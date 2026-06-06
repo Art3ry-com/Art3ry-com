@@ -1,47 +1,56 @@
 # Art3ry
 
-**Growth, automated.**
+## Growth, done for you.
 
-Art3ry is a done-for-you growth company. We run the growth work most businesses
-never have time for — so our clients get more customers, more visibility, and
-more hours back in their week. It isn't software you log into; it's a system we
-run for you, tuned to how your business actually works.
+You run your business. I run everything that makes it grow.
 
-You bring the business. We bring the engine. You get the growth.
+Art3ry isn't software you log into and figure out. There's no dashboard to
+babysit. It's a system I run for you — tuned to how your business actually works —
+so you get more customers and more time, while you keep doing the part only you
+can do.
 
 ---
 
-## What we do
+## What it does for you
 
-We own the levers that actually move a business and run them end to end:
-
-- **SEO** — get found for what your customers are searching
-- **Google Map Pack** — climb into the local 3-pack where the calls come from
-- **Follower & audience growth** — real, compounding reach
-- **Influencer & social analytics** — know what's working, double down on it
-- **Reviews & reputation** — more 5-stars, faster, on autopilot
-- **Lead capture & follow-up** — nothing falls through the cracks
-- **Email & SMS** — the right message, at the right moment, every time
+- **Answers every call and message, day or night** — you never lose a customer to a missed call or a DM you saw too late.
+- **Catches every lead the second it lands** — call, text, DM, form, email. Nothing slips through.
+- **Sends quotes, takes deposits, invoices, and chases what's unpaid** — you get paid without the awkward follow-ups.
+- **Shows you what's actually working before you spend** — which posts, ads, and pages bring real customers, so you double down instead of guessing.
+- **Gets you found first** on Google and the map, where the business comes from.
+- **Grows your audience and keeps your name in front** of the people who almost bought.
+- **Handles the follow-ups and paperwork** so nothing — and no one — gets forgotten.
 
 ## Who it's for
 
-Just about every niche — local service businesses (food trucks, restaurants,
-contractors, auto, salons & med-spas, gyms, clinics, law firms, real estate,
-home services) and online operators (e-commerce, influencers & creators,
-coaches, SaaS, course sellers). If you have customers to win, we help you win
-more of them.
+Anyone who needs more customers and more time:
+
+- Small-business owners & local shops
+- E-commerce & online stores
+- Influencers & content creators
+- Food trucks & mobile vendors
+- Contractors & home services
+- Salons, barbers, med-spas & studios
+- Real estate & insurance agents
+- Funeral homes & memorial services
+- Gyms, clinics & restaurants
+
+…and whatever you do. It doesn't care what you sell — if you have customers to
+win, it wins more of them.
 
 ## The proof
 
-Art3ry's approach was forged running a real company end to end — intake,
-routing, client communication, document generation, invoicing, and case
-tracking across hundreds of live cases. That working system is the proof; the
-product is running it for you.
+This isn't a demo. Art3ry was built to run a real company end to end — every
+call, lead, invoice, and follow-up — and it carries that business every day
+before it ever runs yours.
 
 ## How it works
 
-That stays under the hood — on purpose. The results show up where you can see
-them: your phone, your calendar, your bank account.
+That part's on me — on purpose. The results show up where you can see them: your
+phone, your calendar, your bank account.
+
+**Ready to grow?** Tell me what you do and how someone becomes a customer, and
+I'll show you exactly what the system would run for you.
 
 ---
 
