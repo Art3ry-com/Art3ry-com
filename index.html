@@ -2,127 +2,509 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Art3ry — Growth, done for you.</title>
-  <meta name="description" content="You run your business. Art3ry runs everything that makes it grow — every call answered, every lead caught, every follow-up sent. More customers, more time, in any line of work.">
+  <meta name="description" content="You run your business. Art3ry runs everything that makes it grow — every call answered, every lead caught, every follow-up sent.">
+  <link rel="canonical" href="https://art3ry.com/">
+  <script type="application/ld+json">{
+    "@context":"https://schema.org","@type":"Organization","name":"Art3ry, LLC",
+    "url":"https://art3ry.com","founder":{"@type":"Person","name":"Jesse Moraga","url":"https://jessemoraga.com"},
+    "sameAs":["https://github.com/Art3ry-com","https://centralvalleyprocessservers.com"]
+  }</script>
   <style>
-    :root{
-      --ink:#0a0a0f; --paper:#ffffff; --soft:#f7f8fa; --line:#e6e8ec;
-      --muted:#5b6470; --accent:#ff6a2b; --accent2:#ff9a66;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
-    .wrap{max-width:980px;margin:0 auto;padding:0 24px}
-    header.hero{padding:104px 0 76px;background:linear-gradient(180deg,var(--soft),var(--paper));border-bottom:1px solid var(--line)}
-    .kicker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
-    h1{font-size:clamp(36px,6.5vw,64px);line-height:1.04;margin:0 0 18px;letter-spacing:-.02em}
-    .accent{color:var(--accent)}
-    .lede{font-size:clamp(17px,2.4vw,22px);color:var(--muted);max-width:680px;margin:0}
-    section{padding:64px 0;border-bottom:1px solid var(--line)}
-    h2{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 26px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-    .does{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-    .card{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--paper)}
-    .card b{display:block;font-size:17px;margin-bottom:6px}
-    .card span{color:var(--muted);font-size:15px}
-    .niches{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
-    .niche{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--soft);font-weight:600}
-    .niche em{display:block;font-weight:400;color:var(--muted);font-size:14px;margin-top:2px}
-    .note{color:var(--muted);margin-top:22px;font-size:15px}
-    .closing{font-size:clamp(20px,3vw,30px);max-width:740px;margin:0 0 18px;letter-spacing:-.01em}
-    .cta{display:inline-block;background:var(--accent);color:#fff;font-weight:700;padding:14px 26px;border-radius:12px;text-decoration:none;font-size:16px}
-    footer{padding:48px 0 80px;color:var(--muted);font-size:14px}
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://art3ry.com/#org",
-        "name": "Art3ry, LLC",
-        "url": "https://art3ry.com",
-        "description": "Done-for-you growth (Growth-as-a-Service) for local and online businesses.",
-        "founder": {"@id": "https://jessemoraga.com/#jesse"},
-        "areaServed": "US",
-        "sameAs": ["https://github.com/Art3ry-com"]
-      },
-      {
-        "@type": "Person",
-        "@id": "https://jessemoraga.com/#jesse",
-        "name": "Jesse Moraga",
-        "jobTitle": "Process Server & Systems Builder",
-        "url": "https://jessemoraga.com",
-        "worksFor": {"@type": "Organization", "name": "Central Valley Process Servers", "url": "https://centralvalleyprocessservers.com"},
-        "founder": {"@id": "https://art3ry.com/#org"},
-        "sameAs": [
-          "https://www.linkedin.com/in/jesse-moraga-6784b7412",
-          "https://x.com/JesseMoraga_",
-          "https://www.instagram.com/jessemoragaofficial",
-          "https://github.com/Art3ry-com"
-        ]
-      }
-    ]
+  :root {
+    --bg: #060810;
+    --bg-card: #090c1b;
+    --bg-raised: #0d1126;
+    --red: #e63946;
+    --red-dim: rgba(230,57,70,.14);
+    --red-glow: rgba(230,57,70,.3);
+    --blue: #3a86ff;
+    --blue-dim: rgba(58,134,255,.12);
+    --blue-glow: rgba(58,134,255,.3);
+    --green: #06d6a0;
+    --green-dim: rgba(6,214,160,.08);
+    --border: rgba(255,255,255,.08);
+    --border-red: rgba(230,57,70,.3);
+    --border-blue: rgba(58,134,255,.28);
+    --text: #dde1f0;
+    --muted: #6a7490;
+    --mono: ui-monospace,SFMono-Regular,Menlo,monospace;
   }
-  </script>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.65;
+    background-image:
+      radial-gradient(ellipse 80% 60% at 10% 0%,rgba(88,28,135,.09) 0%,transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 100%,rgba(6,214,160,.05) 0%,transparent 55%),
+      radial-gradient(ellipse 70% 40% at 50% 30%,rgba(58,134,255,.04) 0%,transparent 50%);
+    min-height:100vh;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%}
+
+  /* NAV */
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;background:rgba(6,8,16,.85);backdrop-filter:blur(18px)}
+  .logo{font-size:22px;font-weight:800;letter-spacing:-.5px;color:#fff}
+  .logo span{color:var(--red)}
+  .nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+  .nav-links a:hover{color:#fff;transition:color .15s}
+  .nav-cta{background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:9px 20px;border-radius:8px;font-family:var(--mono);letter-spacing:.02em}
+  .nav-cta:hover{background:#ff4d5a;transition:background .15s}
+
+  /* VEIN SVG divider */
+  .vein{width:100%;overflow:visible;display:block;height:60px;opacity:.7}
+
+  /* HERO */
+  .hero{padding:100px 40px 60px;max-width:1100px;margin:0 auto;position:relative}
+  .hero-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+  .hero-kicker::before{content:'';display:inline-block;width:24px;height:1px;background:var(--red)}
+  .hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;line-height:1.05;letter-spacing:-.03em;color:#fff;margin-bottom:22px}
+  .hero h1 .art{color:var(--red)}
+  .hero h1 .ery{color:var(--blue)}
+  .hero-sub{font-size:19px;color:var(--muted);max-width:640px;margin-bottom:36px;line-height:1.6}
+  .hero-sub strong{color:var(--text)}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn-primary{background:var(--red);color:#fff;font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;letter-spacing:.01em;box-shadow:0 0 24px var(--red-glow)}
+  .btn-primary:hover{background:#ff4d5a;transform:translateY(-1px);transition:all .15s}
+  .btn-secondary{background:var(--blue-dim);color:var(--blue);font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;border:1px solid var(--border-blue)}
+  .btn-secondary:hover{background:rgba(58,134,255,.2);transition:background .15s}
+
+  /* STATS */
+  .stats{display:flex;flex-wrap:wrap;gap:12px;padding:0 40px 0;max-width:1100px;margin:0 auto}
+  .stat{flex:1;min-width:130px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;position:relative;overflow:hidden}
+  .stat::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--red-dim),transparent 60%);pointer-events:none}
+  .stat-num{font-size:28px;font-weight:800;color:var(--red);display:block}
+  .stat-label{font-size:11px;font-family:var(--mono);color:var(--muted);margin-top:2px}
+
+  /* SECTION HEADERS */
+  .section{padding:60px 40px;max-width:1100px;margin:0 auto}
+  .section-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+  .section h2{font-size:clamp(24px,4vw,38px);font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:12px}
+  .section p.lead{font-size:16px;color:var(--muted);max-width:660px;margin-bottom:36px}
+
+  /* GRID CARDS */
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:22px;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+  .card:hover{border-color:rgba(255,255,255,.15);transform:translateY(-2px)}
+  /* Red-accent card */
+  .card-red{border-color:var(--border-red)}
+  .card-red::after{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(ellipse at top right,rgba(230,57,70,.12),transparent 70%);pointer-events:none}
+  /* Blue-accent card */
+  .card-blue{border-color:var(--border-blue)}
+  .card-blue::after{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(ellipse at top right,rgba(58,134,255,.10),transparent 70%);pointer-events:none}
+  .card-icon{font-size:26px;margin-bottom:10px;display:block}
+  .card h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
+  .card p{font-size:14px;color:var(--muted);line-height:1.6}
+  /* Vein corner decoration */
+  .card-vein{position:absolute;bottom:0;right:0;opacity:.35;pointer-events:none}
+
+  /* PROOF */
+  .proof-box{background:linear-gradient(135deg,#100a05,#0a0d1c);border:1px solid rgba(230,57,70,.35);border-radius:16px;padding:28px 32px;position:relative;overflow:hidden}
+  .proof-box::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:radial-gradient(ellipse,rgba(230,57,70,.12),transparent 70%);pointer-events:none}
+  .proof-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ffcb8f;margin-bottom:10px}
+  .proof-box p{color:#d8cfc8;max-width:700px;font-size:16px}
+  .proof-box a{color:var(--red)}
+  .proof-box a:hover{text-decoration:underline}
+
+  /* HOW IT WORKS */
+  .steps{display:flex;gap:0;position:relative}
+  .steps::before{content:'';position:absolute;top:28px;left:28px;right:28px;height:1px;background:linear-gradient(90deg,var(--red),var(--blue));opacity:.35}
+  .step{flex:1;text-align:center;padding:0 20px;position:relative}
+  .step-num{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;margin:0 auto 16px;position:relative;z-index:1}
+  .step-1 .step-num{background:var(--red-dim);border:1px solid var(--border-red);color:var(--red)}
+  .step-2 .step-num{background:rgba(88,28,135,.15);border:1px solid rgba(120,50,200,.35);color:#a855f7}
+  .step-3 .step-num{background:var(--blue-dim);border:1px solid var(--border-blue);color:var(--blue)}
+  .step h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
+  .step p{font-size:14px;color:var(--muted)}
+
+  /* BLOG */
+  .blog-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;transition:all .2s}
+  .blog-card:hover{border-color:var(--border-blue);transform:translateY(-2px)}
+  .blog-tag{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;display:block}
+  .blog-card h3{font-size:17px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.35}
+  .blog-card p{font-size:14px;color:var(--muted)}
+  .blog-card .read{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--blue)}
+
+  /* CTA STRIP */
+  .cta-strip{background:linear-gradient(135deg,#0f0519,#08101f);border:1px solid rgba(58,134,255,.2);border-radius:20px;padding:52px;text-align:center;position:relative;overflow:hidden;margin:0 40px 80px}
+  .cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 100%,rgba(230,57,70,.07),transparent)}
+  .cta-strip h2{font-size:32px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-.02em;position:relative}
+  .cta-strip p{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto 28px;position:relative}
+  .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+  .footer-logo{font-size:15px;font-weight:800;color:#fff}
+  .footer-logo span{color:var(--red)}
+  .footer-links{display:flex;gap:20px;font-size:13px;color:var(--muted)}
+  .footer-links a:hover{color:#fff;transition:color .15s}
+  footer p{font-size:12px;color:var(--muted)}
+
+  /* VEIN ANIMATIONS */
+  @keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}
+  .vein-pulse{animation:pulse 3s ease-in-out infinite}
+
+  @media(max-width:768px){
+    nav{padding:16px 20px}
+    .nav-links{display:none}
+    .hero{padding:60px 20px 40px}
+    .stats,.section{padding-left:20px;padding-right:20px}
+    .grid-2,.grid-3{grid-template-columns:1fr}
+    .steps{flex-direction:column;gap:24px}
+    .steps::before{display:none}
+    .cta-strip{padding:36px 24px;margin:0 20px 60px}
+    footer{padding:28px 20px;flex-direction:column;text-align:center}
+  }
+</style>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <p class="kicker">Art3ry</p>
-      <h1>Growth, <span class="accent">done for you.</span></h1>
-      <p class="lede">You run your business. I run everything that makes it grow. It isn't software you have to learn and there's no dashboard to babysit — you keep doing the work you love, I keep the customers coming in.</p>
-    </div>
-  </header>
 
-  <section>
-    <div class="wrap">
-      <h2>What it does for you</h2>
-      <div class="does">
-        <div class="card"><b>Never miss a customer</b><span>Every call and message answered, day or night — no missed call, no DM you saw too late.</span></div>
-        <div class="card"><b>Catch every lead</b><span>Call, text, DM, form, email — captured the second it lands. Nothing slips through.</span></div>
-        <div class="card"><b>Get paid, no chasing</b><span>Quotes sent, deposits taken, invoices out, unpaid ones followed up — without the awkward asks.</span></div>
-        <div class="card"><b>Know before you spend</b><span>See which posts, ads, and pages actually bring customers — so you double down instead of guessing.</span></div>
-        <div class="card"><b>Get found first</b><span>Top of Google and the map, where the calls and walk-ins come from.</span></div>
-        <div class="card"><b>Stay top of mind</b><span>Your audience grows and your name stays in front of the people who almost bought.</span></div>
-      </div>
-    </div>
-  </section>
+<nav>
+  <a href="/" class="logo">Art<span>3</span>ry</a>
+  <div class="nav-links">
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://centralvalleyprocessservers.com" target="_blank" rel="noopener">The Proof</a>
+  </div>
+  <a href="/get-started/" class="nav-cta">Get started →</a>
+</nav>
 
-  <section>
-    <div class="wrap">
-      <h2>Who it's for</h2>
-      <div class="niches">
-        <div class="niche">Small-business owners <em>& local shops</em></div>
-        <div class="niche">E-commerce <em>& online stores</em></div>
-        <div class="niche">Influencers <em>& creators</em></div>
-        <div class="niche">Food trucks <em>& mobile vendors</em></div>
-        <div class="niche">Contractors <em>& home services</em></div>
-        <div class="niche">Salons, barbers <em>& studios</em></div>
-        <div class="niche">Real estate <em>& insurance agents</em></div>
-        <div class="niche">Funeral homes <em>& memorial services</em></div>
-        <div class="niche">Gyms, clinics <em>& restaurants</em></div>
-      </div>
-      <p class="note">…and whatever you do. It doesn't care what you sell — if you have customers to win, it wins more of them.</p>
-    </div>
-  </section>
+<div class="hero">
+  <svg style="position:absolute;top:0;right:0;width:55%;opacity:.12;pointer-events:none" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hvg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e63946"/>
+      <stop offset="100%" stop-color="#3a86ff"/>
+    </linearGradient>
+  </defs>
+  <!-- Main aorta -->
+  <path d="M300,0 C300,80 280,160 250,240 C220,320 180,380 160,500" stroke="url(#hvg)" stroke-width="3" fill="none"/>
+  <!-- Branches -->
+  <path d="M280,100 C240,90 200,80 160,100 C120,120 80,150 40,160" stroke="#e63946" stroke-width="1.5" fill="none" opacity=".8"/>
+  <path d="M260,180 C290,200 320,220 370,230 C420,240 470,235 520,250" stroke="#3a86ff" stroke-width="1.5" fill="none" opacity=".8"/>
+  <path d="M240,260 C200,270 170,290 150,330 C130,370 140,410 120,450" stroke="#e63946" stroke-width="1" fill="none" opacity=".6"/>
+  <path d="M230,340 C270,350 310,360 360,380 C410,400 450,420 500,440" stroke="#3a86ff" stroke-width="1" fill="none" opacity=".6"/>
+  <!-- Capillaries -->
+  <path d="M160,100 C140,80 110,60 80,40" stroke="#e63946" stroke-width=".7" fill="none" opacity=".5"/>
+  <path d="M520,250 C540,240 560,220 580,200" stroke="#3a86ff" stroke-width=".7" fill="none" opacity=".5"/>
+  <!-- Nodes -->
+  <circle cx="280" cy="100" r="4" fill="#e63946" opacity=".7"/>
+  <circle cx="260" cy="180" r="4" fill="#7b2ff7" opacity=".7"/>
+  <circle cx="240" cy="260" r="4" fill="#e63946" opacity=".6"/>
+  <circle cx="230" cy="340" r="4" fill="#3a86ff" opacity=".6"/>
+</svg>
+  <div class="hero-kicker">Growth-as-a-Service</div>
+  <h1>The playing field<br>isn't level.<br><span class="art">Art</span><span class="ery">3ry</span> changes that.</h1>
+  <p class="hero-sub">You run your business. <strong>I run everything that makes it grow</strong> — calls, leads, invoices, follow-ups, paperwork. No software to learn. No dashboard to babysit.</p>
+  <div class="hero-btns">
+    <a href="/get-started/" class="btn-primary">Get started →</a>
+    <a href="/about/" class="btn-secondary">See how it works</a>
+  </div>
+</div>
 
-  <section>
-    <div class="wrap">
-      <h2>The proof</h2>
-      <p class="closing">This isn't a demo. I built it to run my own company end to end — every call, lead, invoice, and follow-up — and it carries that business every day before I ever run it for yours.</p>
-    </div>
-  </section>
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="vg1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e63946" stop-opacity=".7"/>
+      <stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/>
+    </linearGradient>
+  </defs>
+  <!-- Main vessel -->
+  <path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30"
+    stroke="url(#vg1)" stroke-width="1.5" fill="none"/>
+  <!-- Branch up from ~420 -->
+  <path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/>
+  <!-- Branch down from ~880 -->
+  <path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/>
+  <!-- Capillary from ~700 -->
+  <path d="M700,18 C718,12 730,4 750,2" stroke="#a855f7" stroke-width=".6" fill="none" opacity=".35"/>
+  <circle cx="700" cy="18" r="1.5" fill="#a855f7" opacity=".5"/>
+</svg>
 
-  <section>
-    <div class="wrap">
-      <h2>Ready to grow?</h2>
-      <p class="closing">Tell me what you do and how someone becomes a customer. I'll show you exactly what the system would run for you — and you get back to the part only you can do.</p>
-      <a class="cta" href="https://art3ry.com/get-started/">Get started →</a>
-    </div>
-  </section>
+<div class="stats">
+  <div class="stat"><span class="stat-num">+60%</span><div class="stat-label">traffic · 28 days</div></div>
+  <div class="stat"><span class="stat-num">24/7</span><div class="stat-label">calls answered</div></div>
+  <div class="stat"><span class="stat-num">705+</span><div class="stat-label">jobs run through it</div></div>
+  <div class="stat"><span class="stat-num">1</span><div class="stat-label">operator · no staff</div></div>
+</div>
 
-  <footer>
-    <div class="wrap">Art3ry, LLC — California. © 2026 Art3ry, LLC. All rights reserved.</div>
-  </footer>
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="vg1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e63946" stop-opacity=".7"/>
+      <stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/>
+    </linearGradient>
+  </defs>
+  <!-- Main vessel -->
+  <path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30"
+    stroke="url(#vg1)" stroke-width="1.5" fill="none"/>
+  <!-- Branch up from ~420 -->
+  <path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/>
+  <!-- Branch down from ~880 -->
+  <path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/>
+  <!-- Capillary from ~700 -->
+  <path d="M700,18 C718,12 730,4 750,2" stroke="#a855f7" stroke-width=".6" fill="none" opacity=".35"/>
+  <circle cx="700" cy="18" r="1.5" fill="#a855f7" opacity=".5"/>
+</svg>
+
+<div class="section">
+  <div class="section-kicker">It doesn't care what you sell</div>
+  <h2>If you have customers,<br>it works for you.</h2>
+  <p class="lead">Every business takes calls, sends quotes, and needs the work to keep moving. That whole layer — Art3ry runs it.</p>
+  <div class="grid-2">
+    <a href="/blog/growth-for-local-shops/" class="card card-red">
+      <svg class="card-vein" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64,0 Q64,32 32,32 Q0,32 0,64" fill="none" stroke="#e63946" stroke-width="1.2"/>
+  <path d="M64,0 Q58,28 36,34 Q14,40 0,64" fill="none" stroke="#e63946" stroke-width=".6" opacity=".5"/>
+  <circle cx="32" cy="32" r="2" fill="#e63946" opacity=".7"/>
+</svg>
+      <span class="card-icon">🏪</span>
+      <h3>Local shop &amp; storefront</h3>
+      <p>Every call answered 24/7, appointments booked, confirmations sent. You never lose a walk-in to a missed call.</p>
+    </a>
+    <a href="/blog/growth-for-contractors/" class="card card-blue">
+      <svg class="card-vein" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64,0 Q64,32 32,32 Q0,32 0,64" fill="none" stroke="#3a86ff" stroke-width="1.2"/>
+  <path d="M64,0 Q58,28 36,34 Q14,40 0,64" fill="none" stroke="#3a86ff" stroke-width=".6" opacity=".5"/>
+  <circle cx="32" cy="32" r="2" fill="#3a86ff" opacity=".7"/>
+</svg>
+      <span class="card-icon">🔧</span>
+      <h3>Contractors &amp; home services</h3>
+      <p>You're on a job, not by the phone. Calls qualified, estimates sent, calendar filled. No chasing, no double-booking.</p>
+    </a>
+    <a href="/blog/growth-for-ecommerce/" class="card card-blue">
+      <svg class="card-vein" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64,0 Q64,32 32,32 Q0,32 0,64" fill="none" stroke="#3a86ff" stroke-width="1.2"/>
+  <path d="M64,0 Q58,28 36,34 Q14,40 0,64" fill="none" stroke="#3a86ff" stroke-width=".6" opacity=".5"/>
+  <circle cx="32" cy="32" r="2" fill="#3a86ff" opacity=".7"/>
+</svg>
+      <span class="card-icon">🛒</span>
+      <h3>E-commerce &amp; online stores</h3>
+      <p>Abandoned carts won back, DMs answered instantly, ad spend directed at what actually converts.</p>
+    </a>
+    <a href="/blog/growth-for-salons/" class="card card-red">
+      <svg class="card-vein" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64,0 Q64,32 32,32 Q0,32 0,64" fill="none" stroke="#e63946" stroke-width="1.2"/>
+  <path d="M64,0 Q58,28 36,34 Q14,40 0,64" fill="none" stroke="#e63946" stroke-width=".6" opacity=".5"/>
+  <circle cx="32" cy="32" r="2" fill="#e63946" opacity=".7"/>
+</svg>
+      <span class="card-icon">💈</span>
+      <h3>Salons, barbers &amp; studios</h3>
+      <p>Appointments booked, no-shows reminded, cancellations filled from a waitlist. Your chair stays full.</p>
+    </a>
+    <a href="/blog/growth-for-food-trucks/" class="card card-red">
+      <svg class="card-vein" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64,0 Q64,32 32,32 Q0,32 0,64" fill="none" stroke="#e63946" stroke-width="1.2"/>
+  <path d="M64,0 Q58,28 36,34 Q14,40 0,64" fill="none" stroke="#e63946" stroke-width=".6" opacity=".5"/>
+  <circle cx="32" cy="32" r="2" fill="#e63946" opacity=".7"/>
+</svg>
+      <span class="card-icon">🚚</span>
+      <h3>Food trucks &amp; mobile</h3>
+      <p>Catering inquiries captured at any hour, quotes out, deposits taken. The line's there when you park.</p>
+    </a>
+    <a href="/blog/growth-for-real-estate/" class="card card-blue">
+      <svg class="card-vein" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64,0 Q64,32 32,32 Q0,32 0,64" fill="none" stroke="#3a86ff" stroke-width="1.2"/>
+  <path d="M64,0 Q58,28 36,34 Q14,40 0,64" fill="none" stroke="#3a86ff" stroke-width=".6" opacity=".5"/>
+  <circle cx="32" cy="32" r="2" fill="#3a86ff" opacity=".7"/>
+</svg>
+      <span class="card-icon">🏡</span>
+      <h3>Real estate &amp; insurance</h3>
+      <p>First to call wins. Lead lands → logged → call booked → follow-up runs for weeks. Renewals never slip.</p>
+    </a>
+  </div>
+  <p style="margin-top:16px;font-size:13px;color:var(--muted);font-style:italic">Don't see yours? The pieces are the same for any business. <a href="/get-started/" style="color:var(--blue)">Tell me what you do →</a></p>
+</div>
+
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="vg1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e63946" stop-opacity=".7"/>
+      <stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/>
+    </linearGradient>
+  </defs>
+  <!-- Main vessel -->
+  <path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30"
+    stroke="url(#vg1)" stroke-width="1.5" fill="none"/>
+  <!-- Branch up from ~420 -->
+  <path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/>
+  <!-- Branch down from ~880 -->
+  <path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/>
+  <!-- Capillary from ~700 -->
+  <path d="M700,18 C718,12 730,4 750,2" stroke="#a855f7" stroke-width=".6" fill="none" opacity=".35"/>
+  <circle cx="700" cy="18" r="1.5" fill="#a855f7" opacity=".5"/>
+</svg>
+
+<div class="section">
+  <div class="section-kicker">What it actually handles</div>
+  <h2>Nod at three of these<br>and it already fits.</h2>
+  <div class="grid-3">
+    <div class="card"><h3>📞 Every call answered</h3><p>24/7 AI assistant. No missed call, no voicemail black hole.</p></div>
+    <div class="card"><h3>📥 No lead slips</h3><p>Call, form, text, email, DM — caught the moment it lands.</p></div>
+    <div class="card"><h3>💳 Money handled</h3><p>Quotes sent, invoices out, unpaid ones followed up. You get paid without the awkward asks.</p></div>
+    <div class="card"><h3>📊 Know before you spend</h3><p>See which posts, ads, and pages bring real customers. Double down instead of guessing.</p></div>
+    <div class="card"><h3>🔎 Found first on Google</h3><p>SEO + local search that puts you above competitors where the calls come from.</p></div>
+    <div class="card"><h3>💬 Clients updated</h3><p>Every status message drafted. You stay the last set of eyes before it goes out.</p></div>
+  </div>
+</div>
+
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="vg1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e63946" stop-opacity=".7"/>
+      <stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/>
+    </linearGradient>
+  </defs>
+  <!-- Main vessel -->
+  <path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30"
+    stroke="url(#vg1)" stroke-width="1.5" fill="none"/>
+  <!-- Branch up from ~420 -->
+  <path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/>
+  <!-- Branch down from ~880 -->
+  <path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/>
+  <!-- Capillary from ~700 -->
+  <path d="M700,18 C718,12 730,4 750,2" stroke="#a855f7" stroke-width=".6" fill="none" opacity=".35"/>
+  <circle cx="700" cy="18" r="1.5" fill="#a855f7" opacity=".5"/>
+</svg>
+
+<div class="section">
+  <div class="proof-box">
+    <div class="proof-kicker">The proof it works</div>
+    <p>I didn't build this as a demo. It runs <strong>Central Valley Process Servers</strong> — my own company — every day: 705 jobs coordinated, traffic up 60% in a month with zero ad spend, one operator performing like a staffed firm. Before I run it for you, it carries my business first. <a href="https://centralvalleyprocessservers.com/powered-by-art3ry/">See it running →</a></p>
+  </div>
+</div>
+
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="vg1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e63946" stop-opacity=".7"/>
+      <stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/>
+    </linearGradient>
+  </defs>
+  <!-- Main vessel -->
+  <path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30"
+    stroke="url(#vg1)" stroke-width="1.5" fill="none"/>
+  <!-- Branch up from ~420 -->
+  <path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/>
+  <!-- Branch down from ~880 -->
+  <path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/>
+  <!-- Capillary from ~700 -->
+  <path d="M700,18 C718,12 730,4 750,2" stroke="#a855f7" stroke-width=".6" fill="none" opacity=".35"/>
+  <circle cx="700" cy="18" r="1.5" fill="#a855f7" opacity=".5"/>
+</svg>
+
+<div class="section">
+  <div class="section-kicker">How it works</div>
+  <h2>Three steps. Then it runs.</h2>
+  <div class="steps" style="margin-top:48px">
+    <div class="step step-1">
+      <div class="step-num">01</div>
+      <h3>We map your operation</h3>
+      <p>One 60-min call. I learn your workflow, your tools, your biggest bottlenecks.</p>
+    </div>
+    <div class="step step-2">
+      <div class="step-num">02</div>
+      <h3>I build your system</h3>
+      <p>Custom-built in 100 days. Your stack, your rules, your business logic.</p>
+    </div>
+    <div class="step step-3">
+      <div class="step-num">03</div>
+      <h3>You run smarter</h3>
+      <p>Go live. The system handles the overhead. You focus on the work only you can do.</p>
+    </div>
+  </div>
+</div>
+
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="vg1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e63946" stop-opacity=".7"/>
+      <stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/>
+    </linearGradient>
+  </defs>
+  <!-- Main vessel -->
+  <path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30"
+    stroke="url(#vg1)" stroke-width="1.5" fill="none"/>
+  <!-- Branch up from ~420 -->
+  <path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/>
+  <!-- Branch down from ~880 -->
+  <path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/>
+  <circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/>
+  <!-- Capillary from ~700 -->
+  <path d="M700,18 C718,12 730,4 750,2" stroke="#a855f7" stroke-width=".6" fill="none" opacity=".35"/>
+  <circle cx="700" cy="18" r="1.5" fill="#a855f7" opacity=".5"/>
+</svg>
+
+<div class="section">
+  <div class="section-kicker">From the blog</div>
+  <h2>Read how it works<br>in your industry.</h2>
+  <div class="grid-3" style="margin-top:28px">
+    <a href="/blog/ai-phone-intake/" class="blog-card">
+      <span class="blog-tag">AI Intake</span>
+      <h3>How a 24/7 AI receptionist turns missed calls into booked jobs</h3>
+      <p>Every call you miss is a competitor's win. Here's what changes when the phone never goes to voicemail.</p>
+      <span class="read">Read more →</span>
+    </a>
+    <a href="/blog/automate-invoicing/" class="blog-card">
+      <span class="blog-tag">Invoicing</span>
+      <h3>Why automating your invoices is the fastest ROI in any small business</h3>
+      <p>The average small business waits 14 days to invoice after a job closes. Here's the cost of that delay.</p>
+      <span class="read">Read more →</span>
+    </a>
+    <a href="/blog/seo-for-local-business/" class="blog-card">
+      <span class="blog-tag">SEO</span>
+      <h3>Local SEO that actually works: how to rank above the big firms in your city</h3>
+      <p>You don't need their budget. You need the right signals — and a system that builds them daily.</p>
+      <span class="read">Read more →</span>
+    </a>
+  </div>
+  <p style="margin-top:20px"><a href="/blog/" style="color:var(--blue);font-size:14px;font-weight:600">View all posts →</a></p>
+</div>
+
+<div class="cta-strip">
+  <h2>Ready to run your business<br>at a different level?</h2>
+  <p>Tell me what you do and how someone becomes a customer. I'll show you exactly what the system would run for you.</p>
+  <div class="cta-btns">
+    <a href="/get-started/" class="btn-primary">Get started →</a>
+    <a href="mailto:jesse@art3ry.com" class="btn-secondary">jesse@art3ry.com</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Art<span>3</span>ry</div>
+  <div class="footer-links">
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/get-started/">Get Started</a>
+    <a href="https://centralvalleyprocessservers.com">CVPS</a>
+    <a href="https://jessemoraga.com">Jesse Moraga</a>
+    <a href="https://github.com/Art3ry-com">GitHub</a>
+  </div>
+  <p>© 2026 Art3ry, LLC — California</p>
+</footer>
+
 </body>
 </html>
