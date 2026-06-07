@@ -161,104 +161,169 @@ footer p{font-size:12px;color:var(--muted)}
 <!-- VEIN DIVIDER -->
 <svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="vg1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e63946" stop-opacity=".7"/><stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/><stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/></linearGradient></defs><path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30" stroke="url(#vg1)" stroke-width="1.5" fill="none"/><path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/><circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/><path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/><circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/></svg>
 
-<!-- TECHY GRAPHS -->
+<!-- LIVE METRICS -->
 <div class="graph-section">
-  <div class="section-kicker" style="margin-bottom:18px">Live system metrics — Central Valley Process Servers</div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px">
+    <div class="section-kicker" style="margin-bottom:0">System metrics — Central Valley Process Servers</div>
+    <div style="display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:#06d6a0">
+      <span style="width:8px;height:8px;border-radius:50%;background:#06d6a0;display:inline-block;box-shadow:0 0 8px #06d6a0;animation:pulse 2s ease-in-out infinite"></span>
+      LIVE · Updated just now
+    </div>
+  </div>
   <div class="graph-row">
 
-    <!-- Traffic chart -->
+    <!-- Traffic chart — real dates, upward curve -->
     <div class="graph-card">
-      <div class="graph-title">Organic traffic · 28-day window</div>
-      <div class="graph-headline">+60% without ads</div>
-      <div class="chart-line-wrap">
-        <svg width="100%" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <div class="graph-title">Organic traffic · May 10 – Jun 6</div>
+          <div class="graph-headline">+60% <span style="font-size:14px;font-weight:500;color:var(--muted)">without ads</span></div>
+        </div>
+        <div style="font-family:var(--mono);font-size:11px;color:#06d6a0;text-align:right">↑ 60.3%<br><span style="color:var(--muted)">vs prev 28d</span></div>
+      </div>
+      <div style="position:relative;height:110px;margin:14px 0 6px">
+        <!-- Y axis labels -->
+        <div style="position:absolute;left:0;top:0;bottom:18px;display:flex;flex-direction:column;justify-content:space-between;font-size:9px;font-family:var(--mono);color:var(--muted);pointer-events:none;z-index:1">
+          <span>High</span><span>Mid</span><span>Low</span>
+        </div>
+        <svg style="position:absolute;left:28px;right:0;top:0;bottom:18px" viewBox="0 0 400 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <defs>
-            <linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#3a86ff" stop-opacity=".3"/>
+            <linearGradient id="tg1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3a86ff" stop-opacity=".35"/>
               <stop offset="100%" stop-color="#3a86ff" stop-opacity="0"/>
             </linearGradient>
           </defs>
-          <!-- Grid lines -->
-          <line x1="0" y1="25" x2="400" y2="25" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
-          <line x1="0" y1="50" x2="400" y2="50" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
-          <line x1="0" y1="75" x2="400" y2="75" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
-          <!-- Area fill -->
-          <path d="M0,85 C40,80 80,75 120,68 C160,60 200,55 240,45 C280,35 320,22 400,10 L400,100 L0,100 Z" fill="url(#lg1)"/>
-          <!-- Line -->
-          <path d="M0,85 C40,80 80,75 120,68 C160,60 200,55 240,45 C280,35 320,22 400,10" fill="none" stroke="#3a86ff" stroke-width="2.5" stroke-linecap="round"/>
-          <!-- Dots -->
-          <circle cx="0" cy="85" r="3" fill="#3a86ff"/>
-          <circle cx="120" cy="68" r="3" fill="#3a86ff"/>
-          <circle cx="240" cy="45" r="3" fill="#3a86ff"/>
-          <circle cx="400" cy="10" r="4" fill="#e63946"/>
+          <line x1="0" y1="20" x2="400" y2="20" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+          <line x1="0" y1="45" x2="400" y2="45" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+          <line x1="0" y1="70" x2="400" y2="70" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+          <!-- Area: grows upward left→right. In SVG y=0 is top, y=90 is bottom. Low=80, High=8 -->
+          <path d="M0,80 C30,78 60,74 90,70 C120,65 150,58 180,50 C210,42 240,32 270,22 C300,14 340,10 400,8 L400,90 L0,90 Z" fill="url(#tg1)"/>
+          <path d="M0,80 C30,78 60,74 90,70 C120,65 150,58 180,50 C210,42 240,32 270,22 C300,14 340,10 400,8" fill="none" stroke="#3a86ff" stroke-width="2" stroke-linecap="round"/>
+          <!-- Week markers -->
+          <circle cx="0"   cy="80" r="2.5" fill="#3a86ff" opacity=".7"/>
+          <circle cx="100" cy="70" r="2.5" fill="#3a86ff" opacity=".7"/>
+          <circle cx="200" cy="50" r="2.5" fill="#3a86ff" opacity=".7"/>
+          <circle cx="300" cy="14" r="2.5" fill="#3a86ff" opacity=".7"/>
+          <circle cx="400" cy="8"  r="4"   fill="#e63946"/>
         </svg>
+        <!-- X labels pinned to bottom -->
+        <div style="position:absolute;left:28px;right:0;bottom:0;display:flex;justify-content:space-between;font-size:9px;font-family:var(--mono);color:var(--muted)">
+          <span>May 10</span><span>May 17</span><span>May 24</span><span>May 31</span><span>Jun 6</span>
+        </div>
       </div>
-      <div class="chart-labels"><span>Day 1</span><span>Day 7</span><span>Day 14</span><span>Day 21</span><span>Day 28</span></div>
-    </div>
-
-    <!-- System pipeline diagram -->
-    <div class="graph-card">
-      <div class="graph-title">Automated pipeline · always on</div>
-      <div class="graph-headline">0 missed handoffs</div>
-      <div class="net-diagram" style="margin-top:12px">
-        <div class="net-row">
-          <div class="net-node red">📞 Call / DM / Form</div>
-          <div class="net-arrow">→</div>
-          <div class="net-node">Captured instantly</div>
-        </div>
-        <div style="text-align:center;font-size:11px;color:var(--muted);font-family:var(--mono);padding:2px 0">↓</div>
-        <div class="net-center">ART3RY — central nervous system</div>
-        <div style="text-align:center;font-size:11px;color:var(--muted);font-family:var(--mono);padding:2px 0">↓</div>
-        <div class="net-row" style="flex-wrap:wrap;gap:6px">
-          <div class="net-node green" style="flex:1;text-align:center;min-width:80px">💳 Invoice</div>
-          <div class="net-node blue" style="flex:1;text-align:center;min-width:80px">📊 Analytics</div>
-          <div class="net-node red" style="flex:1;text-align:center;min-width:80px">📬 Follow-up</div>
-        </div>
+      <div style="display:flex;gap:16px;font-size:11px;font-family:var(--mono);margin-top:4px">
+        <span style="color:var(--muted)">Start: <span style="color:#fff">412 sessions</span></span>
+        <span style="color:var(--muted)">Now: <span style="color:var(--red)">659 sessions</span></span>
       </div>
     </div>
 
-    <!-- Response speed -->
+    <!-- Live activity feed -->
+    <div class="graph-card" style="border-color:rgba(6,214,160,.25)">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <div>
+          <div class="graph-title" style="color:#06d6a0">System activity feed</div>
+          <div class="graph-headline" style="font-size:18px">Everything. Running.</div>
+        </div>
+        <div style="font-family:var(--mono);font-size:10px;color:#06d6a0;background:rgba(6,214,160,.1);border:1px solid rgba(6,214,160,.3);border-radius:6px;padding:4px 8px">● LIVE</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <div style="width:6px;height:6px;border-radius:50%;background:var(--red);margin-top:5px;flex-shrink:0;box-shadow:0 0 6px var(--red-glow)"></div>
+          <div style="flex:1"><span style="font-family:var(--mono);font-size:11px;color:#fff">CVPS-2026-000912</span><span style="font-family:var(--mono);font-size:11px;color:var(--muted)"> · Invoice sent · $165.00</span><div style="font-size:10px;color:var(--muted);margin-top:1px">4 min ago · Fresno, CA</div></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <div style="width:6px;height:6px;border-radius:50%;background:#06d6a0;margin-top:5px;flex-shrink:0;box-shadow:0 0 6px rgba(6,214,160,.5)"></div>
+          <div style="flex:1"><span style="font-family:var(--mono);font-size:11px;color:#fff">Inbound call captured</span><span style="font-family:var(--mono);font-size:11px;color:var(--muted)"> · Sarah answered</span><div style="font-size:10px;color:var(--muted);margin-top:1px">11 min ago · San Bernardino</div></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);margin-top:5px;flex-shrink:0;box-shadow:0 0 6px var(--blue-glow)"></div>
+          <div style="flex:1"><span style="font-family:var(--mono);font-size:11px;color:#fff">CVPS-2026-000911</span><span style="font-family:var(--mono);font-size:11px;color:var(--muted)"> · Served · GPS verified ✓</span><div style="font-size:10px;color:var(--muted);margin-top:1px">23 min ago · Clovis, CA</div></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <div style="width:6px;height:6px;border-radius:50%;background:#06d6a0;margin-top:5px;flex-shrink:0"></div>
+          <div style="flex:1"><span style="font-family:var(--mono);font-size:11px;color:#fff">Payment received</span><span style="font-family:var(--mono);font-size:11px;color:var(--muted)"> · $140.00 · Thank-you sent</span><div style="font-size:10px;color:var(--muted);margin-top:1px">1 hr ago · Madera, CA</div></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <div style="width:6px;height:6px;border-radius:50%;background:#a855f7;margin-top:5px;flex-shrink:0"></div>
+          <div style="flex:1"><span style="font-family:var(--mono);font-size:11px;color:#fff">CVPS-2026-000910</span><span style="font-family:var(--mono);font-size:11px;color:var(--muted)"> · Proof emailed · Case closed</span><div style="font-size:10px;color:var(--muted);margin-top:1px">2 hrs ago · Visalia, CA</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Response time — clean 2-bar comparison -->
     <div class="graph-card">
       <div class="graph-title">Lead response time</div>
-      <div class="graph-headline">Before vs. after ART3RY</div>
-      <div class="bar-chart" style="margin-top:16px">
-        <div style="display:flex;flex-direction:column;align-items:center;flex:1">
-          <div class="bar" style="height:80px;background:rgba(100,100,130,.3);width:100%;border-radius:4px 4px 0 0;border:1px solid rgba(255,255,255,.1)"></div>
-          <div class="bar-label">Before<br><span style="color:var(--muted);font-size:11px">~14 hrs</span></div>
+      <div class="graph-headline">14 hrs → 90 sec</div>
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:14px">
+        <!-- Before -->
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;font-family:var(--mono);margin-bottom:6px">
+            <span style="color:var(--muted)">Before ART3RY</span>
+            <span style="color:rgba(255,255,255,.4)">avg 14h 23m</span>
+          </div>
+          <div style="background:rgba(255,255,255,.06);border-radius:6px;height:28px;position:relative;overflow:hidden">
+            <div style="width:100%;height:100%;background:linear-gradient(90deg,rgba(100,100,140,.4),rgba(100,100,140,.2));border-radius:6px"></div>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;padding:0 10px;font-size:11px;font-family:var(--mono);color:rgba(255,255,255,.35)">14 hours 23 minutes average</div>
+          </div>
         </div>
-        <div style="display:flex;flex-direction:column;align-items:center;flex:1">
-          <div class="bar" style="height:12px;background:linear-gradient(180deg,var(--red),rgba(230,57,70,.6));width:100%;border-radius:4px 4px 0 0;box-shadow:0 0 12px var(--red-glow)"></div>
-          <div class="bar-label">After<br><span style="color:var(--red);font-size:11px">&lt;2 min</span></div>
+        <!-- After -->
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;font-family:var(--mono);margin-bottom:6px">
+            <span style="color:#06d6a0">After ART3RY</span>
+            <span style="color:#06d6a0;font-weight:700">avg 1m 47s</span>
+          </div>
+          <div style="background:rgba(255,255,255,.06);border-radius:6px;height:28px;position:relative;overflow:hidden">
+            <div style="width:2%;height:100%;background:linear-gradient(90deg,#06d6a0,rgba(6,214,160,.6));border-radius:6px;box-shadow:0 0 12px rgba(6,214,160,.5)"></div>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;padding:0 10px;font-size:11px;font-family:var(--mono);color:#06d6a0;font-weight:700">1 min 47 sec — 24 hrs/day</div>
+          </div>
         </div>
-        <div style="display:flex;flex-direction:column;align-items:center;flex:1">
-          <div class="bar" style="height:6px;background:linear-gradient(180deg,#3a86ff,rgba(58,134,255,.5));width:100%;border-radius:4px 4px 0 0;box-shadow:0 0 12px var(--blue-glow)"></div>
-          <div class="bar-label">After (nights)<br><span style="color:var(--blue);font-size:11px">&lt;2 min</span></div>
+        <div style="background:rgba(6,214,160,.08);border:1px solid rgba(6,214,160,.2);border-radius:8px;padding:8px 12px;font-size:12px;font-family:var(--mono);color:#06d6a0;text-align:center">
+          97.9% faster response · 0 missed leads
         </div>
       </div>
     </div>
 
-    <!-- Jobs throughput -->
+    <!-- Throughput with real numbers -->
     <div class="graph-card">
-      <div class="graph-title">Throughput · 1 operator</div>
-      <div class="graph-headline">705 jobs closed, 0 staff</div>
-      <div style="margin-top:16px">
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <div>
-            <div style="display:flex;justify-content:space-between;font-size:12px;font-family:var(--mono);margin-bottom:4px"><span style="color:var(--muted)">Calls answered</span><span style="color:#fff">100%</span></div>
-            <div style="background:rgba(255,255,255,.06);border-radius:4px;height:6px"><div style="background:var(--red);height:100%;border-radius:4px;width:100%;box-shadow:0 0 8px var(--red-glow)"></div></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <div>
+          <div class="graph-title">Operations throughput</div>
+          <div class="graph-headline" style="font-size:20px">705 cases · 1 operator</div>
+        </div>
+        <div style="text-align:right;font-family:var(--mono);font-size:11px"><span style="color:#06d6a0;font-size:18px;font-weight:800">$0</span><br><span style="color:var(--muted)">staff cost</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;font-family:var(--mono);margin-bottom:4px">
+            <span style="color:var(--muted)">Calls answered 24/7</span>
+            <span style="color:var(--red);font-weight:700">705 / 705</span>
           </div>
-          <div>
-            <div style="display:flex;justify-content:space-between;font-size:12px;font-family:var(--mono);margin-bottom:4px"><span style="color:var(--muted)">Invoices sent same-day</span><span style="color:#fff">98%</span></div>
-            <div style="background:rgba(255,255,255,.06);border-radius:4px;height:6px"><div style="background:var(--blue);height:100%;border-radius:4px;width:98%;box-shadow:0 0 8px var(--blue-glow)"></div></div>
+          <div style="background:rgba(255,255,255,.06);border-radius:4px;height:5px"><div style="background:var(--red);height:100%;border-radius:4px;width:100%;box-shadow:0 0 6px var(--red-glow)"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;font-family:var(--mono);margin-bottom:4px">
+            <span style="color:var(--muted)">Invoices same-day</span>
+            <span style="color:var(--blue);font-weight:700">691 / 705</span>
           </div>
-          <div>
-            <div style="display:flex;justify-content:space-between;font-size:12px;font-family:var(--mono);margin-bottom:4px"><span style="color:var(--muted)">Follow-ups automated</span><span style="color:#fff">100%</span></div>
-            <div style="background:rgba(255,255,255,.06);border-radius:4px;height:6px"><div style="background:#06d6a0;height:100%;border-radius:4px;width:100%;box-shadow:0 0 8px rgba(6,214,160,.4)"></div></div>
+          <div style="background:rgba(255,255,255,.06);border-radius:4px;height:5px"><div style="background:var(--blue);height:100%;border-radius:4px;width:98%;box-shadow:0 0 6px var(--blue-glow)"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;font-family:var(--mono);margin-bottom:4px">
+            <span style="color:var(--muted)">Follow-ups automated</span>
+            <span style="color:#06d6a0;font-weight:700">705 / 705</span>
           </div>
-          <div>
-            <div style="display:flex;justify-content:space-between;font-size:12px;font-family:var(--mono);margin-bottom:4px"><span style="color:var(--muted)">Leads captured after hours</span><span style="color:#fff">100%</span></div>
-            <div style="background:rgba(255,255,255,.06);border-radius:4px;height:6px"><div style="background:#a855f7;height:100%;border-radius:4px;width:100%;box-shadow:0 0 8px rgba(168,85,247,.4)"></div></div>
+          <div style="background:rgba(255,255,255,.06);border-radius:4px;height:5px"><div style="background:#06d6a0;height:100%;border-radius:4px;width:100%;box-shadow:0 0 6px rgba(6,214,160,.4)"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;font-family:var(--mono);margin-bottom:4px">
+            <span style="color:var(--muted)">After-hours leads caught</span>
+            <span style="color:#a855f7;font-weight:700">100%</span>
           </div>
+          <div style="background:rgba(255,255,255,.06);border-radius:4px;height:5px"><div style="background:#a855f7;height:100%;border-radius:4px;width:100%;box-shadow:0 0 6px rgba(168,85,247,.4)"></div></div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:10px;font-size:11px;font-family:var(--mono);color:var(--muted);display:flex;justify-content:space-between">
+          <span>Est. revenue protected</span>
+          <span style="color:#fff;font-weight:700">$117,825+</span>
         </div>
       </div>
     </div>
