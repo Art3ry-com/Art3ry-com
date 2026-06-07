@@ -60,15 +60,18 @@
   .vein{width:100%;overflow:visible;display:block;height:60px;opacity:.7}
 
   /* HERO */
-  .hero{padding:100px 40px 60px;max-width:1100px;margin:0 auto;position:relative}
+  .hero-wrap{position:relative;overflow:hidden;min-height:600px;display:flex;align-items:center}
+  .hero-bg{position:absolute;inset:0;background:url('/assets/art3ry-brand.jpg') center center/cover no-repeat;opacity:.55}
+  .hero-bg-overlay{position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 35%,rgba(6,8,16,.6) 65%,rgba(6,8,16,.2) 100%)}
+  .hero{padding:90px 40px 70px;max-width:1100px;margin:0 auto;position:relative;z-index:1}
   .hero-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:18px;display:flex;align-items:center;gap:8px}
   .hero-kicker::before{content:'';display:inline-block;width:24px;height:1px;background:var(--red)}
   .hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;line-height:1.05;letter-spacing:-.03em;color:#fff;margin-bottom:22px}
-  .hero h1 .art{color:var(--red)}
-  .hero h1 .ery{color:var(--blue)}
-  .hero-sub{font-size:19px;color:var(--muted);max-width:640px;margin-bottom:36px;line-height:1.6}
+  .hero-sub{font-size:19px;color:var(--muted);max-width:580px;margin-bottom:36px;line-height:1.6}
   .hero-sub strong{color:var(--text)}
   .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  /* Brand image feature section */
+  .brand-visual{width:100%;max-height:380px;object-fit:cover;border-radius:20px;border:1px solid var(--border-red);box-shadow:0 0 60px rgba(230,57,70,.18),0 0 120px rgba(58,134,255,.10);display:block;margin:0 auto}
   .btn-primary{background:var(--red);color:#fff;font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;letter-spacing:.01em;box-shadow:0 0 24px var(--red-glow)}
   .btn-primary:hover{background:#ff4d5a;transform:translateY(-1px);transition:all .15s}
   .btn-secondary{background:var(--blue-dim);color:var(--blue);font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;border:1px solid var(--border-blue)}
@@ -153,6 +156,8 @@
   @media(max-width:768px){
     nav{padding:16px 20px}
     .nav-links{display:none}
+    .hero-wrap{min-height:auto}
+    .hero-bg-overlay{background:linear-gradient(180deg,rgba(6,8,16,.7) 0%,rgba(6,8,16,.85) 100%)}
     .hero{padding:60px 20px 40px}
     .stats,.section{padding-left:20px;padding-right:20px}
     .grid-2,.grid-3{grid-template-columns:1fr}
@@ -175,36 +180,17 @@
   <a href="/get-started/" class="nav-cta">Get started →</a>
 </nav>
 
-<div class="hero">
-  <svg style="position:absolute;top:0;right:0;width:55%;opacity:.12;pointer-events:none" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="hvg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#e63946"/>
-      <stop offset="100%" stop-color="#3a86ff"/>
-    </linearGradient>
-  </defs>
-  <!-- Main aorta -->
-  <path d="M300,0 C300,80 280,160 250,240 C220,320 180,380 160,500" stroke="url(#hvg)" stroke-width="3" fill="none"/>
-  <!-- Branches -->
-  <path d="M280,100 C240,90 200,80 160,100 C120,120 80,150 40,160" stroke="#e63946" stroke-width="1.5" fill="none" opacity=".8"/>
-  <path d="M260,180 C290,200 320,220 370,230 C420,240 470,235 520,250" stroke="#3a86ff" stroke-width="1.5" fill="none" opacity=".8"/>
-  <path d="M240,260 C200,270 170,290 150,330 C130,370 140,410 120,450" stroke="#e63946" stroke-width="1" fill="none" opacity=".6"/>
-  <path d="M230,340 C270,350 310,360 360,380 C410,400 450,420 500,440" stroke="#3a86ff" stroke-width="1" fill="none" opacity=".6"/>
-  <!-- Capillaries -->
-  <path d="M160,100 C140,80 110,60 80,40" stroke="#e63946" stroke-width=".7" fill="none" opacity=".5"/>
-  <path d="M520,250 C540,240 560,220 580,200" stroke="#3a86ff" stroke-width=".7" fill="none" opacity=".5"/>
-  <!-- Nodes -->
-  <circle cx="280" cy="100" r="4" fill="#e63946" opacity=".7"/>
-  <circle cx="260" cy="180" r="4" fill="#7b2ff7" opacity=".7"/>
-  <circle cx="240" cy="260" r="4" fill="#e63946" opacity=".6"/>
-  <circle cx="230" cy="340" r="4" fill="#3a86ff" opacity=".6"/>
-</svg>
-  <div class="hero-kicker">Growth-as-a-Service</div>
-  <h1>The playing field<br>isn't level.<br><span class="art">Art</span><span class="ery">3ry</span> changes that.</h1>
-  <p class="hero-sub">You run your business. <strong>I run everything that makes it grow</strong> — calls, leads, invoices, follow-ups, paperwork. No software to learn. No dashboard to babysit.</p>
-  <div class="hero-btns">
-    <a href="/get-started/" class="btn-primary">Get started →</a>
-    <a href="/about/" class="btn-secondary">See how it works</a>
+<div class="hero-wrap">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-overlay"></div>
+  <div class="hero">
+    <div class="hero-kicker">Growth-as-a-Service</div>
+    <h1>The playing field<br>isn't level.<br>ART3RY changes that.</h1>
+    <p class="hero-sub">You run your business. <strong>I run everything that makes it grow</strong> — calls, leads, invoices, follow-ups, paperwork. No software to learn. No dashboard to babysit.</p>
+    <div class="hero-btns">
+      <a href="/get-started/" class="btn-primary">Get started →</a>
+      <a href="/about/" class="btn-secondary">See how it works</a>
+    </div>
   </div>
 </div>
 
@@ -229,6 +215,11 @@
   <path d="M700,18 C718,12 730,4 750,2" stroke="#a855f7" stroke-width=".6" fill="none" opacity=".35"/>
   <circle cx="700" cy="18" r="1.5" fill="#a855f7" opacity=".5"/>
 </svg>
+
+<!-- Brand visual — full art3ry.com hero image -->
+<div style="padding:0 40px;max-width:1200px;margin:0 auto 0">
+  <img src="/assets/art3ry-brand.jpg" alt="ART3RY — the vascular network that powers your business growth" class="brand-visual">
+</div>
 
 <div class="stats">
   <div class="stat"><span class="stat-num">+60%</span><div class="stat-label">traffic · 28 days</div></div>
