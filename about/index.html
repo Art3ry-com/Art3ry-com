@@ -1,60 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About — Art3ry</title>
-  <meta name="description" content="Art3ry was built by a process server who needed to compete. Now it runs his company — and can run yours.">
-  <style>
-    :root{--ink:#0a0a0f;--paper:#ffffff;--soft:#f7f8fa;--line:#e6e8ec;--muted:#5b6470;--accent:#0a84ff}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
-    .wrap{max-width:700px;margin:0 auto;padding:0 24px}
-    nav{padding:20px 0;border-bottom:1px solid var(--line)}
-    nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
-    nav a.back{color:var(--muted);font-size:14px;margin-right:16px}
-    header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
-    h1{font-size:clamp(32px,5vw,48px);line-height:1.08;margin:0 0 16px;letter-spacing:-.02em}
-    .lede{font-size:18px;color:var(--muted);margin:0}
-    section{padding:48px 0;border-bottom:1px solid var(--line)}
-    section:last-of-type{border-bottom:none}
-    h2{font-size:22px;margin:0 0 16px}
-    p{margin:0 0 16px;color:var(--muted)}
-    p:last-child{margin:0}
-    .cta{display:inline-block;background:var(--accent);color:#fff;font-weight:700;padding:12px 24px;border-radius:12px;text-decoration:none;font-size:15px;margin-top:8px}
-    footer{padding:48px 0 80px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-    footer a{color:var(--muted)}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About — Art3ry</title>
+<meta name="description" content="Art3ry was built in the field, not a boardroom. Learn the origin, the philosophy, and the founder.">
+<link rel="canonical" href="https://art3ry.com/about/">
+<style>
+  :root{--bg:#060810;--bg-card:#090c1b;--bg-raised:#0d1126;--red:#e63946;--red-dim:rgba(230,57,70,.14);--red-glow:rgba(230,57,70,.3);--blue:#3a86ff;--blue-dim:rgba(58,134,255,.12);--blue-glow:rgba(58,134,255,.3);--green:#06d6a0;--green-dim:rgba(6,214,160,.08);--border:rgba(255,255,255,.08);--border-red:rgba(230,57,70,.3);--border-blue:rgba(58,134,255,.28);--text:#dde1f0;--muted:#6a7490;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+  *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;background-image:radial-gradient(ellipse 80% 60% at 10% 0%,rgba(88,28,135,.09) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 90% 100%,rgba(6,214,160,.05) 0%,transparent 55%),radial-gradient(ellipse 70% 40% at 50% 30%,rgba(58,134,255,.04) 0%,transparent 50%);min-height:100vh}
+  a{color:inherit;text-decoration:none}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;background:rgba(6,8,16,.85);backdrop-filter:blur(18px)}
+  .logo{font-size:22px;font-weight:800;letter-spacing:-.5px;color:#fff}.logo span{color:var(--red)}
+  .nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted)}.nav-links a:hover{color:#fff;transition:color .15s}
+  .nav-cta{background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:9px 20px;border-radius:8px;font-family:var(--mono);letter-spacing:.02em}
+  .nav-cta:hover{background:#ff4d5a;transition:background .15s}
+  .vein{width:100%;overflow:visible;display:block;height:60px;opacity:.7}
+  @keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}.vein-pulse{animation:pulse 3s ease-in-out infinite}
+  .section{padding:60px 40px;max-width:1100px;margin:0 auto}
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+  .kicker.blue{color:var(--blue)}
+  h1,h2{font-weight:800;letter-spacing:-.02em;color:#fff}
+  h1{font-size:clamp(32px,5vw,52px);line-height:1.1;margin-bottom:18px}
+  h2{font-size:clamp(22px,4vw,36px);margin-bottom:14px}
+  .lead{font-size:17px;color:var(--muted);max-width:680px;line-height:1.7;margin-bottom:32px}
+  .card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+  .card:hover{border-color:rgba(255,255,255,.15);transform:translateY(-2px)}
+  .card-red{border-color:var(--border-red)}.card-red::after{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(ellipse at top right,rgba(230,57,70,.12),transparent 70%);pointer-events:none}
+  .card-blue{border-color:var(--border-blue)}.card-blue::after{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(ellipse at top right,rgba(58,134,255,.10),transparent 70%);pointer-events:none}
+  .card h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:8px}.card p{font-size:14px;color:var(--muted);line-height:1.65}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .btn-primary{display:inline-block;background:var(--red);color:#fff;font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;letter-spacing:.01em;box-shadow:0 0 24px var(--red-glow)}
+  .btn-primary:hover{background:#ff4d5a;transform:translateY(-1px);transition:all .15s}
+  .btn-secondary{display:inline-block;background:var(--blue-dim);color:var(--blue);font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;border:1px solid var(--border-blue)}
+  .btn-secondary:hover{background:rgba(58,134,255,.2);transition:background .15s}
+  .proof-box{background:linear-gradient(135deg,#100a05,#0a0d1c);border:1px solid rgba(230,57,70,.35);border-radius:16px;padding:28px 32px;position:relative;overflow:hidden}
+  .proof-box::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:radial-gradient(ellipse,rgba(230,57,70,.12),transparent 70%);pointer-events:none}
+  .cta-strip{background:linear-gradient(135deg,#0f0519,#08101f);border:1px solid rgba(58,134,255,.2);border-radius:20px;padding:52px;text-align:center;position:relative;overflow:hidden;margin:0 40px 80px}
+  .cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 100%,rgba(230,57,70,.07),transparent)}
+  .cta-strip h2{position:relative;margin-bottom:12px}.cta-strip p{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto 28px;position:relative}
+  .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+  footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+  .footer-logo{font-size:15px;font-weight:800;color:#fff}.footer-logo span{color:var(--red)}
+  .footer-links{display:flex;gap:20px;font-size:13px;color:var(--muted)}.footer-links a:hover{color:#fff;transition:color .15s}
+  footer p{font-size:12px;color:var(--muted)}
+  @media(max-width:768px){nav{padding:16px 20px}.nav-links{display:none}.section{padding:40px 20px}.grid-2,.grid-3{grid-template-columns:1fr}.cta-strip{padding:36px 24px;margin:0 20px 60px}footer{padding:28px 20px;flex-direction:column;text-align:center}}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <nav><a class="back" href="/">← Art3ry</a></nav>
-    <header>
-      <h1>Built by a small business owner.<br>For small business owners.</h1>
-      <p class="lede">The playing field isn't level. Art3ry is the system that changes that.</p>
-    </header>
-    <section>
-      <h2>Where this came from</h2>
-      <p>Jesse Moraga runs Central Valley Process Servers in Fresno, CA — solo. No staff. He's the one who answers the phone, serves the documents, chases the payments, and handles the paperwork.</p>
-      <p>To compete with bigger firms, he built an AI-powered operating system that handles everything he couldn't afford to hire for: intake, invoicing, client communication, proof-of-service forms, follow-ups, marketing. All automated. All running while he's in the field.</p>
-      <p>It worked. The business runs without the overhead. Art3ry is that system — made available to other operators who are in the same fight.</p>
-    </section>
-    <section>
-      <h2>What Art3ry is</h2>
-      <p>Art3ry isn't software you log into and configure. It's a system Jesse builds and runs for your business — custom to how your operation actually works. You keep doing the work. The system handles everything else.</p>
-      <p>It's built on the same tools that run CVPS every day: AI phone intake (answers calls 24/7), automated invoicing (Square), case management (Notion), client communication (Gmail + AI drafts), and reputation building (SEO + review automation).</p>
-    </section>
-    <section>
-      <h2>The proof</h2>
-      <p>Central Valley Process Servers operates every day on this system. Every call, lead, invoice, and follow-up runs through Art3ry before Art3ry ever runs it for a client. It's not a demo — it's a live operation.</p>
-      <p><a href="https://centralvalleyprocessservers.com" style="color:var(--accent)">centralvalleyprocessservers.com →</a></p>
-    </section>
-    <section>
-      <h2>Ready to see what it would do for yours?</h2>
-      <p>One email. Tell me your business and your biggest bottleneck. I'll tell you exactly what the system would run for you.</p>
-      <a class="cta" href="/get-started/">Get started →</a>
-    </section>
+<nav><a href="/" class="logo">Art<span>3</span>ry</a><div class="nav-links"><a href="/about/">About</a><a href="/blog/">Blog</a><a href="https://centralvalleyprocessservers.com" target="_blank" rel="noopener">The Proof</a></div><a href="/get-started/" class="nav-cta">Get started →</a></nav>
+
+<div class="section" style="padding-top:80px">
+  <div class="kicker">About Art3ry</div>
+  <h1>Built in the field.<br>Not in a boardroom.</h1>
+  <p class="lead">Art3ry came out of running an actual business — not a whiteboard exercise. Every piece of it was built because I needed it, tested because I depended on it, and sharpened because my livelihood depended on it working.</p>
+</div>
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="vg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e63946" stop-opacity=".7"/><stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/><stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/></linearGradient></defs><path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30" stroke="url(#vg)" stroke-width="1.5" fill="none"/><path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/><circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/><path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/><circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/></svg>
+<div class="section">
+  <div class="kicker blue">The origin</div>
+  <h2>It started with one company and a problem every small operator has.</h2>
+  <p class="lead">Central Valley Process Servers — my company — grew faster than I could manage alone. Calls came in at midnight. Invoices sat unsent. Leads slipped through while I was in the field serving documents.</p>
+  <p style="color:var(--muted);margin-bottom:20px;font-size:16px">The answer wasn't to hire. The answer was to build a system that worked while I worked. So I did.</p>
+  <p style="color:var(--muted);font-size:16px">705 jobs later. Traffic up 60%. One operator running what looks like a staffed firm. The system runs the overhead. I run the business.</p>
+</div>
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="vg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e63946" stop-opacity=".7"/><stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/><stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/></linearGradient></defs><path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30" stroke="url(#vg)" stroke-width="1.5" fill="none"/><path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/><circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/><path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/><circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/></svg>
+<div class="section">
+  <div class="kicker">What I believe</div>
+  <h2>The playing field has never been less level — and that's actually good news.</h2>
+  <div class="grid-2" style="margin-top:28px">
+    <div class="card card-red">
+      <h3>Small beats big — if it moves faster.</h3>
+      <p>Enterprise firms are slow. A small operator with the right infrastructure makes decisions and executes in minutes. That speed advantage is real. Art3ry makes it structural.</p>
+    </div>
+    <div class="card card-blue">
+      <h3>The system should work while you work.</h3>
+      <p>You're in the field, at the job, serving customers. While you do that, every lead should be caught, every invoice should go out, every follow-up should fire. That's the standard.</p>
+    </div>
+    <div class="card card-blue">
+      <h3>Proof before pitch.</h3>
+      <p>I don't sell you a concept. I show you a running company. Every claim I make about Art3ry, I've already proven on my own business first. CVPS is the live demo.</p>
+    </div>
+    <div class="card card-red">
+      <h3>Custom means custom.</h3>
+      <p>Your business isn't a template. The system is built around how your customers actually become your customers — your workflow, your tools, your rules.</p>
+    </div>
   </div>
-  <footer><div class="wrap"><a href="/">Art3ry</a> — <a href="/get-started/">Get Started</a> · jesse@art3ry.com · © 2026 Art3ry, LLC</div></footer>
+</div>
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="vg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e63946" stop-opacity=".7"/><stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/><stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/></linearGradient></defs><path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30" stroke="url(#vg)" stroke-width="1.5" fill="none"/><path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/><circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/><path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/><circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/></svg>
+<div class="section">
+  <div class="proof-box">
+    <div style="font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ffcb8f;margin-bottom:12px">The live proof</div>
+    <p style="color:#d8cfc8;font-size:16px;line-height:1.7">Central Valley Process Servers runs on Art3ry in production, every day. It's a one-person process serving firm in Fresno, CA handling 705+ jobs with the pipeline that became Art3ry. <a href="https://centralvalleyprocessservers.com" style="color:var(--red)">See the company →</a></p>
+  </div>
+</div>
+<div class="section">
+  <div class="kicker blue">The founder</div>
+  <h2>Jesse Moraga</h2>
+  <p class="lead">Registered California Process Server (PS-124 Madera County). Sole operator of Central Valley Process Servers. Builder of the AI operating system that runs it. I built Art3ry because I needed it — and now I'm offering it to other operators who need the same edge.</p>
+  <div style="display:flex;gap:14px;flex-wrap:wrap">
+    <a href="https://jessemoraga.com" class="btn-secondary" target="_blank" rel="noopener">jessemoraga.com →</a>
+    <a href="/get-started/" class="btn-primary">Work with me →</a>
+  </div>
+</div>
+<div class="cta-strip">
+  <h2>Ready to run your operation at a different level?</h2>
+  <p>Tell me what you do and what's slipping through the cracks. I'll show you exactly what Art3ry would run for you.</p>
+  <div class="cta-btns"><a href="/get-started/" class="btn-primary">Get started →</a><a href="mailto:jesse@art3ry.com" class="btn-secondary">jesse@art3ry.com</a></div>
+</div>
+
+<footer><div class="footer-logo">Art<span>3</span>ry</div><div class="footer-links"><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/get-started/">Get Started</a><a href="https://centralvalleyprocessservers.com">CVPS</a><a href="https://jessemoraga.com">Jesse Moraga</a></div><p>© 2026 Art3ry, LLC — California</p></footer>
 </body>
 </html>
