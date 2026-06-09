@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://art3ry.com/sitemap.xml

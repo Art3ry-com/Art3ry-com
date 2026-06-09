@@ -1,11 +1,16 @@
 # Deploying art3ry.com — the easy way (no WordPress)
 
-The Art3ry site is just `index.html` in this repo. You do **not** need WordPress
-or any paid plan. Pick one of the two options below.
+The Art3ry site is a static multi-page site in this repo (home, about,
+get-started, blog index + 9 posts, plus `404.html`, `sitemap.xml`, `robots.txt`).
+You do **not** need WordPress or any paid plan. Pick one of the two options below.
 
 > ⚠️ **Blocker until then:** art3ry.com is mid-transfer. You can't set its DNS
 > until the transfer completes and you control the domain at the new registrar.
 > Once it's in your hands, do the steps below (or ping Claude to walk through it).
+>
+> *Status check 2026-06-09: GitHub Pages is not yet enabled on this repo
+> (`art3ry-com.github.io` returns 404) and art3ry.com does not yet serve this
+> site — both steps below are still pending.*
 
 ---
 
@@ -63,7 +68,10 @@ Switch to Option 1 whenever you want art3ry.com to be its own standalone site.
 ---
 
 ## Notes
-- The page content is `index.html` (edit that file to change the site).
+- Site content lives in `index.html` + the per-page `*/index.html` files
+  (each page is a self-contained HTML file — edit those to change the site).
+- After Pages is live, submit `https://art3ry.com/sitemap.xml` in Google
+  Search Console.
 - `CNAME` must contain exactly `art3ry.com` — it tells GitHub Pages the custom
   domain. Don't delete it.
 - DNS changes can take a few minutes to a few hours to take effect.
