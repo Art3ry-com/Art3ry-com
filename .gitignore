@@ -29,3 +29,4 @@ backups/
 .DS_Store
 .idea/
 .vscode/
+scripts/_blog_cards.json
