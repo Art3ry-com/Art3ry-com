@@ -1,8 +1,33 @@
+# art3ry.com — we are an AI company; we WANT to be cited by AI answer engines.
+# Full crawl access for search + AI-answer engines. (Note: Cloudflare's "managed
+# robots.txt" / AI-bot block can override this at the edge — keep that OFF for
+# this site so the rules below actually apply.)
+
 User-agent: *
 Allow: /
 
-# AI answer engines welcome (we are an AI company)
+# AI answer engines — explicitly welcomed (visibility in ChatGPT/Claude/Perplexity/AI Overviews)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
 User-agent: Google-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Applebot
 Allow: /
 
 Sitemap: https://art3ry.com/sitemap.xml
