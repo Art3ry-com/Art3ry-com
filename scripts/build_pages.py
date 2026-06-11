@@ -95,6 +95,14 @@ def _esc(s: str) -> str:
     return html.escape(s or "", quote=True)
 
 
+def _meta(s: str, limit: int = 160) -> str:
+    """Trim a meta description to <=limit chars at a word boundary (no SERP cut-off)."""
+    s = (s or "").strip()
+    if len(s) <= limit:
+        return s
+    return s[:limit].rsplit(" ", 1)[0].rstrip(" .,;:\u2014-")
+
+
 def _h1(s: str) -> str:
     # allow a single <br> in the headline; escape the rest, add a space after <br> so
     # crawlers don't read concatenated words.
@@ -103,7 +111,7 @@ def _h1(s: str) -> str:
 
 
 def _head(title, desc, canon, jsonld) -> str:
-    t, d = _esc(title), _esc(desc)
+    t, d = _esc(title), _esc(_meta(desc))
     return f"""<!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{t}</title><meta name="description" content="{d}">
