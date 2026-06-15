@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About — ART3RY</title>
+<meta name="description" content="ART3RY was built in the field, not a boardroom. Learn the origin, the philosophy, and the founder.">
+<link rel="canonical" href="https://art3ry.com/about/">
+<style>
+:root{--bg:#060810;--bg-card:#090c1b;--bg-raised:#0d1126;--red:#e63946;--red-dim:rgba(230,57,70,.14);--red-glow:rgba(230,57,70,.3);--blue:#3a86ff;--blue-dim:rgba(58,134,255,.12);--blue-glow:rgba(58,134,255,.3);--border:rgba(255,255,255,.08);--border-red:rgba(230,57,70,.3);--border-blue:rgba(58,134,255,.28);--text:#dde1f0;--muted:#6a7490;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;background-image:radial-gradient(ellipse 80% 60% at 10% 0%,rgba(88,28,135,.09) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 90% 100%,rgba(6,214,160,.05) 0%,transparent 55%);min-height:100vh}
+a{color:inherit;text-decoration:none}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;background:rgba(6,8,16,.88);backdrop-filter:blur(20px)}
+.logo img{height:32px;border-radius:4px}
+.nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted)}.nav-links a:hover{color:#fff;transition:color .15s}
+.nav-cta{background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:9px 20px;border-radius:8px;font-family:var(--mono)}.nav-cta:hover{background:#ff4d5a;transition:background .15s}
+.vein{width:100%;overflow:visible;display:block;height:60px;opacity:.7}
+@keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}.vein-pulse{animation:pulse 3s ease-in-out infinite}
+.hero-wrap{position:relative;overflow:hidden;min-height:480px;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;background:url('/assets/art3ry-brand.jpg') center center/cover no-repeat;opacity:.45}
+.hero-bg-overlay{position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 30%,rgba(6,8,16,.6) 65%,rgba(6,8,16,.2) 100%)}
+.hero{padding:80px 40px 80px;max-width:1100px;margin:0 auto;position:relative;z-index:1;width:100%}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.kicker.blue{color:var(--blue)}
+h1{font-size:clamp(34px,5vw,56px);font-weight:900;letter-spacing:-.03em;color:#fff;margin-bottom:18px;line-height:1.05;text-shadow:0 0 40px rgba(0,0,0,.8)}
+h2{font-size:clamp(22px,4vw,36px);font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:14px}
+.lead{font-size:17px;color:var(--muted);max-width:680px;line-height:1.7;margin-bottom:32px}
+.section{padding:60px 40px;max-width:1100px;margin:0 auto}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}.card:hover{border-color:rgba(255,255,255,.15);transform:translateY(-2px)}
+.card-red{border-color:var(--border-red)}.card-red::after{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(ellipse at top right,rgba(230,57,70,.12),transparent 70%);pointer-events:none}
+.card-blue{border-color:var(--border-blue)}.card-blue::after{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(ellipse at top right,rgba(58,134,255,.10),transparent 70%);pointer-events:none}
+.card h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:8px}.card p{font-size:14px;color:var(--muted);line-height:1.65}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.proof-box{background:linear-gradient(135deg,#100a05,#0a0d1c);border:1px solid rgba(230,57,70,.35);border-radius:16px;padding:28px 32px;position:relative;overflow:hidden}
+.proof-box::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:radial-gradient(ellipse,rgba(230,57,70,.12),transparent 70%);pointer-events:none}
+.btn-primary{display:inline-block;background:var(--red);color:#fff;font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;letter-spacing:.01em;box-shadow:0 0 24px var(--red-glow)}.btn-primary:hover{background:#ff4d5a;transform:translateY(-1px);transition:all .15s}
+.btn-secondary{display:inline-block;background:var(--blue-dim);color:var(--blue);font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;border:1px solid var(--border-blue)}.btn-secondary:hover{background:rgba(58,134,255,.2);transition:background .15s}
+.cta-strip{background:linear-gradient(135deg,#0f0519,#08101f);border:1px solid rgba(58,134,255,.2);border-radius:20px;padding:52px;text-align:center;position:relative;overflow:hidden;margin:0 40px 80px}
+.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 100%,rgba(230,57,70,.07),transparent)}
+.cta-strip h2{position:relative;margin-bottom:12px}.cta-strip p{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto 28px;position:relative}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+/* Timeline */
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--red),var(--blue))}
+.tl-item{position:relative;margin-bottom:32px}
+.tl-dot{position:absolute;left:-32px;top:4px;width:20px;height:20px;border-radius:50%;border:2px solid var(--red);background:var(--bg);display:flex;align-items:center;justify-content:center}
+.tl-dot::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--red)}
+.tl-dot.blue{border-color:var(--blue)}.tl-dot.blue::after{background:var(--blue)}
+.tl-year{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.12em;margin-bottom:4px}
+.tl-item h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:4px}
+.tl-item p{font-size:14px;color:var(--muted)}
+/* Metric strip */
+.metric-strip{display:flex;gap:1px;margin:28px 0;border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.metric{flex:1;background:var(--bg-card);padding:20px 16px;text-align:center}
+.metric-num{font-size:24px;font-weight:800;color:var(--red);display:block}
+.metric-lbl{font-size:10px;font-family:var(--mono);color:var(--muted);margin-top:2px}
+.metric:nth-child(even) .metric-num{color:var(--blue)}
+/* Brand image banner */
+.brand-banner{padding:0 40px;max-width:1100px;margin:0 auto 0}
+.brand-banner img{width:100%;border-radius:16px;border:1px solid rgba(230,57,70,.3);box-shadow:0 0 50px rgba(230,57,70,.15),0 0 100px rgba(58,134,255,.08)}
+footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-links{display:flex;gap:20px;font-size:13px;color:var(--muted)}.footer-links a:hover{color:#fff;transition:color .15s}
+footer p{font-size:12px;color:var(--muted)}
+@media(max-width:768px){nav{padding:16px 20px}.nav-links{display:none}.hero-wrap{min-height:auto}.hero-bg-overlay{background:rgba(6,8,16,.82)}.hero{padding:60px 20px 50px}.brand-banner,.section{padding-left:20px;padding-right:20px}.grid-2{grid-template-columns:1fr}.metric-strip{flex-direction:column;border-radius:12px}.cta-strip{padding:36px 24px;margin:0 20px 60px}footer{padding:28px 20px;flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo"><img src="/assets/art3ry-logo.png" alt="ART3RY" style="height:32px;border-radius:4px"></a>
+  <div class="nav-links">
+    <a href="/about/" style="color:#fff">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://jessemoraga.com" target="_blank" rel="noopener">The Proof</a>
+  </div>
+  <a href="/get-started/" class="nav-cta">Get started →</a>
+</nav>
+
+<div class="hero-wrap">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-overlay"></div>
+  <div class="hero">
+    <div class="kicker">About ART3RY</div>
+    <h1>Built in the field.<br>Not in a boardroom.</h1>
+    <p class="lead" style="color:#9aa5bf">ART3RY came out of running an actual business — not a whiteboard exercise. Every piece of it was built because I needed it, tested because I depended on it, and sharpened because my livelihood depended on it working.</p>
+  </div>
+</div>
+
+<!-- Brand image full-width -->
+<div class="brand-banner" style="padding-top:40px">
+  <img src="/assets/art3ry-brand.jpg" alt="ART3RY — the operating system that powers your business">
+</div>
+
+<!-- METRIC STRIP -->
+<div style="padding:40px 40px 0;max-width:1100px;margin:0 auto">
+  <div class="metric-strip">
+    <div class="metric"><span class="metric-num">700+</span><div class="metric-lbl">jobs run through it</div></div>
+    <div class="metric"><span class="metric-num">+60%</span><div class="metric-lbl">traffic · 28 days</div></div>
+    <div class="metric"><span class="metric-num">24/7</span><div class="metric-lbl">calls answered</div></div>
+    <div class="metric"><span class="metric-num">1</span><div class="metric-lbl">operator · no staff</div></div>
+    <div class="metric"><span class="metric-num">0</span><div class="metric-lbl">missed leads</div></div>
+  </div>
+</div>
+
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="vga" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e63946" stop-opacity=".7"/><stop offset="50%" stop-color="#7b2ff7" stop-opacity=".5"/><stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/></linearGradient></defs><path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30" stroke="url(#vga)" stroke-width="1.5" fill="none"/><circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/><circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/></svg>
+
+<!-- ORIGIN TIMELINE -->
+<div class="section">
+  <div class="kicker blue">The origin</div>
+  <h2>How an overloaded operator<br>built his own AI team.</h2>
+  <div class="timeline" style="margin-top:36px">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">THE PROBLEM</div>
+      <h3>Calls at midnight. Invoices sitting. Leads slipping.</h3>
+      <p>a real California field-services company grew faster than one person could manage. The answer wasn't to hire — the overhead was the problem, not the work itself.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">THE BUILD</div>
+      <h3>Every call answered. Every lead caught. Every invoice sent.</h3>
+      <p>I built an AI operating system that handled the overhead while I handled the work. Sarah (AI receptionist, 24/7). Automated invoicing. Field-report pipeline. Lead correlation. SEO engine.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot blue"></div>
+      <div class="tl-year">THE RESULT</div>
+      <h3>700+ jobs. +60% traffic. 0 staff.</h3>
+      <p>The system runs everything: calls, leads, money, updates, SEO. I run the work. That performance gap between the old way and the new way — that's ART3RY.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot blue"></div>
+      <div class="tl-year">NOW</div>
+      <h3>Offering it to other operators.</h3>
+      <p>If it can carry a one-person legal services firm across 700+ jobs, it can carry your business. Every client gets a custom build. Same rigor. Same results.</p>
+    </div>
+  </div>
+</div>
+
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="vgb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#3a86ff" stop-opacity=".6"/><stop offset="100%" stop-color="#e63946" stop-opacity=".6"/></linearGradient></defs><path d="M0,35 C300,20 600,50 900,30 C1200,10 1380,40 1440,35" stroke="url(#vgb)" stroke-width="1.5" fill="none"/><circle cx="900" cy="30" r="2.5" fill="#7b2ff7" opacity=".6"/></svg>
+
+<!-- BELIEFS -->
+<div class="section">
+  <div class="kicker">What I believe</div>
+  <h2>The playing field has never been less level — and that's actually good news.</h2>
+  <div class="grid-2" style="margin-top:28px">
+    <div class="card card-red">
+      <h3>Small beats big — if it moves faster.</h3>
+      <p>Enterprise firms are slow. A small operator with the right infrastructure makes decisions and executes in minutes. That speed advantage is real. ART3RY makes it structural.</p>
+    </div>
+    <div class="card card-blue">
+      <h3>The system should work while you work.</h3>
+      <p>You're in the field, at the job, serving customers. While you do that, every lead should be caught, every invoice should go out, every follow-up should fire. That's the standard.</p>
+    </div>
+    <div class="card card-blue">
+      <h3>Proof before pitch.</h3>
+      <p>I don't sell you a concept. I show you a running company. Every claim I make about ART3RY, I've already proven on my own business first. the flagship operation is the live demo.</p>
+    </div>
+    <div class="card card-red">
+      <h3>Custom means custom.</h3>
+      <p>Your business isn't a template. The system is built around how your customers actually become your customers — your workflow, your tools, your rules.</p>
+    </div>
+  </div>
+</div>
+
+<svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="vgc" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e63946" stop-opacity=".5"/><stop offset="100%" stop-color="#3a86ff" stop-opacity=".5"/></linearGradient></defs><path d="M0,25 C400,45 800,15 1200,30 C1350,38 1420,25 1440,25" stroke="url(#vgc)" stroke-width="1.5" fill="none"/><circle cx="600" cy="35" r="2.5" fill="#e63946" opacity=".5"/></svg>
+
+<!-- PROOF -->
+<div class="section">
+  <div class="proof-box">
+    <div style="font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ffcb8f;margin-bottom:12px">The live proof</div>
+    <p style="color:#d8cfc8;font-size:16px;line-height:1.7">a real California field-services company runs on ART3RY in production, every day. It's a real one-person field-services company handling hundreds of jobs with the pipeline that became ART3RY. <a href="https://jessemoraga.com" style="color:var(--red)">See it running →</a></p>
+  </div>
+</div>
+
+<!-- FOUNDER -->
+<div class="section">
+  <div class="kicker blue">The founder</div>
+  <h2>Jesse Moraga</h2>
+  <p class="lead">Owner-operator of a real California field-services company and builder of the AI operating system that runs it. I built ART3RY because I needed it — and now I'm offering it to other operators who need the same edge.</p>
+  <div style="display:flex;gap:14px;flex-wrap:wrap">
+    <a href="https://jessemoraga.com" class="btn-secondary" target="_blank" rel="noopener">jessemoraga.com →</a>
+    <a href="/get-started/" class="btn-primary">Work with me →</a>
+  </div>
+</div>
+
+<div class="cta-strip">
+  <h2>Ready to run your operation at a different level?</h2>
+  <p>Tell me what you do and what's slipping through the cracks. I'll show you exactly what ART3RY would run for you.</p>
+  <div class="cta-btns"><a href="/get-started/" class="btn-primary">Get started →</a><a href="mailto:jesse@art3ry.com" class="btn-secondary">jesse@art3ry.com</a></div>
+</div>
+
+<footer>
+  <div style="display:flex;flex-direction:column;gap:6px">
+    <div><img src="/assets/art3ry-logo.png" alt="ART3RY" style="height:24px;border-radius:3px"></div>
+    <p style="font-size:11px;color:var(--muted)">© 2026 ART3RY, LLC — California</p>
+  </div>
+  <div class="footer-links">
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/get-started/">Get Started</a>
+    <a href="https://jessemoraga.com" target="_blank" rel="noopener">The Proof</a>
+    <a href="https://jessemoraga.com" target="_blank" rel="noopener">Jesse Moraga</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+    <a href="https://github.com/Art3ry-com" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);text-decoration:none">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      GitHub
+    </a>
+    <a href="mailto:jesse@art3ry.com" style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--muted);text-decoration:none">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      jesse@art3ry.com
+    </a>
+  </div>
+</footer>
+</body>
+</html>

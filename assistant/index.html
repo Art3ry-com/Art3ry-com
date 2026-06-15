@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>An AI Assistant You Call — It Runs Your Email, Calendar & Business | ART3RY</title>
+<meta name="description" content="Overwhelmed? Call your AI assistant. It already sees your email and calendar — you just tell it what to do and it's done. Business, classroom, or household. By ART3RY.">
+<link rel="canonical" href="https://art3ry.com/assistant/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://art3ry.com/assistant/">
+<meta property="og:title" content="An AI Assistant You Call — It Runs Your Email, Calendar & Business">
+<meta property="og:description" content="Overwhelmed? Call your assistant. It already sees your email and calendar — tell it what to do and it's done. Business, classroom, household.">
+<meta property="og:image" content="https://art3ry.com/assets/art3ry-brand.jpg">
+<meta property="og:site_name" content="ART3RY">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="An AI Assistant You Call — It Runs Your Email, Calendar & Business">
+<meta name="twitter:description" content="Call your assistant. It sees your email + calendar. Tell it what to do, it's done.">
+<meta name="twitter:image" content="https://art3ry.com/assets/art3ry-brand.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[
+{"@type":"Service","@id":"https://art3ry.com/assistant/#service","serviceType":"AI personal & business assistant","name":"ART3RY AI Assistant",
+"description":"An AI assistant you call or text in plain language. Connected to your email and calendar, it schedules, replies, follows up, and handles the back-office work for businesses, professionals, educators, and busy households — with a human approval gate on anything that sends money or messages on your behalf.",
+"provider":{"@type":"Organization","name":"Art3ry","url":"https://art3ry.com/"},
+"areaServed":{"@type":"Country","name":"United States"},
+"audience":{"@type":"Audience","audienceType":"small business owners, professionals, educators, and busy households"}},
+{"@type":"FAQPage","@id":"https://art3ry.com/assistant/#faq","mainEntity":[
+{"@type":"Question","name":"What can the assistant actually do?","acceptedAnswer":{"@type":"Answer","text":"Connect your email and calendar and it schedules, drafts and sends replies, sets reminders, follows up, and handles repetitive back-office tasks. You talk to it by phone or text in plain language — no app or dashboard to learn."}},
+{"@type":"Question","name":"Is it safe to let it touch my email and money?","acceptedAnswer":{"@type":"Answer","text":"Yes — anything risky is staged for your approval. Sending a message on your behalf, charging a card, or posting publicly waits for your one-word yes on your own phone before it happens."}},
+{"@type":"Question","name":"Do I need to be technical?","acceptedAnswer":{"@type":"Answer","text":"No. You tell it what you need the way you'd tell a human assistant. ART3RY sets it up and runs it for you."}},
+{"@type":"Question","name":"Is this real or just a demo?","acceptedAnswer":{"@type":"Answer","text":"It's real. ART3RY runs a real California field-services company — a live one-person company operating at an enterprise level on this exact system."}}]}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#060810;--bg-card:#090c1b;--bg-raised:#0d1126;--red:#e63946;--red-dim:rgba(230,57,70,.14);--red-glow:rgba(230,57,70,.3);--blue:#3a86ff;--blue-dim:rgba(58,134,255,.12);--border:rgba(255,255,255,.08);--border-red:rgba(230,57,70,.3);--text:#dde1f0;--muted:#6a7490;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(6,8,16,.85);backdrop-filter:blur(12px);z-index:50}
+.logo-img{height:46px}
+.nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+.nav-links a{text-decoration:none}.nav-links a:hover{color:#fff;transition:color .15s}
+.nav-cta{font-size:14px;font-weight:600;color:#fff;background:var(--red);padding:10px 18px;border-radius:8px;text-decoration:none;box-shadow:0 0 24px var(--red-glow)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 40px}
+.hero{text-align:center;padding:84px 40px 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-160px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,var(--red-dim),transparent 62%);pointer-events:none}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:20px}
+h1{font-size:clamp(34px,5.6vw,62px);font-weight:900;line-height:1.04;letter-spacing:-.035em;color:#fff;position:relative}
+h1 .b{color:var(--blue)}
+.sub{font-size:19px;color:var(--muted);max-width:620px;margin:22px auto 0;line-height:1.6}
+.sub strong{color:var(--text)}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.btn-primary{display:inline-block;background:var(--red);color:#fff;font-weight:700;padding:15px 32px;border-radius:10px;text-decoration:none;box-shadow:0 0 40px var(--red-glow)}
+.btn-secondary{display:inline-block;border:1px solid var(--border);color:var(--text);font-weight:600;padding:15px 28px;border-radius:10px;text-decoration:none}
+.section{padding:60px 40px}
+.section h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;letter-spacing:-.02em;color:#fff;text-align:center;margin-bottom:12px}
+.section .lead{color:var(--muted);text-align:center;max-width:640px;margin:0 auto 44px;font-size:16px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px 24px}
+.step .n{font-family:var(--mono);font-size:13px;color:var(--red);font-weight:700;margin-bottom:12px}
+.step h3{font-size:18px;color:#fff;margin-bottom:8px}
+.step p{font-size:14.5px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:30px 26px;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--red),var(--blue))}
+.card .tag{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+.card h3{font-size:21px;color:#fff;margin-bottom:12px;letter-spacing:-.01em}
+.card .say{font-style:italic;color:var(--text);background:var(--bg-raised);border-left:3px solid var(--red);padding:12px 14px;border-radius:8px;font-size:14.5px;margin-bottom:14px}
+.card ul{list-style:none;font-size:14px;color:var(--muted)}
+.card li{padding:5px 0 5px 22px;position:relative}
+.card li::before{content:'→';position:absolute;left:0;color:var(--red)}
+.safe{background:linear-gradient(180deg,var(--bg-card),var(--bg));border:1px solid var(--border-red);border-radius:20px;padding:44px 40px;text-align:center;max-width:820px;margin:0 auto}
+.safe h2{margin-bottom:14px}
+.safe p{color:var(--muted);max-width:600px;margin:0 auto;font-size:16px}
+.proof{text-align:center;color:var(--muted);font-size:15px}
+.proof a{color:var(--blue);text-decoration:none}
+.faq{max-width:760px;margin:0 auto}
+.faq .q{font-weight:700;color:#fff;margin:22px 0 6px;font-size:16px}
+.faq .a{color:var(--muted);font-size:15px}
+.cta-strip{background:linear-gradient(120deg,var(--red),#b5202d);border-radius:20px;padding:50px 40px;text-align:center;margin:20px 0 70px}
+.cta-strip h2{color:#fff;font-size:clamp(26px,4vw,40px);font-weight:900;margin-bottom:12px}
+.cta-strip p{color:rgba(255,255,255,.9);margin-bottom:26px}
+.cta-strip a{display:inline-block;background:#fff;color:var(--red);font-weight:800;padding:16px 38px;border-radius:10px;text-decoration:none}
+footer{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:34px 40px;border-top:1px solid var(--border)}
+.footer-links{display:flex;gap:22px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.footer-links a{text-decoration:none}.footer-links a:hover{color:#fff}
+@media(max-width:768px){.nav-links{display:none}.steps,.cards{grid-template-columns:1fr}.wrap,.section,.hero{padding-left:20px;padding-right:20px}footer{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo"><img src="/assets/art3ry-logo.png" alt="ART3RY" class="logo-img" style="border-radius:4px"></a>
+  <div class="nav-links">
+    <a href="/assistant/">Assistant</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://jessemoraga.com" target="_blank" rel="noopener">The Proof</a>
+  </div>
+  <a href="/get-started/" class="nav-cta">Get started →</a>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Your AI Assistant</div>
+    <h1>Overwhelmed? Call your assistant.<br><span class="b">It already knows.</span></h1>
+    <p class="sub">It's connected to your <strong>email and calendar</strong>. You call it or text it like a person, tell it what you need, and it's handled — the scheduling, the replies, the follow-ups, the busywork. <strong>Business, classroom, or household.</strong> The work behind the work, off your plate.</p>
+    <div class="btns">
+      <a href="/get-started/" class="btn-primary">Get your assistant →</a>
+      <a href="https://jessemoraga.com" target="_blank" rel="noopener" class="btn-secondary">See it running a real business</a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <h2>It's this simple</h2>
+  <p class="lead">No new app to babysit. No dashboard to learn. You just talk.</p>
+  <div class="steps wrap">
+    <div class="step"><div class="n">01</div><h3>Connect it once</h3><p>Plug in your email and calendar. ART3RY sets it up for you — you don't configure anything.</p></div>
+    <div class="step"><div class="n">02</div><h3>Call or text it</h3><p>"Move my 2pm to Thursday." "Reply to Dana that I'm in." "Remind me to invoice the Vargas job." Plain language, by phone or text.</p></div>
+    <div class="step"><div class="n">03</div><h3>It does the work</h3><p>It handles it and reports back. Anything that sends money or messages on your behalf waits for your one-word yes first.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>A few ways people use it</h2>
+  <p class="lead">Same assistant. Whatever your day actually looks like.</p>
+  <div class="cards wrap">
+    <div class="card">
+      <div class="tag">The business owner</div>
+      <h3>You can't be the front desk and the field crew at once.</h3>
+      <div class="say">"Text the client on the Ramirez job that I'm serving tomorrow, and add the $75 rush charge."</div>
+      <ul><li>Answers, schedules, and follows up while you work</li><li>Drafts the invoice and the client update</li><li>Never lets a lead go cold</li></ul>
+    </div>
+    <div class="card">
+      <div class="tag">The teacher / professional</div>
+      <h3>The teaching is the job. The inbox is the second job.</h3>
+      <div class="say">"Email the parents about Friday's field trip and put it on my calendar."</div>
+      <ul><li>Clears the email pile and the scheduling</li><li>Sends the reminders and the recaps</li><li>Hands you back your evenings</li></ul>
+    </div>
+    <div class="card">
+      <div class="tag">The busy parent</div>
+      <h3>Your family runs on a calendar nobody has time to keep.</h3>
+      <div class="say">"Set up the kids' soccer schedule, email the carpool group, and remind me about the dentist."</div>
+      <ul><li>Keeps the household calendar straight</li><li>Sends the emails you keep forgetting</li><li>One less thing to hold in your head</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="safe">
+    <h2>Powerful, because it's safe</h2>
+    <p>The assistant can do a lot — which is exactly why the risky things can't happen on their own. Anything that sends a message on your behalf, charges a card, or goes public is <strong style="color:var(--text)">staged and waits for your yes</strong> on your own phone. You stay in control; it just makes "decide" the only thing left to do.</p>
+  </div>
+</section>
+
+<section class="section">
+  <p class="proof">It's not a demo. ART3RY runs <a href="https://jessemoraga.com" target="_blank" rel="noopener">a real California field-services company</a> — a real one-person company running like a much bigger one on this exact system.</p>
+</section>
+
+<section class="section">
+  <h2>Questions</h2>
+  <div class="faq">
+    <div class="q">What can the assistant actually do?</div>
+    <div class="a">Connect your email and calendar and it schedules, drafts and sends replies, sets reminders, follows up, and handles repetitive busywork — by phone or text, in plain language. No app or dashboard to learn.</div>
+    <div class="q">Is it safe to let it touch my email and money?</div>
+    <div class="a">Yes. Anything that sends on your behalf, charges a card, or posts publicly is staged for your one-word approval on your own phone before it happens.</div>
+    <div class="q">Do I need to be technical?</div>
+    <div class="a">No. You tell it what you need the way you'd tell a human assistant. ART3RY sets it up and runs it for you.</div>
+    <div class="q">How do I start?</div>
+    <div class="a">Tell us about your day and we'll wire your assistant to it. Email <a href="mailto:jesse@art3ry.com" style="color:var(--blue);text-decoration:none">jesse@art3ry.com</a> or hit Get Started.</div>
+  </div>
+</section>
+
+<section class="section"><h2>Built for your world</h2><p class="lead">Same assistant — tuned to how your day actually runs.</p><div class="cards wrap" style="grid-template-columns:repeat(3,1fr)"><a href="/assistant-for-business/" class="card" style="text-decoration:none;display:block"><div class="tag">Business</div><h3 style="font-size:17px">You didn't start a business to live in your inbox.</h3></a><a href="/assistant-for-educators/" class="card" style="text-decoration:none;display:block"><div class="tag">Educators</div><h3 style="font-size:17px">Your real work ends at 3. The email starts at 6.</h3></a><a href="/assistant-for-families/" class="card" style="text-decoration:none;display:block"><div class="tag">Families</div><h3 style="font-size:17px">You're the only one who remembers everything.</h3></a><a href="/assistant-for-contractors/" class="card" style="text-decoration:none;display:block"><div class="tag">Contractors</div><h3 style="font-size:17px">The call you missed on the roof was a $4,000 job.</h3></a><a href="/assistant-for-salons/" class="card" style="text-decoration:none;display:block"><div class="tag">Salons</div><h3 style="font-size:17px">The chair sat empty because nobody confirmed.</h3></a><a href="/assistant-for-law-firms/" class="card" style="text-decoration:none;display:block"><div class="tag">Law Firms</div><h3 style="font-size:17px">The intake call went to voicemail. The client went elsewhere.</h3></a><a href="/assistant-for-real-estate/" class="card" style="text-decoration:none;display:block"><div class="tag">Real Estate</div><h3 style="font-size:17px">You're in three places at once. Your assistant only needs to be in one.</h3></a><a href="/assistant-for-food-trucks/" class="card" style="text-decoration:none;display:block"><div class="tag">Food Trucks</div><h3 style="font-size:17px">You're slammed on the line and the catering emails keep coming.</h3></a><a href="/assistant-for-ecommerce/" class="card" style="text-decoration:none;display:block"><div class="tag">Ecommerce</div><h3 style="font-size:17px">Your inbox is full of "where's my order?" and you'd rather be growing the store.</h3></a></div></section>
+<section class="section">
+  <div class="cta-strip wrap">
+    <h2>Hand off the work behind the work.</h2>
+    <p>Tell us what's eating your day. We'll give you an assistant that handles it.</p>
+    <a href="/get-started/">Get your assistant →</a>
+  </div>
+</section>
+
+<footer>
+  <div style="display:flex;flex-direction:column;gap:6px">
+    <div><img src="/assets/art3ry-logo.png" alt="ART3RY" style="height:24px;border-radius:3px"></div>
+    <p style="font-size:11px;color:var(--muted)">© 2026 ART3RY, LLC — California</p>
+  </div>
+  <div class="footer-links">
+    <a href="/assistant/">Assistant</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/get-started/">Get Started</a>
+    <a href="https://jessemoraga.com" target="_blank" rel="noopener">The Proof</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+    <a href="mailto:jesse@art3ry.com" style="font-size:12px;color:var(--muted);text-decoration:none">jesse@art3ry.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
