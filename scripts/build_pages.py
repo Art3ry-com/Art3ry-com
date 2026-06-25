@@ -215,9 +215,18 @@ def main(argv=None) -> int:
         written.append(str(out.relative_to(ROOT))); sitemap_urls.append(f"{SITE}/blog/{slug}/")
         blog_cards.append((spec["title"], f"/blog/{slug}/", spec["meta_description"]))
 
-    # rewrite sitemap.xml with the full known set (home + core + everything generated)
+    # rewrite sitemap.xml with the full known set: home + core + everything
+    # generated THIS run + every page already on disk. Globbing the repo's
+    # index.html dirs means pages built in earlier/separate runs are never
+    # dropped from the sitemap (the prior bug — 9 live blog pages went missing).
     core = ["", "assistant/", "about/", "blog/", "get-started/"]
-    all_urls = [f"{SITE}/{u}" for u in core] + sitemap_urls
+    disk_urls = []
+    for idx in sorted(ROOT.glob("**/index.html")):
+        rel = idx.parent.relative_to(ROOT).as_posix()
+        if rel == ".":
+            continue
+        disk_urls.append(f"{SITE}/{rel}/")
+    all_urls = [f"{SITE}/{u}" for u in core] + sitemap_urls + disk_urls
     seen, uniq = set(), []
     for u in all_urls:
         if u not in seen:
