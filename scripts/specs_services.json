@@ -1,0 +1,120 @@
+{
+  "service": [
+    {
+      "slug": "services/seo",
+      "service_type": "Local SEO and content marketing",
+      "kicker": "SEO & Content",
+      "title_tag": "SEO & Content for Small Business — Rank Where Customers Search | ART3RY",
+      "meta_description": "Done-for-you local SEO and content that ranks your business for what customers actually search. We build it, write it, and track it. Start with a free diagnostic.",
+      "h1": "Get found by the people<br>already searching for you.",
+      "hero_sub": "Your future customers are typing your service into Google right now. SEO is owning that moment — the difference between renting attention with ads and owning a page that earns while you sleep. We build it, write it, and rank it.",
+      "what_h2": "What we do",
+      "what_lead": "Not a report you have to act on yourself. We do the work, and you watch the rankings move.",
+      "steps": [
+        {"n": "01", "h3": "Find the money keywords", "p": "We map exactly what your customers search — and where you're losing them to competitors."},
+        {"n": "02", "h3": "Build the pages that rank", "p": "Service pages, local pages, and authority guides written to win the search, not just fill space."},
+        {"n": "03", "h3": "Track what actually converts", "p": "We connect it to your domain and show you where real customers come from — not vanity numbers."}
+      ],
+      "inc_h2": "What's included",
+      "scenarios": [
+        {"tag": "Local SEO", "h3": "Show up in the map pack", "say": "When someone nearby searches your service, you're the one they call.", "bullets": ["Google Business Profile dialed in", "Local landing pages per city you serve", "Reviews working for your ranking"]},
+        {"tag": "Content engine", "h3": "Authority that compounds", "say": "Every guide we publish keeps earning traffic for years.", "bullets": ["Buyer-intent topics, not filler", "Standard-setting guides competitors cite", "Internal linking that lifts the whole site"]},
+        {"tag": "Competitor edge", "h3": "Know exactly who's beating you", "say": "We pull your top 5 competitors apart so you can take their traffic.", "bullets": ["Full audit of you vs 5 rivals", "The gaps you can win this quarter", "A plan, not just a PDF"]}
+      ],
+      "faq": [
+        {"q": "How long until I rank?", "a": "Local and long-tail wins can show in weeks; competitive head terms take a few months. We start with the fastest wins so you see movement early."},
+        {"q": "Do you write the content or do I?", "a": "We do. You stay in the field; we handle the keywords, the writing, and the publishing."},
+        {"q": "Is this just a report?", "a": "No. A report makes the work your problem. We do the work — pages built, published, and tracked."}
+      ],
+      "cta_h2": "Want to see where you rank right now?",
+      "cta_p": "Tell us your business and your top competitors. We'll show you the gaps — free."
+    },
+    {
+      "slug": "services/lead-follow-up",
+      "service_type": "Lead capture and follow-up automation",
+      "kicker": "Lead Capture & Follow-Up",
+      "title_tag": "Instant Lead Follow-Up for Small Business — Never Let a Lead Go Cold | ART3RY",
+      "meta_description": "Every lead captured and worked in minutes, chased until it closes — done for you. Speed-to-lead automation that stops leads going cold. Start with a free diagnostic.",
+      "h1": "Every lead, worked in minutes —<br>not whenever you get to it.",
+      "hero_sub": "The business that answers first usually wins. Most owners can't — they're on a job. We catch every lead the second it lands, reply in minutes, and keep chasing until it books or says no.",
+      "what_h2": "How it works",
+      "what_lead": "You keep doing the work. Every lead gets handled like you were sitting by the phone.",
+      "steps": [
+        {"n": "01", "h3": "Catch it instantly", "p": "Calls, texts, forms, and missed calls — every lead captured the moment it lands, day or night."},
+        {"n": "02", "h3": "Reply in minutes", "p": "An instant, personal first response while you're still on the job — before your competitor even sees it."},
+        {"n": "03", "h3": "Chase till it closes", "p": "Automated follow-up over days and weeks so no lead ever quietly dies in an inbox."}
+      ],
+      "inc_h2": "What's included",
+      "scenarios": [
+        {"tag": "Speed to lead", "h3": "Answer first, win first", "say": "A 5-minute response beats a 5-hour one many times over.", "bullets": ["Instant reply to every new lead", "Missed-call text-back", "After-hours coverage, 24/7"]},
+        {"tag": "Nothing slips", "h3": "Every lead, tracked", "say": "You see exactly where every lead stands, in one place.", "bullets": ["One clean pipeline view", "No leads lost in a phone or inbox", "Reminders so you never forget a follow-up"]},
+        {"tag": "Books itself", "h3": "From lead to booked", "say": "The follow-up that turns a maybe into a job — on autopilot.", "bullets": ["Multi-step follow-up sequences", "Review request after the job", "Re-engagement of old leads"]}
+      ],
+      "faq": [
+        {"q": "Will it sound like a robot?", "a": "No. The first response is written to sound like you, and a real person takes it from there. The automation just makes sure nothing goes cold."},
+        {"q": "What counts as a lead?", "a": "Calls, texts, web forms, and missed calls — anything where someone reaches out. All of it gets caught and worked."},
+        {"q": "Do I need a CRM already?", "a": "No. We set up the whole pipeline. If you already have one, we wire into it."}
+      ],
+      "cta_h2": "How many leads are going cold right now?",
+      "cta_p": "Most owners are shocked. Tell us how leads reach you and we'll show you the leaks — free."
+    },
+    {
+      "slug": "services/websites",
+      "service_type": "Website and funnel design",
+      "kicker": "Websites & Funnels",
+      "title_tag": "Small Business Website Design That Books Jobs — Not Just a Brochure | ART3RY",
+      "meta_description": "A fast, modern website built to turn visitors into booked work — done for you, wired to your follow-up and SEO. Start with a free diagnostic.",
+      "h1": "A website that books work —<br>not one that just sits there.",
+      "hero_sub": "Most small-business sites are expensive brochures. Yours should be a salesperson: load fast, say the right thing, and turn a visitor into a booked job. We build it, wire it to your follow-up, and keep it converting.",
+      "what_h2": "What we build",
+      "what_lead": "Not a template you fill in. A site built around how your customers actually decide to buy.",
+      "steps": [
+        {"n": "01", "h3": "Built to convert", "p": "Clear message, fast load, and an obvious next step — designed to turn visits into leads."},
+        {"n": "02", "h3": "Wired to the engine", "p": "Every form and call flows straight into your instant follow-up — no lead left on a page."},
+        {"n": "03", "h3": "Built to be found", "p": "Set up for SEO from day one, so the site earns traffic instead of just hosting it."}
+      ],
+      "inc_h2": "What's included",
+      "scenarios": [
+        {"tag": "Conversion-first", "h3": "Designed to book jobs", "say": "Every page has one job: get the visitor to reach out.", "bullets": ["Clear offer and call-to-action", "Mobile-fast, no clutter", "Trust built in — reviews, proof, real photos"]},
+        {"tag": "Fully wired", "h3": "Connected to everything", "say": "The site isn't an island — it feeds your whole pipeline.", "bullets": ["Forms into instant follow-up", "Booking and payments where you need them", "Analytics that show what works"]},
+        {"tag": "Yours, handled", "h3": "No DIY, no babysitting", "say": "We build it and keep it running. You don't touch code.", "bullets": ["Full build, done for you", "Updates and changes handled", "Fast, secure hosting sorted"]}
+      ],
+      "faq": [
+        {"q": "Do I have to maintain it?", "a": "No. We build it and keep it running — updates, changes, hosting. You stay in the field."},
+        {"q": "Can you fix my existing site instead?", "a": "Often, yes. We'll tell you straight whether a rebuild or a tune-up gets you more booked work."},
+        {"q": "How fast can it launch?", "a": "A focused, conversion-ready site usually launches in a couple of weeks — faster than most agencies quote."}
+      ],
+      "cta_h2": "Is your site booking jobs — or just existing?",
+      "cta_p": "Send us your site or your idea. We'll show you exactly what's costing you bookings — free."
+    },
+    {
+      "slug": "services/automation",
+      "service_type": "Business process automation",
+      "kicker": "Automation & Invoicing",
+      "title_tag": "Small Business Automation — Kill the Busywork Behind the Work | ART3RY",
+      "meta_description": "Automate invoicing, reminders, reviews, and follow-ups so the busywork runs itself — done for you. Start with a free diagnostic.",
+      "h1": "Kill the busywork<br>behind the work.",
+      "hero_sub": "The actual job is only half of it. The other half — invoices, reminders, review requests, status updates, chasing payment — eats your nights. We automate it so the work behind the work just runs.",
+      "what_h2": "What we automate",
+      "what_lead": "You do the skilled work. The repetitive everything-else runs on its own.",
+      "steps": [
+        {"n": "01", "h3": "Find the time sinks", "p": "We map the repetitive tasks eating your week — the ones that don't need you, just need doing."},
+        {"n": "02", "h3": "Wire them to run themselves", "p": "Invoicing, reminders, reviews, follow-ups — set up to fire automatically at the right moment."},
+        {"n": "03", "h3": "You just get the result", "p": "Money collected, reviews coming in, customers updated — without you lifting a finger."}
+      ],
+      "inc_h2": "What's included",
+      "scenarios": [
+        {"tag": "Get paid", "h3": "Invoicing on autopilot", "say": "The invoice goes out and the reminder chases — without you remembering.", "bullets": ["Auto-sent invoices", "Polite payment reminders", "Less time chasing money"]},
+        {"tag": "Reputation", "h3": "Reviews without asking", "say": "Every happy customer gets the ask, automatically, at the right time.", "bullets": ["Auto review requests after the job", "More 5-star reviews, less effort", "Your ranking and trust both climb"]},
+        {"tag": "No dropped balls", "h3": "Reminders and updates", "say": "Customers and you both stay in the loop without a single manual text.", "bullets": ["Appointment and follow-up reminders", "Status updates customers love", "Nothing forgotten, ever"]}
+      ],
+      "faq": [
+        {"q": "Is this hard to set up on my end?", "a": "No setup on your end. We build the automations around your actual workflow and hand you the result."},
+        {"q": "What can actually be automated?", "a": "Most repeatable stuff: invoicing, reminders, review requests, follow-ups, status updates, scheduling. If it's repetitive and doesn't need your judgment, it can probably run itself."},
+        {"q": "Will it feel impersonal to customers?", "a": "The opposite. Customers get faster, more consistent communication — it just isn't you doing it manually at 11pm."}
+      ],
+      "cta_h2": "What's eating your nights?",
+      "cta_p": "Tell us the busywork that never ends. We'll show you what can run itself — free."
+    }
+  ]
+}

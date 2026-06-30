@@ -192,6 +192,46 @@ def render_blog(spec: dict) -> tuple[str, str]:
     return slug, _guard(body, f"blog:{slug}")
 
 
+def render_service(spec: dict) -> tuple[str, str]:
+    """A growth-as-a-service page (SEO, follow-up, websites, automation...). Sibling
+    of render_landing, but service-framed (not assistant-framed) and cross-linked
+    up to the /services/ hub."""
+    slug = spec["slug"].strip("/")
+    canon = f"{SITE}/{slug}/"
+    jsonld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "Service", "@id": canon + "#service",
+         "serviceType": spec.get("service_type", "Business growth service"),
+         "name": spec["title_tag"], "description": spec["meta_description"],
+         "provider": {"@type": "Organization", "name": "Art3ry", "url": SITE + "/"},
+         "areaServed": {"@type": "Country", "name": "United States"}},
+        {"@type": "FAQPage", "@id": canon + "#faq",
+         "mainEntity": [{"@type": "Question", "name": f["q"],
+                         "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in spec["faq"]]},
+    ]}
+    steps = "".join(
+        f'<div class="step"><div class="n">{_esc(s["n"])}</div><h3>{_esc(s["h3"])}</h3><p>{_esc(s["p"])}</p></div>'
+        for s in spec["steps"])
+    cards = "".join(
+        f'<div class="card"><div class="tag">{_esc(c["tag"])}</div><h3>{_esc(c["h3"])}</h3>'
+        f'<div class="say">{_esc(c["say"])}</div><ul>'
+        + "".join(f"<li>{_esc(b)}</li>" for b in c["bullets"]) + "</ul></div>"
+        for c in spec["scenarios"])
+    faq = "".join(f'<div class="q">{_esc(f["q"])}</div><div class="a">{_esc(f["a"])}</div>' for f in spec["faq"])
+    body = f"""{_head(spec['title_tag'], spec['meta_description'], canon, jsonld)}
+<header class="hero"><div class="wrap"><div class="kicker">{_esc(spec['kicker'])}</div>
+<h1>{_h1(spec['h1'])}</h1><p class="sub">{_esc(spec['hero_sub'])}</p>
+<div class="btns"><a href="/get-started/" class="btn-primary">Start with a free diagnostic &rarr;</a>
+<a href="https://jessemoraga.com" target="_blank" rel="noopener" class="btn-secondary">See it running a real business</a></div></div></header>
+<section class="section"><h2>{_esc(spec['what_h2'])}</h2><p class="lead">{_esc(spec['what_lead'])}</p><div class="steps wrap">{steps}</div></section>
+<section class="section"><h2>{_esc(spec['inc_h2'])}</h2><div class="cards wrap">{cards}</div></section>
+<section class="section"><p class="proof">Not a pitch deck — every Art3ry service already runs <a href="https://jessemoraga.com" target="_blank" rel="noopener">a real California field-services company</a>, a real one-person company.</p></section>
+<section class="section"><h2>Questions</h2><div class="faq">{faq}</div></section>
+<section class="section"><p style="text-align:center;color:var(--muted);font-size:14px">Part of <a href="/services/" style="color:var(--blue);text-decoration:none">Art3ry growth-as-a-service</a> &middot; <a href="/services/" style="color:var(--blue);text-decoration:none">see all services &rarr;</a></p></section>
+<section class="section"><div class="cta-strip wrap"><h2>{_esc(spec['cta_h2'])}</h2><p>{_esc(spec['cta_p'])}</p><a href="/get-started/">Get started &rarr;</a></div></section>
+{_FOOTER}</body></html>"""
+    return slug, _guard(body, f"service:{slug}")
+
+
 def main(argv=None) -> int:
     argv = argv or sys.argv[1:]
     if not argv:
@@ -206,6 +246,13 @@ def main(argv=None) -> int:
         out.write_text(page, encoding="utf-8")
         written.append(str(out.relative_to(ROOT))); sitemap_urls.append(f"{SITE}/{slug}/")
 
+    for spec in specs.get("service", []):
+        slug, page = render_service(spec)
+        out = ROOT / slug / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(page, encoding="utf-8")
+        written.append(str(out.relative_to(ROOT))); sitemap_urls.append(f"{SITE}/{slug}/")
+
     blog_cards = []
     for spec in specs.get("blog", []):
         slug, page = render_blog(spec)
@@ -215,9 +262,14 @@ def main(argv=None) -> int:
         written.append(str(out.relative_to(ROOT))); sitemap_urls.append(f"{SITE}/blog/{slug}/")
         blog_cards.append((spec["title"], f"/blog/{slug}/", spec["meta_description"]))
 
-    # rewrite sitemap.xml with the full known set (home + core + everything generated)
-    core = ["", "assistant/", "about/", "blog/", "get-started/"]
-    all_urls = [f"{SITE}/{u}" for u in core] + sitemap_urls
+    # MERGE sitemap.xml: keep every URL already listed, then add core + everything
+    # generated this run (a partial spec must never silently drop existing pages).
+    existing = []
+    sm_path = ROOT / "sitemap.xml"
+    if sm_path.exists():
+        existing = re.findall(r"<loc>(.*?)</loc>", sm_path.read_text())
+    core = ["", "assistant/", "services/", "about/", "blog/", "get-started/"]
+    all_urls = existing + [f"{SITE}/{u}" for u in core] + sitemap_urls
     seen, uniq = set(), []
     for u in all_urls:
         if u not in seen:
