@@ -68,7 +68,7 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:24px;fl
 _NAV = """<nav>
   <a href="/" class="logo"><img src="/assets/art3ry-logo.png" alt="ART3RY" class="logo-img" style="border-radius:4px"></a>
   <div class="nav-links">
-    <a href="/assistant/">Assistant</a><a href="/about/">About</a><a href="/blog/">Blog</a>
+    <a href="/assistant/">Assistant</a><a href="/services/">Services</a><a href="/about/">About</a><a href="/blog/">Blog</a>
     <a href="https://jessemoraga.com" target="_blank" rel="noopener">The Proof</a>
   </div>
   <a href="/get-started/" class="nav-cta">Get started &rarr;</a>
@@ -80,7 +80,7 @@ _FOOTER = """<footer>
     <p style="font-size:11px;color:var(--muted)">&copy; 2026 ART3RY, LLC — California</p>
   </div>
   <div class="footer-links">
-    <a href="/assistant/">Assistant</a><a href="/about/">About</a><a href="/blog/">Blog</a>
+    <a href="/assistant/">Assistant</a><a href="/services/">Services</a><a href="/about/">About</a><a href="/blog/">Blog</a>
     <a href="/get-started/">Get Started</a>
     <a href="https://jessemoraga.com" target="_blank" rel="noopener">The Proof</a>
   </div>
