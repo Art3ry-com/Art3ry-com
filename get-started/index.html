@@ -55,8 +55,86 @@
   <div class="kicker">Get started</div>
   <h1>Tell me what you do.<br>I'll show you what changes.</h1>
   <p class="lead">One conversation. I'll map your operation, identify the biggest leaks, and show you exactly what the system would handle for your business.</p>
-  <a href="mailto:jesse@art3ry.com?subject=ART3RY%20-%20Let%27s%20talk&body=Hi%20Jesse%2C%0A%0AHere%27s%20my%20business%3A%0A%0AWhat%20I%20sell%3A%0AHow%20customers%20find%20me%3A%0AWhat%27s%20slipping%20through%20the%20cracks%3A%0A" class="btn-primary" style="margin-bottom:48px;display:inline-block">Email jesse@art3ry.com →</a>
+  <div class="card" style="max-width:640px;padding:28px;margin-bottom:16px">
+    <p style="font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:16px">Start the conversation</p>
+    <form id="lead-form" novalidate>
+      <div class="grid-2" style="gap:12px;margin-bottom:12px">
+        <div><label class="fl" for="lf-name">Your name</label><input class="fi" id="lf-name" name="name" type="text" autocomplete="name" required></div>
+        <div><label class="fl" for="lf-biz">Business name</label><input class="fi" id="lf-biz" name="business" type="text" autocomplete="organization"></div>
+      </div>
+      <div class="grid-2" style="gap:12px;margin-bottom:12px">
+        <div><label class="fl" for="lf-email">Your email</label><input class="fi" id="lf-email" name="email" type="email" autocomplete="email" required></div>
+        <div><label class="fl" for="lf-phone">Phone (optional)</label><input class="fi" id="lf-phone" name="phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div style="margin-bottom:12px"><label class="fl" for="lf-sell">What do you sell?</label><input class="fi" id="lf-sell" name="sell" type="text" placeholder="Plumbing, hair, tacos, legal work — plain language"></div>
+      <div style="margin-bottom:16px"><label class="fl" for="lf-leak">What's slipping through the cracks?</label><textarea class="fi" id="lf-leak" name="leak" rows="3" placeholder="Missed calls, no website, invisible on Google, follow-ups not happening…"></textarea></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <button type="submit" class="btn-primary" style="border:0;cursor:pointer;font-family:inherit">Send it to Jesse →</button>
+        <button type="button" id="lf-copy" class="btn-secondary" style="border:1px solid var(--border-blue);cursor:pointer;font-family:inherit">Copy message instead</button>
+      </div>
+      <p id="lf-status" style="font-size:13px;color:var(--green);margin-top:12px;min-height:18px"></p>
+      <p style="font-size:12px;color:var(--muted);margin-top:4px">Goes straight to <a href="mailto:jesse@art3ry.com" style="color:var(--blue)">jesse@art3ry.com</a> — a person, not a ticket queue. Reply within one business day.</p>
+    </form>
+  </div>
 </div>
+<style>
+  .fl{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .fi{width:100%;background:var(--bg-raised);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:14.5px;padding:11px 12px;outline:none;transition:border-color .15s}
+  .fi:focus{border-color:var(--border-blue)}
+  textarea.fi{resize:vertical;min-height:74px}
+</style>
+<script>
+(function(){
+  // Future backend swap: set FORM_ENDPOINT to a capture URL and submissions
+  // POST there instead of composing an email. Empty = composer mode.
+  var FORM_ENDPOINT = "";
+  var f = document.getElementById('lead-form');
+  var status = document.getElementById('lf-status');
+  function val(id){ return (document.getElementById(id).value || '').trim(); }
+  function message(){
+    return 'Hi Jesse,\n\n'
+      + 'Name: ' + val('lf-name') + '\n'
+      + 'Business: ' + (val('lf-biz') || '-') + '\n'
+      + 'Email: ' + val('lf-email') + '\n'
+      + 'Phone: ' + (val('lf-phone') || '-') + '\n\n'
+      + 'What I sell: ' + (val('lf-sell') || '-') + '\n'
+      + "What's slipping: " + (val('lf-leak') || '-') + '\n';
+  }
+  function valid(){
+    if(!val('lf-name') || !/.+@.+\..+/.test(val('lf-email'))){
+      status.style.color = '#e63946';
+      status.textContent = 'Add your name and a real email so Jesse can reply.';
+      return false;
+    }
+    status.style.color = 'var(--green)';
+    return true;
+  }
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!valid()) return;
+    if(FORM_ENDPOINT){
+      fetch(FORM_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({name:val('lf-name'),business:val('lf-biz'),email:val('lf-email'),phone:val('lf-phone'),sell:val('lf-sell'),leak:val('lf-leak')})})
+        .then(function(r){ status.textContent = r.ok ? "Got it — you'll hear from Jesse within one business day." : 'Something hiccuped — use the copy button and email it over.'; })
+        .catch(function(){ status.textContent = 'Something hiccuped — use the copy button and email it over.'; });
+      return;
+    }
+    status.textContent = 'Opening your email app… nothing open? Hit "Copy message instead."';
+    window.location.href = 'mailto:jesse@art3ry.com?subject=' +
+      encodeURIComponent('ART3RY — ' + val('lf-name') + (val('lf-biz') ? ' / ' + val('lf-biz') : '')) +
+      '&body=' + encodeURIComponent(message());
+  });
+  document.getElementById('lf-copy').addEventListener('click', function(){
+    if(!valid()) return;
+    var text = 'To: jesse@art3ry.com\nSubject: ART3RY — ' + val('lf-name') + '\n\n' + message();
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function(){
+      status.textContent = 'Copied. Paste it into any email or text to jesse@art3ry.com.';
+    }).catch(function(){
+      window.prompt('Copy this message, then email it to jesse@art3ry.com:', text);
+    });
+  });
+})();
+</script>
 <svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="vg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e63946" stop-opacity=".7"/><stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/><stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/></linearGradient></defs><path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30" stroke="url(#vg)" stroke-width="1.5" fill="none"/><path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/><circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/><path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/><circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/></svg>
 <div class="section">
   <div class="kicker blue">What to bring</div>
@@ -82,7 +160,7 @@
 </div>
 <div class="cta-strip">
   <h2>Start with an email.</h2>
-  <p>No forms. No booking link. Just tell me what you do and what's not working. I'll reply with next steps.</p>
+  <p>No sales funnel. No ticket queue. Tell me what you do and what's not working — the message goes straight to me. I'll reply with next steps.</p>
   <div class="cta-btns"><a href="mailto:jesse@art3ry.com" class="btn-primary">jesse@art3ry.com →</a><a href="/about/" class="btn-secondary">Learn more about ART3RY</a></div>
 </div>
 
