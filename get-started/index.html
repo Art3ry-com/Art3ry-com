@@ -130,7 +130,10 @@
   // NOTE: we POST as text/plain ON PURPOSE — it keeps this a CORS "simple request"
   // so no preflight OPTIONS is sent. Apps Script cannot answer a preflight. Do not
   // "fix" this to application/json; that is what breaks it.
-  var FORM_ENDPOINT = "";
+  var FORM_ENDPOINT = "https://api.web3forms.com/submit";
+  // Web3Forms public access key. It is a submit-only forwarding token (safe to
+  // expose in client JS — it cannot read past submissions or the account).
+  var WEB3FORMS_KEY = "c20f2911-be5a-4387-bfb4-0782b458650c";
   var f = document.getElementById('lead-form');
   var status = document.getElementById('lf-status');
   var sendBtn = document.getElementById('lf-send');
@@ -190,17 +193,20 @@
 
     fetch(FORM_ENDPOINT, {
       method: 'POST',
-      headers: {'Content-Type': 'text/plain;charset=utf-8'},  // simple request → no preflight
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
       body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        subject: 'ART3RY lead — ' + val('lf-name') + (val('lf-biz') ? ' / ' + val('lf-biz') : ''),
+        from_name: 'Art3ry Website',
         name: val('lf-name'), business: val('lf-biz'), email: val('lf-email'),
         phone: val('lf-phone'), sell: val('lf-sell'), leak: val('lf-leak'),
-        company_website: val('lf-cw'),          // honeypot — humans leave this empty
+        botcheck: val('lf-cw'),                 // Web3Forms' own honeypot field name
         source: 'art3ry.com/get-started', ua: navigator.userAgent
       })
     })
-    .then(function(r){ return r.json().catch(function(){ return {ok:false}; }); })
+    .then(function(r){ return r.json().catch(function(){ return {success:false}; }); })
     .then(function(res){
-      if(res && res.ok){
+      if(res && res.success){
         f.querySelectorAll('input,textarea,button').forEach(function(el){ el.disabled = true; });
         status.style.color = 'var(--green)';
         status.textContent = "Got it — you'll hear from Jesse within one business day.";
