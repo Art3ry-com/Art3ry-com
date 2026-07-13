@@ -93,6 +93,19 @@
       <p id="lf-status" style="font-size:13px;color:var(--green);margin-top:12px;min-height:18px"></p>
       <p style="font-size:12px;color:var(--muted);margin-top:4px">Goes straight to <a href="mailto:jesse@jessemoraga.com" style="color:var(--blue)">jesse@jessemoraga.com</a> — a person, not a ticket queue. Reply within one business day. <a href="#" id="lf-copy" style="color:var(--muted);text-decoration:underline">Rather copy it and send it yourself?</a></p>
     </form>
+
+    <!-- No-dead-end panel. Revealed after a submit so a visitor whose mail app never
+         opened (common on mobile) always has two working exits: copy, or call. -->
+    <div id="lf-fallback" style="display:none;margin-top:18px;border-top:1px solid var(--border);padding-top:18px">
+      <p style="font-size:14px;color:var(--text);font-weight:700;margin-bottom:4px">Email app didn't open?</p>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:14px">No problem — two ways to reach me right now:</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <a href="#" id="lf-fb-copy" style="display:inline-block;background:var(--blue-dim);color:var(--blue);font-weight:700;font-size:14px;padding:11px 20px;border-radius:9px;border:1px solid var(--border-blue)">Copy my message</a>
+        <a href="tel:+15598479824" style="display:inline-block;background:#7b2ff7;color:#fff;font-family:var(--mono);font-weight:700;font-size:15px;padding:11px 22px;border-radius:9px">Or call (559) 847-9824</a>
+      </div>
+      <p id="lf-copied" style="font-size:12.5px;color:var(--green);margin-top:10px;min-height:16px"></p>
+    </div>
+
   </div>
 </div>
 <style>
@@ -143,9 +156,21 @@
   function mailtoFallback(note){
     status.style.color = 'var(--muted)';
     status.textContent = note;
+    // Fire the mail app for people who have one...
     window.location.href = 'mailto:jesse@jessemoraga.com?subject=' +
       encodeURIComponent('ART3RY — ' + val('lf-name') + (val('lf-biz') ? ' / ' + val('lf-biz') : '')) +
       '&body=' + encodeURIComponent(message());
+    // ...and ALWAYS reveal the no-dead-end panel. On a phone with no default mail app
+    // the line above silently does nothing; without this, the visitor is stuck and the
+    // lead is lost. The panel guarantees two working exits: copy the message, or CALL.
+    var fb = document.getElementById('lf-fallback');
+    if(fb){ fb.style.display = 'block'; fb.scrollIntoView({behavior:'smooth', block:'center'}); }
+  }
+  function copyComposed(){
+    var text = 'To: jesse@jessemoraga.com\nSubject: ART3RY — ' + val('lf-name') + '\n\n' + message();
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function(){
+      var s = document.getElementById('lf-copied'); if(s){ s.textContent = '✓ Copied — paste it into any email or text app.'; }
+    }).catch(function(){ window.prompt('Copy this, then email it to jesse@jessemoraga.com:', text); });
   }
 
   f.addEventListener('submit', function(e){
@@ -195,13 +220,11 @@
   document.getElementById('lf-copy').addEventListener('click', function(e){
     e.preventDefault();
     if(!valid()) return;
-    var text = 'To: jesse@jessemoraga.com\nSubject: ART3RY — ' + val('lf-name') + '\n\n' + message();
-    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function(){
-      status.textContent = 'Copied. Paste it into any email or text to jesse@jessemoraga.com.';
-    }).catch(function(){
-      window.prompt('Copy this message, then email it to jesse@jessemoraga.com:', text);
-    });
+    copyComposed();
+    status.textContent = 'Copied. Paste it into any email or text to jesse@jessemoraga.com.';
   });
+  var fbCopy = document.getElementById('lf-fb-copy');
+  if(fbCopy){ fbCopy.addEventListener('click', function(e){ e.preventDefault(); copyComposed(); }); }
 })();
 </script>
 <svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="vg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e63946" stop-opacity=".7"/><stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/><stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/></linearGradient></defs><path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30" stroke="url(#vg)" stroke-width="1.5" fill="none"/><path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/><circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/><path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/><circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/></svg>
