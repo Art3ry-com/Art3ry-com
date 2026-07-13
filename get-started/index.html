@@ -49,7 +49,7 @@
 </style>
 </head>
 <body>
-<nav><a href="/"><img src="/assets/art3ry-logo.png" alt="ART3RY" style="height:32px;border-radius:4px"></a><div class="nav-links"><a href="/assistant/">Assistant</a><a href="/services/">Services</a><a href="/about/">About</a><a href="/blog/">Blog</a><a href="https://jessemoraga.com" target="_blank" rel="noopener">The Proof</a></div><a href="/get-started/" class="nav-cta">Get started →</a></nav>
+<nav><a href="/"><img src="/assets/art3ry-logo.png" alt="ART3RY" style="height:32px;border-radius:4px"></a><div class="nav-links"><a href="/assistant/">Assistant</a><a href="/services/">Services</a><a href="/about/">About</a><a href="/blog/">Blog</a><a href="https://centralvalleyprocessservers.com/powered-by-art3ry/" target="_blank" rel="noopener">The Proof</a></div><a href="/get-started/" class="nav-cta">Get started →</a></nav>
 
 <div class="section" style="padding-top:80px">
   <div class="kicker">Get started</div>
@@ -68,12 +68,12 @@
       </div>
       <div style="margin-bottom:12px"><label class="fl" for="lf-sell">What do you sell?</label><input class="fi" id="lf-sell" name="sell" type="text" placeholder="Plumbing, hair, tacos, legal work — plain language"></div>
       <div style="margin-bottom:16px"><label class="fl" for="lf-leak">What's slipping through the cracks?</label><textarea class="fi" id="lf-leak" name="leak" rows="3" placeholder="Missed calls, no website, invisible on Google, follow-ups not happening…"></textarea></div>
+      <div class="hp" aria-hidden="true"><label for="lf-cw">Company website</label><input id="lf-cw" name="company_website" type="text" tabindex="-1" autocomplete="off"></div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-        <button type="submit" class="btn-primary" style="border:0;cursor:pointer;font-family:inherit">Send it to Jesse →</button>
-        <button type="button" id="lf-copy" class="btn-secondary" style="border:1px solid var(--border-blue);cursor:pointer;font-family:inherit">Copy message instead</button>
+        <button type="submit" id="lf-send" class="btn-primary" style="border:0;cursor:pointer;font-family:inherit">Send it to Jesse →</button>
       </div>
       <p id="lf-status" style="font-size:13px;color:var(--green);margin-top:12px;min-height:18px"></p>
-      <p style="font-size:12px;color:var(--muted);margin-top:4px">Goes straight to <a href="mailto:jesse@art3ry.com" style="color:var(--blue)">jesse@art3ry.com</a> — a person, not a ticket queue. Reply within one business day.</p>
+      <p style="font-size:12px;color:var(--muted);margin-top:4px">Goes straight to <a href="mailto:jesse@art3ry.com" style="color:var(--blue)">jesse@art3ry.com</a> — a person, not a ticket queue. Reply within one business day. <a href="#" id="lf-copy" style="color:var(--muted);text-decoration:underline">Rather copy it and send it yourself?</a></p>
     </form>
   </div>
 </div>
@@ -82,14 +82,27 @@
   .fi{width:100%;background:var(--bg-raised);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:14.5px;padding:11px 12px;outline:none;transition:border-color .15s}
   .fi:focus{border-color:var(--border-blue)}
   textarea.fi{resize:vertical;min-height:74px}
+  /* Honeypot: off-screen for bots, invisible + unfocusable for humans and screen readers. */
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 </style>
 <script>
 (function(){
-  // Future backend swap: set FORM_ENDPOINT to a capture URL and submissions
-  // POST there instead of composing an email. Empty = composer mode.
+  // Real lead capture. Paste the Google Apps Script /exec URL here (deploy steps in
+  // art3ry-brand/automation/art3ry_lead_capture.gs) and every submission is written
+  // to a Sheet AND emailed — no lead can silently vanish.
+  //
+  // Empty = degraded "composer" mode: we fall back to opening the visitor's own mail
+  // app. That fallback is LOSSY (a phone with no default mail client drops the lead
+  // with no trace), which is exactly why the endpoint matters. It stays as the
+  // safety net, never the plan.
+  //
+  // NOTE: we POST as text/plain ON PURPOSE — it keeps this a CORS "simple request"
+  // so no preflight OPTIONS is sent. Apps Script cannot answer a preflight. Do not
+  // "fix" this to application/json; that is what breaks it.
   var FORM_ENDPOINT = "";
   var f = document.getElementById('lead-form');
   var status = document.getElementById('lf-status');
+  var sendBtn = document.getElementById('lf-send');
   function val(id){ return (document.getElementById(id).value || '').trim(); }
   function message(){
     return 'Hi Jesse,\n\n'
@@ -109,22 +122,60 @@
     status.style.color = 'var(--green)';
     return true;
   }
-  f.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(!valid()) return;
-    if(FORM_ENDPOINT){
-      fetch(FORM_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({name:val('lf-name'),business:val('lf-biz'),email:val('lf-email'),phone:val('lf-phone'),sell:val('lf-sell'),leak:val('lf-leak')})})
-        .then(function(r){ status.textContent = r.ok ? "Got it — you'll hear from Jesse within one business day." : 'Something hiccuped — use the copy button and email it over.'; })
-        .catch(function(){ status.textContent = 'Something hiccuped — use the copy button and email it over.'; });
-      return;
-    }
-    status.textContent = 'Opening your email app… nothing open? Hit "Copy message instead."';
+  function mailtoFallback(note){
+    status.style.color = 'var(--muted)';
+    status.textContent = note;
     window.location.href = 'mailto:jesse@art3ry.com?subject=' +
       encodeURIComponent('ART3RY — ' + val('lf-name') + (val('lf-biz') ? ' / ' + val('lf-biz') : '')) +
       '&body=' + encodeURIComponent(message());
+  }
+
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!valid()) return;
+
+    if(!FORM_ENDPOINT){
+      // Degraded mode — no backend deployed yet.
+      mailtoFallback('Opening your email app… nothing open? Use the copy link below.');
+      return;
+    }
+
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Sending…';
+    status.style.color = 'var(--muted)';
+    status.textContent = 'Sending…';
+
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},  // simple request → no preflight
+      body: JSON.stringify({
+        name: val('lf-name'), business: val('lf-biz'), email: val('lf-email'),
+        phone: val('lf-phone'), sell: val('lf-sell'), leak: val('lf-leak'),
+        company_website: val('lf-cw'),          // honeypot — humans leave this empty
+        source: 'art3ry.com/get-started', ua: navigator.userAgent
+      })
+    })
+    .then(function(r){ return r.json().catch(function(){ return {ok:false}; }); })
+    .then(function(res){
+      if(res && res.ok){
+        f.querySelectorAll('input,textarea,button').forEach(function(el){ el.disabled = true; });
+        status.style.color = 'var(--green)';
+        status.textContent = "Got it — you'll hear from Jesse within one business day.";
+        return;
+      }
+      // Server rejected it. Never dead-end the visitor — hand them the mail path.
+      sendBtn.disabled = false; sendBtn.textContent = 'Send it to Jesse →';
+      mailtoFallback("Couldn't send that automatically — opening your email app instead.");
+    })
+    .catch(function(){
+      // Network/CORS failure. Same rule: never lose the lead.
+      sendBtn.disabled = false; sendBtn.textContent = 'Send it to Jesse →';
+      mailtoFallback("Couldn't reach the server — opening your email app instead.");
+    });
   });
-  document.getElementById('lf-copy').addEventListener('click', function(){
+
+  document.getElementById('lf-copy').addEventListener('click', function(e){
+    e.preventDefault();
     if(!valid()) return;
     var text = 'To: jesse@art3ry.com\nSubject: ART3RY — ' + val('lf-name') + '\n\n' + message();
     (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function(){
@@ -175,7 +226,7 @@
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
     <a href="/get-started/">Get Started</a>
-    <a href="https://jessemoraga.com" target="_blank" rel="noopener">The Proof</a>
+    <a href="https://centralvalleyprocessservers.com/powered-by-art3ry/" target="_blank" rel="noopener">The Proof</a>
     <a href="https://jessemoraga.com" target="_blank" rel="noopener">Jesse Moraga</a>
   </div>
   <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
