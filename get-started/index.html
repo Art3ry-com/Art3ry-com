@@ -135,18 +135,22 @@
 </style>
 <script>
 (function(){
-  // Real lead capture. Paste the Google Apps Script /exec URL here (deploy steps in
-  // art3ry-brand/automation/art3ry_lead_capture.gs) and every submission is written
-  // to a Sheet AND emailed — no lead can silently vanish.
+  // Real lead capture via the Web3Forms relay (see commit 72f0c3b, 2026-07-13) — every
+  // submission forwards straight to jesse@jessemoraga.com, no manual step. The public
+  // access key below is submit-only (safe to expose client-side; can't read past
+  // submissions or the account). The Apps Script path in
+  // art3ry-brand/automation/art3ry_lead_capture.gs was an earlier design and is not
+  // what this form calls — don't restore that URL here without redoing this comment too.
   //
-  // Empty = degraded "composer" mode: we fall back to opening the visitor's own mail
-  // app. That fallback is LOSSY (a phone with no default mail client drops the lead
-  // with no trace), which is exactly why the endpoint matters. It stays as the
-  // safety net, never the plan.
+  // Empty FORM_ENDPOINT = degraded "composer" mode: falls back to opening the visitor's
+  // own mail app. That fallback is LOSSY (a phone with no default mail client drops the
+  // lead with no trace), which is why it also stays wired as the .catch() safety net
+  // below even with a real endpoint set — belt AND suspenders, never a single point of
+  // failure.
   //
-  // NOTE: we POST as text/plain ON PURPOSE — it keeps this a CORS "simple request"
-  // so no preflight OPTIONS is sent. Apps Script cannot answer a preflight. Do not
-  // "fix" this to application/json; that is what breaks it.
+  // Web3Forms' free tier is client-side-only by design: it 403s a curl/server call and
+  // Cloudflare-challenges non-browser requests, so this endpoint CANNOT be validated by
+  // curl — only a real browser submitting the real form proves it works.
   var FORM_ENDPOINT = "https://api.web3forms.com/submit";
   // Web3Forms public access key. It is a submit-only forwarding token (safe to
   // expose in client JS — it cannot read past submissions or the account).

@@ -84,7 +84,7 @@ _FOOTER = """<footer>
     <a href="/get-started/">Get Started</a>
     <a href="https://jessemoraga.com" target="_blank" rel="noopener">The Proof</a>
   </div>
-  <div><a href="mailto:jesse@art3ry.com" style="font-size:12px;color:var(--muted);text-decoration:none">jesse@art3ry.com</a></div>
+  <div><a href="mailto:jesse@jessemoraga.com" style="font-size:12px;color:var(--muted);text-decoration:none">jesse@jessemoraga.com</a></div>
 </footer>"""
 
 # Phone leak guard — Jesse's cell must NEVER reach a public page (mirrors the the flagship operation rule).
