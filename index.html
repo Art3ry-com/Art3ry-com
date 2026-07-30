@@ -178,15 +178,9 @@ footer p{font-size:12px;color:var(--muted)}
 <!-- VEIN DIVIDER -->
 <svg class="vein vein-pulse" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="vg1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e63946" stop-opacity=".7"/><stop offset="40%" stop-color="#7b2ff7" stop-opacity=".5"/><stop offset="100%" stop-color="#3a86ff" stop-opacity=".7"/></linearGradient></defs><path d="M0,30 C180,30 260,14 420,30 C580,46 700,18 880,30 C1060,42 1200,22 1440,30" stroke="url(#vg1)" stroke-width="1.5" fill="none"/><path d="M420,30 C440,22 460,8 500,4" stroke="#e63946" stroke-width=".8" fill="none" opacity=".45"/><circle cx="420" cy="30" r="2.5" fill="#e63946" opacity=".6"/><path d="M880,30 C900,38 930,52 960,56" stroke="#3a86ff" stroke-width=".8" fill="none" opacity=".45"/><circle cx="880" cy="30" r="2.5" fill="#3a86ff" opacity=".6"/></svg>
 
-<!-- LIVE METRICS -->
+<!-- SYSTEM METRICS -->
 <div class="graph-section">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px">
-    <div class="section-kicker" style="margin-bottom:0">System metrics — a real California field-services company</div>
-    <div style="display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:#06d6a0">
-      <span style="width:8px;height:8px;border-radius:50%;background:#06d6a0;display:inline-block;box-shadow:0 0 8px #06d6a0;animation:pulse 2s ease-in-out infinite"></span>
-      LIVE · Updated just now
-    </div>
-  </div>
+  <div class="section-kicker" style="margin-bottom:20px">System metrics — a real California field-services company</div>
   <div class="graph-row">
 
     <!-- Traffic chart — real dates, upward curve -->
@@ -198,7 +192,7 @@ footer p{font-size:12px;color:var(--muted)}
         </div>
         <div style="font-family:var(--mono);font-size:11px;color:#06d6a0;text-align:right">↑ 60.3%<br><span style="color:var(--muted)">vs prev 28d</span></div>
       </div>
-      <div style="position:relative;height:110px;margin:14px 0 6px">
+      <div style="position:relative;height:160px;margin:14px 0 6px">
         <!-- Y axis labels -->
         <div style="position:absolute;left:0;top:0;bottom:18px;display:flex;flex-direction:column;justify-content:space-between;font-size:9px;font-family:var(--mono);color:var(--muted);pointer-events:none;z-index:1">
           <span>High</span><span>Mid</span><span>Low</span>
@@ -226,43 +220,6 @@ footer p{font-size:12px;color:var(--muted)}
         <!-- X labels pinned to bottom -->
         <div style="position:absolute;left:28px;right:0;bottom:0;display:flex;justify-content:space-between;font-size:9px;font-family:var(--mono);color:var(--muted)">
           <span>May 10</span><span>May 17</span><span>May 24</span><span>May 31</span><span>Jun 6</span>
-        </div>
-      </div>
-      <div style="display:flex;gap:16px;font-size:11px;font-family:var(--mono);margin-top:4px">
-        <span style="color:var(--muted)">Start: <span style="color:#fff">412 sessions</span></span>
-        <span style="color:var(--muted)">Now: <span style="color:var(--red)">659 sessions</span></span>
-      </div>
-    </div>
-
-    <!-- Live activity feed -->
-    <div class="graph-card" style="border-color:rgba(6,214,160,.25)">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-        <div>
-          <div class="graph-title" style="color:#06d6a0">System activity feed</div>
-          <div class="graph-headline" style="font-size:18px">Everything. Running.</div>
-        </div>
-        <div style="font-family:var(--mono);font-size:10px;color:#06d6a0;background:rgba(6,214,160,.1);border:1px solid rgba(6,214,160,.3);border-radius:6px;padding:4px 8px">● LIVE</div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:8px">
-        <div style="display:flex;gap:10px;align-items:flex-start">
-          <div style="width:6px;height:6px;border-radius:50%;background:var(--red);margin-top:5px;flex-shrink:0;box-shadow:0 0 6px var(--red-glow)"></div>
-          <div style="flex:1"><span style="font-family:var(--mono);font-size:11px;color:#fff">JOB-2026-000912</span><span style="font-family:var(--mono);font-size:11px;color:var(--muted)"> · Invoice sent · $165.00</span><div style="font-size:10px;color:var(--muted);margin-top:1px">4 min ago · Austin, TX</div></div>
-        </div>
-        <div style="display:flex;gap:10px;align-items:flex-start">
-          <div style="width:6px;height:6px;border-radius:50%;background:#06d6a0;margin-top:5px;flex-shrink:0;box-shadow:0 0 6px rgba(6,214,160,.5)"></div>
-          <div style="flex:1"><span style="font-family:var(--mono);font-size:11px;color:#fff">Inbound call captured</span><span style="font-family:var(--mono);font-size:11px;color:var(--muted)"> · Sarah answered</span><div style="font-size:10px;color:var(--muted);margin-top:1px">11 min ago · San Bernardino</div></div>
-        </div>
-        <div style="display:flex;gap:10px;align-items:flex-start">
-          <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);margin-top:5px;flex-shrink:0;box-shadow:0 0 6px var(--blue-glow)"></div>
-          <div style="flex:1"><span style="font-family:var(--mono);font-size:11px;color:#fff">JOB-2026-000911</span><span style="font-family:var(--mono);font-size:11px;color:var(--muted)"> · Job complete · GPS verified ✓</span><div style="font-size:10px;color:var(--muted);margin-top:1px">23 min ago · Denver, CO</div></div>
-        </div>
-        <div style="display:flex;gap:10px;align-items:flex-start">
-          <div style="width:6px;height:6px;border-radius:50%;background:#06d6a0;margin-top:5px;flex-shrink:0"></div>
-          <div style="flex:1"><span style="font-family:var(--mono);font-size:11px;color:#fff">Payment received</span><span style="font-family:var(--mono);font-size:11px;color:var(--muted)"> · $140.00 · Thank-you sent</span><div style="font-size:10px;color:var(--muted);margin-top:1px">1 hr ago · Columbus, OH</div></div>
-        </div>
-        <div style="display:flex;gap:10px;align-items:flex-start">
-          <div style="width:6px;height:6px;border-radius:50%;background:#a855f7;margin-top:5px;flex-shrink:0"></div>
-          <div style="flex:1"><span style="font-family:var(--mono);font-size:11px;color:#fff">JOB-2026-000910</span><span style="font-family:var(--mono);font-size:11px;color:var(--muted)"> · Report emailed · Job closed</span><div style="font-size:10px;color:var(--muted);margin-top:1px">2 hrs ago · Raleigh, NC</div></div>
         </div>
       </div>
     </div>
@@ -301,7 +258,7 @@ footer p{font-size:12px;color:var(--muted)}
     </div>
 
     <!-- Throughput with real numbers -->
-    <div class="graph-card">
+    <div class="graph-card" style="grid-column:1/-1">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
         <div>
           <div class="graph-title">Operations throughput</div>
@@ -337,10 +294,6 @@ footer p{font-size:12px;color:var(--muted)}
             <span style="color:#a855f7;font-weight:700">100%</span>
           </div>
           <div style="background:rgba(255,255,255,.06);border-radius:4px;height:5px"><div style="background:#a855f7;height:100%;border-radius:4px;width:100%;box-shadow:0 0 6px rgba(168,85,247,.4)"></div></div>
-        </div>
-        <div style="border-top:1px solid var(--border);padding-top:10px;font-size:11px;font-family:var(--mono);color:var(--muted);display:flex;justify-content:space-between">
-          <span>Est. revenue protected</span>
-          <span style="color:#fff;font-weight:700">$117,825+</span>
         </div>
       </div>
     </div>
