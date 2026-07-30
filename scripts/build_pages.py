@@ -16,6 +16,7 @@ import html
 import json
 import re
 import sys
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -115,6 +116,7 @@ def _head(title, desc, canon, jsonld) -> str:
     return f"""<!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{t}</title><meta name="description" content="{d}">
+<link rel="icon" type="image/png" href="/assets/art3ry-logo.png">
 <link rel="canonical" href="{canon}">
 <meta property="og:type" content="website"><meta property="og:url" content="{canon}">
 <meta property="og:title" content="{t}"><meta property="og:description" content="{d}">
@@ -262,23 +264,48 @@ def main(argv=None) -> int:
         written.append(str(out.relative_to(ROOT))); sitemap_urls.append(f"{SITE}/blog/{slug}/")
         blog_cards.append((spec["title"], f"/blog/{slug}/", spec["meta_description"]))
 
-    # MERGE sitemap.xml: keep every URL already listed, then add core + everything
-    # generated this run (a partial spec must never silently drop existing pages).
-    existing = []
+    # MERGE sitemap.xml: keep every URL already listed AND the <lastmod> banked
+    # against it, then add core + everything generated this run. A partial spec must
+    # never silently drop existing pages, and a rebuild must never strip lastmod —
+    # re-emitting bare <loc> throws away crawl-scheduling signal we cannot recover.
+    lastmod: dict[str, str | None] = {}
+    order: list[str] = []
     sm_path = ROOT / "sitemap.xml"
     if sm_path.exists():
-        existing = re.findall(r"<loc>(.*?)</loc>", sm_path.read_text())
+        for block in re.findall(r"<url>(.*?)</url>", sm_path.read_text(), re.S):
+            loc = re.search(r"<loc>(.*?)</loc>", block)
+            if not loc:
+                continue
+            u = loc.group(1)
+            if u not in lastmod:
+                order.append(u)
+            lm = re.search(r"<lastmod>(.*?)</lastmod>", block)
+            lastmod[u] = lm.group(1) if lm else lastmod.get(u)
+
     core = ["", "assistant/", "services/", "about/", "blog/", "get-started/"]
-    all_urls = existing + [f"{SITE}/{u}" for u in core] + sitemap_urls
-    seen, uniq = set(), []
-    for u in all_urls:
-        if u not in seen:
-            seen.add(u); uniq.append(u)
+    for u in [f"{SITE}/{c}" for c in core]:
+        if u not in lastmod:
+            order.append(u); lastmod[u] = None
+
+    # Only pages actually rewritten this run get a fresh lastmod.
+    today = date.today().isoformat()
+    for u in sitemap_urls:
+        if u not in lastmod:
+            order.append(u)
+        lastmod[u] = today
+
+    rows = "".join(
+        f"  <url><loc>{u}</loc>"
+        + (f"<lastmod>{lastmod[u]}</lastmod>" if lastmod.get(u) else "")
+        + "</url>\n"
+        for u in order
+    )
     sm = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-          + "".join(f"  <url><loc>{u}</loc></url>\n" for u in uniq) + "</urlset>\n")
+          + rows + "</urlset>\n")
     (ROOT / "sitemap.xml").write_text(sm)
 
-    print(f"build_pages: wrote {len(written)} pages + sitemap ({len(uniq)} urls)")
+    kept = sum(1 for u in order if lastmod.get(u))
+    print(f"build_pages: wrote {len(written)} pages + sitemap ({len(order)} urls, {kept} with lastmod)")
     for w in written:
         print("  ", w)
     # emit blog-card snippets for manual blog-index wiring
