@@ -57,12 +57,25 @@ h1{font-size:clamp(32px,5vw,52px);font-weight:900;letter-spacing:-.03em;color:#f
 footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .footer-links{display:flex;gap:20px;font-size:13px;color:var(--muted);flex-wrap:wrap}.footer-links a:hover{color:#fff}
 @media(max-width:768px){nav{padding:16px 20px}.nav-links{display:none}.hero{padding:56px 20px 20px}.wrap{padding:20px}.metric-strip{flex-wrap:wrap}.cta-strip{padding:34px 22px;margin:10px 20px 60px}footer{padding:28px 20px;flex-direction:column;text-align:center}}
+
+  /* Brand type + wordmark, unified with the rest of the site. Appended last so
+     it wins over the palette this page still carries. */
+  :root{--mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace}
+  body{font-family:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+  h1,h2,h3{font-family:'Archivo',-apple-system,BlinkMacSystemFont,sans-serif;
+           letter-spacing:-.03em;line-height:1.15;text-wrap:balance}
+  .logo{display:flex;align-items:center;gap:9px}
+  .logo-mark{width:24px;height:24px;flex:none}
+  .wordmark{font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;letter-spacing:-.045em;color:#fff;line-height:1}
+  .wordmark em{font-style:normal;color:#FF5A67}
+  footer .wordmark{font-size:16px}
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <nav>
-  <a href="/" class="logo"><img src="/assets/art3ry-logo.png" alt="ART3RY" style="height:32px;border-radius:4px"></a>
+  <a href="/" class="logo" aria-label="ART3RY home"><svg class="logo-mark" viewBox="0 0 26 26" aria-hidden="true"><defs><linearGradient id="lm" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#E63946"/><stop offset="100%" stop-color="#5B9BFF"/></linearGradient></defs><path d="M1 15 H6 L9 7 L13 21 L16 13 H21" fill="none" stroke="url(#lm)" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.2" cy="13" r="2.1" fill="#E63946"/></svg><span class="wordmark">ART<em>3</em>RY</span></a>
   <div class="nav-links"><a href="/services/">The Growth Build</a><a href="/about/">About</a><a href="/blog/">Blog</a></div>
   <a href="/get-started/" class="nav-cta">Work with me →</a>
 </nav>
@@ -128,7 +141,7 @@ footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;justify
 
 <footer>
   <div style="display:flex;flex-direction:column;gap:6px">
-    <div><img src="/assets/art3ry-logo.png" alt="ART3RY" style="height:24px;border-radius:3px"></div>
+    <span class="wordmark">ART<em>3</em>RY</span>
     <p style="font-size:11px;color:var(--muted)">© 2026 ART3RY, LLC — California</p>
   </div>
   <div class="footer-links"><a href="/services/">The Growth Build</a><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/get-started/">Work with me</a><a href="https://jessemoraga.com" target="_blank" rel="noopener">Jesse Moraga</a></div>

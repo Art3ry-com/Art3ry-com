@@ -7,27 +7,27 @@
       "title_tag": "Free Small-Business Growth Diagnostic — Find What's Leaking | ART3RY",
       "meta_description": "A free diagnostic that maps where your business is leaking leads, money, and time — and exactly what to fix first. No cost, no obligation.",
       "h1": "Find out what's leaking —<br>free.",
-      "hero_sub": "Most owners have no idea how many leads die at voicemail, how far they rank, or where their customers actually come from. In one short conversation we map your operation and show you the biggest leaks — and what it'd take to plug them. No cost, no pitch you didn't ask for.",
+      "hero_sub": "Most owners have no idea how many leads die at voicemail, how far they rank, or where their customers actually come from. In one short conversation I map your operation, show you the biggest leaks, and tell you what it'd take to plug them. No cost, no pitch you didn't ask for.",
       "what_h2": "How it works",
       "what_lead": "One conversation. You walk away knowing exactly where you're losing money.",
       "steps": [
-        {"n": "01", "h3": "Tell us your business", "p": "What you do, how customers find you, and what's slipping through the cracks."},
-        {"n": "02", "h3": "We map the leaks", "p": "We check your calls, follow-up, search visibility, site, reviews, and where customers come from."},
+        {"n": "01", "h3": "Tell me your business", "p": "What you do, how customers find you, and what's slipping through the cracks."},
+        {"n": "02", "h3": "I map the leaks", "p": "I check your calls, follow-up, search visibility, site, reviews, and where customers come from."},
         {"n": "03", "h3": "You get the straight answer", "p": "A clear picture of your biggest leaks and what to fix first — yours to keep, free."}
       ],
-      "inc_h2": "What we check",
+      "inc_h2": "What I check",
       "scenarios": [
-        {"tag": "Leads", "h3": "Are you catching them?", "say": "We find out how many calls and leads quietly die at voicemail.", "bullets": ["Missed-call and after-hours coverage", "Speed of your first response", "Where leads fall out of your pipeline"]},
-        {"tag": "Visibility", "h3": "Can customers find you?", "say": "We see how you rank for what people actually search.", "bullets": ["Local search and map-pack presence", "Your site vs your top competitors", "Keywords you should own but don't"]},
-        {"tag": "Conversion", "h3": "Does it turn into work?", "say": "We check whether your site and follow-up actually book jobs.", "bullets": ["Site speed and conversion", "Review count and reputation", "Where your real customers come from"]}
+        {"tag": "Leads", "h3": "Are you catching them?", "say": "I find out how many calls and leads quietly die at voicemail.", "bullets": ["Missed-call and after-hours coverage", "Speed of your first response", "Where leads fall out of your pipeline"]},
+        {"tag": "Visibility", "h3": "Can customers find you?", "say": "I see how you rank for what people actually search.", "bullets": ["Local search and map-pack presence", "Your site vs your top competitors", "Keywords you should own but don't"]},
+        {"tag": "Conversion", "h3": "Does it turn into work?", "say": "I check whether your site and follow-up actually book jobs.", "bullets": ["Site speed and conversion", "Review count and reputation", "Where your real customers come from"]}
       ],
       "faq": [
-        {"q": "Is it really free?", "a": "Yes. The diagnostic costs nothing and there's no obligation. If we're a fit to fix what we find, we'll tell you; if not, you still keep the map."},
-        {"q": "How long does it take?", "a": "About 15 minutes. You tell us about your business; we do the digging and come back with the leaks."},
+        {"q": "Is it really free?", "a": "Yes. The diagnostic costs nothing and there's no obligation. If we're a fit to fix what I find, I'll tell you; if not, you still keep the map."},
+        {"q": "How long does it take?", "a": "About 15 minutes. You tell me about your business; I do the digging and come back with the leaks."},
         {"q": "What do I get at the end?", "a": "A clear, honest picture of where you're losing leads, money, and time — and which fix moves the needle first."}
       ],
       "cta_h2": "Find your leaks — free.",
-      "cta_p": "Tell us about your business. We'll show you exactly where you're losing customers."
+      "cta_p": "Tell me about your business. I'll show you exactly where you're losing customers."
     }
   ]
 }

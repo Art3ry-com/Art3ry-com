@@ -21,7 +21,7 @@
    "paragraphs":[
     "Building the first working version is a weekend. Building one you would trust with real customers is not.",
     "The prompt is the hard part. Getting an agent to reliably ask the right qualifying questions, refuse to answer things it should not, handle interruptions, and hand over cleanly takes many iterations against real conversations. Each iteration is a change, a test call, and a judgement about whether it got better.",
-    "Then the integrations, which is where most DIY builds stall. Reading calendar availability correctly, writing bookings without double-booking, matching returning callers to existing records. We go through what has to work in [AI phone agent integrations](/blog/ai-phone-agent-integrations/).",
+    "Then the integrations, which is where most DIY builds stall. Reading calendar availability correctly, writing bookings without double-booking, matching returning callers to existing records. I go through what has to work in [AI phone agent integrations](/blog/ai-phone-agent-integrations/).",
     "And then it needs maintaining. Models get deprecated, APIs change, your prices and services change, and an agent nobody has looked at in six months is confidently telling callers things that stopped being true in the spring."]},
   {"h2":"When DIY is genuinely the right call",
    "paragraphs":[
@@ -34,7 +34,7 @@
     "If your time is the scarce resource in your business, and it usually is for an owner-operator, then the weeks spent tuning prompts are weeks not spent on paid work. That trade is rarely favourable at typical small-business call volumes.",
     "If the thing has to work correctly from day one because it is answering real customers, the gap between a demo that works and a deployment that holds up is wider than it looks.",
     "If you do not want to be the person who gets paged when a model deprecation breaks the phone line on a Saturday, that is a completely legitimate reason to pay someone else.",
-    "There is no virtue in either choice. It is a straightforward question about where your hours are worth most. If you want to hear what a finished one sounds like before deciding, ART3RY's demo line is (559) 847-9824, and [what is an AI receptionist](/blog/what-is-an-ai-receptionist/) explains what it should be doing."]}],
+    "There is no virtue in either choice. It is a straightforward question about where your hours are worth most. If you want to hear what a finished one sounds like before deciding, [ask me for a live demo](/get-started/), and [what is an AI receptionist](/blog/what-is-an-ai-receptionist/) explains what it should be doing."]}],
  "faq":[
   {"q":"Is building it myself cheaper?","a":"Per minute, almost certainly. Overall, it depends entirely on what your time is worth and how much of the prompt tuning, integration work, and ongoing maintenance you are happy to own."},
   {"q":"What actually drives the per-minute cost?","a":"Mostly your choice of language model and voice. A premium voice and a large model can cost several times a basic configuration, and the responsive-feeling setups generally use the more expensive end."},
@@ -65,12 +65,12 @@
     "Set the ring time deliberately rather than accepting the default. Long enough that you can genuinely get to it when free, short enough that a caller is not listening to a dead tone. Somewhere around five rings suits most businesses.",
     "Then configure what happens next, and make it something other than an answering machine. The simplest version is a forward on no-answer to something that will pick up, whether that is a colleague, a service, or an AI receptionist.",
     "If you keep voicemail, at least make the greeting useful. Say when you will call back and give an alternative that works right now, such as a text number or a booking link. A greeting that just says leave a message wastes the only seconds you have.",
-    "The cheapest meaningful improvement for most small businesses is an automatic text the moment a call is missed. It arrives while they are still holding the phone and it reopens a conversation that had ended. We cover that pattern in [missed call lead capture](/blog/missed-call-lead-capture/)."]},
+    "The cheapest meaningful improvement for most small businesses is an automatic text the moment a call is missed. It arrives while they are still holding the phone and it reopens a conversation that had ended. I cover that pattern in [missed call lead capture](/blog/missed-call-lead-capture/)."]},
   {"h2":"After-hours is a different problem",
    "paragraphs":[
     "During the day the issue is that you are busy. Outside hours the issue is that nobody is there at all, and that is when a large share of high-intent calls arrive.",
     "Evening and weekend callers are frequently the most valuable ones. A burst pipe, a lockout, a problem that has just become urgent enough to spend money on. They are also the least likely to wait until Monday.",
-    "Forwarding out-of-hours calls to something that answers is a smaller change than replacing your daytime setup, and it is where the recovered revenue is most obvious. We looked at why those hours convert so well in [after-hours jobs are your most profitable](/blog/after-hours-answering-service/).",
+    "Forwarding out-of-hours calls to something that answers is a smaller change than replacing your daytime setup, and it is where the recovered revenue is most obvious. I looked at why those hours convert so well in [after-hours jobs are your most profitable](/blog/after-hours-answering-service/).",
     "It is also easy to measure. Count what comes in outside hours for a month, then count what a covered month recovers. That comparison is usually the end of the debate."]},
   {"h2":"Work out what the window is worth",
    "paragraphs":[
