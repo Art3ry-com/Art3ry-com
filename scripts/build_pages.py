@@ -26,7 +26,7 @@ SITE = "https://art3ry.com"
 # The design system lives in assets/pages.css, not inline. Bump CSS_V on every
 # change to it: /assets/*.css ships max-age=14400, and new HTML paired with
 # four-hour-stale CSS renders as garbage.
-CSS_V = "20260831a"
+CSS_V = "20260831b"
 _CSS_LINK = f'<link rel="stylesheet" href="/assets/pages.css?v={CSS_V}">'
 
 
