@@ -65,7 +65,8 @@
       and your competitors before I answer, so give me a day or so rather than a canned reply in
       ten minutes.
     </p>
-    <p style="font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-bottom:14px">Two fields required. Everything else just helps me prepare — skip it if you're in a hurry.</p>
+    <p style="font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-bottom:14px">Two fields required. Everything else just helps me prepare, skip it if you're in a hurry.</p>
+    <p id="lf-prefill" hidden style="font-family:var(--mono);font-size:11.5px;color:var(--blue);margin-bottom:14px">I filled in two answers from what you picked on the home page. Change anything that is not right.</p>
     <form id="lead-form" novalidate>
       <div class="grid-2" style="gap:12px;margin-bottom:12px">
         <div><label class="fl" for="lf-name">Your name</label><input class="fi" id="lf-name" name="name" type="text" autocomplete="name" required></div>
@@ -133,6 +134,34 @@
   var status = document.getElementById('lf-status');
   var sendBtn = document.getElementById('lf-send');
   function val(id){ return (document.getElementById(id).value || '').trim(); }
+
+  // The homepage schematic already asked what they run. Carry that answer over
+  // (?trade=, or the stored pick) so nobody types the same thing twice. Prefilled
+  // values stay fully editable; this only fills fields the visitor left empty.
+  var TRADE_FILL = {
+    contractor:{sell:'Contracting and home services', leak:'Calls I miss while I am on a job'},
+    salon:     {sell:'Salon',                         leak:'No-shows and gaps in the chair'},
+    realestate:{sell:'Real estate',                   leak:'Leads going cold before I get back to them'},
+    shop:      {sell:'A local shop',                  leak:'People who ask once and never come back'},
+    food:      {sell:'Food truck and catering',       leak:'Event requests I answer too late'},
+    clinic:    {sell:'Clinic',                        leak:'No-shows and missed calls'}
+  };
+  (function prefillFromTrade(){
+    var key = null;
+    try {
+      key = new URLSearchParams(location.search).get('trade') ||
+            localStorage.getItem('art3ry:trade');
+    } catch (e) { key = null; }
+    var t = key && TRADE_FILL[key];
+    if (!t) return;
+    [['lf-sell', t.sell], ['lf-leak', t.leak]].forEach(function(pair){
+      var el = document.getElementById(pair[0]);
+      if (el && !el.value) el.value = pair[1];
+    });
+    var note = document.getElementById('lf-prefill');
+    if (note) note.hidden = false;
+  })();
+
   function message(){
     return 'Hi Jesse,\n\n'
       + 'Name: ' + val('lf-name') + '\n'
