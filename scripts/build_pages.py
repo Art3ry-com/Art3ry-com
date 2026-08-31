@@ -151,7 +151,7 @@ def render_landing(spec: dict) -> tuple[str, str]:
 <section class="section"><p class="proof">Not a demo — ART3RY runs <a href="https://jessemoraga.com" target="_blank" rel="noopener">a real California field-services company</a>, a real one-person company.</p></section>
 <section class="section"><h2>Questions</h2><div class="faq">{faq}</div></section>
 <section class="section"><div class="cta-strip wrap"><h2>Hand off the work behind the work.</h2><p>Tell us what's eating your day. We'll wire your assistant to it.</p><a href="/get-started/">Get your assistant &rarr;</a></div></section>
-{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}}'></script></body></html>"""
+{_FOOTER}</body></html>"""
     return slug, _guard(body, f"landing:{slug}")
 
 
@@ -175,7 +175,7 @@ def render_blog(spec: dict) -> tuple[str, str]:
 <h1 style="font-size:clamp(28px,4.4vw,46px)">{_esc(spec['title'])}</h1><p class="sub">{_esc(spec['dek'])}</p></div></header>
 <article class="article">{secs}<h2>FAQ</h2><div class="faq" style="max-width:none">{faq}</div></article>
 <section class="section"><div class="cta-strip wrap"><h2>Stop doing the work behind the work.</h2><p>ART3RY is the AI assistant that runs it for you.</p><a href="/get-started/">Get your assistant &rarr;</a></div></section>
-{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}}'></script></body></html>"""
+{_FOOTER}</body></html>"""
     return slug, _guard(body, f"blog:{slug}")
 
 
@@ -211,11 +211,11 @@ def render_service(spec: dict) -> tuple[str, str]:
 <a href="https://jessemoraga.com" target="_blank" rel="noopener" class="btn-secondary">See it running a real business</a></div></div></header>
 <section class="section"><h2>{_esc(spec['what_h2'])}</h2><p class="lead">{_esc(spec['what_lead'])}</p><div class="steps wrap">{steps}</div></section>
 <section class="section"><h2>{_esc(spec['inc_h2'])}</h2><div class="cards wrap">{cards}</div></section>
-<section class="section"><p class="proof">Not a pitch deck — every Art3ry service already runs <a href="https://jessemoraga.com" target="_blank" rel="noopener">a real California field-services company</a>, a real one-person company.</p></section>
+<section class="section"><p class="proof">Not a pitch deck. Every Art3ry service already runs <a href="https://jessemoraga.com" target="_blank" rel="noopener">a real California field-services company</a>, a real one-person company.</p></section>
 <section class="section"><h2>Questions</h2><div class="faq">{faq}</div></section>
 <section class="section"><p style="text-align:center;color:var(--ink-2);font-size:14px">Part of <a href="/services/" style="color:var(--blue);text-decoration:none">Art3ry growth-as-a-service</a> &middot; <a href="/services/" style="color:var(--blue);text-decoration:none">see all services &rarr;</a></p></section>
 <section class="section"><div class="cta-strip wrap"><h2>{_esc(spec['cta_h2'])}</h2><p>{_esc(spec['cta_p'])}</p><a href="/get-started/">Get started &rarr;</a></div></section>
-{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}}'></script></body></html>"""
+{_FOOTER}</body></html>"""
     return slug, _guard(body, f"service:{slug}")
 
 

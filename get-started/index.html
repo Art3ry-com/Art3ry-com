@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Work With Me: Tell Me About Your Business | ART3RY</title>
 <link rel="icon" type="image/png" href="/assets/art3ry-logo.png">
-<meta name="description" content="Email Jesse Moraga directly about your business. No sales team, no call funnel — you get a scope and a number back from the person who does the work.">
+<meta name="description" content="Email Jesse Moraga directly about your business. No sales team, no call funnel. You get a scope and a number back from the person who does the work.">
 <link rel="canonical" href="https://art3ry.com/get-started/">
 <style>
   :root{--bg:#060810;--bg-card:#090c1b;--bg-raised:#0d1126;--red:#e63946;--red-dim:rgba(230,57,70,.14);--red-glow:rgba(230,57,70,.3);--blue:#3a86ff;--blue-dim:rgba(58,134,255,.12);--blue-glow:rgba(58,134,255,.3);--green:#06d6a0;--green-dim:rgba(6,214,160,.08);--border:rgba(255,255,255,.08);--border-red:rgba(230,57,70,.3);--border-blue:rgba(58,134,255,.28);--text:#dde1f0;--muted:#6a7490;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
@@ -233,12 +233,24 @@
       headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
       body: JSON.stringify({
         access_key: WEB3FORMS_KEY,
-        subject: 'ART3RY lead — ' + val('lf-name') + (val('lf-biz') ? ' / ' + val('lf-biz') : ''),
+        subject: 'ART3RY lead: ' + val('lf-name') + (val('lf-biz') ? ' / ' + val('lf-biz') : ''),
         from_name: 'Art3ry Website',
-        name: val('lf-name'), business: val('lf-biz'), email: val('lf-email'),
-        phone: val('lf-phone'), sell: val('lf-sell'), leak: val('lf-leak'),
-        botcheck: val('lf-cw'),                 // Web3Forms' own honeypot field name
-        source: 'art3ry.com/get-started', ua: navigator.userAgent
+        // Reply-To the person who filled the form. Hitting reply answers the lead,
+        // and a relayed message with a real reply address scores better than one without.
+        replyto: val('lf-email'),
+        // Web3Forms renders these keys verbatim as the email body, so they are
+        // written the way they should read on a phone. Empty optional fields are
+        // dropped rather than sent as blanks. The raw user-agent string was noise
+        // in every lead; device class is the only part worth knowing.
+        'Name': val('lf-name'),
+        'Business': val('lf-biz') || undefined,
+        'Email': val('lf-email'),
+        'Phone': val('lf-phone') || undefined,
+        'What they sell': val('lf-sell') || undefined,
+        "What's slipping": val('lf-leak') || undefined,
+        'Sent from': 'art3ry.com/get-started' +
+                     (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? ' (phone)' : ' (desktop)'),
+        botcheck: val('lf-cw')                  // Web3Forms' own honeypot field name
       })
     })
     .then(function(r){ return r.json().catch(function(){ return {success:false}; }); })
@@ -246,12 +258,12 @@
       if(res && res.success){
         f.querySelectorAll('input,textarea,button').forEach(function(el){ el.disabled = true; });
         status.style.color = 'var(--green)';
-        status.textContent = "Got it — you'll hear from Jesse within one business day.";
+        status.textContent = "Got it. You'll hear from Jesse within one business day.";
         return;
       }
       // Server rejected it. Never dead-end the visitor — hand them the mail path.
       sendBtn.disabled = false; sendBtn.textContent = 'Send it to Jesse →';
-      mailtoFallback("Couldn't send that automatically — opening your email app instead.");
+      mailtoFallback("Couldn't send that automatically. Opening your email app instead.");
     })
     .catch(function(){
       // Network/CORS failure. Same rule: never lose the lead.
@@ -316,6 +328,5 @@
     </a>
   </div>
 </footer>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script>
 </body>
 </html>

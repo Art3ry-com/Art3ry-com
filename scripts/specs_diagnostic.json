@@ -4,16 +4,16 @@
       "slug": "diagnostic",
       "service_type": "Free small-business growth diagnostic",
       "kicker": "Free Growth Diagnostic",
-      "title_tag": "Free Small-Business Growth Diagnostic — Find What's Leaking | ART3RY",
-      "meta_description": "A free diagnostic that maps where your business is leaking leads, money, and time — and exactly what to fix first. No cost, no obligation.",
-      "h1": "Find out what's leaking —<br>free.",
+      "title_tag": "Free Small-Business Growth Diagnostic: Find What's Leaking | ART3RY",
+      "meta_description": "A free diagnostic that maps where your business is leaking leads, money, and time, and exactly what to fix first. No cost, no obligation.",
+      "h1": "Find out what's leaking.<br>Free.",
       "hero_sub": "Most owners have no idea how many leads die at voicemail, how far they rank, or where their customers actually come from. In one short conversation I map your operation, show you the biggest leaks, and tell you what it'd take to plug them. No cost, no pitch you didn't ask for.",
       "what_h2": "How it works",
       "what_lead": "One conversation. You walk away knowing exactly where you're losing money.",
       "steps": [
         {"n": "01", "h3": "Tell me your business", "p": "What you do, how customers find you, and what's slipping through the cracks."},
         {"n": "02", "h3": "I map the leaks", "p": "I check your calls, follow-up, search visibility, site, reviews, and where customers come from."},
-        {"n": "03", "h3": "You get the straight answer", "p": "A clear picture of your biggest leaks and what to fix first — yours to keep, free."}
+        {"n": "03", "h3": "You get the straight answer", "p": "A clear picture of your biggest leaks and what to fix first, yours to keep, free."}
       ],
       "inc_h2": "What I check",
       "scenarios": [
@@ -24,9 +24,9 @@
       "faq": [
         {"q": "Is it really free?", "a": "Yes. The diagnostic costs nothing and there's no obligation. If we're a fit to fix what I find, I'll tell you; if not, you still keep the map."},
         {"q": "How long does it take?", "a": "About 15 minutes. You tell me about your business; I do the digging and come back with the leaks."},
-        {"q": "What do I get at the end?", "a": "A clear, honest picture of where you're losing leads, money, and time — and which fix moves the needle first."}
+        {"q": "What do I get at the end?", "a": "A clear, honest picture of where you're losing leads, money, and time, and which fix moves the needle first."}
       ],
-      "cta_h2": "Find your leaks — free.",
+      "cta_h2": "Find your leaks, free.",
       "cta_p": "Tell me about your business. I'll show you exactly where you're losing customers."
     }
   ]
