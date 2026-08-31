@@ -468,3 +468,97 @@ footer p{font-size:11.5px;color:var(--ink-3);font-family:var(--mono)}
 @media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 
 @media print{body{background:#fff}nav,.cta-strip,.callout,.progress{display:none}}
+
+/* ============================================================
+   THE REEL — pinned scroll sequence
+   The hero shows a business leaking work. Here you scroll and
+   watch it get repaired, phase by phase. Scroll position drives
+   the state; nothing autoplays.
+   ============================================================ */
+.reel{position:relative;background:var(--void);color:var(--on-void)}
+.reel::before{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(40% 34% at 14% 16%,rgba(230,57,70,.20),transparent 62%),
+    radial-gradient(42% 36% at 88% 76%,rgba(44,107,232,.24),transparent 64%);
+  filter:blur(30px);
+}
+.reel-track{position:relative;height:360vh}
+.reel-stage{
+  position:sticky;top:0;height:100vh;min-height:620px;
+  display:flex;align-items:center;overflow:hidden;z-index:1;
+}
+.reel-inner{
+  max-width:var(--wrap);margin:0 auto;padding:0 var(--gut);width:100%;
+  display:grid;grid-template-columns:.82fr 1.18fr;gap:52px;align-items:center;
+}
+
+/* left column: the phase copy, cross-fading */
+.reel-copy{position:relative;min-height:290px}
+.reel-step{
+  position:absolute;inset:0;opacity:0;transform:translateY(18px);
+  transition:opacity .5s var(--ease),transform .5s var(--ease);
+  pointer-events:none;
+}
+.reel-step.on{opacity:1;transform:none;pointer-events:auto}
+.reel-step h2{color:#fff;font-size:clamp(28px,3.4vw,44px);margin-bottom:14px}
+.reel-step p{color:var(--on-void-2);font-size:17px;line-height:1.62;max-width:430px}
+.reel-step .phase-n{color:#8FB4FF;margin-bottom:16px}
+
+/* the rail — which act you are in */
+.reel-rail{
+  position:absolute;left:var(--gut);top:50%;transform:translateY(-50%);
+  display:flex;flex-direction:column;gap:12px;z-index:3;
+}
+.reel-rail i{
+  width:2px;height:34px;background:rgba(255,255,255,.16);border-radius:2px;
+  display:block;position:relative;overflow:hidden;
+}
+.reel-rail i::after{
+  content:'';position:absolute;inset:0 0 auto 0;height:0;background:var(--red);
+  transition:height .35s var(--ease);
+}
+.reel-rail i.on::after{height:100%}
+
+/* right column: the diagram */
+.reel-vis{position:relative}
+.reel-vis svg{width:100%;height:auto;display:block;overflow:visible}
+.reel-cap{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:#6E7C9C;margin-top:16px;display:flex;justify-content:space-between;
+}
+.reel-cap b{font-weight:500;color:var(--red-hot)}
+.reel[data-phase="3"] .reel-cap b{color:var(--mint)}
+
+/* diagram layers, revealed by phase */
+.lyr{opacity:0;transition:opacity .55s var(--ease)}
+.reel[data-phase="1"] .lyr-know,
+.reel[data-phase="2"] .lyr-know,
+.reel[data-phase="3"] .lyr-know{opacity:1}
+.reel[data-phase="2"] .lyr-build,
+.reel[data-phase="3"] .lyr-build{opacity:1}
+.reel[data-phase="3"] .lyr-op{opacity:1}
+/* the leak closes only at the end */
+.lyr-leak{opacity:1;transition:opacity .5s var(--ease)}
+.reel[data-phase="3"] .lyr-leak{opacity:0}
+.node{transition:stroke .5s var(--ease),fill .5s var(--ease)}
+
+@media(max-width:980px){
+  .reel-track{height:auto}
+  .reel-stage{position:relative;height:auto;min-height:0;padding:56px 0}
+  .reel-inner{grid-template-columns:1fr;gap:32px}
+  .reel-copy{min-height:0;display:flex;flex-direction:column;gap:26px}
+  .reel-step{position:relative;opacity:1;transform:none;pointer-events:auto}
+  .reel-rail{display:none}
+  /* every layer shown at once on small screens, since there is no pin */
+  .lyr{opacity:1}
+  .lyr-leak{opacity:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .reel-track{height:auto}
+  .reel-stage{position:relative;height:auto;padding:56px 0}
+  .reel-inner{grid-template-columns:1fr;gap:32px}
+  .reel-copy{min-height:0;display:flex;flex-direction:column;gap:26px}
+  .reel-step{position:relative;opacity:1;transform:none}
+  .lyr{opacity:1}.lyr-leak{opacity:0}.reel-rail{display:none}
+}
