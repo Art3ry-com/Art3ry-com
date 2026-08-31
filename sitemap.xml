@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://art3ry.com/</loc></url>
-  <url><loc>https://art3ry.com/assistant/</loc></url>
-  <url><loc>https://art3ry.com/about/</loc></url>
+  <url><loc>https://art3ry.com/</loc><lastmod>2026-08-31</lastmod></url>
+  <url><loc>https://art3ry.com/about/</loc><lastmod>2026-08-31</lastmod></url>
   <url><loc>https://art3ry.com/playbook/</loc></url>
-  <url><loc>https://art3ry.com/services/</loc></url>
+  <url><loc>https://art3ry.com/services/</loc><lastmod>2026-08-31</lastmod></url>
   <url><loc>https://art3ry.com/blog/</loc></url>
-  <url><loc>https://art3ry.com/get-started/</loc></url>
-  <url><loc>https://art3ry.com/assistant-for-business/</loc></url>
-  <url><loc>https://art3ry.com/assistant-for-educators/</loc></url>
-  <url><loc>https://art3ry.com/assistant-for-families/</loc></url>
-  <url><loc>https://art3ry.com/assistant-for-contractors/</loc></url>
-  <url><loc>https://art3ry.com/assistant-for-salons/</loc></url>
-  <url><loc>https://art3ry.com/assistant-for-law-firms/</loc></url>
-  <url><loc>https://art3ry.com/assistant-for-real-estate/</loc></url>
-  <url><loc>https://art3ry.com/assistant-for-food-trucks/</loc></url>
-  <url><loc>https://art3ry.com/assistant-for-ecommerce/</loc></url>
+  <url><loc>https://art3ry.com/get-started/</loc><lastmod>2026-08-31</lastmod></url>
   <url><loc>https://art3ry.com/blog/ai-receptionist-for-contractors-missed-calls/</loc></url>
   <url><loc>https://art3ry.com/blog/all-in-one-business-software-kill-saas-bloat/</loc></url>
   <url><loc>https://art3ry.com/blog/marketing-agency-alternative-fire-without-losing-leads/</loc></url>
@@ -32,10 +22,10 @@
   <url><loc>https://art3ry.com/blog/business-operating-system/</loc></url>
   <url><loc>https://art3ry.com/blog/missed-call-lead-capture/</loc></url>
   <url><loc>https://art3ry.com/blog/business-money-leaks/</loc></url>
-  <url><loc>https://art3ry.com/services/seo/</loc></url>
-  <url><loc>https://art3ry.com/services/lead-follow-up/</loc></url>
-  <url><loc>https://art3ry.com/services/websites/</loc></url>
-  <url><loc>https://art3ry.com/services/automation/</loc></url>
+  <url><loc>https://art3ry.com/services/seo/</loc><lastmod>2026-08-31</lastmod></url>
+  <url><loc>https://art3ry.com/services/lead-follow-up/</loc><lastmod>2026-08-31</lastmod></url>
+  <url><loc>https://art3ry.com/services/websites/</loc><lastmod>2026-08-31</lastmod></url>
+  <url><loc>https://art3ry.com/services/automation/</loc><lastmod>2026-08-31</lastmod></url>
   <url><loc>https://art3ry.com/diagnostic/</loc></url>
   <url><loc>https://art3ry.com/blog/ai-phone-intake/</loc><lastmod>2026-08-31</lastmod></url>
   <url><loc>https://art3ry.com/blog/automate-invoicing/</loc><lastmod>2026-08-31</lastmod></url>

@@ -1,4 +1,4 @@
-# art3ry.com — we are an AI company; we WANT to be cited by AI answer engines.
+# art3ry.com — I want this site cited by AI answer engines.
 # Full crawl access for search + AI-answer engines. (Note: Cloudflare's "managed
 # robots.txt" / AI-bot block can override this at the edge — keep that OFF for
 # this site so the rules below actually apply.)
