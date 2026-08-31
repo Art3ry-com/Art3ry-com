@@ -185,7 +185,8 @@ nav{
 }
 .btn-primary{background:var(--red);color:#fff;box-shadow:0 12px 34px -14px rgba(230,57,70,.85)}
 .btn-primary:hover{background:var(--red-hot);transform:translateY(-3px);box-shadow:0 20px 44px -16px rgba(230,57,70,.9)}
-.btn-secondary{border:1px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.04);backdrop-filter:blur(6px)}
+.btn-secondary{border:1px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(6px)}
+.btn-secondary:hover{border-color:rgba(255,255,255,.5);backdrop-filter:blur(6px)}
 .btn-secondary:hover{border-color:rgba(255,255,255,.5);transform:translateY(-3px)}
 .sheet .btn-secondary,.cta-strip .btn-secondary{background:var(--sheet);color:var(--ink);border:1px solid var(--rule)}
 .sheet .btn-secondary:hover,.cta-strip .btn-secondary:hover{border-color:var(--ink)}
@@ -198,7 +199,7 @@ nav{
   box-shadow:0 50px 110px -30px rgba(0,0,0,.95),
              0 0 90px -30px rgba(44,107,232,.55),
              inset 0 1px 0 rgba(255,255,255,.16);
-  padding:22px;backdrop-filter:blur(12px);
+  padding:22px;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
   opacity:0;animation:fadeUp 1s var(--ease) .3s forwards;
   transform-style:preserve-3d;
 }
@@ -363,7 +364,15 @@ p.lead,.section .lead{font-size:17.5px;color:var(--ink-2);max-width:680px;margin
 .band .kicker{color:#7FB0FF}
 .band .kicker::before{background:#7FB0FF;box-shadow:0 -3px 0 -1px #7FB0FF,0 3px 0 -1px #7FB0FF}
 .band .measure{background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.12);
-  box-shadow:0 30px 70px -30px rgba(0,0,0,.8);backdrop-filter:blur(8px)}
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.8);-webkit-backdrop-filter:blur(8px)}
+.band .measure-row{border-color:rgba(255,255,255,.09)}
+.band .measure-label,.band .pbar-tag,.band .measure-val span{color:#8595B5}
+.band .measure-val{color:#fff}
+.band .pbar{background:rgba(255,255,255,.09)}
+
+/* ---------- Callout (dark inset) ---------- */
+.callout{
+  background:var(--void);backdrop-filter:blur(8px)}
 .band .measure-row{border-color:rgba(255,255,255,.09)}
 .band .measure-label,.band .pbar-tag,.band .measure-val span{color:#8595B5}
 .band .measure-val{color:#fff}
