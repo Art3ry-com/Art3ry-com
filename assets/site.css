@@ -126,6 +126,15 @@ nav{
   display:flex;align-items:center;justify-content:space-between;
   padding:18px var(--gut);z-index:60;
 }
+.logo{display:flex;align-items:center;gap:11px;flex:none}
+.logo-mark{width:26px;height:26px;flex:none;display:block}
+.wordmark{
+  font-family:var(--sans);font-weight:900;font-size:21px;letter-spacing:-.045em;
+  color:#fff;line-height:1;display:block;
+}
+.wordmark em{font-style:normal;color:var(--red-hot)}
+.sheet .wordmark,footer .wordmark{color:var(--ink)}
+.sheet .wordmark em,footer .wordmark em{color:var(--red)}
 .logo-img{height:40px;width:auto}
 .nav-links{display:flex;gap:30px;font-size:14px;font-weight:500}
 .stage .nav-links{color:var(--on-void-2)}
@@ -184,10 +193,12 @@ nav{
 /* ---------- The live diagram ---------- */
 .rig{
   position:relative;border-radius:10px;
-  background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.018));
-  border:1px solid rgba(255,255,255,.13);
-  box-shadow:0 40px 90px -34px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.11);
-  padding:20px;backdrop-filter:blur(10px);
+  background:linear-gradient(158deg,rgba(30,44,82,.92),rgba(11,17,36,.94));
+  border:1px solid rgba(126,158,224,.26);
+  box-shadow:0 50px 110px -30px rgba(0,0,0,.95),
+             0 0 90px -30px rgba(44,107,232,.55),
+             inset 0 1px 0 rgba(255,255,255,.16);
+  padding:22px;backdrop-filter:blur(12px);
   opacity:0;animation:fadeUp 1s var(--ease) .3s forwards;
   transform-style:preserve-3d;
 }
@@ -212,10 +223,10 @@ nav{
 }
 
 /* diagram parts */
-.n-box{fill:rgba(255,255,255,.05);stroke:rgba(255,255,255,.24)}
-.n-txt{fill:#B9C6E2;font-family:var(--mono);font-size:10px;letter-spacing:1.2px}
+.n-box{fill:rgba(255,255,255,.07);stroke:rgba(150,178,236,.42)}
+.n-txt{fill:#D3DEF5;font-family:var(--mono);font-size:10px;letter-spacing:1.2px}
 .n-core{fill:#fff}
-.wire{stroke:rgba(255,255,255,.2);stroke-width:1.25;fill:none}
+.wire{stroke:rgba(160,186,236,.34);stroke-width:1.25;fill:none}
 .wire-red{stroke:var(--red);stroke-width:1.25;fill:none;stroke-dasharray:4 4}
 .dot{r:3.2}
 .dot-b{fill:var(--blue-hot)}
@@ -225,25 +236,32 @@ nav{
 /* ============================================================
    LIGHT SHEET
    ============================================================ */
-.sheet{position:relative;background:var(--paper)}
+.sheet{position:relative;background:var(--paper);isolation:isolate}
+.sheet::after{
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(48% 30% at 8% 12%,rgba(44,107,232,.09),transparent 62%),
+    radial-gradient(42% 28% at 96% 62%,rgba(230,57,70,.07),transparent 64%);
+}
 .sheet::before{
   content:'';position:absolute;inset:0;pointer-events:none;
   background-image:
     linear-gradient(var(--grid) 1px,transparent 1px),
     linear-gradient(90deg,var(--grid) 1px,transparent 1px);
-  background-size:88px 88px;
-  mask-image:linear-gradient(#000,#000);
-  opacity:.55;
+  background-size:132px 132px;
+  mask-image:radial-gradient(120% 90% at 50% 0%,#000 10%,transparent 72%);
+  -webkit-mask-image:radial-gradient(120% 90% at 50% 0%,#000 10%,transparent 72%);
+  opacity:.5;
 }
 .sheet>*{position:relative}
-.section{max-width:var(--wrap);margin:0 auto;padding:88px var(--gut)}
+.section{max-width:var(--wrap);margin:0 auto;padding:76px var(--gut)}
 p.lead,.section .lead{font-size:17.5px;color:var(--ink-2);max-width:680px;margin-top:14px;line-height:1.65}
 .rule-line{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
 .rule-line::after{content:'';display:block;height:1px;background:var(--rule)}
 
 /* ---------- Counters ---------- */
 .stats{
-  max-width:var(--wrap);margin:-46px auto 0;padding:0 var(--gut);position:relative;z-index:5;
+  max-width:var(--wrap);margin:-42px auto 0;padding:0 var(--gut);position:relative;z-index:5;
 }
 .stats-in{
   display:grid;grid-template-columns:repeat(4,1fr);
@@ -258,10 +276,22 @@ p.lead,.section .lead{font-size:17.5px;color:var(--ink-2);max-width:680px;margin
 .stat-num{display:block;font-size:38px;font-weight:900;letter-spacing:-.045em;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
 .stat-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-top:9px}
 
+/* ---------- Card icons ---------- */
+.ico{
+  width:46px;height:46px;border-radius:12px;display:grid;place-items:center;
+  margin-bottom:18px;color:#fff;
+  background:linear-gradient(150deg,var(--blue),#1B4FBF);
+  box-shadow:0 8px 20px -8px rgba(44,107,232,.75);
+}
+.ico svg{width:23px;height:23px;stroke:currentColor;stroke-width:1.85;fill:none;
+  stroke-linecap:round;stroke-linejoin:round}
+.ico.red{background:linear-gradient(150deg,var(--red),#A50F1B);box-shadow:0 8px 20px -8px rgba(230,57,70,.75)}
+.ico.mint{background:linear-gradient(150deg,#12C48B,#068259);box-shadow:0 8px 20px -8px rgba(18,196,139,.7)}
+
 /* ---------- Cards, tilt ---------- */
 .card,.step,.blog-card{
   background:var(--sheet);border:1px solid var(--rule);border-radius:8px;
-  padding:28px 26px;box-shadow:var(--sh-1);position:relative;overflow:hidden;
+  padding:30px 28px;box-shadow:var(--sh-1);position:relative;overflow:hidden;
   transition:box-shadow .3s var(--ease),border-color .3s var(--ease),transform .12s linear;
   transform-style:preserve-3d;
 }
@@ -312,6 +342,32 @@ p.lead,.section .lead{font-size:17.5px;color:var(--ink-2);max-width:680px;margin
 .pbar.red i{background:var(--red)}
 .pbar-pair{display:flex;flex-direction:column;gap:10px}
 .pbar-tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px}
+
+/* ---------- Dark data band ----------
+   Instrument readings look better on a dark ground, and it breaks up
+   an otherwise uniform run of white sheets. */
+.band{
+  background:var(--void);color:var(--on-void);position:relative;overflow:hidden;
+  margin:0;padding:0;
+}
+.band::before{
+  content:'';position:absolute;inset:-25%;pointer-events:none;
+  background:
+    radial-gradient(30% 38% at 12% 20%,rgba(44,107,232,.26),transparent 62%),
+    radial-gradient(32% 38% at 88% 84%,rgba(230,57,70,.18),transparent 64%);
+  filter:blur(26px);
+}
+.band>*{position:relative}
+.band h2{color:#fff}
+.band .lead{color:var(--on-void-2)}
+.band .kicker{color:#7FB0FF}
+.band .kicker::before{background:#7FB0FF;box-shadow:0 -3px 0 -1px #7FB0FF,0 3px 0 -1px #7FB0FF}
+.band .measure{background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.12);
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.8);backdrop-filter:blur(8px)}
+.band .measure-row{border-color:rgba(255,255,255,.09)}
+.band .measure-label,.band .pbar-tag,.band .measure-val span{color:#8595B5}
+.band .measure-val{color:#fff}
+.band .pbar{background:rgba(255,255,255,.09)}
 
 /* ---------- Callout (dark inset) ---------- */
 .callout{

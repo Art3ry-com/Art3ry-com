@@ -30,7 +30,17 @@
   <div class="stage-grid"></div>
 
   <nav>
-    <a href="/" class="logo"><img src="/assets/art3ry-logo.png" alt="ART3RY" class="logo-img"></a>
+    <a href="/" class="logo" aria-label="ART3RY home">
+      <svg class="logo-mark" viewBox="0 0 26 26" aria-hidden="true">
+        <defs><linearGradient id="lm" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#E63946"/><stop offset="100%" stop-color="#5B9BFF"/>
+        </linearGradient></defs>
+        <path d="M1 15 H6 L9 7 L13 21 L16 13 H21" fill="none" stroke="url(#lm)"
+              stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="23.2" cy="13" r="2.1" fill="#E63946"/>
+      </svg>
+      <span class="wordmark">ART<em>3</em>RY</span>
+    </a>
     <div class="nav-links"><a href="/services/">The Growth Build</a><a href="/about/">About</a><a href="/blog/">Blog</a></div>
     <a href="/get-started/" class="nav-cta">Work with me &rarr;</a>
   </nav>
@@ -149,7 +159,10 @@
     </div>
   </div>
 
-  <div class="section" style="padding-top:0">
+  </div><!-- /sheet -->
+
+  <div class="band">
+   <div class="section">
     <div class="kicker blue">Measured, not estimated</div>
     <h2>What it actually did.</h2>
     <p class="lead" style="margin-bottom:34px">Three readings from the same company, over the period it was being built.</p>
@@ -192,10 +205,10 @@
         <div class="measure-val">700+<span>jobs &middot; no staff</span></div>
       </div>
     </div>
-  </div>
+   </div>
+  </div><!-- /band -->
 
-  <div class="rule-line"></div>
-
+  <div class="sheet">
   <div class="section">
     <div class="kicker">The Growth Build</div>
     <h2>Three phases.<br>Know, build, operate.</h2>
@@ -204,7 +217,7 @@
     <div class="grid-3" style="margin-top:40px">
       <div class="card card-red rv tilt">
         <span class="phase-n">PHASE 01</span>
-        <h3>Know</h3>
+        <div class="ico red"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></div><h3>Know</h3>
         <p>Before I build anything, I find out what&rsquo;s actually true about your market.</p>
         <ul>
           <li>Market research for your trade and your city</li>
@@ -214,7 +227,7 @@
       </div>
       <div class="card card-blue rv rv-2 tilt">
         <span class="phase-n">PHASE 02</span>
-        <h3>Build</h3>
+        <div class="ico "><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5M3 16.5l9 5 9-5"/></svg></div><h3>Build</h3>
         <p>The assets you should already own, built properly and wired together.</p>
         <ul>
           <li>A <a href="/services/websites/">website</a> built to book work, not to sit there</li>
@@ -226,7 +239,7 @@
       </div>
       <div class="card card-red rv rv-3 tilt">
         <span class="phase-n">PHASE 03</span>
-        <h3>Operate</h3>
+        <div class="ico red"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M22 12h-3M5 12H2M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M18.4 18.4l-2.1-2.1M7.7 7.7L5.6 5.6"/></svg></div><h3>Operate</h3>
         <p>The part everyone skips. What keeps running after launch day.</p>
         <ul>
           <li>Intake, so nothing that comes in gets lost</li>
@@ -245,12 +258,12 @@
     <div class="kicker blue">What actually changes</div>
     <h2>Nod at three of these<br>and we should talk.</h2>
     <div class="grid-3" style="margin-top:36px">
-      <div class="card rv tilt"><h3>People can find you</h3><p>Local search, a real site, a Google profile that&rsquo;s filled out. The basics most businesses never finish.</p></div>
-      <div class="card rv rv-2 tilt"><h3>Nothing gets lost</h3><p>Call, form, text, email, DM &mdash; it lands somewhere you&rsquo;ll see it, instead of somewhere you won&rsquo;t.</p></div>
-      <div class="card rv rv-3 tilt"><h3>Money moves faster</h3><p>Quotes go out same day, invoices don&rsquo;t sit, and the unpaid ones get chased without you doing it.</p></div>
-      <div class="card rv rv-4 tilt"><h3>You stop guessing</h3><p>Analytics wired up properly, so you know which pages and posts bring customers &mdash; before you spend on more.</p></div>
-      <div class="card rv rv-5 tilt"><h3>You look like a business</h3><p>Email on your own domain instead of a personal Gmail. It costs almost nothing and it changes how people read you.</p></div>
-      <div class="card rv rv-6 tilt"><h3>It keeps running</h3><p>The follow-ups, the reminders, the status updates &mdash; handled, with you as the last set of eyes before anything goes out.</p></div>
+      <div class="card rv tilt"><div class="ico "><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg></div><h3>People can find you</h3><p>Local search, a real site, a Google profile that&rsquo;s filled out. The basics most businesses never finish.</p></div>
+      <div class="card rv rv-2 tilt"><div class="ico red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h4l2 3h6l2-3h4"/><path d="M5 5h14l2 8v6H3v-6z"/></svg></div><h3>Nothing gets lost</h3><p>Call, form, text, email, DM &mdash; it lands somewhere you&rsquo;ll see it, instead of somewhere you won&rsquo;t.</p></div>
+      <div class="card rv rv-3 tilt"><div class="ico mint"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><path d="M12 9.5v5M10 11h3a1.2 1.2 0 010 2.4h-2.6"/></svg></div><h3>Money moves faster</h3><p>Quotes go out same day, invoices don&rsquo;t sit, and the unpaid ones get chased without you doing it.</p></div>
+      <div class="card rv rv-4 tilt"><div class="ico "><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>You stop guessing</h3><p>Analytics wired up properly, so you know which pages and posts bring customers &mdash; before you spend on more.</p></div>
+      <div class="card rv rv-5 tilt"><div class="ico red"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><h3>You look like a business</h3><p>Email on your own domain instead of a personal Gmail. It costs almost nothing and it changes how people read you.</p></div>
+      <div class="card rv rv-6 tilt"><div class="ico mint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 01-13.7 5.6M4 12a8 8 0 0113.7-5.6"/><path d="M4 6v4h4M20 18v-4h-4"/></svg></div><h3>It keeps running</h3><p>The follow-ups, the reminders, the status updates &mdash; handled, with you as the last set of eyes before anything goes out.</p></div>
     </div>
   </div>
 
@@ -301,7 +314,7 @@
 
   <footer>
     <div>
-      <img src="/assets/art3ry-logo.png" alt="ART3RY" style="height:24px">
+      <span class="logo"><svg class="logo-mark" viewBox="0 0 26 26" aria-hidden="true"><defs><linearGradient id="lm2" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#E63946"/><stop offset="100%" stop-color="#2C6BE8"/></linearGradient></defs><path d="M1 15 H6 L9 7 L13 21 L16 13 H21" fill="none" stroke="url(#lm2)" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.2" cy="13" r="2.1" fill="#E63946"/></svg><span class="wordmark">ART<em>3</em>RY</span></span>
       <p style="margin-top:7px">&copy; 2026 ART3RY, LLC &mdash; California</p>
     </div>
     <div class="footer-links"><a href="/services/">The Growth Build</a><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/get-started/">Work with me</a><a href="https://jessemoraga.com" target="_blank" rel="noopener">Jesse Moraga</a></div>
