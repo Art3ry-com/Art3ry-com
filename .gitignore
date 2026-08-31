@@ -30,3 +30,8 @@ backups/
 .idea/
 .vscode/
 scripts/_blog_cards.json
+
+# Strategy docs live in the PRIVATE jesse-moraga-brand repo.
+# This repo is public and its Pages root is Jekyll-rendered — a .md here
+# becomes a crawlable page on art3ry.com.
+docs/
