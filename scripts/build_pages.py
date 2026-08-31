@@ -213,7 +213,7 @@ def render_service(spec: dict) -> tuple[str, str]:
 <section class="section"><h2>{_esc(spec['inc_h2'])}</h2><div class="cards wrap">{cards}</div></section>
 <section class="section"><p class="proof">Not a pitch deck — every Art3ry service already runs <a href="https://jessemoraga.com" target="_blank" rel="noopener">a real California field-services company</a>, a real one-person company.</p></section>
 <section class="section"><h2>Questions</h2><div class="faq">{faq}</div></section>
-<section class="section"><p style="text-align:center;color:var(--muted);font-size:14px">Part of <a href="/services/" style="color:var(--blue);text-decoration:none">Art3ry growth-as-a-service</a> &middot; <a href="/services/" style="color:var(--blue);text-decoration:none">see all services &rarr;</a></p></section>
+<section class="section"><p style="text-align:center;color:var(--ink-2);font-size:14px">Part of <a href="/services/" style="color:var(--blue);text-decoration:none">Art3ry growth-as-a-service</a> &middot; <a href="/services/" style="color:var(--blue);text-decoration:none">see all services &rarr;</a></p></section>
 <section class="section"><div class="cta-strip wrap"><h2>{_esc(spec['cta_h2'])}</h2><p>{_esc(spec['cta_p'])}</p><a href="/get-started/">Get started &rarr;</a></div></section>
 {_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}}'></script></body></html>"""
     return slug, _guard(body, f"service:{slug}")
@@ -267,7 +267,9 @@ def main(argv=None) -> int:
             lm = re.search(r"<lastmod>(.*?)</lastmod>", block)
             lastmod[u] = lm.group(1) if lm else lastmod.get(u)
 
-    core = ["", "assistant/", "services/", "about/", "blog/", "get-started/"]
+    # /assistant/ is intentionally noindex,follow and out of the sitemap (3fdd684):
+    # submitting a noindexed URL sends Google two contradictory instructions.
+    core = ["", "services/", "about/", "blog/", "get-started/"]
     for u in [f"{SITE}/{c}" for c in core]:
         if u not in lastmod:
             order.append(u); lastmod[u] = None
