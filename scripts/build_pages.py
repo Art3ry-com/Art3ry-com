@@ -69,10 +69,10 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:24px;fl
 _NAV = """<nav>
   <a href="/" class="logo"><img src="/assets/art3ry-logo.png" alt="ART3RY" class="logo-img" style="border-radius:4px"></a>
   <div class="nav-links">
-    <a href="/assistant/">Assistant</a><a href="/services/">Services</a><a href="/about/">About</a><a href="/blog/">Blog</a>
+    <a href="/services/">The Growth Build</a><a href="/about/">About</a><a href="/blog/">Blog</a>
     <a href="https://jessemoraga.com" target="_blank" rel="noopener">The Proof</a>
   </div>
-  <a href="/get-started/" class="nav-cta">Get started &rarr;</a>
+  <a href="/get-started/" class="nav-cta">Work with me &rarr;</a>
 </nav>"""
 
 _FOOTER = """<footer>
@@ -81,7 +81,7 @@ _FOOTER = """<footer>
     <p style="font-size:11px;color:var(--muted)">&copy; 2026 ART3RY, LLC — California</p>
   </div>
   <div class="footer-links">
-    <a href="/assistant/">Assistant</a><a href="/services/">Services</a><a href="/about/">About</a><a href="/blog/">Blog</a>
+    <a href="/services/">The Growth Build</a><a href="/about/">About</a><a href="/blog/">Blog</a>
     <a href="/get-started/">Get Started</a>
     <a href="https://jessemoraga.com" target="_blank" rel="noopener">The Proof</a>
   </div>
@@ -156,7 +156,7 @@ def render_landing(spec: dict) -> tuple[str, str]:
         for c in spec["scenarios"])
     faq = "".join(f'<div class="q">{_esc(f["q"])}</div><div class="a">{_esc(f["a"])}</div>' for f in spec["faq"])
     body = f"""{_head(spec['title_tag'], spec['meta_description'], canon, jsonld)}
-<header class="hero"><div class="wrap"><div class="kicker">Your AI Assistant</div>
+<header class="hero"><div class="wrap"><div class="kicker">The Growth Build</div>
 <h1>{_h1(spec['h1'])}</h1><p class="sub">{_esc(spec['hero_sub'])}</p>
 <div class="btns"><a href="/get-started/" class="btn-primary">Get your assistant &rarr;</a>
 <a href="https://jessemoraga.com" target="_blank" rel="noopener" class="btn-secondary">See it running a real business</a></div></div></header>
@@ -166,7 +166,7 @@ def render_landing(spec: dict) -> tuple[str, str]:
 <section class="section"><p class="proof">Not a demo — ART3RY runs <a href="https://jessemoraga.com" target="_blank" rel="noopener">a real California field-services company</a>, a real one-person company.</p></section>
 <section class="section"><h2>Questions</h2><div class="faq">{faq}</div></section>
 <section class="section"><div class="cta-strip wrap"><h2>Hand off the work behind the work.</h2><p>Tell us what's eating your day. We'll wire your assistant to it.</p><a href="/get-started/">Get your assistant &rarr;</a></div></section>
-{_FOOTER}</body></html>"""
+{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script></body></html>"""
     return slug, _guard(body, f"landing:{slug}")
 
 
@@ -190,7 +190,7 @@ def render_blog(spec: dict) -> tuple[str, str]:
 <h1 style="font-size:clamp(28px,4.4vw,46px)">{_esc(spec['title'])}</h1><p class="sub">{_esc(spec['dek'])}</p></div></header>
 <article class="article">{secs}<h2>FAQ</h2><div class="faq" style="max-width:none">{faq}</div></article>
 <section class="section"><div class="cta-strip wrap"><h2>Stop doing the work behind the work.</h2><p>ART3RY is the AI assistant that runs it for you.</p><a href="/get-started/">Get your assistant &rarr;</a></div></section>
-{_FOOTER}</body></html>"""
+{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script></body></html>"""
     return slug, _guard(body, f"blog:{slug}")
 
 
@@ -230,7 +230,7 @@ def render_service(spec: dict) -> tuple[str, str]:
 <section class="section"><h2>Questions</h2><div class="faq">{faq}</div></section>
 <section class="section"><p style="text-align:center;color:var(--muted);font-size:14px">Part of <a href="/services/" style="color:var(--blue);text-decoration:none">Art3ry growth-as-a-service</a> &middot; <a href="/services/" style="color:var(--blue);text-decoration:none">see all services &rarr;</a></p></section>
 <section class="section"><div class="cta-strip wrap"><h2>{_esc(spec['cta_h2'])}</h2><p>{_esc(spec['cta_p'])}</p><a href="/get-started/">Get started &rarr;</a></div></section>
-{_FOOTER}</body></html>"""
+{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script></body></html>"""
     return slug, _guard(body, f"service:{slug}")
 
 
