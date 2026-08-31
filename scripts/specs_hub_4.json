@@ -1,0 +1,87 @@
+{"blog":[
+{
+ "slug":"diy-voice-ai-what-it-really-costs",
+ "title":"DIY Voice AI: What Vapi, Retell, and Synthflow Really Cost to Run",
+ "meta_description":"The per-minute rate is the smallest part of the bill. What actually goes into the cost of running your own voice AI agent, and the work nobody quotes for.",
+ "dek":"Building it yourself on a voice AI platform is genuinely cheaper per minute. Whether it is cheaper overall depends on what your time is worth and how much of the hidden work you enjoy.",
+ "sections":[
+  {"h2":"The stack you are actually paying for",
+   "paragraphs":[
+    "A voice agent is not one product, it is four things chained together, and each bills separately. Understanding the chain is what lets you read a quote properly.",
+    "First, telephony: the number itself and the per-minute cost of carrying the call. Second, speech-to-text, converting the caller's audio into words. Third, the language model that decides what to say. Fourth, text-to-speech, turning the reply into audio.",
+    "Platforms like Vapi, Retell, and Synthflow orchestrate these four and add their own margin and tooling on top. Some bundle everything into a single per-minute rate, others pass through the component costs and charge for the orchestration.",
+    "This matters because the components have very different price profiles. A premium, natural-sounding voice can cost several times a basic one, and a large language model costs considerably more per exchange than a small one. Two agents on the same platform can differ severalfold in running cost purely on those two choices."]},
+  {"h2":"Why the per-minute rate misleads",
+   "paragraphs":[
+    "The advertised rate is usually the floor: cheapest model, cheapest voice, no extras. The configuration that actually sounds good and behaves well is rarely the cheapest one.",
+    "Latency costs money too. The setups that feel natural, where the agent responds without an awkward pause, generally use faster and more expensive inference. You can have cheap or you can have responsive, and callers notice the difference immediately.",
+    "Then there is everything that is not talk time: failed calls, testing, and the calls where someone rings, hears a voice, and hangs up. During development you will burn a meaningful amount on your own testing, which is fine but should be expected.",
+    "None of this makes the platforms bad value. Per minute, DIY is genuinely cheaper than any human service. The point is that the number on the pricing page is not the number on your invoice."]},
+  {"h2":"The cost that is not on any invoice",
+   "paragraphs":[
+    "Building the first working version is a weekend. Building one you would trust with real customers is not.",
+    "The prompt is the hard part. Getting an agent to reliably ask the right qualifying questions, refuse to answer things it should not, handle interruptions, and hand over cleanly takes many iterations against real conversations. Each iteration is a change, a test call, and a judgement about whether it got better.",
+    "Then the integrations, which is where most DIY builds stall. Reading calendar availability correctly, writing bookings without double-booking, matching returning callers to existing records. We go through what has to work in [AI phone agent integrations](/blog/ai-phone-agent-integrations/).",
+    "And then it needs maintaining. Models get deprecated, APIs change, your prices and services change, and an agent nobody has looked at in six months is confidently telling callers things that stopped being true in the spring."]},
+  {"h2":"When DIY is genuinely the right call",
+   "paragraphs":[
+    "If you enjoy this kind of work, build it. That is not a throwaway line. The people who succeed at DIY voice agents are the ones who find the iteration interesting rather than a tax, because the iteration never really stops.",
+    "If you have unusual requirements that no packaged product handles, building gives you control that buying cannot. Odd integrations, unusual call flows, and industry-specific logic are all easier when you own the whole thing.",
+    "If you are technical and your call volume is high, the per-minute economics compound in your favour and the build time amortises quickly.",
+    "And if you want to understand the technology properly rather than rent it, building one is by far the fastest education available. Even if you end up buying, you will buy far better for having tried."]},
+  {"h2":"When buying is the honest answer",
+   "paragraphs":[
+    "If your time is the scarce resource in your business, and it usually is for an owner-operator, then the weeks spent tuning prompts are weeks not spent on paid work. That trade is rarely favourable at typical small-business call volumes.",
+    "If the thing has to work correctly from day one because it is answering real customers, the gap between a demo that works and a deployment that holds up is wider than it looks.",
+    "If you do not want to be the person who gets paged when a model deprecation breaks the phone line on a Saturday, that is a completely legitimate reason to pay someone else.",
+    "There is no virtue in either choice. It is a straightforward question about where your hours are worth most. If you want to hear what a finished one sounds like before deciding, ART3RY's demo line is (559) 847-9824, and [what is an AI receptionist](/blog/what-is-an-ai-receptionist/) explains what it should be doing."]}],
+ "faq":[
+  {"q":"Is building it myself cheaper?","a":"Per minute, almost certainly. Overall, it depends entirely on what your time is worth and how much of the prompt tuning, integration work, and ongoing maintenance you are happy to own."},
+  {"q":"What actually drives the per-minute cost?","a":"Mostly your choice of language model and voice. A premium voice and a large model can cost several times a basic configuration, and the responsive-feeling setups generally use the more expensive end."},
+  {"q":"How long does a DIY build take?","a":"A working demo takes a weekend. Something you would put in front of real customers, with reliable qualifying, clean handovers, and working calendar integration, takes considerably longer and never entirely stops needing attention."},
+  {"q":"What breaks after launch?","a":"Model deprecations, API changes, and knowledge going stale as your prices and services change. An agent nobody has reviewed in six months will confidently tell callers things that are no longer true."},
+  {"q":"Can I start DIY and switch later?","a":"Yes, and it is a reasonable path. Building one teaches you what to ask for, which makes you a much better buyer if you later decide the maintenance is not how you want to spend your time."}]
+},
+{
+ "slug":"how-long-does-a-call-ring-before-voicemail",
+ "title":"How Long Does a Call Ring Before Voicemail, and Why It Costs You Jobs",
+ "meta_description":"Most phones give a caller about twenty to thirty seconds before voicemail. Here is what to do with those seconds so the call becomes a job instead of a message.",
+ "dek":"You get roughly five or six rings to answer before a caller is handed to voicemail, and most callers will not leave one. That short window is worth configuring deliberately.",
+ "sections":[
+  {"h2":"The actual number",
+   "paragraphs":[
+    "On most mobile networks a call rings for somewhere around twenty to thirty seconds before diverting to voicemail, which works out to roughly five or six rings. The exact figure varies by carrier and can often be changed, though the setting is buried.",
+    "On a desk phone or a VoIP system the ring time is usually configurable directly, and the default is often shorter than you would guess.",
+    "Twenty-five seconds is not long. If you are up a ladder, gloved, driving, or mid-treatment, it is not enough time to get to a phone even when you want to.",
+    "So the question is not how to answer faster. It is what should happen in second twenty-six, and for most businesses the honest answer is currently nothing useful."]},
+  {"h2":"Why voicemail does not catch it",
+   "paragraphs":[
+    "A caller with an urgent problem is in a comparison mindset. They have a list of search results open. Reaching your voicemail does not read as you are busy, it reads as this one is unavailable, next.",
+    "Leaving a voicemail is also a slightly unpleasant social act. It requires composing a coherent message on the spot with no feedback, and a large share of people simply will not do it, particularly for a business they have no relationship with.",
+    "Even when someone does leave one, you have introduced a delay. You hear it an hour later, ring back, and get their voicemail. Now you are in phone tag with someone who has already spoken to two of your competitors.",
+    "The businesses that treat voicemail as their safety net are usually the ones convinced their phone is not ringing much. It is ringing. It is just not converting."]},
+  {"h2":"What to do with the ring window",
+   "paragraphs":[
+    "Set the ring time deliberately rather than accepting the default. Long enough that you can genuinely get to it when free, short enough that a caller is not listening to a dead tone. Somewhere around five rings suits most businesses.",
+    "Then configure what happens next, and make it something other than an answering machine. The simplest version is a forward on no-answer to something that will pick up, whether that is a colleague, a service, or an AI receptionist.",
+    "If you keep voicemail, at least make the greeting useful. Say when you will call back and give an alternative that works right now, such as a text number or a booking link. A greeting that just says leave a message wastes the only seconds you have.",
+    "The cheapest meaningful improvement for most small businesses is an automatic text the moment a call is missed. It arrives while they are still holding the phone and it reopens a conversation that had ended. We cover that pattern in [missed call lead capture](/blog/missed-call-lead-capture/)."]},
+  {"h2":"After-hours is a different problem",
+   "paragraphs":[
+    "During the day the issue is that you are busy. Outside hours the issue is that nobody is there at all, and that is when a large share of high-intent calls arrive.",
+    "Evening and weekend callers are frequently the most valuable ones. A burst pipe, a lockout, a problem that has just become urgent enough to spend money on. They are also the least likely to wait until Monday.",
+    "Forwarding out-of-hours calls to something that answers is a smaller change than replacing your daytime setup, and it is where the recovered revenue is most obvious. We looked at why those hours convert so well in [after-hours jobs are your most profitable](/blog/after-hours-answering-service/).",
+    "It is also easy to measure. Count what comes in outside hours for a month, then count what a covered month recovers. That comparison is usually the end of the debate."]},
+  {"h2":"Work out what the window is worth",
+   "paragraphs":[
+    "Take your average booked job value and multiply by the share of callers who become customers. That is what an answered call is worth to you on average.",
+    "Then count your missed calls for a month. Your phone log has this, and most business phone systems will show it directly. Owners are usually surprised by the number, particularly outside hours.",
+    "Multiply those together and you have the monthly cost of second twenty-six. For a trade with a four-figure average job, missing a handful of calls a month is a serious number. For a high-volume, low-value business it is smaller per call but larger in aggregate.",
+    "Whatever it comes to, compare it against the cost of covering that window rather than against zero. That is the actual decision, and it is usually not close."]}],
+ "faq":[
+  {"q":"How many rings before voicemail?","a":"Typically five or six, or about twenty to thirty seconds, though it varies by carrier and is often adjustable. VoIP and desk systems usually let you set it directly."},
+  {"q":"Can I change how long my phone rings?","a":"Usually yes. Mobile carriers generally allow it through a short dial code or account setting, and VoIP systems expose it in the admin panel. It is worth setting deliberately rather than leaving at default."},
+  {"q":"Do people leave voicemails?","a":"Far fewer than owners assume, particularly first-time callers with an urgent problem. Most will simply ring the next business rather than compose a message."},
+  {"q":"What is the cheapest fix?","a":"An automatic text sent the moment a call is missed. It reaches the caller while they still have the phone in hand and reopens a conversation that had otherwise ended."},
+  {"q":"Should I forward calls after hours?","a":"For most service businesses, yes. Out-of-hours calls are often the highest intent and the least willing to wait, and covering only that window is a much smaller change than altering your daytime setup."}]
+}]}

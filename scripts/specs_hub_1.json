@@ -1,0 +1,190 @@
+{
+ "blog": [
+  {
+   "slug": "what-is-an-ai-receptionist",
+   "title": "What Is an AI Receptionist? A Plain-English Explanation",
+   "meta_description": "An AI receptionist answers your business calls 24/7, books the job, and writes up what happened. Here is how it actually works, what it costs, and where it breaks.",
+   "dek": "It answers the phone in a voice trained on your business, handles the questions every caller asks, books onto your calendar, and emails you the rundown. Here is what that really means, without the sales gloss.",
+   "sections": [
+    {
+     "h2": "The short version",
+     "paragraphs": [
+      "An AI receptionist is software that picks up your business phone, holds a real spoken conversation with whoever called, and does something useful with it: books an appointment, captures the job details, answers the question they rang about, or routes an emergency to you directly.",
+      "It is not a phone tree. There is no press one for sales. The caller talks the way they would talk to a person, and it talks back, in a voice you choose, using facts about your business that you gave it.",
+      "The part most owners underestimate is what happens after the call. A good setup emails or texts you a full rundown within a minute of hanging up: who rang, what they wanted, what was said, what got booked, and what still needs you. The phone call stops being a thing you have to remember and becomes a written record that turns up in your inbox.",
+      "The honest framing: it is very good at the eighty percent of calls that are the same five questions, and it should hand you the other twenty percent rather than guess."
+     ]
+    },
+    {
+     "h2": "Why the phone is still where small businesses lose money",
+     "paragraphs": [
+      "For a trade, a clinic, a salon, or a law firm, the phone is the cash register. Someone with a problem and a credit card picks it up. If nobody answers, they do not leave a voicemail and wait. They ring the next result on Google.",
+      "That is the whole mechanism, and it is unglamorous. The job was not lost to a better competitor or a better price. It was lost because a person was under a sink, mid-treatment, in a hearing, or asleep.",
+      "The gap is worst exactly when the work is most valuable. Evenings, weekends, and the middle of a job are when the highest-intent calls come in, and they are precisely the hours a one-person or small-team business cannot cover. We wrote about that pattern in [after-hours jobs are your most profitable](/blog/after-hours-answering-service/).",
+      "Voicemail is not a safety net either. Most callers with an urgent problem will not use it, and the ones who do have already started calling around while they wait for you."
+     ]
+    },
+    {
+     "h2": "How it actually works, step by step",
+     "paragraphs": [
+      "First, the number. You either forward your existing business line to it, or you point a new number at it and use that on your website and Google profile. Nothing about your phone changes for the caller.",
+      "Second, the knowledge. This is the part that determines whether it is any good. It needs to know your service area, your hours, what you do and do not take on, how you price things or why you will not price over the phone, and what a qualified job looks like. Vague inputs produce a vague, useless assistant.",
+      "Third, the conversation. It answers, greets the caller in your business's name, and works through what it needs: what the problem is, where they are, when they need it, and how to reach them. Good ones let the caller interrupt and change direction, because real people do.",
+      "Fourth, the action. It writes to your calendar, sends the confirmation, logs the details, and notifies you. The design decision that matters most here is whether anything reaches your customer without you seeing it first. See [can an AI phone agent work with your calendar, CRM, and sheets](/blog/ai-phone-agent-integrations/) for how that plumbing is actually wired."
+     ]
+    },
+    {
+     "h2": "AI receptionist, virtual receptionist, answering service: the difference",
+     "paragraphs": [
+      "These three terms get used as if they mean the same thing. They do not, and the difference is mostly about who is on the other end and what they are allowed to do.",
+      "An answering service is human, usually offshore or in a call centre, usually paid per minute or per call. They take a message and pass it on. They are cheap, they are available at 3am, and they generally cannot book you a job or answer anything specific about your business.",
+      "A virtual receptionist is also human, but dedicated and trained on your business, so they can book, qualify, and speak with some authority. They cost considerably more, and they are still bound by human hours and human availability.",
+      "An AI receptionist sits in an odd spot: it has the availability of the cheap option and the business knowledge of the expensive one, and it fails differently from both. It will never be tired or rude, and it will also never use judgement about a caller who is grieving, furious, or describing something genuinely unusual. That is the real trade, and we broke it down properly in [virtual receptionist companies compared](/blog/virtual-receptionist-companies-compared/)."
+     ]
+    },
+    {
+     "h2": "What it costs, roughly",
+     "paragraphs": [
+      "Pricing in this category comes in three shapes, and knowing which one you are being quoted matters more than the headline number.",
+      "Per-minute pricing is common with answering services and with the raw voice-AI platforms. It looks cheap until you have a busy month, and it punishes you for exactly the thing you wanted, which is more calls answered.",
+      "Per-call or per-booking pricing aligns better with how you actually make money, but read carefully what counts as a call. Wrong numbers and hang-ups sometimes count.",
+      "Flat monthly pricing, usually with a setup fee for the build, is what most done-for-you providers use. It is the easiest to budget against. We go through the whole market in [answering service pricing](/blog/answering-service-pricing/), and if you are weighing this against putting a person on the front desk, [the real numbers are here](/blog/ai-receptionist-cost-vs-front-desk-hire/)."
+     ]
+    },
+    {
+     "h2": "Where it breaks, honestly",
+     "paragraphs": [
+      "It struggles with heavy accents on a bad line, with callers who talk over it continuously, and with anything genuinely outside what it was told about. Those are real limits, not marketing caveats.",
+      "It should not be the thing that decides an emergency. Any competent setup has a rule that routes certain words and certain situations straight to a human, immediately, and you should insist on knowing what that rule is.",
+      "It should not quote prices in trades where quoting blind loses you money or gets you into trouble. In some businesses the entire skill is refusing to quote until you have seen the job, and the assistant has to be built to hold that line.",
+      "And it should not be allowed to message your customers unsupervised in the first weeks. The setups that survive contact with reality draft the message, show it to the owner, and send only on a yes. Once you trust it, you loosen that. Not before."
+     ]
+    },
+    {
+     "h2": "If you want this for your trade specifically",
+     "paragraphs": [
+      "The questions change a lot by industry, so the detail lives on separate pages rather than being flattened into one generic answer.",
+      "For the trades, where the call arrives while you are under a sink or up a ladder, start with [AI receptionist for contractors](/assistant-for-contractors/). For firms running new-client intake with rules about what may and may not be said, [AI receptionist for law firms](/assistant-for-law-firms/) covers the constraints.",
+      "For appointment businesses where the real money is in cancellations and no-shows, see [AI receptionist for salons and med spas](/assistant-for-salons/). For agents who lose listings to whoever called back first, [AI receptionist for real estate](/assistant-for-real-estate/). For catering enquiries that arrive mid-service, [AI receptionist for food trucks](/assistant-for-food-trucks/).",
+      "If you sell online rather than answer a phone, the same engine works the inbox instead: [AI customer service for e-commerce](/assistant-for-ecommerce/). And if none of those fit, the general case is [an AI receptionist for small business](/assistant-for-business/)."
+     ]
+    },
+    {
+     "h2": "Is it worth it for your business?",
+     "paragraphs": [
+      "The maths is not complicated. Work out roughly what one booked job is worth to you, and roughly how many calls a month you currently miss. If the first number times even one or two recovered calls beats the monthly cost, the rest is detail.",
+      "For a trade with a four-figure average job, one recovered call a quarter covers it. For a salon with a sixty-dollar cut, you need volume, and the value is really in cancellation refills and no-show reduction instead. Different maths, same principle.",
+      "The businesses where it does not pay are the ones with very low call volume and very high-touch relationships, where every call genuinely needs the owner. If that is you, an assistant that takes the admin off your plate is a better fit than one that answers the phone.",
+      "If you want to hear one before you decide anything, ART3RY's demo line is (559) 847-9824. It is an AI receptionist answering live, not a recording. Ring it and try to break it."
+     ]
+    }
+   ],
+   "faq": [
+    {
+     "q": "Will callers know they are talking to an AI?",
+     "a": "Some will and some will not, and you should assume the honest answer is that many will work it out within a few exchanges. The setups that go badly are the ones that try hard to hide it. The ones that go well simply sound competent and get the caller what they rang for quickly."
+    },
+    {
+     "q": "Can it use my existing business number?",
+     "a": "Yes. In most cases you forward your existing line to it, either always or only when you do not pick up within a set number of rings. Your number stays your number and nothing changes on your customer's end."
+    },
+    {
+     "q": "What happens if it does not understand the caller?",
+     "a": "A well-built one says so plainly and takes a message or transfers, rather than guessing. Ask any provider to demonstrate exactly this before you sign anything, because it is where the cheap builds fall apart."
+    },
+    {
+     "q": "Will it text or email my customers without me approving it?",
+     "a": "That is a configuration choice, and it should be yours. ART3RY's default is that it drafts the message and waits for your one-word yes before anything reaches a customer. You can loosen that once you trust it."
+    },
+    {
+     "q": "How long does it take to set up?",
+     "a": "The technical wiring is fast. The part that takes time is the knowledge, because a good assistant needs real answers to the questions your callers actually ask. Expect to spend a couple of hours getting that right rather than a couple of minutes."
+    }
+   ]
+  },
+  {
+   "slug": "ai-phone-agent-integrations",
+   "title": "Can an AI Phone Agent Work With Your Calendar, CRM, and Sheets?",
+   "meta_description": "Yes, but the integration is where most AI phone setups quietly fail. What connects cleanly, what breaks, and what to demand a demo of before you sign.",
+   "dek": "An AI receptionist that cannot write to your calendar is a very expensive answering machine. Here is what actually connects, what only half connects, and the questions that expose a weak setup.",
+   "sections": [
+    {
+     "h2": "Why integration is the whole game",
+     "paragraphs": [
+      "An AI phone agent that answers beautifully and then does nothing with the call has moved your problem, not solved it. You still have to read a transcript, open your calendar, check availability, ring the customer back, and write it down somewhere.",
+      "The value only appears when the call ends with something already done: a slot held, a confirmation sent, a record written, a notification in your pocket. That requires the agent to have working, authenticated access to the systems you already run your business on.",
+      "This is also where the demos get slippery. Almost every provider will say they integrate with your calendar. Far fewer will show you a live call that results in a correctly-placed event, with the right duration, in the right timezone, that does not double-book you.",
+      "So the useful question is never does it integrate. It is show me a call, right now, that ends with the booking in my actual calendar."
+     ]
+    },
+    {
+     "h2": "Calendars: the one that has to work",
+     "paragraphs": [
+      "Google Calendar and Microsoft 365 are the two that matter for most small businesses, and both connect cleanly through their official APIs. If a provider cannot do these two properly, that tells you something.",
+      "The hard part is not writing an event. It is reading availability correctly before offering a slot. That means honouring your working hours, your existing appointments, your travel time between jobs, and your buffer preferences. An agent that offers a caller a 2pm you cannot make is worse than one that took a message.",
+      "Timezones are the classic failure. If you serve more than one timezone, or you have a virtual assistant in another one, ask specifically how the agent resolves the caller's timezone versus yours. Get it wrong and you get no-shows that are entirely your own fault.",
+      "Recurring appointments and multi-resource booking, where the slot needs both a person and a room or a chair, are meaningfully harder. Salons and clinics should test this explicitly rather than assume it."
+     ]
+    },
+    {
+     "h2": "CRMs: where it gets uneven",
+     "paragraphs": [
+      "The major CRMs have solid APIs and most serious providers support the common ones. The friction is rarely technical. It is that your CRM has custom fields, a particular pipeline, and a way you actually use it that no generic integration knows about.",
+      "What you want is control over the mapping. When the agent captures a caller's problem description, you should be able to say which field that lands in, and what stage the record enters your pipeline at. Without that, you get a pile of unsorted contacts and someone still has to triage them.",
+      "Deduplication matters more than people expect. A repeat customer ringing about a second job should attach to their existing record, not create a second one. Ask how the agent matches on phone number, and what it does when the number matches but the name does not.",
+      "If your CRM is a spreadsheet, that is genuinely fine for a lot of businesses. Sheets and Airtable are well-supported, easy to audit, and easy to change. We argue in [kill SaaS bloat](/blog/all-in-one-business-software-kill-saas-bloat/) that the number of tools is usually the problem, not the sophistication of any one of them."
+     ]
+    },
+    {
+     "h2": "Spreadsheets, invoicing, and the long tail",
+     "paragraphs": [
+      "Google Sheets is the most underrated destination for call data. It is instantly readable, trivially filterable, and every owner already knows how to use it. For a lot of small operations, a well-structured sheet of every call with outcome and value is more useful than a CRM nobody opens.",
+      "Invoicing connections are worth thinking about carefully. The temptation is to have the agent raise the invoice automatically after a booked job. The safer pattern is that it drafts the invoice and someone approves it, because an incorrectly-issued invoice costs you more goodwill than the ten seconds it saved. We cover the sane version in [automating your invoices](/blog/automate-invoicing/).",
+      "For everything without a native connection, most platforms fall back to webhooks or a middleware layer like Zapier or Make. This works, and it also adds a link in the chain that can silently break. If a critical path runs through middleware, you want to know how you would find out it had stopped.",
+      "Notification is the integration people forget to specify. Where does the rundown land? Email, SMS, a messaging app? Getting this right is what makes the whole thing feel like it is working, because it is the only part you see every day."
+     ]
+    },
+    {
+     "h2": "The questions that expose a weak setup",
+     "paragraphs": [
+      "Ask to see a live call end-to-end, using your calendar, not a sandbox. Watch the event appear. Check the duration and the timezone. This single test eliminates most of the field.",
+      "Ask what happens when an integration fails. If Google is down or a token expires, does the agent tell the caller it cannot book and take a message, or does it cheerfully confirm an appointment that was never written? The second behaviour is common and it is much worse than not booking at all.",
+      "Ask who owns the connection. If the provider authenticates through their own account rather than yours, find out what happens to your data and your bookings if you leave.",
+      "Ask what you can change yourself. If adjusting a field mapping or a working-hours rule requires a support ticket and three days, you will stop adjusting it, and the setup will drift out of line with how you actually work."
+     ]
+    },
+    {
+     "h2": "What a sane architecture looks like",
+     "paragraphs": [
+      "The pattern that holds up: the agent reads availability live before it offers anything, writes the booking immediately on confirmation, logs a complete record of the call somewhere you can audit, and notifies you with a summary you can act on from your phone.",
+      "Anything customer-facing beyond the call itself, the confirmation text, the follow-up, the reminder, sits behind an approval step until you have watched it behave for a few weeks. This is the single most useful safety rail and it costs you almost nothing.",
+      "Failures should be loud. A booking that did not save should page you, not appear in a log nobody reads. The quiet failure, where everything looks fine and no work is happening, is the expensive one.",
+      "If you want to see the whole picture rather than just the phone layer, [what is an AI receptionist](/blog/what-is-an-ai-receptionist/) covers how the pieces fit together, and ART3RY's demo line on (559) 847-9824 will book against a real calendar if you want to watch it happen."
+     ]
+    }
+   ],
+   "faq": [
+    {
+     "q": "Does it work with Google Calendar and Outlook?",
+     "a": "Both, through their official APIs. The thing to test is not whether an event can be created but whether availability is read correctly first, including your working hours, buffers, and timezone."
+    },
+    {
+     "q": "What if I do not use a CRM?",
+     "a": "A structured Google Sheet is a perfectly good destination and is easier to audit than most CRMs. Many small operations are better served by one clear sheet than by software they never open."
+    },
+    {
+     "q": "Can it write to more than one system at once?",
+     "a": "Yes. A typical setup writes the booking to your calendar, the record to your CRM or sheet, and the summary to your phone, from a single call."
+    },
+    {
+     "q": "What happens if an integration breaks mid-call?",
+     "a": "It should tell the caller it cannot confirm right now and take their details instead. Ask any provider to demonstrate this failure path, because an agent that confirms bookings it never saved is worse than one that does not book at all."
+    },
+    {
+     "q": "Do I need Zapier?",
+     "a": "Only for systems without a native connection. Where there is a direct integration, use it. Every middleware hop is another thing that can quietly stop working."
+    }
+   ]
+  }
+ ]
+}

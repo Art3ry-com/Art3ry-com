@@ -1,0 +1,93 @@
+{"blog":[
+{
+ "slug":"answering-service-pricing",
+ "title":"Answering Service Pricing: Per-Minute, Per-Call, and the Hidden Fees",
+ "meta_description":"How answering services actually charge, why the headline rate is never what you pay, and the questions that reveal the real monthly cost before you sign.",
+ "dek":"Every provider quotes a different unit, which makes comparison almost impossible on purpose. Here is how to translate any quote into what you will actually pay.",
+ "sections":[
+  {"h2":"Why comparing quotes is deliberately hard",
+   "paragraphs":[
+    "One provider quotes a per-minute rate. Another quotes a per-call rate. A third quotes a monthly plan with an included allowance. A fourth quotes a per-receptionist-minute rate that rounds every call up to the next full minute. None of these are directly comparable, and that is not an accident.",
+    "The only number that matters is your total monthly cost at your actual call volume, including the calls you did not want. Until a provider gives you that, you do not have a quote, you have a rate card.",
+    "The good news is that translating between models is straightforward arithmetic once you know your own numbers. The bad news is that most owners do not know their own numbers, which is exactly what the pricing model relies on.",
+    "So before you ring anyone: pull your call log for a typical month. How many inbound calls? How long was the average one? How many were wrong numbers, robocalls, or suppliers? That last figure is where the money hides."]},
+  {"h2":"The four pricing models, translated",
+   "paragraphs":[
+    "Per-minute is the most common and the most misleading. The rate looks small, but billing usually rounds up to the next minute or the next six seconds, and the clock often starts before a human picks up. Ask specifically: when does billing start, what is the rounding increment, and is hold time billed?",
+    "Per-call is easier to reason about and aligns better with value, since a call is roughly a lead. The trap is the definition. Ask whether a hang-up counts, whether a wrong number counts, and whether a caller who rings back twice counts as one or two.",
+    "Monthly plans with an included allowance are the easiest to budget and the easiest to overrun. The critical question is the overage rate, because it is frequently much higher than the effective rate inside the plan. A plan that is comfortable in January can be painful in your busy season.",
+    "Flat monthly pricing, usually with a one-off setup fee, is what most done-for-you AI providers use. It removes the volume anxiety entirely, which matters more than people expect, because per-minute pricing quietly discourages you from sending it more calls."]},
+  {"h2":"The fees that are not in the headline number",
+   "paragraphs":[
+    "Setup and onboarding. Sometimes free, sometimes several hundred dollars, and occasionally buried as a first-month surcharge. Ask whether it is refundable if the thing does not work.",
+    "Script or knowledge changes. Some human services charge per script revision. If your business changes seasonally, this adds up, and worse, it discourages you from keeping the script accurate.",
+    "After-hours, weekend, and holiday premiums. These are common with human services and they apply to exactly the hours you bought the service for. An after-hours premium on an after-hours answering service deserves a straight answer about what the effective rate really is.",
+    "Integrations, extra numbers, call recording, transcription, and reporting are all sometimes separate line items. And check the contract length and the notice period, because a twelve-month lock-in changes the risk of trying something entirely."]},
+  {"h2":"Human services versus AI, on cost alone",
+   "paragraphs":[
+    "Human answering services price on labour, so their cost scales almost linearly with your call volume. That is fair, and it means a busy month is an expensive month. Their strength is judgement and genuine empathy on a difficult call.",
+    "Dedicated virtual receptionists cost substantially more per hour because someone is actually learning your business. For firms where every call is high value, this can be the right answer and the cost is not the point.",
+    "AI answering costs are dominated by the build rather than the volume, so the marginal cost of one more call is close to nothing. That inverts the incentive: you want it to take more calls, not fewer. The weakness is the judgement gap we discuss in [what is an AI receptionist](/blog/what-is-an-ai-receptionist/).",
+    "If what you are really deciding is whether to put a person on the front desk instead, the full comparison including the costs nobody quotes is in [AI receptionist versus a front-desk hire](/blog/ai-receptionist-cost-vs-front-desk-hire/)."]},
+  {"h2":"Work out your own number first",
+   "paragraphs":[
+    "Take your monthly inbound call count and multiply by your average call length. That is your billable minutes under a per-minute model, before rounding, which typically adds ten to twenty percent.",
+    "Now subtract nothing. That is the point. Under per-minute and per-call models you pay for the supplier confirming a delivery and the robocall about your car warranty, unless the contract explicitly says otherwise.",
+    "Then work out what a booked job is worth to you on average, and how many calls a month currently go unanswered. If recovering even a fraction of those covers the cost, the pricing model matters far less than simply having something answer.",
+    "That is genuinely the whole calculation. A trade with a four-figure average job and six missed calls a month is in a completely different decision than a salon with a sixty-dollar service, and no provider's pricing page will tell you which one you are."]},
+  {"h2":"What to ask before you sign anything",
+   "paragraphs":[
+    "What will my total bill be at my actual volume, including wrong numbers and hang-ups? Ask for it in writing, as a number, not a rate.",
+    "What is the overage rate, and what happened to your busiest customers last December? A provider who cannot answer the second question is not paying attention to their own product.",
+    "What is the contract length, the notice period, and what do I keep if I leave? Call recordings, transcripts, and the contact records generated by those calls should be yours.",
+    "And can I hear it work before I pay anything? For an AI service that is a reasonable ask, and it takes thirty seconds. ART3RY's demo line is (559) 847-9824 and answers live. For a human service, ask to hear a recording of a real call handled for a business like yours."]}],
+ "faq":[
+  {"q":"What is a typical answering service cost per month?","a":"The honest answer is that it depends far more on your call volume and pricing model than on the provider. The useful move is to translate every quote into your own total monthly cost at your real volume, including wrong numbers, and compare those figures rather than the advertised rates."},
+  {"q":"Is per-minute or per-call pricing better?","a":"Per-call is usually easier to reason about because a call is roughly a lead. Per-minute rewards short calls, which is not always what you want, since a thorough qualifying call is often more valuable than a quick message."},
+  {"q":"Do I pay for wrong numbers and robocalls?","a":"Under most per-minute and per-call contracts, yes, unless it is explicitly excluded. Ask directly, because for some businesses this is a meaningful share of total volume."},
+  {"q":"Why is AI answering priced differently?","a":"Because the cost sits in building and maintaining the assistant rather than in the minutes it spends on the phone. That usually means flat monthly pricing and no reason to discourage volume."},
+  {"q":"Should I be worried about a long contract?","a":"Be cautious of anything over twelve months with a long notice period, particularly for a service you have not tested. Ask for a short initial term or a clear exit, and make sure your call data comes with you."}]
+},
+{
+ "slug":"virtual-receptionist-companies-compared",
+ "title":"Virtual Receptionist Companies Compared: Human, Hybrid, and AI",
+ "meta_description":"The three kinds of virtual receptionist, what each is genuinely good at, where each fails, and how to work out which one your business actually needs.",
+ "dek":"Human, hybrid, and AI answering are three different products sold under one name. Choosing well starts with being honest about which of your calls actually need a person.",
+ "sections":[
+  {"h2":"Three products, one label",
+   "paragraphs":[
+    "Search for a virtual receptionist and you will get results for shared human call centres, dedicated human receptionists, and AI voice agents, all using the same vocabulary. They solve overlapping problems with very different trade-offs.",
+    "A shared human answering service has operators handling calls for many businesses at once. They work from a script, they take messages reliably, and they are the cheapest human option. They will not know your business in any depth.",
+    "A dedicated virtual receptionist is a person, or a small team, assigned to your business. They learn your services, your regulars, and your quirks. They can hold a real conversation about your work. They cost several times more.",
+    "An AI voice agent answers every call instantly, at any hour, with whatever knowledge you gave it. It never has a bad day and never puts anyone on hold. It also has no judgement about the situations it was not built for."]},
+  {"h2":"What each is genuinely good at",
+   "paragraphs":[
+    "Shared human services are good at overflow and out-of-hours message-taking when the message itself is the deliverable. If all you need is to know someone rang and what about, they do that well and cheaply.",
+    "Dedicated receptionists are good where the call is the relationship. A firm handling distressed clients, a practice with a long-standing patient list, a business where the caller expects to be recognised. Judgement, warmth, and discretion are things you are genuinely buying.",
+    "AI agents are good at volume, speed, and consistency. Every call answered on the first ring, at 2am, on a holiday, with the same accurate information every time. They are also good at the structured work around the call: booking, logging, notifying, and following up without anyone remembering to.",
+    "Hybrid setups, where AI answers first and escalates to a human on defined triggers, are increasingly the sensible middle. You get the coverage without pretending software can handle a genuinely difficult conversation."]},
+  {"h2":"Where each one fails",
+   "paragraphs":[
+    "Shared services fail on specifics. The caller asks whether you service their model, or whether you can be there before school pickup, and the operator cannot say. You get a message, the caller got nothing, and they are already ringing someone else.",
+    "Dedicated receptionists fail on availability and cost. One person cannot cover 168 hours a week, so you are buying coverage for business hours and still missing the evening calls that convert best. And the cost only makes sense above a certain call value.",
+    "AI fails on the unusual. A caller who is bereaved, furious, or describing something genuinely outside the script needs a person, and a well-configured agent should recognise that and hand over rather than improvise. Ask any provider to show you that handover working.",
+    "All three fail if the knowledge behind them is thin. This is the part owners skip. A receptionist of any kind who does not know your service area, your pricing stance, and what you refuse to take on will lose you work politely."]},
+  {"h2":"How to choose without agonising",
+   "paragraphs":[
+    "Start with a blunt question: what fraction of your calls genuinely need a human being? For most trades, clinics, and service businesses the honest answer is small. Most calls are the same handful of questions and a booking.",
+    "If that fraction is small, the AI-first hybrid is usually right, and the money is better spent on making the escalation path good than on paying humans to answer questions a machine can answer better.",
+    "If that fraction is large, because your callers are in crisis or your service is genuinely bespoke, buy the person. Do not let cost per call drive a decision about the first impression of a high-value relationship.",
+    "And if you mostly need to stop losing after-hours work while keeping your daytime calls exactly as they are, you may only need coverage for the gap. Forwarding on no-answer after six rings is a smaller change than replacing your whole front desk."]},
+  {"h2":"Questions that separate the good from the plausible",
+   "paragraphs":[
+    "Ask to hear it, not read about it. A human service should play you a real call handled for a business like yours. An AI provider should give you a number to ring right now. Anyone who will only demo over a slide deck is telling you something.",
+    "Ask what happens on the calls it cannot handle. The answer should be specific: these triggers, this handover, this notification. Vagueness here is the single most reliable warning sign.",
+    "Ask what you own. Recordings, transcripts, and the customer records generated should be yours, and exportable, whichever way you go.",
+    "And ask what it costs at your real volume, not per unit. The pricing models are not comparable on their face, which is why we wrote [answering service pricing](/blog/answering-service-pricing/) as a translation guide. If you want the underlying explanation of the AI option, start at [what is an AI receptionist](/blog/what-is-an-ai-receptionist/)."]}],
+ "faq":[
+  {"q":"What is the difference between an answering service and a virtual receptionist?","a":"An answering service is usually shared human operators taking messages from a script. A virtual receptionist is dedicated to your business and trained on it, so they can book, qualify, and answer specifics. The second costs considerably more."},
+  {"q":"Is an AI receptionist better than a human one?","a":"Better at different things. AI wins on availability, speed, consistency, and everything structured around the call. Humans win on judgement, empathy, and anything genuinely unusual. Most businesses are best served by AI answering first with a clear route to a person."},
+  {"q":"Can I use AI for after-hours only?","a":"Yes, and it is a sensible way to start. Forward on no-answer or outside business hours, keep your daytime calls exactly as they are, and see what it recovers before changing anything else."},
+  {"q":"How do I test one properly?","a":"Ring it and try to break it. Talk over it, change your mind mid-sentence, ask something slightly outside its remit, and see whether it admits the limit or invents an answer. The second behaviour tells you not to buy it."},
+  {"q":"What should I never hand to an AI receptionist?","a":"Anything where a wrong answer is expensive or unsafe: medical advice, legal advice, emergency triage, and firm quotes in trades where quoting unseen loses money. Those should trigger an immediate handover to a person."}]
+}]}

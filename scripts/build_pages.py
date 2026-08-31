@@ -96,6 +96,20 @@ def _esc(s: str) -> str:
     return html.escape(s or "", quote=True)
 
 
+_LINK_RE = re.compile(r"\[([^\]\[]+)\]\((/[A-Za-z0-9\-/]*/)\)")
+
+
+def _esc_p(s: str) -> str:
+    """Escape a paragraph, then re-enable [text](/site-relative/) internal links only.
+
+    Hub-and-spoke content is worthless without in-body internal links, but we still
+    never want raw author HTML in a paragraph. So: escape everything first, then
+    re-open exactly one construct, and only for paths that start and end with "/".
+    No protocol, no host, no attributes -> nothing external, nothing injectable.
+    """
+    return _LINK_RE.sub(lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', _esc(s or ""))
+
+
 def _meta(s: str, limit: int = 160) -> str:
     """Trim a meta description to <=limit chars at a word boundary (no SERP cut-off)."""
     s = (s or "").strip()
@@ -166,7 +180,7 @@ def render_landing(spec: dict) -> tuple[str, str]:
 <section class="section"><p class="proof">Not a demo — ART3RY runs <a href="https://jessemoraga.com" target="_blank" rel="noopener">a real California field-services company</a>, a real one-person company.</p></section>
 <section class="section"><h2>Questions</h2><div class="faq">{faq}</div></section>
 <section class="section"><div class="cta-strip wrap"><h2>Hand off the work behind the work.</h2><p>Tell us what's eating your day. We'll wire your assistant to it.</p><a href="/get-started/">Get your assistant &rarr;</a></div></section>
-{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script></body></html>"""
+{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}}'></script></body></html>"""
     return slug, _guard(body, f"landing:{slug}")
 
 
@@ -182,7 +196,7 @@ def render_blog(spec: dict) -> tuple[str, str]:
          "mainEntity": [{"@type": "Question", "name": f["q"],
                          "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in spec["faq"]]},
     ]}
-    secs = "".join(f"<h2>{_esc(s['h2'])}</h2>" + "".join(f"<p>{_esc(p)}</p>" for p in s["paragraphs"])
+    secs = "".join(f"<h2>{_esc(s['h2'])}</h2>" + "".join(f"<p>{_esc_p(p)}</p>" for p in s["paragraphs"])
                    for s in spec["sections"])
     faq = "".join(f'<div class="q">{_esc(f["q"])}</div><div class="a">{_esc(f["a"])}</div>' for f in spec["faq"])
     body = f"""{_head(spec['title'] + ' | ART3RY', spec['meta_description'], canon, jsonld)}
@@ -190,7 +204,7 @@ def render_blog(spec: dict) -> tuple[str, str]:
 <h1 style="font-size:clamp(28px,4.4vw,46px)">{_esc(spec['title'])}</h1><p class="sub">{_esc(spec['dek'])}</p></div></header>
 <article class="article">{secs}<h2>FAQ</h2><div class="faq" style="max-width:none">{faq}</div></article>
 <section class="section"><div class="cta-strip wrap"><h2>Stop doing the work behind the work.</h2><p>ART3RY is the AI assistant that runs it for you.</p><a href="/get-started/">Get your assistant &rarr;</a></div></section>
-{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script></body></html>"""
+{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}}'></script></body></html>"""
     return slug, _guard(body, f"blog:{slug}")
 
 
@@ -230,7 +244,7 @@ def render_service(spec: dict) -> tuple[str, str]:
 <section class="section"><h2>Questions</h2><div class="faq">{faq}</div></section>
 <section class="section"><p style="text-align:center;color:var(--muted);font-size:14px">Part of <a href="/services/" style="color:var(--blue);text-decoration:none">Art3ry growth-as-a-service</a> &middot; <a href="/services/" style="color:var(--blue);text-decoration:none">see all services &rarr;</a></p></section>
 <section class="section"><div class="cta-strip wrap"><h2>{_esc(spec['cta_h2'])}</h2><p>{_esc(spec['cta_p'])}</p><a href="/get-started/">Get started &rarr;</a></div></section>
-{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'></script></body></html>"""
+{_FOOTER}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}}'></script></body></html>"""
     return slug, _guard(body, f"service:{slug}")
 
 
