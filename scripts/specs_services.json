@@ -2,27 +2,27 @@
   "service": [
     {
       "slug": "services/seo",
-      "service_type": "Local SEO and content marketing",
+      "service_type": "SEO and content marketing",
       "kicker": "SEO & Content",
       "title_tag": "SEO & Content for Small Business: Rank Where Customers Search | ART3RY",
-      "meta_description": "Done-for-you local SEO and content that ranks your business for what customers actually search. I build it, write it, and track it. Start with a free diagnostic.",
+      "meta_description": "Done-for-you SEO and content that ranks your business for what customers actually search. I build it, write it, and track it. Start with a free diagnostic.",
       "h1": "Get found by the people<br>already searching for you.",
       "hero_sub": "Your future customers are typing your service into Google right now. SEO is owning that moment: the difference between renting attention with ads and owning a page that earns while you sleep. I build it, write it, and rank it.",
       "what_h2": "What I do",
       "what_lead": "Not a report you have to act on yourself. I do the work, and you watch the rankings move.",
       "steps": [
         {"n": "01", "h3": "Find the money keywords", "p": "I map exactly what your customers search, and where you're losing them to competitors."},
-        {"n": "02", "h3": "Build the pages that rank", "p": "Service pages, local pages, and authority guides written to win the search, not just fill space."},
+        {"n": "02", "h3": "Build the pages that rank", "p": "Service pages, market pages, and authority guides written to win the search, not just fill space."},
         {"n": "03", "h3": "Track what actually converts", "p": "I connect it to your domain and show you where real customers come from, not vanity numbers."}
       ],
       "inc_h2": "What's included",
       "scenarios": [
-        {"tag": "Local SEO", "h3": "Show up in the map pack", "say": "When someone nearby searches your service, you're the one they call.", "bullets": ["Google Business Profile dialed in", "Local landing pages per city you serve", "Reviews working for your ranking"]},
+        {"tag": "Search visibility", "h3": "Show up in the map pack", "say": "When someone nearby searches your service, you're the one they call.", "bullets": ["Google Business Profile dialed in", "Landing pages for every market you serve", "Reviews working for your ranking"]},
         {"tag": "Content engine", "h3": "Authority that compounds", "say": "Every guide I publish keeps earning traffic for years.", "bullets": ["Buyer-intent topics, not filler", "Standard-setting guides competitors cite", "Internal linking that lifts the whole site"]},
         {"tag": "Competitor edge", "h3": "Know exactly who's beating you", "say": "I pull your top 5 competitors apart so you can take their traffic.", "bullets": ["Full audit of you vs 5 rivals", "The gaps you can win this quarter", "A plan, not just a PDF"]}
       ],
       "faq": [
-        {"q": "How long until I rank?", "a": "Local and long-tail wins can show in weeks; competitive head terms take a few months. I start with the fastest wins so you see movement early."},
+        {"q": "How long until I rank?", "a": "Long-tail wins can show in weeks; competitive head terms take a few months. I start with the fastest wins so you see movement early."},
         {"q": "Do you write the content or do I?", "a": "I do. You stay in the field; I handle the keywords, the writing, and the publishing."},
         {"q": "Is this just a report?", "a": "No. A report makes the work your problem. I do the work: pages built, published, and tracked."}
       ],
