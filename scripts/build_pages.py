@@ -26,6 +26,14 @@ SITE = "https://art3ry.com"
 # The design system lives in assets/pages.css, not inline. Bump CSS_V on every
 # change to it: /assets/*.css ships max-age=14400, and new HTML paired with
 # four-hour-stale CSS renders as garbage.
+# Cloudflare Web Analytics. Public site token by design (it is visible in the
+# page source of every site using it), so it lives here rather than in .env.
+# Manual beacon rather than Automatic setup, per the token Jesse issued.
+_ANALYTICS = ("""<!-- Cloudflare Web Analytics -->"""
+              """<script defer type="module" src="https://static.cloudflareinsights.com/beacon.min.js" """
+              """data-cf-beacon='{"token": "11bbd30f1f234e4a85f719e0e1c87be3"}'></script>"""
+              """<!-- End Cloudflare Web Analytics -->""")
+
 CSS_V = "20260831c"
 _CSS_LINK = f'<link rel="stylesheet" href="/assets/pages.css?v={CSS_V}">'
 
@@ -151,7 +159,7 @@ def render_landing(spec: dict) -> tuple[str, str]:
 <section class="section"><p class="proof">Not a demo — ART3RY runs <a href="https://jessemoraga.com" target="_blank" rel="noopener">a real California field-services company</a>, a real one-person company.</p></section>
 <section class="section"><h2>Questions</h2><div class="faq">{faq}</div></section>
 <section class="section"><div class="cta-strip wrap"><h2>Hand off the work behind the work.</h2><p>Tell us what's eating your day. We'll wire your assistant to it.</p><a href="/get-started/">Get your assistant &rarr;</a></div></section>
-{_FOOTER}</body></html>"""
+{_FOOTER}{_ANALYTICS}</body></html>"""
     return slug, _guard(body, f"landing:{slug}")
 
 
@@ -175,7 +183,7 @@ def render_blog(spec: dict) -> tuple[str, str]:
 <h1 style="font-size:clamp(28px,4.4vw,46px)">{_esc(spec['title'])}</h1><p class="sub">{_esc(spec['dek'])}</p></div></header>
 <article class="article">{secs}<h2>FAQ</h2><div class="faq" style="max-width:none">{faq}</div></article>
 <section class="section"><div class="cta-strip wrap"><h2>Stop doing the work behind the work.</h2><p>ART3RY is the AI assistant that runs it for you.</p><a href="/get-started/">Get your assistant &rarr;</a></div></section>
-{_FOOTER}</body></html>"""
+{_FOOTER}{_ANALYTICS}</body></html>"""
     return slug, _guard(body, f"blog:{slug}")
 
 
@@ -215,7 +223,7 @@ def render_service(spec: dict) -> tuple[str, str]:
 <section class="section"><h2>Questions</h2><div class="faq">{faq}</div></section>
 <section class="section"><p style="text-align:center;color:var(--ink-2);font-size:14px">Part of <a href="/services/" style="color:var(--blue);text-decoration:none">Art3ry growth-as-a-service</a> &middot; <a href="/services/" style="color:var(--blue);text-decoration:none">see all services &rarr;</a></p></section>
 <section class="section"><div class="cta-strip wrap"><h2>{_esc(spec['cta_h2'])}</h2><p>{_esc(spec['cta_p'])}</p><a href="/get-started/">Get started &rarr;</a></div></section>
-{_FOOTER}</body></html>"""
+{_FOOTER}{_ANALYTICS}</body></html>"""
     return slug, _guard(body, f"service:{slug}")
 
 
