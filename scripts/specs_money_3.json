@@ -1,0 +1,252 @@
+{
+ "blog": [
+  {
+   "slug": "why-is-my-business-not-showing-up-on-google",
+   "title": "Why Is My Business Not Showing Up on Google? Work Through It in This Order",
+   "meta_description": "Missing from Google search or Maps? Work the causes in order: verification, suspension, name and category, radius, duplicates, and your own biased search.",
+   "dek": "Most of the time it is one of six things, and you can check five of them in the next ten minutes. Here is the order I work through it, most common cause first.",
+   "sections": [
+    {
+     "h2": "Start here: you are the worst possible person to search for your own business",
+     "paragraphs": [
+      "You typed your business name into Google from your office, on the phone you use every day, signed into the account that owns the profile, and something looked wrong. That search is close to worthless as evidence. Google personalises results by location, search history, and signed-in account, so what you see from your desk is roughly the best case, and what a stranger across town sees can be a completely different page.",
+      "The ten minute version of the check: open a private or incognito window, turn wifi off so your phone is on cell data, and search the way a customer would. Not your business name. The thing they would actually type, like emergency plumber near me, or mobile notary in the town you serve.",
+      "The better version costs you one text message. Ask somebody who lives on the other side of town to run the search and screenshot what they get. That single screenshot tells you more than an hour of refreshing your own results.",
+      "Do this before anything else, because a good share of these panics end right here. The business is on Google. It is just not first for a competitive term, from a spot where a competitor happens to be closer. That is a ranking problem, not a visibility problem, and the two get fixed differently."
+     ]
+    },
+    {
+     "h2": "Cause one: the profile is not verified, or verification never actually finished",
+     "paragraphs": [
+      "An unverified Business Profile does not behave like a verified one. In plenty of cases it simply will not show to the public at all. This is the single most common reason a brand-new listing is invisible, and it is the fastest one to rule out.",
+      "Sign in and look at the profile. Google puts verification and suspension notices at the top where you cannot miss them, but only if you actually open the dashboard, and most owners never do after the first week. If there is a Verify now prompt sitting there, that is your answer and nothing else on this list matters until it clears.",
+      "Verification also gets interrupted. A video verification that timed out, a postcard that never arrived, a re-verification triggered by editing your address or your category: any of those can leave you sitting in a queue you did not know you were in. Check the status rather than assuming it went through because you started it.",
+      "If you did verify and you are still invisible, give it a little time before you start changing fields. Newly verified profiles do not always appear in every surface the same day. Changing five things at once while Google is still processing the first change is how people turn a short delay into a review."
+     ]
+    },
+    {
+     "h2": "Cause two: the profile is suspended and the notice was easy to miss",
+     "paragraphs": [
+      "Suspension is more common than owners expect and the notification is quiet. The listing disappears, everything you built with it goes with it, and unless you open the dashboard you may never see the reason.",
+      "The usual triggers are boring and avoidable. A mailbox service or a virtual office used as a street address. Keywords bolted onto the business name. A big edit to address, name, or category all in one sitting. Several profiles registered at the same address. Certain regulated categories that need extra proof before they will run.",
+      "If you are suspended, screenshot everything before you touch a single field, then appeal with real evidence: photos of your signage, a utility bill in the business name, your registration, your insurance certificate, a photo of a branded vehicle. Appeals succeed on documents, not on explanations.",
+      "One thing not to do: create a second profile to get around it. That gives you two dead listings instead of one, and it makes the eventual appeal harder. Fix the profile you have."
+     ]
+    },
+    {
+     "h2": "Cause three: your name or your primary category does not match what people search",
+     "paragraphs": [
+      "The name field is for your real-world business name, the one on your sign and your invoices. Nothing else. I will come back to why stuffing it is a bad trade in the Maps piece, but for diagnosis, a name that does not match your legal and physical identity is a suspension waiting to happen.",
+      "The primary category is different and it is the field people get wrong most often. It largely decides which searches you are eligible to appear for in the first place. A mobile mechanic filed under auto repair shop, a bookkeeper filed under accountant instead of tax preparer, a mobile notary filed under legal services: each of those is a business that is technically on Google and effectively invisible for the query that matters.",
+      "Checking it takes two minutes. Search the exact term you want to win, look at the businesses sitting in the map results, and look at what category each one is using. If none of them share your primary category, that is not a coincidence and it is not unfair. It is the answer.",
+      "The rest of the profile fields matter for the same reason, which is eligibility rather than decoration. I go field by field on [what a fully built Google Business Profile actually looks like](/google-business-profile-optimization/)."
+     ]
+    },
+    {
+     "h2": "Cause four: you are simply outside the searcher's radius",
+     "paragraphs": [
+      "Google describes local results as coming down to relevance, distance, and prominence. Distance means distance from the person searching, or from the place they named in the search. It is not distance from you, and it is not something you get to influence.",
+      "So a business three miles from downtown can be invisible downtown and dominant in its own neighbourhood, on the same day, for the same search term. Nothing is broken. You are watching proximity do its job.",
+      "This bites service-area businesses hardest. If you hide your address and list service areas, you are still anchored to the address on file as far as anybody outside Google can tell. Listing thirty cities does not put you in thirty cities. It tells Google where you will travel, not where you rank.",
+      "The honest fix is not a fake address, and please do not rent a mailbox for this. It is to win the ground near you decisively, then reach the outer ring with pages, reviews, and paid search rather than pretending to be somewhere you are not. [How to rank on Google Maps](/blog/how-to-rank-on-google-maps/) goes through which parts of that are actually winnable."
+     ]
+    },
+    {
+     "h2": "Cause five: a duplicate listing is quietly competing with you",
+     "paragraphs": [
+      "Google creates listings on its own from other data sources, so you can easily have a profile you never made. Add an old office address, a previous owner, an employee who claimed it years ago on their personal account, or a slight variation of your name, and you end up with two or three versions of yourself splitting the signals.",
+      "Find them the way a customer would not: search your phone number in Maps, search every old address you have used, and search each variation of your name including the abbreviated one. Look for pins near your old locations too, not just name matches.",
+      "When you find one, decide which profile survives before you delete anything. Reviews live on the profile, so the keeper is almost always the one that already carries the review history, even if it is the one with the worse data on it. You can fix the data. You cannot move the reviews.",
+      "Then remove the duplicate through Google's own process rather than just abandoning it. An abandoned listing does not stop existing, it just stops being maintained, and it will keep showing your closed address to somebody."
+     ]
+    },
+    {
+     "h2": "Cause six: the website has no signals yet, or is actively telling Google to stay away",
+     "paragraphs": [
+      "If the site went live recently, some of this is patience. A new domain has no history, no links, and nothing pointing at it, and it takes time before Google treats it as a real thing. That is not a fault to fix, it is a clock to run.",
+      "What is worth checking immediately is whether you are blocking yourself. A noindex tag left on from the staging build is the most common self-inflicted wound in this whole list, and it is completely silent. View the page source and search for noindex. Load your domain followed by slash robots dot txt and read what it says. I have found both of these on live business sites more than once.",
+      "Connect Google Search Console and use the URL inspection tool on your homepage and your main service page. It will tell you plainly whether the page is indexed, and if it is not, it usually tells you why. That is a real answer rather than a guess, and it takes about five minutes to set up.",
+      "One thing that catches people: a Facebook page is not a substitute for a website. Social pages get indexed unpredictably, you do not control the markup, and you cannot fix anything when it goes wrong. You can absolutely have a Google profile with no website, plenty of businesses do, but the site is where relevance gets built. [What actually moves local rankings for a small operator](/blog/seo-for-local-business/) covers what that site needs to say."
+     ]
+    },
+    {
+     "h2": "The smaller symptoms: reviews, hours, and description not showing",
+     "paragraphs": [
+      "Reviews that vanish are usually filtered rather than deleted. A review left from an account with no history, one containing a link or a phone number, one written on a device in your shop, or a sudden cluster after a long silence: all of those look inorganic to an automated filter, and some of them get removed without telling anybody. The defence is a steady, ordinary flow of reviews from real customers over time.",
+      "Hours that will not show are usually either empty, contradicted by special hours you set once and forgot, or overwritten by a user-suggested edit. Anybody can suggest an edit to your profile. Most owners never look, which means your hours can be wrong for months because a stranger guessed.",
+      "The business description is a common false alarm. It does not appear in the map results at all, only on the profile panel, and Google sometimes shows its own generated summary instead of yours. That is not a bug and it is not something to fix.",
+      "The habit that catches all three: open the profile once a week and actually read it. Hours, phone, website link, categories, services. It takes two minutes and it beats finding out in March that your number has been wrong since December."
+     ]
+    },
+    {
+     "h2": "Not showing up at all versus not showing up first",
+     "paragraphs": [
+      "These are two different problems and people conflate them constantly. If a search for your exact business name finds you, you exist on Google and every fix above is done. What you have now is a competitive ranking problem, which is slower and more interesting.",
+      "Ranking work is category accuracy, a genuinely complete profile, a steady drip of reviews, real activity, and a website that says something specific about what you do and where. None of it is clever. All of it is relentless, which is exactly why most owner-operators lose it to businesses that are no better at the actual job.",
+      "There is also a failure mode worse than not ranking, which is ranking and then dropping the result. Somebody finds you at 7pm, calls, gets voicemail, and calls the next result. You paid for that visibility with months of work and handed the job away in four rings. [Where the missed calls actually go](/blog/missed-call-lead-capture/) is the unglamorous other half of this.",
+      "Get visible first, then get found first, then make sure something answers. In that order."
+     ]
+    },
+    {
+     "h2": "The checklist, in the order I would run it",
+     "paragraphs": [
+      "One: search from incognito on cell data, and get somebody across town to search too. Two: open the profile dashboard and look for a verification or suspension notice. Three: check the primary category against whoever is currently ranking for your term. Four: search your phone number and old addresses in Maps for duplicates. Five: view source on your homepage and look for noindex, then check robots dot txt. Six: connect Search Console and inspect your main pages.",
+      "Five of those six are free and take about ten minutes total. The sixth, a suspension appeal, is the only one that takes real time, and it is worth doing properly the first time with documents rather than three times with arguments.",
+      "What I will not tell you is that any of this guarantees a position. Nobody honest can promise you a rank on Google, because the ranking is not for sale and it changes with the location of the person searching. What can be promised is the work: the profile built out properly, the pages that answer real searches, and a cadence that does not stop the week you get busy.",
+      "If you have run the list and you are still invisible, send me what you found and I will tell you what I see. Email jesse@jessemoraga.com, or [start here](/get-started/) and tell me your city and your service."
+     ]
+    }
+   ],
+   "faq": [
+    {
+     "q": "Why is my business not showing up on Google after verification?",
+     "a": "Give it a little time first, because newly verified profiles do not always appear across every surface immediately. After that, check three things in order: whether the verification actually completed rather than stalling in a queue, whether a suspension notice is sitting in the dashboard, and whether you are simply searching from a location where a closer competitor outranks you. Search from incognito on cell data before you conclude anything."
+    },
+    {
+     "q": "How do I find my business on Google?",
+     "a": "Search your exact business name plus your city in a private window. If that finds you, you are on Google and your problem is ranking rather than visibility. If it does not, sign in to your Business Profile and look for a verification or suspension notice, then search your phone number in Maps to see whether a duplicate listing is holding your place."
+    },
+    {
+     "q": "Why are my business reviews not showing up on Google?",
+     "a": "Reviews are usually filtered rather than deleted. Common causes: the reviewer's account has no history, the review contains a link or a phone number, several arrived in a burst after a long silence, or they were all left on a device inside your business. There is no appeal that reliably restores them, so the practical answer is a steady ordinary flow of reviews from real customers rather than a campaign."
+    },
+    {
+     "q": "Why does my Facebook business page not show up on Google?",
+     "a": "Social pages get indexed unpredictably, and you control almost none of the technical signals that decide it. A Facebook page is not a substitute for either a Google Business Profile or a website. Build the profile first, since it is free and it is what feeds the map results, and treat the Facebook page as a place people check you out rather than a place they find you."
+    },
+    {
+     "q": "Why is my business not showing up on Google anymore?",
+     "a": "Something changed, and the usual suspects are a suspension, a user-suggested edit that altered your address or category, an accidental duplicate that Google is now favouring, or an edit you made yourself that put the profile back into review. Open the dashboard first. If the profile looks healthy, check your website for a noindex tag left behind by a recent redesign."
+    },
+    {
+     "q": "Do I need a website to put my business on Google?",
+     "a": "No. You can create and verify a Google Business Profile with no website at all, and many businesses run that way successfully. But the website is where you build relevance for searches beyond your own name, so with no site you are competing with one hand behind your back on anything competitive."
+    }
+   ]
+  },
+  {
+   "slug": "how-to-rank-on-google-maps",
+   "title": "How to Rank on Google Maps: What Actually Moves the Map Pack",
+   "meta_description": "Proximity is the one factor you cannot buy, which is exactly why category, completeness, reviews and steady activity are the winnable ground on Google Maps.",
+   "dek": "There are three slots, your rank changes block by block, and nobody honest will guarantee you one of them. Here is what genuinely moves you, in the order I would work it.",
+   "sections": [
+    {
+     "h2": "What the map pack actually is",
+     "paragraphs": [
+      "Search something local and you get a small map with a short list of businesses under it, usually three, sitting above the ordinary blue links. That block is what people mean by the map pack. Tap through it and you get the local finder, which is the longer list the pack was drawn from.",
+      "It is worth understanding that this is a separate result from the classic organic listings underneath. They are related, they feed each other, and they are not the same system. You can sit in the map pack for a term and be nowhere in the blue links for it, or the reverse. Most local service businesses should care about the pack first, because it is above everything and it carries a call button.",
+      "Google describes local results as being based mainly on relevance, distance, and prominence. Relevance is how well you match what was asked. Distance is how far you are from the searcher. Prominence is how well known and well established you look, on and off Google.",
+      "Google does not publish weightings for those three. Anybody handing you a pie chart with percentages on it invented the percentages. So I am going to take the three at face value, be honest that one of them is out of your hands, and spend the rest of this on the parts you can actually move."
+     ]
+    },
+    {
+     "h2": "Proximity is the factor nobody can buy",
+     "paragraphs": [
+      "Distance is measured from the person searching, or from the place they typed. Not from you. That single fact governs everything else about Maps and it is the reason so much local SEO advice sounds like it does not work.",
+      "The consequence people miss: you do not have a Google Maps rank. You have hundreds of them. You can be first on your own street, fourth a mile out, and absent across town, at the same moment, for the same words. So the question how do I rank number one on Google Maps does not have an answer, because the question is missing a location.",
+      "This is also why your address matters more than any tactic on this page, and why you cannot cheat it. A mailbox service, a coworking desk you never sit at, a relative's garage in a better part of town: those are the fastest known routes to a suspended profile, and a suspension takes your reviews out of circulation while you appeal. If you are wondering whether your listing is already in trouble, [work through the not-showing-up checklist](/blog/why-is-my-business-not-showing-up-on-google/) first.",
+      "The useful reframe is this. Proximity sets the board and you do not get a vote. Everything else on the board is winnable, and most of your competitors are not even trying to win it."
+     ]
+    },
+    {
+     "h2": "Getting on the map at all, and paying nobody for it",
+     "paragraphs": [
+      "A Google Business Profile is free. Creating one, claiming one, and verifying one are all free. If someone is selling you a package to get your business listed on Google Maps, they are charging you for something you can do yourself in about twenty minutes.",
+      "Before you create a new profile, search Maps for your business name, your phone number, and your address. Google generates listings from other data sources, so there may already be one sitting there with a few reviews on it. Claim that one. Creating a second is how you end up with a duplicate fighting your real listing for the rest of its life.",
+      "Then verify. Video verification has become the common route, and it goes badly when people treat it as a formality. Plan one continuous shot: your street signage, the surrounding area so the location is identifiable, your vehicle or your tools or your equipment, then inside, then your own face and a piece of ID or business paperwork if asked. Do it during daylight, on a stable phone, with the real business visible.",
+      "Verification is not a ranking factor. It is the door. Nothing else in this post does anything for you until it is done."
+     ]
+    },
+    {
+     "h2": "Your primary category is the highest-leverage field you control",
+     "paragraphs": [
+      "The primary category largely decides which searches you are eligible to appear in. Get it wrong and you can do everything else on this list perfectly while remaining invisible for the term that actually pays you.",
+      "Choose the category that describes what you fundamentally are, not the widest one and not the one that sounds most impressive. Then add secondary categories for the other things you genuinely do, sparingly. Stacking twelve categories does not make you eligible for twelve markets, it dilutes what you look like.",
+      "The research method is embarrassingly simple and almost nobody does it. Search the exact term you want to win, from a location inside your service area, and look at the businesses in the pack. Check what primary category each of them uses. If none of them shares yours, you have found your problem and you have found your fix in the same two minutes.",
+      "Re-check it once a year. Google adds and retires categories regularly, and a better-fitting one may have appeared since you set it up. While you are in there, the rest of the profile deserves the same attention, which I walk through in [Google Business Profile optimization](/google-business-profile-optimization/)."
+     ]
+    },
+    {
+     "h2": "Your business name is not a keyword field",
+     "paragraphs": [
+      "Google's guidelines are direct about this: the name on your profile is your real-world business name, the one on your signage, your invoices, and your registration. Not your name plus your city plus your three best services.",
+      "It works, briefly, which is why it keeps spreading. Then it stops. A competitor reports it, or an automated check catches it, and you are either edited back or suspended. If you are suspended, your reviews go dark while you appeal, and you lose weeks of visibility to save a few words in a field.",
+      "If a competitor above you is stuffing their name, do not copy them. Google runs a complaint process for exactly this, and reporting a guideline violation is both legitimate and considerably faster than out-stuffing someone. It is one of the few competitive levers in local search that is genuinely available to a small operator.",
+      "The one legitimate exception is when a keyword is authentically part of your registered name and appears on your sign. If it is on the building, it belongs in the field. If you added it last Tuesday, it does not."
+     ]
+    },
+    {
+     "h2": "Completeness: every empty field is a search you cannot win",
+     "paragraphs": [
+      "Think of the profile as a set of questions Google can only answer about you if you answered them first. An empty field is not neutral. It is a query you are not eligible for and a phone call somebody makes to a competitor instead of reading it on your listing.",
+      "Fill all of it. Hours, and holiday hours before the holiday rather than after. Your services, each with a real description in plain language. Attributes, which is where things like wheelchair access, appointment required, or veteran owned live. Products where they apply. Service areas if you travel. Your website link and a booking or appointment link if you take them. Photos of the exterior, the interior, your team, your vehicle, and your finished work.",
+      "Seed the questions section yourself with the questions you genuinely get asked all day, and answer them. That is not gaming anything, it is publishing your own FAQ where the customer is already standing. If you do not do it, somebody else will ask something awkward there and it will sit unanswered.",
+      "I would not spend a minute geotagging photos. I have never seen it do anything. Recent, real, unpolished photos of actual work help you because people choose with their eyes, and that is reason enough to keep adding them."
+     ]
+    },
+    {
+     "h2": "Reviews: steady beats a burst, every time",
+     "paragraphs": [
+      "Reviews are the prominence signal a small operator can actually build, and the pattern matters as much as the count. A slow, ordinary, continuous flow reads as a real business. Forty reviews in one week after two years of silence reads as a campaign, and filters treat it that way.",
+      "Ask at the moment of relief, which is right when the job is finished and the customer is visibly glad it is over. Ask out loud, then follow it with something they can tap. The ask that works is specific and small: mention what you fixed, and say it helps people nearby find you.",
+      "Do not buy reviews, do not trade them, do not offer a discount for one, and do not screen for happy customers before asking. All of that is against Google's policies, all of it is detectable, and the downside is losing the profile you built everything on.",
+      "Reply to every review including the bad ones, and write the reply for the next person reading it rather than for the person who left it. On deleting reviews: you cannot. You can flag one that breaks policy and hope, and you can respond. That is the whole toolkit, which is exactly why volume is the only real defence. The timing side of this is the part that quietly falls apart when you get busy, and I wrote about fixing that in [local SEO automation](/blog/local-seo-automation/)."
+     ]
+    },
+    {
+     "h2": "Activity: a live business versus a parked listing",
+     "paragraphs": [
+      "Two profiles with similar categories and similar review counts do not look the same to anybody if one of them has been untouched for eighteen months. Posting updates, adding new photos, answering questions, replying to messages, and keeping hours accurate are what a working business looks like from the outside.",
+      "I am not going to tell you that posting weekly is a ranking button, because that is not a claim anybody can substantiate. What I will say is that everything prominence is built from, reviews, mentions, engagement, accurate information, comes from a business that is actively maintained, and none of it comes from one that is not.",
+      "Set a cadence you can hold through a busy month. Weekly is plenty. A rhythm you keep for a year beats a heroic fortnight followed by silence, and the silence is what actually happens to owner-operators, every time, because the paying work is in front of you and the profile is not.",
+      "The practical trick is attaching it to something that already happens. You finish jobs. Photos exist on your phone already. The upkeep should ride on the work rather than compete with it for your evening."
+     ]
+    },
+    {
+     "h2": "The website behind the pin still counts",
+     "paragraphs": [
+      "Prominence is not built solely inside Google. It comes from the wider web: your own site, mentions of your business elsewhere, directory listings, local organisations, links from people who have a real reason to link to you. The profile is the front door and the site is the building behind it.",
+      "Make your name, address, and phone number identical everywhere they appear. Not similar. Identical, down to whether you write Street or St. Inconsistent details across directories are one of the few genuinely mechanical problems in local search, and one of the few you can completely finish.",
+      "Give each service its own page, written for a person deciding whether to call you, and let the city appear where it naturally belongs rather than sprayed through every sentence. A page that answers the actual question someone typed does more than any amount of keyword density, and it is also the only version of this that a human can stand to read.",
+      "The longer argument for how a small operator out-publishes bigger competitors without a marketing department is in [local SEO that actually works](/blog/seo-for-local-business/)."
+     ]
+    },
+    {
+     "h2": "Measuring it honestly, and what the first thirty days look like",
+     "paragraphs": [
+      "Stop checking your rank by searching from your own office. You are the closest person to your own business and you are signed in, so you will always look better than you are. Check from a grid of points across the area you serve, or at minimum get people in three different parts of town to search and screenshot. Rank is a map, not a number.",
+      "Then use Google's own performance data on the profile: calls, direction requests, website clicks, messages, and the searches that showed you. Those are the honest scoreboard because they are counted by Google rather than estimated by a tool, and they move for real reasons.",
+      "The only number that pays is booked work. Visibility that produces calls you do not answer is worse than no visibility, because you did the work and then handed the job to whoever picked up second. That leak, and four others like it, is the subject of [the five places your business money leaks](/blog/business-money-leaks/).",
+      "If I had thirty days: week one, verify and fix categories and clean up duplicates. Week two, fill every field and load real photos. Week three, start the review habit and reply to every review already there. Week four, service pages and consistent details across directories. Then hold it. And to be plain about it: nobody honest can guarantee you a position on Maps, because the result changes with the location of the person searching and it is not for sale. What can be committed to is the profile, the pages, and the cadence. If you want me to look at where yours stands, [tell me your city and your service](/get-started/), or email jesse@jessemoraga.com."
+     ]
+    }
+   ],
+   "faq": [
+    {
+     "q": "How do I get my business on Google Maps for free?",
+     "a": "Create or claim a Google Business Profile and verify it. All of that is free. Search Maps for your name, phone number, and address first, because Google may have already generated a listing you can claim instead of creating a duplicate. Anyone charging you a fee to get listed is charging for about twenty minutes of work you can do yourself."
+    },
+    {
+     "q": "How do I rank higher on Google Maps?",
+     "a": "Get the primary category right, fill every field on the profile, build a steady flow of real reviews, keep the profile actively maintained, and back it with a website that says specifically what you do and where. Distance from the searcher is the factor you cannot influence, which is precisely why those other five are where the winnable ground is."
+    },
+    {
+     "q": "Can I delete Google reviews for my business?",
+     "a": "No. You cannot delete a review someone else wrote. You can flag one that violates Google's policies and it may be removed, and you can publicly reply to it. That is the entire toolkit, and it is the reason a steady flow of genuine reviews is the only real defence against one bad night."
+    },
+    {
+     "q": "How should I name my business on Google Maps?",
+     "a": "Exactly as it appears in the real world, on your signage and your paperwork. Adding your city or your services to the name field works briefly and then gets you edited back or suspended, and a suspension takes your reviews out of circulation while you appeal. If a keyword is genuinely part of your registered name and it is on your building, it belongs there. Otherwise it does not."
+    },
+    {
+     "q": "Does SEO work for a small business?",
+     "a": "For a local service business it is usually the highest-value channel available, because the person searching has the problem right now and is ready to pay someone to solve it. What does not work is treating it as a one-time project. The results come from consistency, which is exactly the thing a busy owner-operator cannot sustain by willpower and should therefore build a system for."
+    },
+    {
+     "q": "Why is my business not showing up on Google Maps anymore?",
+     "a": "Something changed. The most common causes are a suspension you did not notice, a user-suggested edit that altered your address or category, a duplicate listing Google has started favouring, or a large edit you made that put the profile back into review. Open the dashboard first, because a suspension or verification notice will be sitting at the top of it."
+    }
+   ]
+  }
+ ]
+}
