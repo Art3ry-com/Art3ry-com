@@ -187,6 +187,48 @@ def render_blog(spec: dict) -> tuple[str, str]:
     return slug, _guard(body, f"blog:{slug}")
 
 
+def render_hub(spec: dict, all_hubs: list[dict]) -> tuple[str, str]:
+    """A playbook hub page (/playbook/<slug>/): the pillar that binds one topic
+    cluster. Lists every spoke with a one-line reason to read it, points at the
+    matching service, and cross-references sibling hubs. Spec: specs_playbook.json,
+    which scripts/wire_playbook.py also reads to inject the spoke->hub backlinks."""
+    slug = spec["slug"].strip("/")
+    canon = f"{SITE}/playbook/{slug}/"
+    jsonld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "CollectionPage", "@id": canon + "#page", "name": spec["title_tag"],
+         "description": spec["meta_description"], "url": canon,
+         "isPartOf": {"@type": "WebSite", "name": "Art3ry", "url": SITE + "/"}},
+        {"@type": "ItemList", "@id": canon + "#list",
+         "itemListElement": [{"@type": "ListItem", "position": i + 1,
+                              "name": s["title"], "url": SITE + s["href"]}
+                             for i, s in enumerate(spec["spokes"])]},
+        {"@type": "BreadcrumbList", "@id": canon + "#crumbs", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "The Growth Playbook", "item": SITE + "/playbook/"},
+            {"@type": "ListItem", "position": 2, "name": spec["h1"], "item": canon}]},
+    ]}
+    intro = "".join(f'<p class="lead" style="margin-bottom:14px">{_esc_p(p)}</p>' for p in spec["intro"])
+    cards = "".join(
+        f'<div class="card"><div class="tag">{_esc(s["tag"])}</div>'
+        f'<h3><a href="{s["href"]}">{_esc(s["title"])}</a></h3>'
+        f'<p style="font-size:14.5px;color:var(--ink-2);margin-bottom:10px">{_esc(s["hook"])}</p>'
+        f'<a href="{s["href"]}" style="color:var(--blue);font-size:14px;font-weight:600">Read it &rarr;</a></div>'
+        for s in spec["spokes"])
+    by_slug = {h["slug"]: h for h in all_hubs}
+    related = " &middot; ".join(
+        f'<a href="/playbook/{r}/" style="color:var(--blue);text-decoration:none">{_esc(by_slug[r]["h1"])}</a>'
+        for r in spec.get("related", []) if r in by_slug)
+    svc = spec["service"]
+    body = f"""{_head(spec['title_tag'], spec['meta_description'], canon, jsonld)}
+<header class="hero" style="padding-bottom:34px"><div class="wrap"><div class="kicker">{_esc(spec['kicker'])} &middot; <a href="/playbook/" style="color:inherit">The Growth Playbook</a></div>
+<h1 style="font-size:clamp(30px,4.8vw,50px)">{_h1(spec['h1'])}</h1><p class="sub">{_esc(spec['hero_sub'])}</p></div></header>
+<section class="section"><div class="wrap" style="max-width:760px">{intro}</div></section>
+<section class="section"><h2>Read it in this order</h2><div class="cards wrap">{cards}</div></section>
+<section class="section"><div class="cta-strip wrap"><h2>{_esc(svc['label'])}</h2><p>{_esc(svc['line'])}</p><a href="{svc['href']}">Start with a free diagnostic &rarr;</a></div></section>
+<section class="section"><p style="text-align:center;color:var(--ink-2);font-size:14px">Keep going: {related} &middot; <a href="/playbook/" style="color:var(--blue);text-decoration:none">all playbooks &rarr;</a></p></section>
+{_FOOTER}{_ANALYTICS}</body></html>"""
+    return slug, _guard(body, f"hub:{slug}")
+
+
 def render_service(spec: dict) -> tuple[str, str]:
     """A growth-as-a-service page (SEO, follow-up, websites, automation...). Sibling
     of render_landing, but service-framed (not assistant-framed) and cross-linked
@@ -247,6 +289,14 @@ def main(argv=None) -> int:
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(page, encoding="utf-8")
         written.append(str(out.relative_to(ROOT))); sitemap_urls.append(f"{SITE}/{slug}/")
+
+    hubs = specs.get("hub", [])
+    for spec in hubs:
+        slug, page = render_hub(spec, hubs)
+        out = ROOT / "playbook" / slug / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(page, encoding="utf-8")
+        written.append(str(out.relative_to(ROOT))); sitemap_urls.append(f"{SITE}/playbook/{slug}/")
 
     blog_cards = []
     for spec in specs.get("blog", []):

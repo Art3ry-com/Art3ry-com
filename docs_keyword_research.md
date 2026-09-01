@@ -180,3 +180,55 @@ actually type. It does not give monthly volume numbers.
 - /blog/seo-for-local-business/
 - /blog/virtual-receptionist-companies-compared/
 - /blog/what-is-an-ai-receptionist/
+---
+
+# Growth pass, 2026-08-31: business growth / make money / automate
+
+Second autocomplete pass, aimed at the terrain Jesse wants to own: business
+growth, making money, automating a business. 18 seeds, a-z expansion, 1,544 raw
+phrases, 1,334 qualified. Full data: `scripts/research/growth_pass_2026-08-31.json`,
+rerunnable via `scripts/research/growth_pass_research.py`. Same caveat as above:
+Google's own suggest data, real queries, no volume numbers.
+
+## What it found, biggest first
+
+| phrases | cluster | covered by |
+|---:|---|---|
+| 424 | grow-the-business ("how to grow a small business" + variants) | **NEW: /blog/how-to-grow-a-small-business/** (written this pass) |
+| 347 | automate / "ai for small business" | **NEW: /blog/how-to-automate-a-small-business/** (written this pass); "ai for small business" head term still open |
+| 211 | get-more-customers ("how to get more clients as a barber/lawyer/realtor...") | OPEN |
+| ~90 | trade-leads pattern ("how to get more plumbing/roofing/cleaning/concrete leads") | OPEN, maps onto growth-for-your-trade |
+| 79 | marketing-ads ("how to advertise my small business free/locally/on google") | OPEN |
+| 27 | make-more-money ("how to increase sales/revenue in a small business") | OPEN |
+| 23 | slow-business ("why is my business slow right now/this month") | OPEN |
+
+## The write-next queue, in order
+
+1. **/blog/how-to-get-more-customers/** — 211 phrases plus the trade-leads
+   pattern. The per-trade long tail ("as a barber", "as a photographer", "as a
+   personal trainer") wants an H2-per-trade structure. Hub: make-more-money.
+2. **/blog/ai-for-small-business/** — the head term of the 347-phrase bucket,
+   different intent from the automate pillar (tool-choice, not method).
+   Autocomplete even carries "ai for small business anthropic". Hub:
+   automate-your-business.
+3. **/blog/how-to-advertise-my-small-business/** — 79 phrases, dominated by
+   "for free", "locally", "on google", "on facebook". Angle: fix the free
+   channels first, ads last, which is already the site's thesis. Hub:
+   make-more-money.
+4. **/blog/how-to-increase-sales-in-a-small-business/** — 27 phrases. Hub:
+   make-more-money.
+5. **/blog/why-is-my-business-slow/** — 23 phrases, emotional diagnostic
+   intent, near-zero competition angle. The grow pillar's FAQ answers it in
+   miniature; this expands it. Hub: make-more-money.
+6. **Trade-lead spokes** ("how to get more [trade] leads") as
+   growth-for-your-trade expansions, one per trade Art3ry actually serves.
+
+## The hub architecture (shipped 2026-08-31)
+
+Six hubs at `/playbook/<slug>/`, every post and landing page assigned to
+exactly one, all wiring generated from `scripts/specs_playbook.json`:
+get-found-on-google (7) · never-miss-a-call (12) · automate-your-business (10)
+· make-more-money (7) · website-that-wins-work (3) · growth-for-your-trade (16).
+Chain: hub → spokes in reading order; spoke → its hub + all playbooks; spokes →
+siblings in prose (already present); /playbook/ manifesto → library of six;
+/blog/ → playbook banner. `wire_playbook.py` enforces link integrity.

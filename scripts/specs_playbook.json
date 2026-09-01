@@ -1,0 +1,156 @@
+{
+  "_comment": "The playbook hub library: single source of truth for topic clusters. render_hub() in build_pages.py builds /playbook/<slug>/ pages from the 'hub' list; scripts/wire_playbook.py injects the spoke->hub backlinks, the library section on /playbook/, and the blog-index banner. Every post belongs to exactly one hub; hubs cross-reference each other via 'related'.",
+  "hub": [
+    {
+      "slug": "get-found-on-google",
+      "title_tag": "Get Found on Google: The Local Search Playbook | ART3RY",
+      "meta_description": "Why your business is invisible on Google, how the map pack actually works, and the exact order to fix it in. The full local search playbook, free.",
+      "kicker": "Playbook 01",
+      "h1": "Get Found on Google",
+      "hero_sub": "Customers are typing exactly what you sell into Google right now. If someone else's name comes up, this playbook is the fix. Work it top to bottom: diagnose why you are invisible, claim the map pack, then build pages that rank for years.",
+      "intro": [
+        "Search is the only marketing channel that compounds. An ad stops the second you stop paying. A page that ranks keeps sending you customers while you sleep, for years, for free. That is why this playbook comes first.",
+        "Start with the diagnostic post if you are invisible, the Maps post if you show up but not first, and the service pages when you would rather I just do it."
+      ],
+      "spokes": [
+        {"href": "/blog/why-is-my-business-not-showing-up-on-google/", "title": "Why Is My Business Not Showing Up on Google?", "hook": "The diagnostic. Eight causes, checked in the order that finds the problem fastest.", "tag": "Start here"},
+        {"href": "/blog/how-to-rank-on-google-maps/", "title": "How to Rank on Google Maps", "hook": "What actually moves the map pack, and the parts everyone wastes money on.", "tag": "Pillar"},
+        {"href": "/blog/seo-for-local-business/", "title": "Local SEO That Actually Works", "hook": "How a small operator outranks the big firms in their own city.", "tag": "Guide"},
+        {"href": "/blog/local-seo-automation/", "title": "Invisible While Competitors Show Up First?", "hook": "The automated version: reviews, citations, and content on a schedule.", "tag": "Guide"},
+        {"href": "/blog/fresno-seo-for-small-business/", "title": "Fresno SEO: Getting Found Here", "hook": "The same playbook applied to one real city, step by step.", "tag": "Case"},
+        {"href": "/google-business-profile-optimization/", "title": "Google Business Profile Optimization, Done for You", "hook": "The single highest-leverage local search asset, handled.", "tag": "Service"},
+        {"href": "/seo-company-fresno/", "title": "SEO Company in Fresno", "hook": "Local search as a service, for businesses that want it run, not explained.", "tag": "Service"}
+      ],
+      "service": {"href": "/services/seo/", "label": "SEO as a service", "line": "Would rather skip the homework? I build and run this whole playbook for you."},
+      "related": ["website-that-wins-work", "never-miss-a-call"]
+    },
+    {
+      "slug": "never-miss-a-call",
+      "title_tag": "Never Miss a Call: The Lead Capture Playbook | ART3RY",
+      "meta_description": "Every missed call is a job that went to the next name on the list. How answering speed, after-hours coverage, and AI receptionists actually work.",
+      "kicker": "Playbook 02",
+      "h1": "Never Miss a Call",
+      "hero_sub": "The business that answers in five minutes beats the one that answers in five hours, almost every time. You cannot answer while you work. Something else can. This playbook covers what that something is, what it costs, and where it breaks.",
+      "intro": [
+        "Getting found is half the job. The other half is what happens when the phone rings and you are under a sink, on a roof, or with a client. Most owners lose more money here than anywhere else, and never see it happen, because a missed call leaves no receipt.",
+        "Start with the plain-English explainer, then the cost posts when you are comparing options, then the integration and DIY posts when you want to know how deep the water is."
+      ],
+      "spokes": [
+        {"href": "/blog/what-is-an-ai-receptionist/", "title": "What Is an AI Receptionist?", "hook": "The plain-English explanation: how it works, what it costs, where it breaks.", "tag": "Start here"},
+        {"href": "/blog/how-long-does-a-call-ring-before-voicemail/", "title": "How Long Does a Call Ring Before Voicemail?", "hook": "About 25 seconds. Here is what happens in them, and why it costs you jobs.", "tag": "Guide"},
+        {"href": "/blog/instant-lead-response-software-5-minute-rule/", "title": "The 5-Minute Rule", "hook": "Why you lose most leads before you even see them, with the research.", "tag": "Guide"},
+        {"href": "/blog/missed-call-lead-capture/", "title": "Missed Call Lead Capture for the Trades", "hook": "The catch-and-callback system for plumbers, electricians, and every trade.", "tag": "Guide"},
+        {"href": "/blog/after-hours-answering-service/", "title": "After-Hours Jobs Are Your Most Profitable", "hook": "Emergency calls pay the best margins and get answered the worst.", "tag": "Guide"},
+        {"href": "/blog/ai-receptionist-for-contractors-missed-calls/", "title": "Why Contractors Lose $50K a Year to Missed Calls", "hook": "The math on what voicemail actually costs a working contractor.", "tag": "Guide"},
+        {"href": "/blog/ai-phone-intake/", "title": "How 24/7 AI Phone Intake Books Jobs", "hook": "The full path from missed call to booked job, walked through live.", "tag": "Guide"},
+        {"href": "/blog/answering-service-pricing/", "title": "Answering Service Pricing", "hook": "Per-minute, per-call, and the hidden fees every provider buries.", "tag": "Compare"},
+        {"href": "/blog/virtual-receptionist-companies-compared/", "title": "Virtual Receptionist Companies Compared", "hook": "Human, hybrid, and AI, priced and ranked honestly.", "tag": "Compare"},
+        {"href": "/blog/ai-phone-agent-integrations/", "title": "Can an AI Phone Agent Work With Your Tools?", "hook": "Calendar, CRM, spreadsheets: what connects cleanly and what fights you.", "tag": "Deep dive"},
+        {"href": "/blog/diy-voice-ai-what-it-really-costs/", "title": "DIY Voice AI: What It Really Costs", "hook": "Vapi, Retell, and Synthflow priced out if you build it yourself.", "tag": "Deep dive"},
+        {"href": "/never-lose-a-job-to-voicemail/", "title": "Never Lose a Job to Voicemail", "hook": "The done-for-you version for the trades.", "tag": "Service"}
+      ],
+      "service": {"href": "/services/lead-follow-up/", "label": "Lead capture and follow-up as a service", "line": "I install the answer-everything system and run it, so every caller becomes a lead."},
+      "related": ["automate-your-business", "make-more-money"]
+    },
+    {
+      "slug": "automate-your-business",
+      "title_tag": "Automate Your Business: The Owner-Operator Playbook | ART3RY",
+      "meta_description": "How to automate a small business without buying twelve tools: invoicing, scheduling, reminders, follow-up, and the order to wire them in.",
+      "kicker": "Playbook 03",
+      "h1": "Automate Your Business",
+      "hero_sub": "The job is only half the work. Invoices, reminders, scheduling, review requests, chasing payment: none of it needs your skill, it just needs doing. This playbook is how one operator wires that half to run itself.",
+      "intro": [
+        "I run a real one-person field company this way. Over 700 jobs have gone through the system: it answers, books, invoices, follows up, and files, while I do the actual work. Everything in this playbook is running live somewhere, not theorized.",
+        "Start with the pillar post for the full method and the order to automate in. The rest go deep on one piece at a time."
+      ],
+      "spokes": [
+        {"href": "/blog/how-to-automate-a-small-business/", "title": "How to Automate a Small Business", "hook": "The full method: what to automate first, what to skip, and the order that pays for itself.", "tag": "Start here"},
+        {"href": "/blog/run-my-business-on-autopilot-not-the-receptionist/", "title": "You Didn't Start a Business to Become Its Receptionist", "hook": "The case for autopilot, from an owner who lived the alternative.", "tag": "Guide"},
+        {"href": "/blog/automate-invoicing/", "title": "Automating Your Invoices Is the Fastest ROI", "hook": "The first automation to install, and the one that pays back the same week.", "tag": "Guide"},
+        {"href": "/blog/ai-appointment-scheduling-software/", "title": "AI Appointment Scheduling Software", "hook": "How self-booking works, what breaks, and when a human still has to touch it.", "tag": "Guide"},
+        {"href": "/blog/how-to-reduce-no-shows/", "title": "How to Reduce No-Shows", "hook": "The reminder sequence that actually works, with the timing that matters.", "tag": "Guide"},
+        {"href": "/blog/ai-agents-for-business/", "title": "AI Agents for Business", "hook": "What agents actually do today, and what is still marketing fiction.", "tag": "Deep dive"},
+        {"href": "/blog/hire-an-ai-employee/", "title": "Hire an AI Employee", "hook": "The team you cannot afford in salaries, working around the clock.", "tag": "Deep dive"},
+        {"href": "/blog/business-operating-system/", "title": "The Business Operating System, Proven Live", "hook": "What it looks like when every play runs together in one real company.", "tag": "Case"},
+        {"href": "/blog/all-in-one-business-software-kill-saas-bloat/", "title": "How to Kill SaaS Bloat for Good", "hook": "From 42 subscriptions to one system that does the work.", "tag": "Compare"},
+        {"href": "/blog/gohighlevel-alternative-done-for-you/", "title": "GoHighLevel Alternative: Done-For-You, Not DIY", "hook": "Why owner-operators drown in DIY platforms, and the alternative.", "tag": "Compare"}
+      ],
+      "service": {"href": "/services/automation/", "label": "Automation as a service", "line": "I wire the repetitive half of your business to run itself. You keep the half you are good at."},
+      "related": ["never-miss-a-call", "make-more-money"]
+    },
+    {
+      "slug": "make-more-money",
+      "title_tag": "Make More Money: Pricing, Leaks, and Real Costs | ART3RY",
+      "meta_description": "What to charge, where your money quietly leaks, and what hiring actually costs. The money playbook for owner-operators, with real numbers.",
+      "kicker": "Playbook 04",
+      "h1": "Make More Money",
+      "hero_sub": "Most owners do not have a revenue problem. They have a pricing problem, a leak problem, or a cost structure problem wearing a revenue problem's clothes. This playbook is the math, done honestly.",
+      "intro": [
+        "Every post here comes back to the same discipline: measure it before you decide it. What you charge, what a missed lead costs, what an employee really costs against what a system costs. The numbers are rarely what they feel like.",
+        "Start with the pricing method. It is the highest-leverage hour you will spend on your business this year."
+      ],
+      "spokes": [
+        {"href": "/blog/how-to-grow-a-small-business/", "title": "How to Grow a Small Business", "hook": "The whole method in one post: five levers, in order, from an owner who runs them live.", "tag": "Pillar"},
+        {"href": "/blog/how-much-should-i-charge-for-my-services/", "title": "How Much Should I Charge for My Services?", "hook": "The actual method, not a vibe: costs, market, positioning, and the raise you owe yourself.", "tag": "Start here"},
+        {"href": "/blog/business-money-leaks/", "title": "The 5 Places Your Business Money Leaks", "hook": "Missed calls, dead leads, slow invoices, no-shows, and silent churn. With fixes.", "tag": "Guide"},
+        {"href": "/blog/what-hiring-an-employee-actually-costs/", "title": "What Hiring an Employee Actually Costs", "hook": "The fully loaded number, and when hiring is still the right call anyway.", "tag": "Guide"},
+        {"href": "/blog/ai-receptionist-cost-vs-front-desk-hire/", "title": "AI Receptionist vs. a $45,000 Front-Desk Hire", "hook": "The real numbers on the most common staffing question I get.", "tag": "Compare"},
+        {"href": "/blog/growth-as-a-service-for-small-business/", "title": "What Is Growth-as-a-Service?", "hook": "The agency alternative for owner-operators, and when each makes sense.", "tag": "Compare"},
+        {"href": "/blog/marketing-agency-alternative-fire-without-losing-leads/", "title": "Fire Your Marketing Agency Without Losing a Lead", "hook": "The clean exit checklist: what to take back before you cancel.", "tag": "Guide"}
+      ],
+      "service": {"href": "/services/", "label": "The Growth Build", "line": "The free diagnostic finds your biggest leak first. Then we decide together what is worth fixing."},
+      "related": ["automate-your-business", "never-miss-a-call"]
+    },
+    {
+      "slug": "website-that-wins-work",
+      "title_tag": "A Website That Wins Work: Cost, Need, and Build | ART3RY",
+      "meta_description": "Do you need a website, what a good one honestly costs, and what separates a site that wins customers from an online brochure.",
+      "kicker": "Playbook 05",
+      "h1": "A Website That Wins Work",
+      "hero_sub": "A website is not a brochure. Done right it is the employee that never sleeps: it ranks, it answers, it books. Done wrong it is rent on an empty room. This playbook is the difference.",
+      "intro": [
+        "The two questions every owner asks, answered without a sales agenda: whether you need one at all, and what a good one costs. Both posts give you the honest ranges, including the cases where the answer is no.",
+        "Read these before you talk to any web designer, including me."
+      ],
+      "spokes": [
+        {"href": "/blog/do-i-need-a-website-for-my-business/", "title": "Do I Need a Website for My Business?", "hook": "An honest answer, including the businesses that genuinely do not.", "tag": "Start here"},
+        {"href": "/blog/how-much-does-a-small-business-website-cost/", "title": "How Much Does a Small Business Website Cost?", "hook": "Honest ranges for every route: DIY, freelancer, agency, and done-for-you.", "tag": "Pillar"},
+        {"href": "/web-design-fresno/", "title": "Web Design in Fresno", "hook": "The done-for-you version: a site built to rank and convert, not just exist.", "tag": "Service"}
+      ],
+      "service": {"href": "/services/websites/", "label": "Websites as a service", "line": "I build sites that win the search AND the phone call. This one is the portfolio."},
+      "related": ["get-found-on-google", "never-miss-a-call"]
+    },
+    {
+      "slug": "growth-for-your-trade",
+      "title_tag": "Growth for Your Trade: Playbooks by Industry | ART3RY",
+      "meta_description": "The same growth system, translated for contractors, salons, real estate, food trucks, local shops, e-commerce, and more. Find your trade.",
+      "kicker": "Playbook 06",
+      "h1": "Growth for Your Trade",
+      "hero_sub": "The plays are universal. The way they land in your week is not. A salon's no-show problem, a contractor's voicemail problem, and a realtor's speed-to-lead problem are the same leak wearing different uniforms. Find yours.",
+      "intro": [
+        "Each guide below takes the whole system and walks it through one trade: where that industry actually loses money, which play matters most, and what the fix looks like on a normal Tuesday.",
+        "If your trade is not here, the closest one still applies. The leak patterns repeat."
+      ],
+      "spokes": [
+        {"href": "/blog/growth-for-contractors/", "title": "Contractors", "hook": "You cannot answer the phone from a roof. Here is what should.", "tag": "Trades"},
+        {"href": "/blog/growth-for-salons/", "title": "Salons and Med Spas", "hook": "Every empty chair is inventory that expired. Keep them booked.", "tag": "Beauty"},
+        {"href": "/blog/growth-for-real-estate/", "title": "Real Estate", "hook": "The first agent to call wins. How to always be first.", "tag": "Realty"},
+        {"href": "/blog/growth-for-food-trucks/", "title": "Food Trucks", "hook": "Catering inquiries come at 11 PM. Book them without being awake.", "tag": "Food"},
+        {"href": "/blog/growth-for-local-shops/", "title": "Local Shops", "hook": "Stay open longer without hiring more staff.", "tag": "Retail"},
+        {"href": "/blog/growth-for-ecommerce/", "title": "E-Commerce", "hook": "Stop watching ad spend disappear into abandoned carts.", "tag": "Online"},
+        {"href": "/blog/ai-assistant-for-families/", "title": "Busy Parents", "hook": "The same back office, pointed at family life instead of a storefront.", "tag": "Home"},
+        {"href": "/assistant-for-contractors/", "title": "The Contractor Assistant", "hook": "Done-for-you call capture for the trades.", "tag": "Service"},
+        {"href": "/assistant-for-salons/", "title": "The Salon Assistant", "hook": "Bookings and no-show defense, handled.", "tag": "Service"},
+        {"href": "/assistant-for-law-firms/", "title": "The Law Firm Assistant", "hook": "Virtual intake, handled safely.", "tag": "Service"},
+        {"href": "/assistant-for-real-estate/", "title": "The Real Estate Assistant", "hook": "Speed-to-lead on every inquiry.", "tag": "Service"},
+        {"href": "/assistant-for-food-trucks/", "title": "The Food Truck Assistant", "hook": "Catering bookings while you serve.", "tag": "Service"},
+        {"href": "/assistant-for-ecommerce/", "title": "The E-Commerce Assistant", "hook": "The inbox and cart recovery, handled.", "tag": "Service"},
+        {"href": "/assistant-for-educators/", "title": "The Educator Assistant", "hook": "For tutors and independent teachers.", "tag": "Service"},
+        {"href": "/assistant-for-families/", "title": "The Family Assistant", "hook": "The household back office.", "tag": "Service"},
+        {"href": "/assistant-for-business/", "title": "The Small Business Assistant", "hook": "The general-purpose version, for everyone else.", "tag": "Service"}
+      ],
+      "service": {"href": "/get-started/", "label": "Start with your trade", "line": "Tell me your trade on the diagnostic and I will map these plays onto your actual week."},
+      "related": ["never-miss-a-call", "automate-your-business"]
+    }
+  ]
+}

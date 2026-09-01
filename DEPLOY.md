@@ -28,6 +28,14 @@ then `git diff`, then decide. It has twice tried to undo deliberate decisions.
 The generator merges rather than replaces, on purpose. A naive rewrite throws
 away crawl-scheduling signal that cannot be recovered.
 
+**4. Run `python3 scripts/wire_playbook.py` after every `build_pages.py` run.**
+The playbook hub-and-spoke links (the "Part of the X playbook" block on every
+post and landing page, the library on `/playbook/`, the banner on `/blog/`)
+live in marker-delimited blocks that the generator does not emit. A rebuild
+strips them from any spec'd page; the wiring script puts them back, verifies
+every spoke link resolves, and is safe to run twice. Cluster membership lives
+in ONE place: `scripts/specs_playbook.json`.
+
 ---
 
 ## The two stylesheets
