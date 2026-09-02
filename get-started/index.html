@@ -199,7 +199,7 @@
     status.textContent = note;
     // Fire the mail app for people who have one...
     window.location.href = 'mailto:jesse@jessemoraga.com?subject=' +
-      encodeURIComponent('ART3RY — ' + val('lf-name') + (val('lf-biz') ? ' / ' + val('lf-biz') : '')) +
+      encodeURIComponent('ART3RY: ' + val('lf-name') + (val('lf-biz') ? ' / ' + val('lf-biz') : '')) +
       '&body=' + encodeURIComponent(message());
     // ...and ALWAYS reveal the no-dead-end panel. On a phone with no default mail app
     // the line above silently does nothing; without this, the visitor is stuck and the
@@ -208,9 +208,9 @@
     if(fb){ fb.style.display = 'block'; fb.scrollIntoView({behavior:'smooth', block:'center'}); }
   }
   function copyComposed(){
-    var text = 'To: jesse@jessemoraga.com\nSubject: ART3RY — ' + val('lf-name') + '\n\n' + message();
+    var text = 'To: jesse@jessemoraga.com\nSubject: ART3RY: ' + val('lf-name') + '\n\n' + message();
     (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function(){
-      var s = document.getElementById('lf-copied'); if(s){ s.textContent = '✓ Copied — paste it into any email or text app.'; }
+      var s = document.getElementById('lf-copied'); if(s){ s.textContent = '✓ Copied. Paste it into any email or text app.'; }
     }).catch(function(){ window.prompt('Copy this, then email it to jesse@jessemoraga.com:', text); });
   }
 
@@ -269,7 +269,7 @@
     .catch(function(){
       // Network/CORS failure. Same rule: never lose the lead.
       sendBtn.disabled = false; sendBtn.textContent = 'Send it to Jesse →';
-      mailtoFallback("Couldn't reach the server — opening your email app instead.");
+      mailtoFallback("Couldn't reach the server, opening your email app instead.");
     });
   });
 
