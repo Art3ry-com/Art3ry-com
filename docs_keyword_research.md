@@ -196,7 +196,7 @@ Google's own suggest data, real queries, no volume numbers.
 |---:|---|---|
 | 424 | grow-the-business ("how to grow a small business" + variants) | **NEW: /blog/how-to-grow-a-small-business/** (written this pass) |
 | 347 | automate / "ai for small business" | **NEW: /blog/how-to-automate-a-small-business/** (written this pass); "ai for small business" head term still open |
-| 211 | get-more-customers ("how to get more clients as a barber/lawyer/realtor...") | OPEN |
+| 211 | get-more-customers ("how to get more clients as a barber/lawyer/realtor...") | **SHIPPED 2026-09-02: /blog/how-to-get-more-customers/** (hub: make-more-money) |
 | ~90 | trade-leads pattern ("how to get more plumbing/roofing/cleaning/concrete leads") | OPEN, maps onto growth-for-your-trade |
 | 79 | marketing-ads ("how to advertise my small business free/locally/on google") | OPEN |
 | 27 | make-more-money ("how to increase sales/revenue in a small business") | OPEN |
@@ -207,6 +207,10 @@ Google's own suggest data, real queries, no volume numbers.
 1. **/blog/how-to-get-more-customers/** — 211 phrases plus the trade-leads
    pattern. The per-trade long tail ("as a barber", "as a photographer", "as a
    personal trainer") wants an H2-per-trade structure. Hub: make-more-money.
+   **SHIPPED 2026-09-02.** Structure landed as three leaks (not found, not
+   answered, not followed up), the fix in payback order, and a seven-trade
+   translation block in one H2 rather than an H2 per trade. Spec lives in
+   `scripts/specs_pillars.json`; spoke added to the make-more-money hub.
 2. **/blog/ai-for-small-business/** — the head term of the 347-phrase bucket,
    different intent from the automate pillar (tool-choice, not method).
    Autocomplete even carries "ai for small business anthropic". Hub:
