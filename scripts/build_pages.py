@@ -15,6 +15,7 @@ from __future__ import annotations
 import html
 import json
 import re
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -57,7 +58,7 @@ _NAV = """<nav>
 _FOOTER = """<footer>
   <div style="display:flex;flex-direction:column;gap:6px">
     <span class="wordmark">ART<em>3</em>RY</span>
-    <p style="font-size:11px">&copy; 2026 ART3RY, LLC &mdash; California</p>
+    <p style="font-size:11px">&copy; 2026 ART3RY, LLC, California</p>
   </div>
   <div class="footer-links">
     <a href="/services/">The Growth Build</a><a href="/about/">About</a><a href="/blog/">Blog</a>
@@ -164,8 +165,13 @@ def render_landing(spec: dict) -> tuple[str, str]:
 
 
 def render_blog(spec: dict) -> tuple[str, str]:
+    """A blog post. `title` is the headline the reader sees (H1 + schema headline);
+    optional `title_tag` is the SERP line, which is length-capped and keyword-led and
+    therefore often has to differ. Without `title_tag` the two stay identical, which
+    is how every post shipped before the two ever needed to diverge."""
     slug = spec["slug"].strip("/")
     canon = f"{SITE}/blog/{slug}/"
+    title_tag = spec.get("title_tag") or spec["title"] + " | ART3RY"
     jsonld = {"@context": "https://schema.org", "@graph": [
         {"@type": "BlogPosting", "@id": canon + "#post", "headline": spec["title"],
          "description": spec["meta_description"], "url": canon,
@@ -178,7 +184,7 @@ def render_blog(spec: dict) -> tuple[str, str]:
     secs = "".join(f"<h2>{_esc(s['h2'])}</h2>" + "".join(f"<p>{_esc_p(p)}</p>" for p in s["paragraphs"])
                    for s in spec["sections"])
     faq = "".join(f'<div class="q">{_esc(f["q"])}</div><div class="a">{_esc(f["a"])}</div>' for f in spec["faq"])
-    body = f"""{_head(spec['title'] + ' | ART3RY', spec['meta_description'], canon, jsonld)}
+    body = f"""{_head(title_tag, spec['meta_description'], canon, jsonld)}
 <header class="hero" style="padding-bottom:30px"><div class="wrap"><div class="kicker">ART3RY Blog</div>
 <h1 style="font-size:clamp(28px,4.4vw,46px)">{_esc(spec['title'])}</h1><p class="sub">{_esc(spec['dek'])}</p></div></header>
 <article class="article">{secs}<h2>FAQ</h2><div class="faq" style="max-width:none">{faq}</div></article>
@@ -269,10 +275,108 @@ def render_service(spec: dict) -> tuple[str, str]:
     return slug, _guard(body, f"service:{slug}")
 
 
+_ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
+
+
+def _page_path(url: str) -> Path:
+    """Map a sitemap URL back to the file that renders it."""
+    rel = url[len(SITE):].strip("/")
+    return (ROOT / rel / "index.html") if rel else (ROOT / "index.html")
+
+
+def _git(*args: str) -> str:
+    """Run git in the repo; empty string if git is unavailable or errors."""
+    try:
+        r = subprocess.run(("git",) + args, cwd=ROOT, capture_output=True, text=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        return ""
+    return r.stdout if r.returncode == 0 else ""
+
+
+def _committed_dates() -> dict[str, str]:
+    """repo-relative path -> date of the newest commit that touched it."""
+    dates: dict[str, str] = {}
+    current = ""
+    for line in _git("log", "--format=%cs", "--name-only", "--no-renames").splitlines():
+        if not line:
+            continue
+        if _ISO_DATE.fullmatch(line):
+            current = line
+        elif current:
+            dates.setdefault(line, current)  # first hit wins = newest commit
+    return dates
+
+
+def _uncommitted() -> set[str]:
+    """repo-relative paths with staged, unstaged or untracked changes right now."""
+    out = set()
+    for line in _git("status", "--porcelain", "--untracked-files=all").splitlines():
+        if len(line) > 3:
+            out.add(line[3:].split(" -> ")[-1].strip('"'))
+    return out
+
+
+def write_sitemap(fresh_urls: list[str]) -> None:
+    """MERGE sitemap.xml: keep every URL already listed AND the <lastmod> banked
+    against it, then add core + everything generated this run. A partial spec must
+    never silently drop existing pages.
+
+    <lastmod> is derived from the repo, not from the fact that the factory happened
+    to rewrite a file: a page whose bytes did not change keeps the date of the commit
+    that last changed it, and only a page with real pending edits gets today. That is
+    what stops a no-op rebuild from bumping all 64 dates and burning crawl budget.
+    Dates never move backwards — a previously published lastmod is kept if it is newer
+    than what the repo can prove, because that signal cannot be recovered.
+    """
+    banked: dict[str, str] = {}
+    order: list[str] = []
+    sm_path = ROOT / "sitemap.xml"
+    if sm_path.exists():
+        for block in re.findall(r"<url>(.*?)</url>", sm_path.read_text(), re.S):
+            loc = re.search(r"<loc>(.*?)</loc>", block)
+            if not loc:
+                continue
+            u = loc.group(1)
+            if u not in banked:
+                order.append(u)
+                banked[u] = ""
+            lm = re.search(r"<lastmod>(.*?)</lastmod>", block)
+            if lm:
+                banked[u] = lm.group(1)
+
+    # /assistant/ is intentionally noindex,follow and out of the sitemap (3fdd684):
+    # submitting a noindexed URL sends Google two contradictory instructions.
+    core = ["", "services/", "about/", "blog/", "get-started/", "playbook/"]
+    for u in [f"{SITE}/{c}" for c in core] + fresh_urls:
+        if u not in banked:
+            order.append(u)
+            banked[u] = ""
+
+    today = date.today().isoformat()
+    committed, pending = _committed_dates(), _uncommitted()
+
+    lastmod: dict[str, str] = {}
+    for u in order:
+        rel = str(_page_path(u).relative_to(ROOT))
+        lastmod[u] = today if rel in pending else max(committed.get(rel, ""), banked[u]) or today
+
+    rows = "".join(f"  <url><loc>{u}</loc><lastmod>{lastmod[u]}</lastmod></url>\n" for u in order)
+    sm_path.write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
+                       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                       + rows + "</urlset>\n")
+    changed = sum(1 for u in order if lastmod[u] == today)
+    print(f"build_pages: sitemap {len(order)} urls, all with lastmod ({changed} dated today)")
+
+
 def main(argv=None) -> int:
     argv = argv or sys.argv[1:]
     if not argv:
-        print("usage: build_pages.py specs.json"); return 2
+        print("usage: build_pages.py specs.json | --sitemap-only"); return 2
+    if argv[0] == "--sitemap-only":
+        # Re-date the sitemap after every page edit has landed (hand-edits and
+        # wire_playbook.py both run after the factory). Safe to run on its own.
+        write_sitemap([])
+        return 0
     specs = json.loads(Path(argv[0]).read_text())
     written, sitemap_urls = [], []
 
@@ -307,50 +411,8 @@ def main(argv=None) -> int:
         written.append(str(out.relative_to(ROOT))); sitemap_urls.append(f"{SITE}/blog/{slug}/")
         blog_cards.append((spec["title"], f"/blog/{slug}/", spec["meta_description"]))
 
-    # MERGE sitemap.xml: keep every URL already listed AND the <lastmod> banked
-    # against it, then add core + everything generated this run. A partial spec must
-    # never silently drop existing pages, and a rebuild must never strip lastmod —
-    # re-emitting bare <loc> throws away crawl-scheduling signal we cannot recover.
-    lastmod: dict[str, str | None] = {}
-    order: list[str] = []
-    sm_path = ROOT / "sitemap.xml"
-    if sm_path.exists():
-        for block in re.findall(r"<url>(.*?)</url>", sm_path.read_text(), re.S):
-            loc = re.search(r"<loc>(.*?)</loc>", block)
-            if not loc:
-                continue
-            u = loc.group(1)
-            if u not in lastmod:
-                order.append(u)
-            lm = re.search(r"<lastmod>(.*?)</lastmod>", block)
-            lastmod[u] = lm.group(1) if lm else lastmod.get(u)
-
-    # /assistant/ is intentionally noindex,follow and out of the sitemap (3fdd684):
-    # submitting a noindexed URL sends Google two contradictory instructions.
-    core = ["", "services/", "about/", "blog/", "get-started/"]
-    for u in [f"{SITE}/{c}" for c in core]:
-        if u not in lastmod:
-            order.append(u); lastmod[u] = None
-
-    # Only pages actually rewritten this run get a fresh lastmod.
-    today = date.today().isoformat()
-    for u in sitemap_urls:
-        if u not in lastmod:
-            order.append(u)
-        lastmod[u] = today
-
-    rows = "".join(
-        f"  <url><loc>{u}</loc>"
-        + (f"<lastmod>{lastmod[u]}</lastmod>" if lastmod.get(u) else "")
-        + "</url>\n"
-        for u in order
-    )
-    sm = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-          + rows + "</urlset>\n")
-    (ROOT / "sitemap.xml").write_text(sm)
-
-    kept = sum(1 for u in order if lastmod.get(u))
-    print(f"build_pages: wrote {len(written)} pages + sitemap ({len(order)} urls, {kept} with lastmod)")
+    write_sitemap(sitemap_urls)
+    print(f"build_pages: wrote {len(written)} pages")
     for w in written:
         print("  ", w)
     # emit blog-card snippets for manual blog-index wiring

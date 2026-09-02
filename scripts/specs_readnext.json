@@ -1,0 +1,45 @@
+{
+  "_comment": "Curated 'Keep reading' links for the pages the page factory rebuilds. Only the hrefs live here: each card's title and blurb are read from the destination page at wire time, so a retitled post updates every card that points at it. Pages NOT built from a spec keep their hand-written block and are absent here. Restored by scripts/wire_playbook.py after every build_pages.py run.",
+  "readnext": {
+    "blog/do-i-need-a-website-for-my-business": [
+      "/blog/how-much-does-a-small-business-website-cost/",
+      "/blog/why-is-my-business-not-showing-up-on-google/",
+      "/blog/seo-for-local-business/"
+    ],
+    "blog/fresno-seo-for-small-business": [
+      "/blog/why-is-my-business-not-showing-up-on-google/",
+      "/blog/how-to-rank-on-google-maps/",
+      "/blog/seo-for-local-business/"
+    ],
+    "blog/how-much-does-a-small-business-website-cost": [
+      "/blog/do-i-need-a-website-for-my-business/",
+      "/blog/how-much-should-i-charge-for-my-services/",
+      "/blog/marketing-agency-alternative-fire-without-losing-leads/"
+    ],
+    "blog/how-much-should-i-charge-for-my-services": [
+      "/blog/business-money-leaks/",
+      "/blog/what-hiring-an-employee-actually-costs/",
+      "/blog/automate-invoicing/"
+    ],
+    "blog/how-to-rank-on-google-maps": [
+      "/blog/why-is-my-business-not-showing-up-on-google/",
+      "/blog/seo-for-local-business/",
+      "/blog/local-seo-automation/"
+    ],
+    "blog/how-to-reduce-no-shows": [
+      "/blog/ai-appointment-scheduling-software/",
+      "/blog/instant-lead-response-software-5-minute-rule/",
+      "/blog/growth-for-salons/"
+    ],
+    "blog/what-hiring-an-employee-actually-costs": [
+      "/blog/hire-an-ai-employee/",
+      "/blog/how-much-should-i-charge-for-my-services/",
+      "/blog/run-my-business-on-autopilot-not-the-receptionist/"
+    ],
+    "blog/why-is-my-business-not-showing-up-on-google": [
+      "/blog/how-to-rank-on-google-maps/",
+      "/blog/local-seo-automation/",
+      "/blog/seo-for-local-business/"
+    ]
+  }
+}

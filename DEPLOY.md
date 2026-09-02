@@ -7,8 +7,9 @@ need to know before you do that.
 you push  →  GitHub Pages rebuilds (~1 min)  →  Cloudflare edge (600s cache)  →  art3ry.com
 ```
 
-Repo `Art3ry-com/Art3ry-com` · `CNAME` = `art3ry.com` · **58 pages** · no build
-step, no npm, no framework. The HTML in this repo is the HTML that ships.
+Repo `Art3ry-com/Art3ry-com` · `CNAME` = `art3ry.com` · **74 pages, 64 in the
+sitemap** (the ten `/assistant*` pages are parked `noindex`) · no build step, no
+npm, no framework. The HTML in this repo is the HTML that ships.
 
 ---
 
@@ -24,17 +25,31 @@ Change the CSS, change the version, in the same commit.
 `scripts/build_pages.py` writes real pages and mutates `sitemap.xml`. Run it,
 then `git diff`, then decide. It has twice tried to undo deliberate decisions.
 
-**3. Keep the sitemap's `<lastmod>` values.**
-The generator merges rather than replaces, on purpose. A naive rewrite throws
-away crawl-scheduling signal that cannot be recovered.
+**3. The sitemap dates itself from git. Do not hand-edit `<lastmod>`.**
+The generator merges rather than replaces, on purpose, and every URL now carries
+a `<lastmod>`. The date is **the commit that last changed that page's file**, or
+today if the file has pending edits, so a rebuild that produces identical bytes
+keeps the old date instead of bumping all 64 and burning crawl budget, and a page
+you actually edited moves on its own. A previously published date is never walked
+backwards. Because the dates read the working tree, run
+
+```bash
+python3 scripts/build_pages.py --sitemap-only
+```
+
+**last**, after every page edit, including `wire_playbook.py`.
 
 **4. Run `python3 scripts/wire_playbook.py` after every `build_pages.py` run.**
-The playbook hub-and-spoke links (the "Part of the X playbook" block on every
-post and landing page, the library on `/playbook/`, the banner on `/blog/`)
-live in marker-delimited blocks that the generator does not emit. A rebuild
-strips them from any spec'd page; the wiring script puts them back, verifies
-every spoke link resolves, and is safe to run twice. Cluster membership lives
-in ONE place: `scripts/specs_playbook.json`.
+Marker-delimited blocks the generator does not emit, which a rebuild therefore
+strips from any spec'd page: the "Part of the X playbook" backlink on every post
+and landing page, the library on `/playbook/`, the banner on `/blog/`, and the
+"Keep reading" cards. The wiring script puts them all back, verifies every link
+resolves, and is safe to run twice. Cluster membership lives in ONE place,
+`scripts/specs_playbook.json`; the "Keep reading" link lists in
+`scripts/specs_readnext.json`, which stores **only hrefs**: each card's title and
+blurb are read from the destination page at wire time, so retitling a post updates
+every card that points at it. Pages the factory does not own keep their
+hand-written block and are absent from that spec.
 
 ---
 
@@ -43,7 +58,7 @@ in ONE place: `scripts/specs_playbook.json`.
 | File | Used by | Notes |
 |---|---|---|
 | `assets/site.css` | the homepage, and only the homepage | hero schematic, scroll reel, trade picker |
-| `assets/pages.css` | 49 interior pages | implements the page factory's class contract |
+| `assets/pages.css` | 65 interior pages | implements the page factory's class contract |
 
 **They are never loaded together.** Both define `.hero`, `.card` and `.section`
 and they mean different things. Loading both breaks the page.
@@ -65,9 +80,21 @@ without editing its spec means the next build silently reverts your change. That
 is exactly how the site's first-person rewrite nearly got undone: the HTML was
 fixed and the specs were not.
 
-Spec files: `specs_services.json`, `specs_diagnostic.json`, `specs_hub_1..5.json`.
-Most of the 58 pages predate the specs and cannot be regenerated; edit those by
-hand and know that the factory will not reproduce them.
+Spec files: `specs_services.json`, `specs_diagnostic.json`, `specs_playbook.json`,
+`specs_hub_1..5.json`, `specs_money_1..3.json`, `specs_pillars.json`,
+`specs_fresno.json`: 24 pages in all. The other 50 predate the specs and cannot
+be regenerated; edit those by hand and know that the factory will not reproduce
+them. `scripts/build_pages.py` takes ONE spec at a time, so a full rebuild is
+
+```bash
+for f in scripts/specs_*.json; do python3 scripts/build_pages.py "$f"; done
+python3 scripts/wire_playbook.py
+python3 scripts/build_pages.py --sitemap-only
+```
+
+A blog spec's `title` is the H1 and the schema headline; add `title_tag` when the
+SERP line has to be shorter or lead with a different keyword. Without it the two
+stay identical.
 
 Guards that will stop a build: Jesse's private cell in any output aborts with a
 non-zero exit. Keep it that way.
@@ -117,8 +144,8 @@ Already configured and working. Do not change these unless something is broken.
 
 ## Known open
 
-- **Cloudflare Web Analytics is not collecting.** All 58 pages ship
-  `data-cf-beacon='{"token": "REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN"}'`. Until a
-  real token replaces that placeholder the site has no analytics at all, which is
-  awkward on a site that sells analytics setup. The token comes from the
-  Cloudflare dashboard under Web Analytics.
+- **Eleven indexable pages carry no JSON-LD at all**: `/blog/`, `/get-started/`,
+  `/blog/seo-for-local-business/`, `/blog/ai-phone-intake/`,
+  `/blog/automate-invoicing/` and the six `/blog/growth-for-*/` posts. They predate
+  the factory, so nothing will add schema to them on a rebuild. Structured data is
+  the cheapest remaining on-page win on this site.
