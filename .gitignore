@@ -35,3 +35,6 @@ scripts/_blog_cards.json
 # This repo is public and its Pages root is Jekyll-rendered — a .md here
 # becomes a crawlable page on art3ry.com.
 docs/
+
+# Unpublished drafts, never deploy from here
+drafts/

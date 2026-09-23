@@ -164,31 +164,101 @@ def render_landing(spec: dict) -> tuple[str, str]:
     return slug, _guard(body, f"landing:{slug}")
 
 
+_HTTPS_ONLY = re.compile(r"^https://[A-Za-z0-9.\-]+/")
+
+
+def _proof_block(proof: dict, where: str) -> str:
+    """Optional trust block: the only place an EXTERNAL link may appear in a post.
+
+    Paragraphs deliberately allow site-relative links only (_esc_p), so an outbound
+    proof link (a Google Business listing, the operating company) needs an explicit,
+    validated home rather than raw author HTML loosened into prose. Every href is
+    checked to be https with a host, and every label is escaped.
+    """
+    links = ""
+    for l in proof.get("links", []):
+        url = (l.get("url") or "").strip()
+        if not _HTTPS_ONLY.match(url):
+            raise SystemExit(f"build_pages: ABORT - proof link is not a plain https URL in {where}: {url!r}")
+        cls = ' class="btn-primary"' if l.get("primary") else ' class="btn-secondary"'
+        links += f'<a{cls} href="{_esc(url)}" target="_blank" rel="noopener">{_esc(l["label"])}</a>'
+    note = f'<p class="proof" style="margin-top:18px">{_esc(proof["note"])}</p>' if proof.get("note") else ""
+    return (f'<section class="section"><div class="safe">'
+            f'<h2>{_esc(proof["h2"])}</h2><p>{_esc(proof["text"])}</p>'
+            f'<div class="btns">{links}</div>{note}</div></section>')
+
+
+def _video_slot(slug: str) -> str:
+    """A commented, styled placeholder so a video can be dropped in later without
+    touching layout. Ships as a comment: an empty frame would be worse than none."""
+    return f"""
+<!-- ======== VIDEO SLOT ({slug}) =========================================
+     Uncomment the section below and paste ONE embed inside .videowrap:
+       YouTube  : <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" allowfullscreen></iframe>
+       Self-host: <video src="/assets/VIDEO.mp4" controls playsinline poster="/assets/art3ry-brand.jpg"></video>
+     ===================================================================== -->
+<!--
+<section class="section" style="padding-top:0"><div class="wrap">
+  <div class="videowrap" style="max-width:860px;margin:0 auto;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000">
+    PASTE EMBED HERE
+  </div>
+</div></section>
+-->
+"""
+
+
 def render_blog(spec: dict) -> tuple[str, str]:
     """A blog post. `title` is the headline the reader sees (H1 + schema headline);
     optional `title_tag` is the SERP line, which is length-capped and keyword-led and
     therefore often has to differ. Without `title_tag` the two stay identical, which
-    is how every post shipped before the two ever needed to diverge."""
+    is how every post shipped before the two ever needed to diverge.
+
+    Optional keys, all backward compatible (a spec without them builds exactly as before):
+      author       {"name","job_title"} -> Person byline + Person author in schema
+      extra_schema [ {...} ]            -> extra JSON-LD nodes (e.g. the operating company)
+      proof        {...}                -> trust block, the only external-link surface
+      video        true                 -> commented video placeholder after the hero
+    """
     slug = spec["slug"].strip("/")
     canon = f"{SITE}/blog/{slug}/"
     title_tag = spec.get("title_tag") or spec["title"] + " | ART3RY"
-    jsonld = {"@context": "https://schema.org", "@graph": [
+
+    author_spec = spec.get("author")
+    if author_spec:
+        author = {"@type": "Person", "name": author_spec["name"]}
+        if author_spec.get("job_title"):
+            author["jobTitle"] = author_spec["job_title"]
+        if author_spec.get("works_for_id"):
+            author["worksFor"] = {"@id": author_spec["works_for_id"]}
+    else:
+        author = {"@type": "Organization", "name": "Art3ry"}
+
+    graph = [
         {"@type": "BlogPosting", "@id": canon + "#post", "headline": spec["title"],
          "description": spec["meta_description"], "url": canon,
-         "author": {"@type": "Organization", "name": "Art3ry"},
+         "author": author,
          "publisher": {"@type": "Organization", "name": "Art3ry", "url": SITE + "/"}},
         {"@type": "FAQPage", "@id": canon + "#faq",
          "mainEntity": [{"@type": "Question", "name": f["q"],
                          "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in spec["faq"]]},
-    ]}
+    ]
+    graph.extend(spec.get("extra_schema", []))
+    jsonld = {"@context": "https://schema.org", "@graph": graph}
+
     secs = "".join(f"<h2>{_esc(s['h2'])}</h2>" + "".join(f"<p>{_esc_p(p)}</p>" for p in s["paragraphs"])
                    for s in spec["sections"])
     faq = "".join(f'<div class="q">{_esc(f["q"])}</div><div class="a">{_esc(f["a"])}</div>' for f in spec["faq"])
+    byline = (f'<p class="article-meta">By {_esc(author_spec["name"])}'
+              + (f', {_esc(author_spec["job_title"])}' if author_spec.get("job_title") else "")
+              + "</p>") if author_spec else ""
+    video = _video_slot(slug) if spec.get("video") else ""
+    proof = _proof_block(spec["proof"], f"blog:{slug}") if spec.get("proof") else ""
+
     body = f"""{_head(title_tag, spec['meta_description'], canon, jsonld)}
-<header class="hero" style="padding-bottom:30px"><div class="wrap"><div class="kicker">ART3RY Blog</div>
-<h1 style="font-size:clamp(28px,4.4vw,46px)">{_esc(spec['title'])}</h1><p class="sub">{_esc(spec['dek'])}</p></div></header>
-<article class="article">{secs}<h2>FAQ</h2><div class="faq" style="max-width:none">{faq}</div></article>
-<section class="section"><div class="cta-strip wrap"><h2>Stop doing the work behind the work.</h2><p>ART3RY is the AI assistant that runs it for you.</p><a href="/get-started/">Get your assistant &rarr;</a></div></section>
+<header class="hero" style="padding-bottom:30px"><div class="wrap"><div class="kicker">{_esc(spec.get('kicker', 'ART3RY Blog'))}</div>
+<h1 style="font-size:clamp(28px,4.4vw,46px)">{_h1(spec['title'])}</h1><p class="sub">{_esc(spec['dek'])}</p>{byline}</div></header>
+{video}<article class="article">{secs}<h2>FAQ</h2><div class="faq" style="max-width:none">{faq}</div></article>
+{proof}<section class="section"><div class="cta-strip wrap"><h2>Stop doing the work behind the work.</h2><p>ART3RY is the AI assistant that runs it for you.</p><a href="/get-started/">Get your assistant &rarr;</a></div></section>
 {_FOOTER}{_ANALYTICS}</body></html>"""
     return slug, _guard(body, f"blog:{slug}")
 
