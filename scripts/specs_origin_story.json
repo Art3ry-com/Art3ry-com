@@ -5,12 +5,11 @@
    "kicker": "Fresno, California",
    "title": "I Ran My Business Out of a Motel Room in Fresno. Now It Runs Itself.",
    "title_tag": "From a Motel Room to a Business That Runs Itself | ART3RY",
-   "meta_description": "A Fresno surgical tech left the operating room, ran a business out of a motel room, and built the automation that now runs it. Why I am helping five Central Valley small business owners do the same.",
+   "meta_description": "A Fresno surgical tech left the operating room, ran a business out of a motel room, and built the automation that now runs it. Why I am helping five Fresno small business owners do the same.",
    "dek": "I was a surgical tech in Fresno. Then I wasn't. This is the whole story: the motel, the garage with no heat, and the month I spent building the thing that finally made it stop breaking.",
    "author": {
     "name": "Jesse Moraga",
-    "job_title": "Founder, Art3ry",
-    "works_for_id": "https://centralvalleyprocessservers.com/#org"
+    "job_title": "Founder, Art3ry"
    },
    "video": true,
    "sections": [
@@ -44,7 +43,7 @@
      "paragraphs": [
       "Here's the part people leave out of these stories.",
       "I started a notary business first. Moved my family to Nevada for it. It didn't work. I don't have a dramatic reason. It just didn't. I learned a lot about what I'd actually signed up for, which was the real return on it, but it didn't pay.",
-      "So we came back to California, and I slept on a friend's couch. That's where I bought my LLC for Central Valley Process Servers in 2024. From a couch. I want to be clear that there was no moment where it clicked and the money started. I filed paperwork on a couch and then had to go figure out how to make it real.",
+      "So we came back to California, and I slept on a friend's couch. That's where I bought my LLC for a California field-services company in 2024. From a couch. I want to be clear that there was no moment where it clicked and the money started. I filed paperwork on a couch and then had to go figure out how to make it real.",
       "I also went back to surgery for a few months in there. I want to be honest about that, because it's not a straight line. I tried to go back. And it wasn't for me anymore. The hospitals felt profit-first in a way I couldn't unsee once I'd seen it, and morale kept getting crushed. Good people, ground down. I couldn't do it a second time.",
       "After that came the motel."
      ]
@@ -55,7 +54,7 @@
       "After three months, my business got us out of that motel room and into a converted garage. No heat, no air conditioning. In Fresno, that means you're genuinely cold in January and genuinely miserable in July.",
       "I didn't care even a little. We were off the street, and we were there because of work I'd done. That mattered more to me than the temperature.",
       "Somewhere in there, my girlfriend and I split up, and I was on my own raising my daughter. Rent was $1,150 a month, plus PG&E, plus gas, plus supplies, plus food. That number doesn't sound like much to a lot of people. It was everything to me. There were nights I cried after she went to sleep because I could not see where the next month's money was coming from.",
-      "And somehow I made it. Every month. I don't have a clever explanation for that. I served papers, I picked up work, I answered every call, and it came together every single month.",
+      "And somehow I made it. Every month. I don't have a clever explanation for that. I ran the field work, I picked up jobs, I answered every call, and it came together every single month.",
       "About nine months later, I got a real apartment. Heat, air conditioning, a door that locked. Paid for entirely by my business. Nobody co-signed it, nobody helped, no second income. That apartment is the proudest thing I own."
      ]
     },
@@ -63,7 +62,7 @@
      "h2": "Then success started breaking things",
      "paragraphs": [
       "Here's what nobody warns you about: getting busy is its own problem.",
-      "Once the work picked up, I started dropping things. Not because I was lazy, but because there was one of me. Follow-ups I meant to make and didn't. Invoices I sent late, or sent wrong, or forgot to send at all. Emails that sat unanswered for three days because I was in my car serving papers. Clients who quietly stopped calling, and I never even knew which ones or why.",
+      "Once the work picked up, I started dropping things. Not because I was lazy, but because there was one of me. Follow-ups I meant to make and didn't. Invoices I sent late, or sent wrong, or forgot to send at all. Emails that sat unanswered for three days because I was out in my car working a job. Clients who quietly stopped calling, and I never even knew which ones or why.",
       "That's the thing about a one-person business. You don't lose clients in a dramatic blowup. They slip through a crack you never saw, and you find out months later when you notice somebody hasn't called in a while. If that sounds familiar, it's the same pattern behind every [money leak](/blog/business-money-leaks/) I've watched drain a small operation.",
       "So I stopped. I spent a month, a real month, most of every day, building automation for my own business using AI. Not buying software. Building the thing that actually fit how my business works, because nothing off the shelf did. I taught myself to run it lean, on a $200-a-month subscription, because that's what I could afford.",
       "I got a lot of it wrong first. That month was not a montage. But at the end of it, the follow-ups happened whether I remembered or not. Invoices went out the day the work was done. Nothing sat in my inbox for three days."
@@ -92,7 +91,7 @@
    "faq": [
     {
      "q": "What does Art3ry actually do for a small business?",
-     "a": "It handles the work behind the work: intake, follow-ups, invoicing, reminders, and the emails that pile up while you're doing the job you were hired for. It's the same kind of system I built to run my own process-serving business in Fresno, adapted to how yours actually works."
+     "a": "It handles the work behind the work: intake, follow-ups, invoicing, reminders, and the emails that pile up while you're doing the job you were hired for. It's the same kind of system I built to run my own field-services business in Fresno, adapted to how yours actually works."
     },
     {
      "q": "Who are the five businesses you're looking for?",
@@ -107,46 +106,8 @@
      "a": "No. In 2021 I couldn't use the software I'd bought. That's the entire reason I build this for people instead of handing them a tool and wishing them luck."
     },
     {
-     "q": "Are you still a process server?",
-     "a": "Yes. Central Valley Process Servers is a real, active, registered business in Fresno. It's the business this system was built for and still runs on every day."
-    }
-   ],
-   "proof": {
-    "h2": "You can check that this is real",
-    "text": "Everything above happened at a business you can look up right now: a registered California process-serving company in Fresno, with a live Google listing and real customers who left real reviews.",
-    "links": [
-     {
-      "label": "See the Google listing and reviews",
-      "url": "https://www.google.com/maps/place/?q=place_id:ChIJn4ytxpMUBgoRJiwwIEFMpd4",
-      "primary": true
-     },
-     {
-      "label": "Central Valley Process Servers",
-      "url": "https://centralvalleyprocessservers.com/"
-     }
-    ],
-    "note": "Registered California Process Server, PS-124, Madera County."
-   },
-   "extra_schema": [
-    {
-     "@type": "ProfessionalService",
-     "@id": "https://centralvalleyprocessservers.com/#org",
-     "name": "Central Valley Process Servers",
-     "url": "https://centralvalleyprocessservers.com/",
-     "sameAs": [
-      "https://www.google.com/maps/place/?q=place_id:ChIJn4ytxpMUBgoRJiwwIEFMpd4"
-     ],
-     "areaServed": [
-      {
-       "@type": "City",
-       "name": "Fresno"
-      },
-      {
-       "@type": "AdministrativeArea",
-       "name": "Central Valley, California"
-      }
-     ],
-     "identifier": "Registered California Process Server PS-124, Madera County"
+     "q": "Do you still run that business?",
+     "a": "Yes. It's a registered California field-services company in Fresno that I run myself, and the system was built for it and still runs it every day."
     }
    ]
   }
