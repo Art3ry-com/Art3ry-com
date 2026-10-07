@@ -1,0 +1,232 @@
+{
+  "blog": [
+    {
+      "slug": "ai-phone-intake",
+      "title": "AI Phone Intake: What the Call Should Capture Before You Call Back",
+      "title_tag": "AI Phone Intake: What the Call Should Capture | ART3RY",
+      "meta_description": "AI phone intake means the call ends with a usable job record, not a voicemail. The questions to ask, what to log, and how to hand it to your calendar.",
+      "dek": "Answering the call is half the job. The other half is what you know when it ends. Here is what a good intake captures, the questions worth asking, and how the record should reach you.",
+      "sections": [
+        {
+          "h2": "Answering is not intake",
+          "paragraphs": [
+            "Most conversations about phone automation stop at pick up the call. That is the easy part. A call that gets answered and ends with a name and a vague I need a plumber is still a chore waiting for you at 6 PM: call back, ask the same questions, play phone tag, hope they have not called someone else.",
+            "Intake is what happens between hello and goodbye. It is the structured set of questions that turns a stranger's problem into a record you can act on without another conversation. If you want the plain-English version of the whole category, start with [what an AI receptionist is](/blog/what-is-an-ai-receptionist/). This post is about the part that decides whether the call was worth anything.",
+            "I run a one-person California field-services company, and over 700 jobs have gone through a system I built to run exactly this. What follows is what I learned about which questions earn their place."
+          ]
+        },
+        {
+          "h2": "The principle: ask only what changes your next move",
+          "paragraphs": [
+            "Every question you ask on a call costs you a little of the caller's patience. A caller who just wants the leak fixed will tolerate three or four questions and abandon at ten. So the rule is simple: ask only what changes what you do next.",
+            "If the answer does not change the price, the schedule, the tools you bring, or whether you take the job at all, do not ask it on the first call. Save it for the visit."
+          ]
+        },
+        {
+          "h2": "The six things worth capturing",
+          "paragraphs": [
+            "One, who and how to reach them. Name, the number they are calling from, and the best way and time to reach them. Confirm the number by reading it back, because a single wrong digit kills the lead.",
+            "Two, where. The service address or at least the city and cross street. Location decides whether you can take the job, how long the drive is, and whether it falls inside your service area. For California trades, this is also where the Central Valley sprawl bites: a call from Reedley and a call from Clovis are different afternoons.",
+            "Three, what. The problem in the caller's own words, plus one clarifying question that matters in your trade. A plumber wants to know if water is actively running. A salon wants the service and the stylist. A notary wants the document type and number of signers.",
+            "Four, when. How soon they need it and the windows that work. This is the field that separates the emergency you drop everything for from the quote you can handle tomorrow.",
+            "Five, how they found you. One quick question. It costs three seconds and tells you which of your efforts is working, which is data you cannot get any other way.",
+            "Six, what happens next. The caller should hang up knowing exactly what comes after: a text with a link, a callback by a stated time, a confirmed slot. Uncertainty after the call is what sends people back to Google."
+          ]
+        },
+        {
+          "h2": "Where the record should land",
+          "paragraphs": [
+            "A transcript in an inbox is better than voicemail, but it is still homework. The record should arrive where you already work, already sorted: a text or notification with the three lines that matter, the full details in your calendar or job list, and the lead tagged by urgency so you can tell an emergency from a tire-kicker at a glance.",
+            "This is the point where most DIY setups quietly fail, because the voice part is easy and the plumbing is not. I wrote up where the connections tend to break in [AI phone agent integrations](/blog/ai-phone-agent-integrations/), and what it really costs to wire it yourself in [the DIY voice AI cost breakdown](/blog/diy-voice-ai-what-it-really-costs/)."
+          ]
+        },
+        {
+          "h2": "What to automate after the call ends",
+          "paragraphs": [
+            "The minute the call ends, send the caller a text that confirms what you heard and states the next step. It catches mistakes while they are cheap to fix and tells the caller you are real and attentive. If you need photos or a document, ask for them in that text rather than on the phone.",
+            "If a callback is promised, the system should hold you to it. A task with a deadline, a nudge if it slips, and an automatic message to the customer if you are running behind. This is the follow-up side of the system, and it is what [lead follow-up](/services/lead-follow-up/) is built to do.",
+            "Do not automate judgment. Pricing exceptions, scope arguments, and angry customers belong to you. A good intake sends those up the line immediately, with context, instead of trying to handle them."
+          ]
+        },
+        {
+          "h2": "What good intake sounds like",
+          "paragraphs": [
+            "It sounds like a competent person who values the caller's time. It greets, states the business, asks what is going on, and responds to the answer rather than reading a script. It confirms the details back. It never pretends to be a person if asked, and it hands off to a human when the caller wants one.",
+            "Test it the way a customer would. Call at 9 PM on a Sunday and be difficult. Mumble an address. Change your mind about the date. Ask something off-script. If the record you receive is still usable, the intake works. If you have to call back to figure out what happened, it does not."
+          ]
+        },
+        {
+          "h2": "Where to start",
+          "paragraphs": [
+            "Write down the six fields above for your trade, in order of importance. Cut anything that does not change your next move. That list is your intake, whether a person, a form, or a voice system is collecting it.",
+            "Then see where calls are currently going. The [missed call lead capture](/blog/missed-call-lead-capture/) post covers the quick text-back version for the days when the phone rings while your hands are full, and [the free diagnostic](/diagnostic/) shows how many calls and leads are currently dying before they become jobs."
+          ]
+        }
+      ],
+      "faq": [
+        {"q": "What is AI phone intake?", "a": "It is an automated voice agent that answers a call, asks a short set of structured questions, and delivers a usable job record to you. The goal is a call that ends with a name, location, problem, timing, and a confirmed next step."},
+        {"q": "What questions should an intake call ask?", "a": "Only the ones that change your next move: who and how to reach them, where, what the problem is, when they need it, how they found you, and what happens next. Anything else can wait for the visit."},
+        {"q": "How is intake different from an answering service?", "a": "An answering service usually takes a message. Intake collects structured information, texts a confirmation, and puts the record where your calendar and follow-up can act on it."},
+        {"q": "Can AI intake handle emergencies?", "a": "It can recognize urgency from the caller's answers and alert you immediately with the details. Decisions about price, scope, and anything sensitive should still go to a person."},
+        {"q": "Will callers know they are talking to AI?", "a": "A good setup is honest about it if asked and hands off to a human on request. What callers actually care about is being answered quickly and having their problem understood."}
+      ]
+    },
+    {
+      "slug": "automate-invoicing",
+      "title": "Automate Invoicing: Get Paid for the Work You Already Did",
+      "title_tag": "Automate Invoicing: Fastest ROI for Small Business | ART3RY",
+      "meta_description": "Automate invoicing for a small business: send on job completion, add payment links, and chase late payers politely. The setup, the order, and what to skip.",
+      "dek": "Invoicing is the one back-office job where doing it slower costs you cash. Here is how to send on the trigger, make paying easy, and chase politely without you ever feeling awkward.",
+      "sections": [
+        {
+          "h2": "The job is done and the money is not",
+          "paragraphs": [
+            "You finish the work, the customer thanks you, and you drive to the next one. The invoice is in your head, or on a sticky note, or in a truck that smells like coffee and PVC cement. You will get to it tonight. Then tonight turns into the weekend, and the weekend turns into a Tuesday where you are suddenly out of cash for materials.",
+            "That is not a discipline problem. It is a design problem. Invoicing depends on you remembering at the exact moment you are least able to. The fix is to stop depending on memory.",
+            "I run a one-person California field-services company, and 700+ jobs have run through a system I built so the paperwork happens when the work does. This is what I would set up first, in order."
+          ]
+        },
+        {
+          "h2": "The principle: the invoice is triggered by the job, not by you",
+          "paragraphs": [
+            "A job moving to done is an event. An invoice should be a consequence of that event, the same way a receipt follows a purchase. If a human has to notice, decide, open an app, and type, the process will fail on your busiest days, which are your most profitable days.",
+            "Decide what counts as done for each type of work: the visit is complete, the customer accepted the quote, the deposit cleared, the document was delivered. Pick one trigger per job type, and write it down."
+          ]
+        },
+        {
+          "h2": "Why it pays: cash flow and fewer forgotten jobs",
+          "paragraphs": [
+            "There are two ways slow invoicing costs you. The first is timing. Terms usually run from the invoice date, so every day you wait to send is a day later you get paid. For a business that fronts materials or pays contractors, that delay is a loan you are making to your customer for free.",
+            "The second is leakage. In a busy week, some jobs simply never get billed, and you only discover it months later in a bookkeeping cleanup, if ever. I have never met an owner who did a full audit and found nothing.",
+            "None of this needs a made-up statistic to be true. Look at your last thirty days of completed jobs and compare them to what you billed. The gap, if there is one, is your answer, and it is specific to your business."
+          ]
+        },
+        {
+          "h2": "How to apply it, step one: one link, one tap",
+          "paragraphs": [
+            "Put a payment link on every invoice. The easiest invoice to pay is the one that opens in a text message and takes a card or a bank transfer in under a minute. Each extra step, such as mailing a check or logging into a portal, adds days.",
+            "Keep the invoice itself plain. Business name, job, date, amount, due date, and how to pay. If a customer has to decode it, they will put it off."
+          ]
+        },
+        {
+          "h2": "Step two: send within minutes of the trigger",
+          "paragraphs": [
+            "Wire the trigger to the send. When the job is marked complete in your calendar or job list, the invoice goes out with a short note in your voice: Thanks for having us out today. Invoice is below, and you can pay right from this link. The customer's gratitude is at its peak at that moment, which is when paying feels natural.",
+            "For work with deposits, split it: deposit invoice on acceptance, balance invoice on completion. That keeps cash coming in during the job instead of only after it."
+          ]
+        },
+        {
+          "h2": "Step three: chase without the awkwardness",
+          "paragraphs": [
+            "Chasing payment is the part owners hate, which is exactly why it is worth automating. A short sequence works: a friendly reminder a couple of days before the due date, a note on the due date, and a firmer one a few days after. Same tone as your invoice, no scolding.",
+            "Stop the sequence the moment the invoice is paid. Nothing destroys goodwill like a past-due notice to someone who paid yesterday. The same follow-up logic powers the quote reminders I describe in [how to follow up on a quote](/blog/how-to-follow-up-on-a-quote/), and it is the heart of [lead follow-up](/services/lead-follow-up/)."
+          ]
+        },
+        {
+          "h2": "Step four: close the loop with a review ask",
+          "paragraphs": [
+            "A paid invoice is the best moment to ask for a review. The customer is satisfied, the transaction is done, and they have your name in front of them. Send the thank-you with a link. This turns the bookkeeping step into a visibility step, and it is the cleanest way to build the reviews that feed the map, which I cover in [how to get more Google reviews](/blog/how-to-get-more-google-reviews/)."
+          ]
+        },
+        {
+          "h2": "What not to automate",
+          "paragraphs": [
+            "Do not automate disputes, refunds, or custom pricing. Those need a human in the loop, quickly. Also do not send invoices for work you have not confirmed is done. A wrong invoice costs more trust than a late one.",
+            "Review the system once a month: jobs completed versus invoices sent versus money received. If the three numbers do not line up, you have found the leak. For the wider picture of where money slips out, [the five business money leaks](/blog/business-money-leaks/) puts invoicing in context, and [automation](/services/automation/) is the service that wires it together."
+          ]
+        },
+        {
+          "h2": "Start this week",
+          "paragraphs": [
+            "Pull last month's completed jobs and check each against your invoices. Add a payment link to your template. Pick the trigger. Then decide whether you build the reminder sequence yourself or hand it over. If you are not sure where your biggest leak is, [the free diagnostic](/diagnostic/) looks at the whole chain, from the first call to the last payment."
+          ]
+        }
+      ],
+      "faq": [
+        {"q": "How soon should I send an invoice after a job?", "a": "As soon as the work is done, ideally within minutes while the customer is still pleased. Tie the send to a trigger such as the job being marked complete, so it does not depend on memory."},
+        {"q": "What should a small business invoice include?", "a": "Your business name and contact details, the customer, a description of the work, the date, the amount, the due date, and a clear way to pay. A payment link removes most of the friction."},
+        {"q": "How do I chase a late invoice without damaging the relationship?", "a": "Use a short, friendly sequence: a reminder before the due date, a note on it, and a firmer follow-up after. Keep the tone consistent with your brand, and stop the sequence as soon as payment arrives."},
+        {"q": "Should I collect a deposit?", "a": "For larger or materials-heavy jobs, yes. A deposit on acceptance and a balance on completion keeps cash flowing during the work and filters out customers who are not committed."},
+        {"q": "What is the first thing to automate in invoicing?", "a": "The send. Connect the job-complete event to an invoice with a payment link. After that, add the reminder sequence and the review request."}
+      ]
+    },
+    {
+      "slug": "seo-for-local-business",
+      "title": "SEO for Local Business: The Order That Gets You Found",
+      "title_tag": "Local SEO that actually works | ART3RY",
+      "meta_description": "SEO for local business: how to rank above bigger firms in your city, in the order to do it. Profile, reviews, pages, citations, and what to ignore.",
+      "dek": "Bigger firms do not rank because they are better. They rank because someone keeps doing the boring work. Here is the boring work, in the order that pays first, for owners without a marketing department.",
+      "sections": [
+        {
+          "h2": "You are not losing to better companies",
+          "paragraphs": [
+            "Search for what you do in your city. The names on top are rarely the best operators. They are the ones with a profile that is complete, reviews that keep arriving, and pages that say clearly what they do and where. That is a maintenance advantage, not a quality advantage, and maintenance can be copied.",
+            "I run a one-person California field-services company. 700+ jobs have gone through the system I built, and when I aimed the same system at this website, organic traffic rose 60% in 28 days with zero ad spend. No secret. A steady cadence of useful pages and the fundamentals done in the right order.",
+            "This post is the order. Each step has a deeper guide, linked as we go."
+          ]
+        },
+        {
+          "h2": "The principle: local results run on three things",
+          "paragraphs": [
+            "Google states that local results are based mainly on [relevance, distance, and prominence](https://support.google.com/business/answer/7091). Relevance is how well your profile matches the search. Distance is how far you are from the searcher. Prominence is how well known you are, which includes your reviews and how many sites link to you.",
+            "You cannot change distance. You can improve the other two, which is why the work below is mostly about being clear, being complete, and being talked about."
+          ]
+        },
+        {
+          "h2": "Step one: the Google Business Profile",
+          "paragraphs": [
+            "This is the highest-return hour you will spend. Claim it, verify it, choose the most specific primary category, list your services and areas, and add real photos. Most small businesses set it up once and walk away. A profile that is current wins against one that is merely present.",
+            "If you are not appearing at all, work through [why your business is not showing up on Google](/blog/why-is-my-business-not-showing-up-on-google/) first. If you appear but not at the top, [how to rank on Google Maps](/blog/how-to-rank-on-google-maps/) is the next read, and the [Google Business Profile optimization](/google-business-profile-optimization/) page covers the setup."
+          ]
+        },
+        {
+          "h2": "Step two: reviews, steadily",
+          "paragraphs": [
+            "Reviews feed prominence and persuade the click. What matters is a steady flow of recent, specific ones, not a burst. Ask every customer on the day of the job, with a direct link, and reply to each one. The full method, including the rules that can get your profile in trouble, is in [how to get more Google reviews](/blog/how-to-get-more-google-reviews/)."
+          ]
+        },
+        {
+          "h2": "Step three: one page per real service",
+          "paragraphs": [
+            "Your website needs a page for each thing you sell, written for the person searching for it. Name the service and the city in the heading, answer the obvious questions in plain text, show real work, and make calling easy. A single page that says we do everything wins nothing.",
+            "If you cover several cities, do not clone pages. Google treats thin, near-identical city pages as spam, and I walk through what to do instead in [service area pages that rank](/blog/service-area-pages-that-rank/). Not sure you need a bigger site at all? Read [do I need a website for my business](/blog/do-i-need-a-website-for-my-business/)."
+          ]
+        },
+        {
+          "h2": "Step four: consistency across the web",
+          "paragraphs": [
+            "Your business name, address, and phone number should read the same on your site, your profile, and the directories that matter in your trade. Conflicts make you look unreliable to both people and machines. Do one clean-up pass, then check once a quarter.",
+            "Add LocalBusiness structured data that matches your page. Google requires a name and address and recommends more, such as hours and phone, per its [LocalBusiness documentation](https://developers.google.com/search/docs/appearance/structured-data/local-business)."
+          ]
+        },
+        {
+          "h2": "Step five: publish on a cadence",
+          "paragraphs": [
+            "Search rewards sites that keep answering questions. Publish useful posts that match what your customers actually type, and keep them honest. Google's guidance is to make [helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), which in practice means original information from someone who has done the work.",
+            "This is the part that dies first, because nobody has time. It is also the part that can be systemized, which is what [local SEO automation](/blog/local-seo-automation/) is about."
+          ]
+        },
+        {
+          "h2": "What to ignore",
+          "paragraphs": [
+            "Ignore anyone promising page one in thirty days, anyone selling hundreds of directory listings, and anyone whose reports are all rankings for terms you did not choose. Ignore keyword stuffing; it reads badly and helps nothing. Ignore chasing every new tactic before the five steps above are done.",
+            "If you are in the Central Valley and want it done for you, the [Fresno SEO](/seo-company-fresno/) page shows how I run it, and [SEO as a service](/services/seo/) covers the rest of California."
+          ]
+        },
+        {
+          "h2": "See where you stand",
+          "paragraphs": [
+            "Run the search yourself from your phone, in your city, for your main service. Note who shows up, how many reviews they have, and what their pages say that yours does not. If you would like that done properly, [the free diagnostic](/diagnostic/) maps your visibility against your competitors and tells you which step to do first."
+          ]
+        }
+      ],
+      "faq": [
+        {"q": "What is local SEO?", "a": "It is the work of making your business appear when people search for what you do near them, in Google's map results and normal results. It combines your Business Profile, reviews, website pages, and consistent business information."},
+        {"q": "How long does local SEO take?", "a": "Profile and review improvements can move the map in weeks, while new pages and content usually take a few months to settle. Plan on judging results over a quarter, not a week."},
+        {"q": "Do I need a website for local SEO?", "a": "A well-built profile can get you found without one, but a site with a page for each service gives you far more places to appear and a place to send customers. A bad site is worse than none."},
+        {"q": "What matters most for ranking on Google Maps?", "a": "Google lists relevance, distance, and prominence. You cannot change distance, so focus on a complete profile with the right category and a steady flow of real reviews."},
+        {"q": "Can I do local SEO myself?", "a": "Yes. The steps are not secret, but they take steady attention. Many owners do the profile and reviews themselves and hand off the content cadence."}
+      ]
+    }
+  ]
+}
