@@ -1,204 +1,249 @@
 {
-  "blog": [
+ "blog": [
+  {
+   "slug": "growth-for-food-trucks",
+   "title": "Food Truck Growth: Get Found, Get Booked, Fill the Catering Calendar",
+   "title_tag": "Food Truck Growth: Take Catering Bookings at 11 PM | ART3RY",
+   "meta_description": "Food truck growth beyond the line: get found when you are parked, answer catering inquiries fast, collect deposits, and turn followers into regulars.",
+   "dek": "Service stops pay the bills. Catering builds the business. Both depend on being findable and fast to answer. Here is how a truck handles that while the grill is hot.",
+   "sections": [
     {
-      "slug": "growth-for-food-trucks",
-      "title": "Food Truck Growth: Get Found, Get Booked, Fill the Catering Calendar",
-      "title_tag": "Food Truck Growth: Take Catering Bookings at 11 PM | ART3RY",
-      "meta_description": "Food truck growth beyond the line: get found when you are parked, answer catering inquiries fast, collect deposits, and turn followers into regulars.",
-      "dek": "Service stops pay the bills. Catering builds the business. Both depend on being findable and fast to answer. Here is how a truck handles that while the grill is hot.",
-      "sections": [
-        {
-          "h2": "Two businesses on one truck",
-          "paragraphs": [
-            "A food truck is really two businesses. The first sells to whoever walks up today: volume, thin margin, weather-dependent. The second sells to someone planning an event: a date, a headcount, a budget, and a much bigger ticket. Catering usually decides whether a truck stays a hustle or becomes a business.",
-            "The catch is that the two run on different clocks. Service stops happen at noon, when you cannot touch your phone. Catering inquiries arrive at 10:30 at night, when you are cleaning up or asleep. The inquiry goes unanswered, and the planner books whoever replied.",
-            "I run a one-person California field-services company, and 700+ jobs have gone through a system I built to answer, collect details, and follow up on a schedule that is not mine. The same approach fits a truck."
-          ]
-        },
-        {
-          "h2": "Part one: be findable where you are today",
-          "paragraphs": [
-            "Customers do not search for a taco truck by name. They search for tacos near me, or food trucks in a specific part of town. Your Google Business Profile is the answer to that, and it needs to be accurate. Update your hours and location when they change, add real photos of the food and the truck, and pick the exact category.",
-            "Google lists relevance, distance, and prominence as the factors behind local results. A moving truck cannot win on distance, so lean on the other two: a complete profile and fresh reviews. The mechanics are in [how to rank on Google Maps](/blog/how-to-rank-on-google-maps/).",
-            "Post your location where your regulars look, at the same time every day. Consistency matters more than polish. The followers who know where you will be at 11 AM are the ones who show up."
-          ]
-        },
-        {
-          "h2": "Part two: answer the catering inquiry like it is a customer",
-          "paragraphs": [
-            "A catering inquiry deserves an answer within minutes, even if the answer is a short acknowledgment and a few questions. Date, headcount, location, budget range, dietary needs, and whether they need serving staff. Collect those up front and you can price the job without a call.",
-            "Speed matters because the planner is comparing trucks and picks the one who makes it easy. A Harvard Business Review study of 1.25 million leads found that [contacting a lead within an hour made it nearly seven times as likely to be qualified as waiting even an hour longer](https://hbr.org/2011/03/the-short-life-of-online-sales-leads). It is not a food truck study, but the lesson fits an event planner exactly.",
-            "Put a clear catering page on your site or profile with sample menus, minimums, and the area you cover. That page answers half the questions before anyone asks."
-          ]
-        },
-        {
-          "h2": "Part three: quote, deposit, and confirm",
-          "paragraphs": [
-            "Send the quote the same day, with the menu, price, and a link to pay a deposit. A deposit blocks the date on your calendar and filters out the casually curious. Confirm details a few days before the event: address, load-in time, power or parking needs, and a contact on site.",
-            "If they go quiet after the quote, follow up. Three short messages over two weeks win jobs that were never lost. The timing and wording are in [how to follow up on a quote](/blog/how-to-follow-up-on-a-quote/)."
-          ]
-        },
-        {
-          "h2": "Part four: turn events into the next event",
-          "paragraphs": [
-            "A catered event puts your food in front of fifty people who all know someone planning something. Leave cards or a QR code. Send the host a thank-you with a review link the next day. Ask permission to use a photo from the event. One good catering job should seed the next two.",
-            "Do not offer a discount in return for a review; Google prohibits incentivized reviews. A direct link and a sincere ask are allowed and work. See [how to get more Google reviews](/blog/how-to-get-more-google-reviews/) for the full method."
-          ]
-        },
-        {
-          "h2": "California notes",
-          "paragraphs": [
-            "Permits, commissary requirements, and county health rules vary across California, so check the requirements for each county you work in and put your permit information on your catering page. Customers planning an event want to know you are legitimate. In the Valley, heat shapes the season: summer events cluster on evenings and weekends, so quote early and block your calendar accordingly."
-          ]
-        },
-        {
-          "h2": "Start small",
-          "paragraphs": [
-            "Fix your profile, build a one-page catering menu, and set up a reply that goes out the moment an inquiry arrives. Then add the deposit link and the follow-up. If you want help seeing which of these is costing you the most, [the free diagnostic](/diagnostic/) takes about fifteen minutes, and the [AI assistant for food trucks](/assistant-for-food-trucks/) page shows a hands-free version."
-          ]
-        }
-      ],
-      "faq": [
-        {"q": "How do food trucks get catering bookings?", "a": "Make inquiries easy and answer them within minutes, collecting date, headcount, location, and budget. Have a clear catering page, send a quote the same day with a deposit link, and follow up if they go quiet."},
-        {"q": "How do I get my food truck found on Google?", "a": "Claim and complete your Google Business Profile, keep hours and location accurate, add real photos, choose the right category, and collect recent reviews."},
-        {"q": "Should I take deposits for catering?", "a": "Yes. A deposit secures the date on your calendar and filters out casual inquiries. Send the payment link with the quote."},
-        {"q": "How often should I post my location?", "a": "On the same schedule every day, ideally before lunch. Regulars rely on consistency more than on polish."},
-        {"q": "Can automation handle food truck inquiries?", "a": "It can acknowledge inquiries instantly, collect event details, send quotes and deposit links, and follow up. Menu decisions and special requests are best left to you."}
-      ]
+     "h2": "Two businesses on one truck",
+     "paragraphs": [
+      "A food truck is really two businesses. The first sells to whoever walks up today: volume, thin margin, weather-dependent. The second sells to someone planning an event: a date, a headcount, a budget, and a much bigger ticket. Catering usually decides whether a truck stays a hustle or becomes a business.",
+      "The catch is that the two run on different clocks. Service stops happen at noon, when you cannot touch your phone. Catering inquiries arrive at 10:30 at night, when you are cleaning up or asleep. The inquiry goes unanswered, and the planner books whoever replied.",
+      "I run a one-person California field-services company, and 700+ jobs have gone through a system I built to answer, collect details, and follow up on a schedule that is not mine. The same approach fits a truck."
+     ]
     },
     {
-      "slug": "growth-for-local-shops",
-      "title": "Local Shop Growth: Win the Search, Answer the Question, Stay Open Longer",
-      "title_tag": "Local Shop Growth: Stay Open Longer, No New Hires | ART3RY",
-      "meta_description": "Growth for local shops: show up in 'near me' searches, answer questions after closing, keep regulars coming back, and compete with big boxes on availability.",
-      "dek": "You cannot match a big box on price or hours. You can match them on being easy to find and quick to answer. Here is how a shop with a counter does it.",
-      "sections": [
-        {
-          "h2": "The big box is not your real competition",
-          "paragraphs": [
-            "A local shop usually loses a sale in one of three places: the customer could not find you, could not tell if you were open, or asked a question and got no answer. None of those are about price or selection. They are about availability, and availability is something a small shop can fix.",
-            "I run a one-person California field-services company, and 700+ jobs have gone through a system I built so questions get answered while I am doing the work. Retail has a different counter, but the same gaps."
-          ]
-        },
-        {
-          "h2": "Gap one: they cannot find you",
-          "paragraphs": [
-            "Someone types hardware store near me, or gift shop open now. The map shows three or four names. If your profile is incomplete or your hours are wrong, you do not make the list. Google describes local ranking as relevance, distance, and prominence, and you can improve relevance and prominence with a [complete profile and good reviews](https://support.google.com/business/answer/7091).",
-            "Fill in everything: category, services or products, hours including holidays, photos of the storefront and the shelves, and attributes like parking or curbside pickup. Update hours the day they change. A wrong hour is a customer standing at a locked door and a one-star review."
-          ]
-        },
-        {
-          "h2": "Gap two: they cannot tell if you have it",
-          "paragraphs": [
-            "Many walk-ins start as a question: do you carry this, are you open Sunday, can you special order it. If the answer takes a phone call nobody picks up, the customer buys online.",
-            "Put the common answers in text where they can be found: a short product list on your site, a page for services like repair or special orders, hours and policies. Then make sure a question sent by phone, text, or message gets a reply even when you are helping someone at the register. The plain-English version of how an after-hours answer works is in [after-hours answering](/blog/after-hours-answering-service/)."
-          ]
-        },
-        {
-          "h2": "Gap three: they came once and never again",
-          "paragraphs": [
-            "Regulars are the shop. A simple follow-up keeps them coming: a thank-you with a review link after a bigger purchase, a note when a special order arrives, a short seasonal message to people who bought a related item last year. Ask permission, keep it useful, and keep it infrequent.",
-            "Reviews work as the shop's megaphone. Ask at the register, with a QR code on the counter or a text link. Do not offer a discount in exchange; Google prohibits it. The method is in [how to get more Google reviews](/blog/how-to-get-more-google-reviews/)."
-          ]
-        },
-        {
-          "h2": "Do you need a website?",
-          "paragraphs": [
-            "Often yes, but it can be small. A site that lists what you sell, where you are, when you are open, and how to reach you is enough to start. Whether and how much you should spend is covered in [do I need a website for my business](/blog/do-i-need-a-website-for-my-business/), and the [websites](/services/websites/) service covers the build."
-          ]
-        },
-        {
-          "h2": "Making time without hiring",
-          "paragraphs": [
-            "The point of automation in a shop is not to replace the conversation at the counter. It is to take over the repeats: the same ten questions, the reminder calls, the review requests, the reorder texts. That frees the owner to be present for the customer who is actually in the building.",
-            "In the Central Valley, where many shops are family-run and the owner is also the stock clerk, that time is the scarcest thing you have. Spend it where a human matters."
-          ]
-        },
-        {
-          "h2": "Start with the profile",
-          "paragraphs": [
-            "Check your Google profile tonight against the list above. Fix hours, add photos, and ask your next five customers for a review. Then pick the one question you answer most and make sure it is answerable without you. For a proper look at where your shop is leaking customers, [the free diagnostic](/diagnostic/) covers search, answers, and follow-up, and the [AI assistant for small business](/assistant-for-business/) page shows the hands-free version."
-          ]
-        }
-      ],
-      "faq": [
-        {"q": "How can a local shop compete with big stores?", "a": "Compete on being easy to find and quick to answer. Keep your Google profile complete and accurate, answer questions fast, and build regulars with simple follow-up and reviews."},
-        {"q": "What should be on a local shop's Google profile?", "a": "Accurate hours including holidays, the right category, photos of the storefront and products, services or product listings, and attributes like parking or curbside pickup. Keep it current."},
-        {"q": "How do I get more reviews for my shop?", "a": "Ask at the register with a QR code or text a direct Google review link after bigger purchases. Do not offer discounts for reviews, which Google prohibits."},
-        {"q": "Does a small shop need a website?", "a": "A small one is usually worth having: what you sell, where you are, hours, and how to reach you. It gives search engines and customers a reliable place to find answers."},
-        {"q": "What can a shop automate?", "a": "Answers to common questions, after-hours inquiries, reminders, reorder messages, and review requests. Keep the in-person conversation and special requests with the owner."}
-      ]
+     "h2": "Part one: be findable where you are today",
+     "paragraphs": [
+      "Customers do not search for a taco truck by name. They search for tacos near me, or food trucks in a specific part of town. Your Google Business Profile is the answer to that, and it needs to be accurate. Update your hours and location when they change, add real photos of the food and the truck, and pick the exact category.",
+      "Google lists relevance, distance, and prominence as the factors behind local results. A moving truck cannot win on distance, so lean on the other two: a complete profile and fresh reviews. The mechanics are in [how to rank on Google Maps](/blog/how-to-rank-on-google-maps/).",
+      "Post your location where your regulars look, at the same time every day. Consistency matters more than polish. The followers who know where you will be at 11 AM are the ones who show up."
+     ]
     },
     {
-      "slug": "growth-for-ecommerce",
-      "title": "E-Commerce Growth: Fix the Leaks Before You Buy More Traffic",
-      "title_tag": "E-Commerce Growth: Recover Abandoned Cart Ad Spend | ART3RY",
-      "meta_description": "E-commerce growth without more ad spend: cart recovery, fast answers to pre-sale questions, review capture, and honest attribution. What the data says causes abandonment.",
-      "dek": "Traffic is the expensive part. Most stores lose most of it at checkout and in the inbox. Here is what the data says leaks, and the fixes in the order that pay back first.",
-      "sections": [
-        {
-          "h2": "You paid for the click and lost the sale",
-          "paragraphs": [
-            "An ad brings someone to your store. They browse, add something to the cart, and leave. You spent money to get them there and nothing came back. Every operator knows this loop, and the usual reaction is to buy more traffic.",
-            "More traffic into a leaking store is more leak. The better first move is to find where the sales are escaping. I run a one-person California field-services company, and 700+ jobs have gone through a system I built to find and fix the leaks in a pipeline. The logic is identical for a store."
-          ]
-        },
-        {
-          "h2": "What the research says about abandoned carts",
-          "paragraphs": [
-            "The Baymard Institute pulls together 50 studies of cart abandonment and puts the [average documented abandonment rate at about 70%](https://baymard.com/lists/cart-abandonment-rate). Note that a large part of that is people just browsing, so not all of it is recoverable.",
-            "The useful part is the reasons they gave when they did intend to buy. In Baymard's data, the biggest were extra costs being too high, at 40%, followed by slow delivery at 20%, concerns about card security at 19%, being forced to create an account at 18%, and a long or complicated checkout at 17%. Many of those are fixable by design rather than by marketing.",
-            "That ordering is your to-do list. Show total cost early, including shipping. Offer guest checkout. State delivery dates clearly. Make the page look trustworthy. Simplify the form. Each is a fix you control, and none costs ad dollars."
-          ]
-        },
-        {
-          "h2": "Fix one: remove the surprises",
-          "paragraphs": [
-            "Surprise costs at the last step are the number one reason in that data. Put shipping and estimated total on the cart page, or offer a free-shipping threshold and say so on the product page. If your shipping is high, build it into the price and advertise free shipping. Customers react to the surprise more than the amount.",
-            "Add guest checkout, show delivery dates, and keep your return policy a click away in plain language."
-          ]
-        },
-        {
-          "h2": "Fix two: a polite nudge to the abandoners",
-          "paragraphs": [
-            "For shoppers who gave you an email or phone number before leaving, a short reminder with the items and a link back to the cart recovers a share of them. Send the first within hours, a second the next day, and stop. Keep it helpful, not frantic. If there is a real reason to delay, such as low stock, say it honestly.",
-            "Do not fake urgency or discounts that train customers to abandon on purpose. A reminder is a service; a bribe is a habit."
-          ]
-        },
-        {
-          "h2": "Fix three: answer the question that is blocking the sale",
-          "paragraphs": [
-            "Pre-sale questions are the highest-intent messages you receive. Is this in stock, does it fit, how long is shipping, can I return it. When those sit unanswered for a day, the buyer buys somewhere else. A system should answer the common ones instantly, route the unusual ones to you, and follow up with anyone who asked and did not buy.",
-            "The speed principle is general: a Harvard Business Review study of 1.25 million leads found that [firms contacting leads within an hour were nearly seven times as likely to qualify them as those waiting an hour longer](https://hbr.org/2011/03/the-short-life-of-online-sales-leads). It is not a study of stores, but a shopper's question is a lead like any other."
-          ]
-        },
-        {
-          "h2": "Fix four: reviews after the package arrives",
-          "paragraphs": [
-            "Ask for a review a few days after delivery, when the customer has used the product, with a one-click link. Reviews are the closest thing a store has to a salesperson, and they sharply reduce the need to discount. Do not offer a reward in exchange; Google prohibits incentivized reviews. If you also sell locally, the principles in [how to get more Google reviews](/blog/how-to-get-more-google-reviews/) apply to your profile too."
-          ]
-        },
-        {
-          "h2": "Fix five: know which dollar made which sale",
-          "paragraphs": [
-            "Many operators know clicks and not outcomes. Track each source through to purchase, so you cut what loses money and double what works. Keep it simple: a source on every order, a weekly look at revenue per channel, and a rule to cut anything that has not paid back within a window you set.",
-            "Be careful with attribution tools that claim certainty they cannot have. Treat the numbers as directional and test changes one at a time."
-          ]
-        },
-        {
-          "h2": "Where to start",
-          "paragraphs": [
-            "Open your own checkout on a phone and count the surprises. Fix the top one this week. Then set up the reminder and the pre-sale answers. If you want someone to check the whole path from click to repeat order, [the free diagnostic](/diagnostic/) covers search, response, follow-up, and where customers come from, and the [AI assistant for e-commerce](/assistant-for-ecommerce/) page shows the hands-free version. For broader context on which leaks matter in any business, see [the five business money leaks](/blog/business-money-leaks/)."
-          ]
-        }
-      ],
-      "faq": [
-        {"q": "What is the average cart abandonment rate?", "a": "The Baymard Institute puts the average documented rate at about 70%, based on 50 studies. A portion of that is shoppers who were only browsing, so not all of it can be recovered."},
-        {"q": "Why do shoppers abandon their carts?", "a": "In Baymard's data the top reasons were extra costs being too high (40%), slow delivery (20%), security concerns (19%), forced account creation (18%), and a long or complicated checkout (17%)."},
-        {"q": "Do cart recovery emails work?", "a": "A short, timely reminder to shoppers who gave you contact details recovers some abandoned carts. Send one within hours and one the next day, keep it helpful, and avoid fake urgency."},
-        {"q": "How do I reduce cart abandonment without discounts?", "a": "Show total cost early, offer guest checkout, state delivery dates, make the page trustworthy, and simplify the checkout form. These are design fixes and cost nothing in ad spend."},
-        {"q": "When should I ask for a product review?", "a": "A few days after delivery, once the customer has used the product, with a one-click link. Do not offer rewards in exchange for reviews."}
-      ]
+     "h2": "Part two: answer the catering inquiry like it is a customer",
+     "paragraphs": [
+      "A catering inquiry deserves an answer within minutes, even if the answer is a short acknowledgment and a few questions. Date, headcount, location, budget range, dietary needs, and whether they need serving staff. Collect those up front and you can price the job without a call.",
+      "Speed matters because the planner is comparing trucks and picks the one who makes it easy. A Harvard Business Review study of 1.25 million leads found that [contacting a lead within an hour made it nearly seven times as likely to be qualified as waiting even an hour longer](https://hbr.org/2011/03/the-short-life-of-online-sales-leads). It is not a food truck study, but the lesson fits an event planner exactly.",
+      "Put a clear catering page on your site or profile with sample menus, minimums, and the area you cover. That page answers half the questions before anyone asks."
+     ]
+    },
+    {
+     "h2": "Part three: quote, deposit, and confirm",
+     "paragraphs": [
+      "Send the quote the same day, with the menu, price, and a link to pay a deposit. A deposit blocks the date on your calendar and filters out the casually curious. Confirm details a few days before the event: address, load-in time, power or parking needs, and a contact on site.",
+      "If they go quiet after the quote, follow up. Three short messages over two weeks win jobs that were never lost. The timing and wording are in [how to follow up on a quote](/blog/how-to-follow-up-on-a-quote/)."
+     ]
+    },
+    {
+     "h2": "Part four: turn events into the next event",
+     "paragraphs": [
+      "A catered event puts your food in front of fifty people who all know someone planning something. Leave cards or a QR code. Send the host a thank-you with a review link the next day. Ask permission to use a photo from the event. One good catering job should seed the next two.",
+      "Do not offer a discount in return for a review; Google prohibits incentivized reviews. A direct link and a sincere ask are allowed and work. See [how to get more Google reviews](/blog/how-to-get-more-google-reviews/) for the full method."
+     ]
+    },
+    {
+     "h2": "California notes",
+     "paragraphs": [
+      "Permits, commissary requirements, and county health rules vary across California, so check the requirements for each county you work in and put your permit information on your catering page. Customers planning an event want to know you are legitimate. In the Valley, heat shapes the season: summer events cluster on evenings and weekends, so quote early and block your calendar accordingly."
+     ]
+    },
+    {
+     "h2": "Start small",
+     "paragraphs": [
+      "Fix your profile, build a one-page catering menu, and set up a reply that goes out the moment an inquiry arrives. Then add the deposit link and the follow-up. If you want help seeing which of these is costing you the most, [the free diagnostic](/diagnostic/) takes about fifteen minutes, and the [AI assistant for food trucks](/assistant-for-food-trucks/) page shows a hands-free version."
+     ]
     }
-  ]
+   ],
+   "faq": [
+    {
+     "q": "How do food trucks get catering bookings?",
+     "a": "Make inquiries easy and answer them within minutes, collecting date, headcount, location, and budget. Have a clear catering page, send a quote the same day with a deposit link, and follow up if they go quiet."
+    },
+    {
+     "q": "How do I get my food truck found on Google?",
+     "a": "Claim and complete your Google Business Profile, keep hours and location accurate, add real photos, choose the right category, and collect recent reviews."
+    },
+    {
+     "q": "Should I take deposits for catering?",
+     "a": "Yes. A deposit secures the date on your calendar and filters out casual inquiries. Send the payment link with the quote."
+    },
+    {
+     "q": "How often should I post my location?",
+     "a": "On the same schedule every day, ideally before lunch. Regulars rely on consistency more than on polish."
+    },
+    {
+     "q": "Can automation handle food truck inquiries?",
+     "a": "It can acknowledge inquiries instantly, collect event details, send quotes and deposit links, and follow up. Menu decisions and special requests are best left to you."
+    }
+   ]
+  },
+  {
+   "slug": "growth-for-local-shops",
+   "title": "Local Shop Growth: Win the Search, Answer the Question, Stay Open Longer",
+   "title_tag": "Local Shop Growth: Stay Open Longer, No New Hires | ART3RY",
+   "meta_description": "Growth for local shops: show up in near-me searches, answer questions after closing, keep regulars coming back, and compete with big boxes on availability.",
+   "dek": "You cannot match a big box on price or hours. You can match them on being easy to find and quick to answer. Here is how a shop with a counter does it.",
+   "sections": [
+    {
+     "h2": "The big box is not your real competition",
+     "paragraphs": [
+      "A local shop usually loses a sale in one of three places: the customer could not find you, could not tell if you were open, or asked a question and got no answer. None of those are about price or selection. They are about availability, and availability is something a small shop can fix.",
+      "I run a one-person California field-services company, and 700+ jobs have gone through a system I built so questions get answered while I am doing the work. Retail has a different counter, but the same gaps."
+     ]
+    },
+    {
+     "h2": "Gap one: they cannot find you",
+     "paragraphs": [
+      "Someone types hardware store near me, or gift shop open now. The map shows three or four names. If your profile is incomplete or your hours are wrong, you do not make the list. Google describes local ranking as relevance, distance, and prominence, and you can improve relevance and prominence with a [complete profile and good reviews](https://support.google.com/business/answer/7091).",
+      "Fill in everything: category, services or products, hours including holidays, photos of the storefront and the shelves, and attributes like parking or curbside pickup. Update hours the day they change. A wrong hour is a customer standing at a locked door and a one-star review."
+     ]
+    },
+    {
+     "h2": "Gap two: they cannot tell if you have it",
+     "paragraphs": [
+      "Many walk-ins start as a question: do you carry this, are you open Sunday, can you special order it. If the answer takes a phone call nobody picks up, the customer buys online.",
+      "Put the common answers in text where they can be found: a short product list on your site, a page for services like repair or special orders, hours and policies. Then make sure a question sent by phone, text, or message gets a reply even when you are helping someone at the register. The plain-English version of how an after-hours answer works is in [after-hours answering](/blog/after-hours-answering-service/)."
+     ]
+    },
+    {
+     "h2": "Gap three: they came once and never again",
+     "paragraphs": [
+      "Regulars are the shop. A simple follow-up keeps them coming: a thank-you with a review link after a bigger purchase, a note when a special order arrives, a short seasonal message to people who bought a related item last year. Ask permission, keep it useful, and keep it infrequent.",
+      "Reviews work as the shop's megaphone. Ask at the register, with a QR code on the counter or a text link. Do not offer a discount in exchange; Google prohibits it. The method is in [how to get more Google reviews](/blog/how-to-get-more-google-reviews/)."
+     ]
+    },
+    {
+     "h2": "Do you need a website?",
+     "paragraphs": [
+      "Often yes, but it can be small. A site that lists what you sell, where you are, when you are open, and how to reach you is enough to start. Whether and how much you should spend is covered in [do I need a website for my business](/blog/do-i-need-a-website-for-my-business/), and the [websites](/services/websites/) service covers the build."
+     ]
+    },
+    {
+     "h2": "Making time without hiring",
+     "paragraphs": [
+      "The point of automation in a shop is not to replace the conversation at the counter. It is to take over the repeats: the same ten questions, the reminder calls, the review requests, the reorder texts. That frees the owner to be present for the customer who is actually in the building.",
+      "In the Central Valley, where many shops are family-run and the owner is also the stock clerk, that time is the scarcest thing you have. Spend it where a human matters."
+     ]
+    },
+    {
+     "h2": "Start with the profile",
+     "paragraphs": [
+      "Check your Google profile tonight against the list above. Fix hours, add photos, and ask your next five customers for a review. Then pick the one question you answer most and make sure it is answerable without you. For a proper look at where your shop is leaking customers, [the free diagnostic](/diagnostic/) covers search, answers, and follow-up, and the [AI assistant for small business](/assistant-for-business/) page shows the hands-free version."
+     ]
+    }
+   ],
+   "faq": [
+    {
+     "q": "How can a local shop compete with big stores?",
+     "a": "Compete on being easy to find and quick to answer. Keep your Google profile complete and accurate, answer questions fast, and build regulars with simple follow-up and reviews."
+    },
+    {
+     "q": "What should be on a local shop's Google profile?",
+     "a": "Accurate hours including holidays, the right category, photos of the storefront and products, services or product listings, and attributes like parking or curbside pickup. Keep it current."
+    },
+    {
+     "q": "How do I get more reviews for my shop?",
+     "a": "Ask at the register with a QR code or text a direct Google review link after bigger purchases. Do not offer discounts for reviews, which Google prohibits."
+    },
+    {
+     "q": "Does a small shop need a website?",
+     "a": "A small one is usually worth having: what you sell, where you are, hours, and how to reach you. It gives search engines and customers a reliable place to find answers."
+    },
+    {
+     "q": "What can a shop automate?",
+     "a": "Answers to common questions, after-hours inquiries, reminders, reorder messages, and review requests. Keep the in-person conversation and special requests with the owner."
+    }
+   ]
+  },
+  {
+   "slug": "growth-for-ecommerce",
+   "title": "E-Commerce Growth: Fix the Leaks Before You Buy More Traffic",
+   "title_tag": "E-Commerce Growth: Recover Abandoned Cart Ad Spend | ART3RY",
+   "meta_description": "E-commerce growth without more ad spend: cart recovery, fast answers to pre-sale questions, review capture, and honest attribution. What the data says causes",
+   "dek": "Traffic is the expensive part. Most stores lose most of it at checkout and in the inbox. Here is what the data says leaks, and the fixes in the order that pay back first.",
+   "sections": [
+    {
+     "h2": "You paid for the click and lost the sale",
+     "paragraphs": [
+      "An ad brings someone to your store. They browse, add something to the cart, and leave. You spent money to get them there and nothing came back. Every operator knows this loop, and the usual reaction is to buy more traffic.",
+      "More traffic into a leaking store is more leak. The better first move is to find where the sales are escaping. I run a one-person California field-services company, and 700+ jobs have gone through a system I built to find and fix the leaks in a pipeline. The logic is identical for a store."
+     ]
+    },
+    {
+     "h2": "What the research says about abandoned carts",
+     "paragraphs": [
+      "The Baymard Institute pulls together 50 studies of cart abandonment and puts the [average documented abandonment rate at about 70%](https://baymard.com/lists/cart-abandonment-rate). Note that a large part of that is people just browsing, so not all of it is recoverable.",
+      "The useful part is the reasons they gave when they did intend to buy. In Baymard's data, the biggest were extra costs being too high, at 40%, followed by slow delivery at 20%, concerns about card security at 19%, being forced to create an account at 18%, and a long or complicated checkout at 17%. Many of those are fixable by design rather than by marketing.",
+      "That ordering is your to-do list. Show total cost early, including shipping. Offer guest checkout. State delivery dates clearly. Make the page look trustworthy. Simplify the form. Each is a fix you control, and none costs ad dollars."
+     ]
+    },
+    {
+     "h2": "Fix one: remove the surprises",
+     "paragraphs": [
+      "Surprise costs at the last step are the number one reason in that data. Put shipping and estimated total on the cart page, or offer a free-shipping threshold and say so on the product page. If your shipping is high, build it into the price and advertise free shipping. Customers react to the surprise more than the amount.",
+      "Add guest checkout, show delivery dates, and keep your return policy a click away in plain language."
+     ]
+    },
+    {
+     "h2": "Fix two: a polite nudge to the abandoners",
+     "paragraphs": [
+      "For shoppers who gave you an email or phone number before leaving, a short reminder with the items and a link back to the cart recovers a share of them. Send the first within hours, a second the next day, and stop. Keep it helpful, not frantic. If there is a real reason to delay, such as low stock, say it honestly.",
+      "Do not fake urgency or discounts that train customers to abandon on purpose. A reminder is a service; a bribe is a habit."
+     ]
+    },
+    {
+     "h2": "Fix three: answer the question that is blocking the sale",
+     "paragraphs": [
+      "Pre-sale questions are the highest-intent messages you receive. Is this in stock, does it fit, how long is shipping, can I return it. When those sit unanswered for a day, the buyer buys somewhere else. A system should answer the common ones instantly, route the unusual ones to you, and follow up with anyone who asked and did not buy.",
+      "The speed principle is general: a Harvard Business Review study of 1.25 million leads found that [firms contacting leads within an hour were nearly seven times as likely to qualify them as those waiting an hour longer](https://hbr.org/2011/03/the-short-life-of-online-sales-leads). It is not a study of stores, but a shopper's question is a lead like any other."
+     ]
+    },
+    {
+     "h2": "Fix four: reviews after the package arrives",
+     "paragraphs": [
+      "Ask for a review a few days after delivery, when the customer has used the product, with a one-click link. Reviews are the closest thing a store has to a salesperson, and they sharply reduce the need to discount. Do not offer a reward in exchange; Google prohibits incentivized reviews. If you also sell locally, the principles in [how to get more Google reviews](/blog/how-to-get-more-google-reviews/) apply to your profile too."
+     ]
+    },
+    {
+     "h2": "Fix five: know which dollar made which sale",
+     "paragraphs": [
+      "Many operators know clicks and not outcomes. Track each source through to purchase, so you cut what loses money and double what works. Keep it simple: a source on every order, a weekly look at revenue per channel, and a rule to cut anything that has not paid back within a window you set.",
+      "Be careful with attribution tools that claim certainty they cannot have. Treat the numbers as directional and test changes one at a time."
+     ]
+    },
+    {
+     "h2": "Where to start",
+     "paragraphs": [
+      "Open your own checkout on a phone and count the surprises. Fix the top one this week. Then set up the reminder and the pre-sale answers. If you want someone to check the whole path from click to repeat order, [the free diagnostic](/diagnostic/) covers search, response, follow-up, and where customers come from, and the [AI assistant for e-commerce](/assistant-for-ecommerce/) page shows the hands-free version. For broader context on which leaks matter in any business, see [the five business money leaks](/blog/business-money-leaks/)."
+     ]
+    }
+   ],
+   "faq": [
+    {
+     "q": "What is the average cart abandonment rate?",
+     "a": "The Baymard Institute puts the average documented rate at about 70%, based on 50 studies. A portion of that is shoppers who were only browsing, so not all of it can be recovered."
+    },
+    {
+     "q": "Why do shoppers abandon their carts?",
+     "a": "In Baymard's data the top reasons were extra costs being too high (40%), slow delivery (20%), security concerns (19%), forced account creation (18%), and a long or complicated checkout (17%)."
+    },
+    {
+     "q": "Do cart recovery emails work?",
+     "a": "A short, timely reminder to shoppers who gave you contact details recovers some abandoned carts. Send one within hours and one the next day, keep it helpful, and avoid fake urgency."
+    },
+    {
+     "q": "How do I reduce cart abandonment without discounts?",
+     "a": "Show total cost early, offer guest checkout, state delivery dates, make the page trustworthy, and simplify the checkout form. These are design fixes and cost nothing in ad spend."
+    },
+    {
+     "q": "When should I ask for a product review?",
+     "a": "A few days after delivery, once the customer has used the product, with a one-click link. Do not offer rewards in exchange for reviews."
+    }
+   ]
+  }
+ ]
 }
