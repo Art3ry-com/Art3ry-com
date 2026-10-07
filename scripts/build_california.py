@@ -92,8 +92,8 @@ def link_list(items):
 
 def authored_text(pg):
     parts = [pg["sub"]] + pg["lead"]
-    for _, ps, bl in pg["secs"]:
-        parts += ps + (bl or [])
+    for sc in pg["secs"]:
+        parts += sc[1] + (sc[2] if len(sc) > 2 else [])
     for q, a in pg["faq"]:
         parts += [q, a]
     parts += list(pg.get("ind_notes", {}).values())
