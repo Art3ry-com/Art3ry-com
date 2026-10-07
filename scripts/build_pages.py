@@ -22,6 +22,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://art3ry.com"
+# One entity graph for the whole site. The full ProfessionalService node (name
+# "Art3ry", no street address, no phone: it is a service-area business, matching
+# the Google Business Profile) lives on the homepage; every other page points at it.
+ORG_REF = {"@type": "Organization", "@id": SITE + "/#organization", "name": "Art3ry", "url": SITE + "/"}
+PERSON_REF = {"@type": "Person", "@id": SITE + "/#jesse", "name": "Jesse Moraga", "url": "https://jessemoraga.com"}
+OG_IMAGE = SITE + "/assets/art3ry-brand.jpg"
 
 # Shared brand CSS (matches the live homepage + /assistant/ page).
 # The design system lives in assets/pages.css, not inline. Bump CSS_V on every
@@ -134,7 +140,7 @@ def render_landing(spec: dict) -> tuple[str, str]:
     jsonld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Service", "@id": canon + "#service", "serviceType": "AI assistant",
          "name": spec["title_tag"], "description": spec["meta_description"],
-         "provider": {"@type": "Organization", "name": "Art3ry", "url": SITE + "/"},
+         "provider": ORG_REF,
          "areaServed": {"@type": "Country", "name": "United States"}},
         {"@type": "FAQPage", "@id": canon + "#faq",
          "mainEntity": [{"@type": "Question", "name": f["q"],
@@ -231,13 +237,13 @@ def render_blog(spec: dict) -> tuple[str, str]:
         if author_spec.get("works_for_id"):
             author["worksFor"] = {"@id": author_spec["works_for_id"]}
     else:
-        author = {"@type": "Organization", "name": "Art3ry"}
+        author = PERSON_REF
 
     graph = [
         {"@type": "BlogPosting", "@id": canon + "#post", "headline": spec["title"],
          "description": spec["meta_description"], "url": canon,
-         "author": author,
-         "publisher": {"@type": "Organization", "name": "Art3ry", "url": SITE + "/"}},
+         "image": OG_IMAGE, "mainEntityOfPage": {"@type": "WebPage", "@id": canon},
+         "author": author, "publisher": ORG_REF},
         {"@type": "FAQPage", "@id": canon + "#faq",
          "mainEntity": [{"@type": "Question", "name": f["q"],
                          "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in spec["faq"]]},
@@ -315,7 +321,7 @@ def render_service(spec: dict) -> tuple[str, str]:
         {"@type": "Service", "@id": canon + "#service",
          "serviceType": spec.get("service_type", "Business growth service"),
          "name": spec["title_tag"], "description": spec["meta_description"],
-         "provider": {"@type": "Organization", "name": "Art3ry", "url": SITE + "/"},
+         "provider": ORG_REF,
          "areaServed": {"@type": "Country", "name": "United States"}},
         {"@type": "FAQPage", "@id": canon + "#faq",
          "mainEntity": [{"@type": "Question", "name": f["q"],
@@ -343,6 +349,23 @@ def render_service(spec: dict) -> tuple[str, str]:
 <section class="section"><div class="cta-strip wrap"><h2>{_esc(spec['cta_h2'])}</h2><p>{_esc(spec['cta_p'])}</p><a href="/get-started/">Get started &rarr;</a></div></section>
 {_FOOTER}{_ANALYTICS}</body></html>"""
     return slug, _guard(body, f"service:{slug}")
+
+
+def render_404() -> str:
+    """The 404 page GitHub Pages serves for any missing URL. noindex, paths absolute
+    (it is served from any depth), links back into the money pages."""
+    canon = SITE + "/404.html"
+    page = _head("Page not found | ART3RY", "That page does not exist. Start from the Growth Build, the blog, or tell me about your business.",
+                 canon, {"@context": "https://schema.org", "@type": "WebPage", "name": "Page not found", "url": canon})
+    page = page.replace('<link rel="canonical" href="%s">' % canon, '<meta name="robots" content="noindex,follow">')
+    body = f"""{page}
+<header class="hero"><div class="wrap"><div class="kicker">404</div>
+<h1>That page is not here.</h1><p class="sub">The link may be old or mistyped. These are the places most people are looking for.</p>
+<div class="btns"><a href="/services/" class="btn-primary">The Growth Build &rarr;</a>
+<a href="/blog/" class="btn-secondary">Read the blog</a>
+<a href="/get-started/" class="btn-secondary">Work with me</a></div></div></header>
+{_FOOTER}{_ANALYTICS}</body></html>"""
+    return _guard(body, "404")
 
 
 _ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
@@ -442,6 +465,10 @@ def main(argv=None) -> int:
     argv = argv or sys.argv[1:]
     if not argv:
         print("usage: build_pages.py specs.json | --sitemap-only"); return 2
+    if argv[0] == "--404":
+        (ROOT / "404.html").write_text(render_404(), encoding="utf-8")
+        print("build_pages: wrote 404.html")
+        return 0
     if argv[0] == "--sitemap-only":
         # Re-date the sitemap after every page edit has landed (hand-edits and
         # wire_playbook.py both run after the factory). Safe to run on its own.
