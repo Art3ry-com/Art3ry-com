@@ -1,0 +1,181 @@
+{
+  "blog": [
+    {
+      "slug": "how-to-get-more-google-reviews",
+      "title": "How to Get More Google Reviews: Ask Every Customer, the Same Day",
+      "title_tag": "How to Get More Google Reviews for Your Business | ART3RY",
+      "meta_description": "How to get more Google reviews without bribes or begging: the same-day ask, the link, the wording, and a system so it happens for every customer.",
+      "dek": "Most small businesses have fewer reviews than they deserve for one boring reason: nobody asked. Here is the ask, the wording, the link, and how to make it happen on every job without you remembering.",
+      "sections": [
+        {
+          "h2": "Why you have fewer reviews than you deserve",
+          "paragraphs": [
+            "You do good work. People tell you so at the door, over text, sometimes with a handshake. Then you drive off, and that praise goes nowhere. It never reaches the one place a stranger will read it before deciding to call you.",
+            "I run a one-person California field-services company, and over 700 jobs have gone through the system I built to run it. The pattern is the same every time I look at a business that is underpowered on reviews. The customers were happy. Nobody asked at the right moment. The review you do not request is a review your competitor gets by default, because their customer was just as happy and somebody on their side had a link ready.",
+            "This post is the whole method. The principle, why it works, and how to put it on rails so it happens whether you are on a roof, in a chair, or asleep."
+          ]
+        },
+        {
+          "h2": "The principle: reviews are a byproduct of asking, not of quality",
+          "paragraphs": [
+            "Quality earns you the right to ask. It does not do the asking. A happy customer has no reason to open Google Maps, find your listing, and write three sentences on a Tuesday. It is a favor, and favors need a request, an easy path, and good timing.",
+            "So the job is not to get better at the work. You already are. The job is to remove the friction between a pleased customer and a published review, and to do it every time instead of when you happen to remember."
+          ]
+        },
+        {
+          "h2": "Why it matters: reviews feed the map and the click",
+          "paragraphs": [
+            "Reviews do two things, and both pay. First, they feed ranking. Google says plainly that [more reviews and positive ratings can help your business's local ranking](https://support.google.com/business/answer/7091), and it lists review count as part of prominence, one of the three factors behind local results alongside relevance and distance. You cannot move distance. You can move prominence.",
+            "Second, they decide the click. When three plumbers show up on the map, a person scans the stars and the count before reading anything else. A business with forty recent reviews beats an identical business with six, even if you are the better operator. If you want the full picture of what moves the map, read [how to rank on Google Maps](/blog/how-to-rank-on-google-maps/).",
+            "There is a third effect people miss. A steady stream of recent reviews tells Google and customers that you are open, active, and currently doing the work. A burst of twenty reviews followed by two years of silence tells the opposite."
+          ]
+        },
+        {
+          "h2": "How to apply it, step one: build the link once",
+          "paragraphs": [
+            "Open your Google Business Profile and use the option to share a review request. It gives you a short link that drops the customer straight into the review box. Turn that same link into a QR code for a printed card, a van sticker, or an invoice footer. [Google says directly that you can ask customers to visit a Google link or scan a QR code](https://support.google.com/business/answer/3474122), so this is the approved path, not a hack.",
+            "Save the link in your phone as a text shortcut. If asking takes more than five seconds, you will skip it on busy days, and busy days are when your best customers are happiest."
+          ]
+        },
+        {
+          "h2": "Step two: ask the same day, in your own words",
+          "paragraphs": [
+            "The best time is the moment the customer feels the relief. The leak is fixed. The haircut looks good. The paperwork is filed. Ask then, or within a few hours, while the feeling is fresh. A week later you are asking a stranger for homework.",
+            "Keep the wording human and short. Something like this works in a text: Thanks again for having us out today. If you were happy with the work, a quick Google review helps a small business like ours more than you would think. Here is the link. No pressure either way.",
+            "Name the specific thing when you can. Thanks for trusting us with the move on Saturday gets a more specific review than a generic thanks. Specific reviews rank for specific searches and persuade better, because they read like a real person wrote them."
+          ]
+        },
+        {
+          "h2": "Step three: know the rules, because the penalty is real",
+          "paragraphs": [
+            "Do not offer a discount, a free item, or a gift card in exchange for a review. [Google calls incentivized reviews fake and misleading content and prohibits them](https://support.google.com/business/answer/3474122), and the cleanup is ugly: removed reviews, a flagged profile, sometimes a suspension that takes your listing offline while your phone goes quiet.",
+            "Do not ask only the customers you think will be positive. Ask everyone. It is the honest approach, and it protects you, because a profile that is suspiciously perfect looks fake to the people reading it. A four-point-something average with real detail is more believable than a flawless run of five stars.",
+            "Do not write them yourself, and do not ask friends who never used you. If you are unsure whether a tactic is allowed, assume it is not and do the plain version instead."
+          ]
+        },
+        {
+          "h2": "Step four: reply to every review, including the bad one",
+          "paragraphs": [
+            "Reply to each review within a day or two. Thank people by name and mention the job. It takes thirty seconds and shows the next reader that a human runs this place. Google notes that [positive reviews and helpful replies can help your business stand out](https://support.google.com/business/answer/7091).",
+            "For a bad review, stay calm and factual. Say what you will do to make it right and offer to take it offline. Do not argue in public. The person you are really writing to is the stranger reading it next month, and that reader is looking for how you handle trouble."
+          ]
+        },
+        {
+          "h2": "Put it on rails so it never depends on your memory",
+          "paragraphs": [
+            "Here is where most owners stall. They ask well for two weeks, get busy, and the habit dies. The fix is the same one I use everywhere else in the business: trigger it from an event instead of a memory.",
+            "When a job is marked done, a text with your review link goes out that afternoon, from your number, in your voice. If there is no response in three days, one gentle nudge. Then it stops. That is the entire automation, and it is the difference between ten reviews a year and ten a month. This is what [lead follow-up](/services/lead-follow-up/) means in practice: the system does the polite, repetitive thing on time, every time, so you do not have to feel awkward about it.",
+            "If you want to see how that fits with the rest of your online presence, the [Google Business Profile optimization](/google-business-profile-optimization/) page covers the profile side, and [SEO](/services/seo/) covers the pages that sit behind it."
+          ]
+        },
+        {
+          "h2": "A few California specifics",
+          "paragraphs": [
+            "California customers read reviews carefully because the market is crowded. In a place like Fresno or Bakersfield, a dozen plumbers, salons, or lawyers can sit inside the same few miles, and the map is where the choice gets made. In the Central Valley, where trust runs through word of mouth, a review that says the owner showed up when he said he would does more than any ad.",
+            "Seasonal trades have a timing angle. If you do HVAC, ask hardest in the first heat wave and the first cold snap, when people are most relieved and most likely to write. If you do tax prep, ask in March, not June. Ask when the customer is feeling the benefit."
+          ]
+        },
+        {
+          "h2": "What to do this week",
+          "paragraphs": [
+            "Grab your review link and save it. Text it to your last ten happy customers, one at a time, in your own words. Reply to every review you already have. Then decide how the ask will trigger from now on, by habit or by system.",
+            "If you want me to look at where you stand, [the free diagnostic](/diagnostic/) checks your reviews, your profile, and where your leads actually come from, and tells you what to fix first. It is about fifteen minutes."
+          ]
+        }
+      ],
+      "faq": [
+        {"q": "How many Google reviews do I need?", "a": "There is no magic number. Look at the three businesses ranking above you for your main search and aim to match their count and recency, then keep adding a few every month. A steady flow of recent reviews matters more than a one-time pile."},
+        {"q": "Can I offer a discount for a Google review?", "a": "No. Google prohibits offering free or discounted goods or services in exchange for reviews and treats them as fake and misleading content. Ask plainly, make it easy with a link, and let the work earn it."},
+        {"q": "When is the best time to ask for a review?", "a": "The same day the job finishes, while the customer still feels the relief of it being done. Within a few hours is ideal. A week later, the memory and the motivation are both weaker."},
+        {"q": "What should I do about a bad Google review?", "a": "Reply calmly and factually within a day or two, say what you will do to fix it, and invite the person to talk offline. Do not argue. Future customers are reading how you handle it, not just what was said."},
+        {"q": "Can I automate asking for reviews?", "a": "Yes, and it is the best way to keep it consistent. Trigger a text with your review link when a job is marked complete, send one nudge if there is no response, and stop. Automate the ask, never the content of the review."}
+      ]
+    },
+    {
+      "slug": "how-to-follow-up-on-a-quote",
+      "title": "How to Follow Up on a Quote Without Sounding Desperate",
+      "title_tag": "How to Follow Up on a Quote or Estimate (Scripts) | ART3RY",
+      "meta_description": "How to follow up on a quote or estimate: the timing, the three messages, and the wording that wins jobs back without sounding pushy. Built for service businesses.",
+      "dek": "Most quotes do not get rejected. They get forgotten. Here is the timing, the three messages, and the wording that bring a stalled estimate back to life, without a single pushy line.",
+      "sections": [
+        {
+          "h2": "The quote you sent is not dead, it is just quiet",
+          "paragraphs": [
+            "You sent the estimate. The customer said they would think about it. Then nothing. A week goes by and you tell yourself they went with someone else, so you move on to the next job and never look back.",
+            "Usually that is not what happened. They got busy. They meant to reply. Your quote slid under the school pickup, the work deadline, and the cousin who offered to do it cheaper. Nobody said no. Nobody said anything. The deal died of neglect, and the neglect was shared.",
+            "I run a one-person California field-services company, and over 700 jobs have gone through a system I built to follow up while I am out working. The biggest lesson from watching it run is boring: the follow-up you are afraid will annoy people mostly rescues work you had written off."
+          ]
+        },
+        {
+          "h2": "The principle: a quote is a question you have not finished asking",
+          "paragraphs": [
+            "A quote is not a delivery. It is an open question: do you want to do this? Sending the number and going silent leaves the question hanging, and the person with the problem is not obligated to close it for you.",
+            "Following up is how you finish asking. It is also a service. You are helping a busy person make a decision they already half made. Think of it as keeping their problem on the table, not chasing their money."
+          ]
+        },
+        {
+          "h2": "Why speed and persistence both matter",
+          "paragraphs": [
+            "There is real research on how quickly interest fades. A well-known Harvard Business Review study of 1.25 million sales leads found that [firms that contacted a lead within an hour were nearly seven times as likely to qualify it as firms that waited even an hour longer](https://hbr.org/2011/03/the-short-life-of-online-sales-leads), and far more likely than those that waited a day or more. That study is about first contact, but the lesson carries over to quotes: attention decays fast, and the business that stays in front of the customer gets the decision.",
+            "I wrote about the first-response side in [the 5-minute rule](/blog/instant-lead-response-software-5-minute-rule/). This post is about what happens after you have sent the number, which is where most small businesses quietly lose the job.",
+            "Persistence matters because the decision does not happen on your schedule. It happens whenever the customer has a calm ten minutes. If your message is the one sitting at the top of their inbox at that moment, you win. If you only wrote once, you are betting on luck."
+          ]
+        },
+        {
+          "h2": "The three-message sequence",
+          "paragraphs": [
+            "Here is the sequence I use and recommend for most service work. Adjust the days for your sales cycle. A roofing job is slower than a haircut.",
+            "Message one, day one or two: confirm receipt and make it easy. Hi Maria, just checking that the estimate for the fence came through okay. Happy to answer any questions or adjust the scope. That is it. No pressure, one clear offer to help.",
+            "Message two, day four or five: add something useful. Hi Maria, one thing worth mentioning on the fence: the gate hardware on the quote is the heavy-duty version, which tends to matter in the Valley heat. If you want a lighter option to bring the number down, I can send that too. You are giving a reason to reply that is not just checking in.",
+            "Message three, day ten to fourteen: close the loop politely. Hi Maria, I do not want to keep pinging you. If the timing is not right, no problem at all. I will hold your quote for a couple more weeks in case you want to move ahead. This works because it gives permission to say no, and it creates a soft deadline without inventing a fake one. People often reply to this one when they ignored the first two."
+          ]
+        },
+        {
+          "h2": "What to say, and what to leave out",
+          "paragraphs": [
+            "Lead with the customer's situation, not your invoice. Mention the specific job, the date they wanted it done, the thing they said mattered. Specifics prove a human wrote it and remind them why they asked.",
+            "Offer a next step that is small. Reply with a yes and I will get you on the calendar is easier than let me know. Give one question they can answer in five words.",
+            "Leave out the guilt. Never write I have not heard back from you. Never fake scarcity unless it is real. A real deadline, like a material price that expires or a crew schedule that fills, is honest and useful. An invented one burns trust, and trust is most of what a local business has."
+          ]
+        },
+        {
+          "h2": "Pick the channel that matches how they contacted you",
+          "paragraphs": [
+            "If they texted, text back. If they emailed, email. If they called, a short text after the call is usually welcome, and a voicemail is a fine third touch. Switching channels is a decent move on the final message, since a different channel can reach someone who buried the first. For many homeowners and small shops, a text gets read in minutes while an email waits for a week.",
+            "Keep each message short enough to read on a phone without scrolling. Two or three sentences, one question."
+          ]
+        },
+        {
+          "h2": "Trade by trade, a few real examples",
+          "paragraphs": [
+            "Contractors and home services: the quote is often the first of several the customer is collecting, so message two should add value, like a note on materials, scheduling, or what you will do about the permit. The after-hours call that never became a quote is a related leak, covered in [after-hours answering](/blog/after-hours-answering-service/).",
+            "Photographers, event pros, and caterers: inquiries arrive months ahead. A day-three nudge and a day-ten nudge, plus a date-based note when the calendar is filling, protects the booking.",
+            "Law, tax, and professional offices: lean on clarity. Restate the scope and what happens next. People hesitate on professional services because they are unsure what they are buying, so the follow-up that answers one unasked question wins the file.",
+            "Notaries, mobile services, and one-visit jobs: the window is short, so follow up the same day, then once more. Slow follow-up here is just a no."
+          ]
+        },
+        {
+          "h2": "Put it on rails",
+          "paragraphs": [
+            "The reason owners do not follow up is not laziness. It is the awkwardness, plus the fact that there is no moment in the day when it feels like the job. The fix is to take the decision out of your hands. When a quote goes out, the system starts a clock. If there is no reply, the next message fires on day two, day five, and day twelve, from your number, in your voice. When the customer replies, the sequence stops on its own, so you never double-message someone who already said yes.",
+            "That is exactly what [lead follow-up](/services/lead-follow-up/) is built for, and it connects to the rest of the plumbing in [automation](/services/automation/). If you also want the first-contact side handled, [missed call lead capture](/blog/missed-call-lead-capture/) shows how to stop losing the lead before there is a quote at all."
+          ]
+        },
+        {
+          "h2": "Start with the quotes already sitting there",
+          "paragraphs": [
+            "Open your sent folder or your notes and pull every quote from the last sixty days that never got a clear answer. Send message three to all of them today. It is the cheapest sales work you will do this month, because those customers already know you and already asked.",
+            "If you would rather have someone find the biggest leak in your whole pipeline, [the free diagnostic](/diagnostic/) looks at response speed, follow-up, search visibility, and reviews, and tells you what to fix first."
+          ]
+        }
+      ],
+      "faq": [
+        {"q": "How long should I wait before following up on a quote?", "a": "One to two days for a first check that the quote arrived, then again around day four or five, then a final polite close at ten to fourteen days. Shorter cycles for quick jobs like single-visit services, longer for big projects."},
+        {"q": "How many times should I follow up on an estimate?", "a": "Three touches is a good default for most service work. After a polite final message that gives permission to say no, stop. Anything beyond that without a reply is rarely worth the damage to the relationship."},
+        {"q": "Should I follow up by text or email?", "a": "Use the channel the customer used with you. For many local customers a text is read faster than an email. Switching channels on the final message can reach someone who missed the first two."},
+        {"q": "What if the customer says my price is too high?", "a": "Ask what they were expecting and offer a lighter scope to hit a number, rather than cutting your rate on the same work. A smaller option protects your margin and gives them a real choice."},
+        {"q": "Can I automate quote follow-up without sounding robotic?", "a": "Yes. Write the messages yourself in your own voice, personalize with the customer's name and job, and let a system send them on a schedule. The sequence should stop the moment the customer replies."}
+      ]
+    }
+  ]
+}

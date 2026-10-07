@@ -15,8 +15,11 @@
       "spokes": [
         {"href": "/blog/why-is-my-business-not-showing-up-on-google/", "title": "Why Is My Business Not Showing Up on Google?", "hook": "The diagnostic. Eight causes, checked in the order that finds the problem fastest.", "tag": "Start here"},
         {"href": "/blog/how-to-rank-on-google-maps/", "title": "How to Rank on Google Maps", "hook": "What actually moves the map pack, and the parts everyone wastes money on.", "tag": "Pillar"},
+        {"href": "/blog/how-to-get-more-google-reviews/", "title": "How to Get More Google Reviews", "hook": "The ask, the link, the wording, and the rules that keep your profile safe.", "tag": "Guide"},
         {"href": "/blog/seo-for-local-business/", "title": "Local SEO That Actually Works", "hook": "How a small operator outranks the big firms in their own city.", "tag": "Guide"},
+        {"href": "/blog/service-area-pages-that-rank/", "title": "Service Area Pages for More Than One City", "hook": "What Google allows, how to set service areas, and how to avoid doorway pages.", "tag": "Guide"},
         {"href": "/blog/local-seo-automation/", "title": "Invisible While Competitors Show Up First?", "hook": "The automated version: reviews, citations, and content on a schedule.", "tag": "Guide"},
+        {"href": "/blog/how-to-show-up-in-ai-search-local-business/", "title": "How to Show Up in AI Search", "hook": "What Google says, what is unproven, and the habits worth doing this month.", "tag": "Guide"},
         {"href": "/blog/fresno-seo-for-small-business/", "title": "Fresno SEO: Getting Found Here", "hook": "The same playbook applied to one real city, step by step.", "tag": "Case"},
         {"href": "/google-business-profile-optimization/", "title": "Google Business Profile Optimization, Done for You", "hook": "The single highest-leverage local search asset, handled.", "tag": "Service"},
         {"href": "/seo-company-fresno/", "title": "SEO Company in Fresno", "hook": "Local search as a service, for businesses that want it run, not explained.", "tag": "Service"}
@@ -92,6 +95,7 @@
       "spokes": [
         {"href": "/blog/how-to-grow-a-small-business/", "title": "How to Grow a Small Business", "hook": "The whole method in one post: five levers, in order, from an owner who runs them live.", "tag": "Pillar"},
         {"href": "/blog/how-to-get-more-customers/", "title": "How to Get More Customers", "hook": "The three leaks behind every version of the question, and the fix in the order that pays first.", "tag": "Guide"},
+        {"href": "/blog/how-to-follow-up-on-a-quote/", "title": "How to Follow Up on a Quote", "hook": "The timing, the three messages, and the wording that revive a stalled estimate.", "tag": "Guide"},
         {"href": "/blog/how-much-should-i-charge-for-my-services/", "title": "How Much Should I Charge for My Services?", "hook": "The actual method, not a vibe: costs, market, positioning, and the raise you owe yourself.", "tag": "Start here"},
         {"href": "/blog/business-money-leaks/", "title": "The 5 Places Your Business Money Leaks", "hook": "Missed calls, dead leads, slow invoices, no-shows, and silent churn. With fixes.", "tag": "Guide"},
         {"href": "/blog/what-hiring-an-employee-actually-costs/", "title": "What Hiring an Employee Actually Costs", "hook": "The fully loaded number, and when hiring is still the right call anyway.", "tag": "Guide"},
