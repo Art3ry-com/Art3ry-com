@@ -1,0 +1,247 @@
+{
+ "service": [
+  {
+   "slug": "services/ai-phone-assistant",
+   "service_type": "AI phone assistant and AI receptionist for small business",
+   "kicker": "AI Phone Assistant",
+   "title_tag": "AI Phone Assistant for Small Business: Every Call Answered | ART3RY",
+   "meta_description": "An AI receptionist that answers every call, qualifies the caller, and hands you a clean lead: name, phone, email and what they need. Built and run for you.",
+   "h1": "Every call answered.<br>Every caller qualified.",
+   "hero_sub": "You can't pick up while you're working, and most callers won't leave a voicemail. They call the next business. An AI phone assistant answers in your business's name, day or night, finds out what the caller needs, and hands it to you as a lead you can act on. All a lead really needs is a name, a phone or email, and what they're asking for. It gets all three.",
+   "what_h2": "How it works",
+   "what_lead": "I build it around your business, your services and your rules. You never configure anything.",
+   "steps": [
+    {
+     "n": "01",
+     "h3": "It picks up",
+     "p": "Every call, after hours and weekends included. It greets the caller in your business's name and talks like a person, not a phone tree."
+    },
+    {
+     "n": "02",
+     "h3": "It qualifies",
+     "p": "It asks the questions you would ask: what they need, where, how soon. It answers the common questions from your own information, and it never quotes a price you haven't approved."
+    },
+    {
+     "n": "03",
+     "h3": "It hands you the lead",
+     "p": "Name, phone, email and the request land in your inbox or as a text within seconds, and the follow-up starts on its own. If the caller wants a person, you get alerted to call them back."
+    }
+   ],
+   "inc_h2": "What's included",
+   "scenarios": [
+    {
+     "tag": "Never miss a call",
+     "h3": "Answering, 24/7",
+     "say": "The phone is answered whether you're on a job, driving, or asleep.",
+     "bullets": [
+      "Answers in your business's name",
+      "Handles the questions you get every day",
+      "Works on the number you already have"
+     ]
+    },
+    {
+     "tag": "Qualified, not just answered",
+     "h3": "Intake that sorts the calls",
+     "say": "You get the details you need to decide, not a voicemail to decode.",
+     "bullets": [
+      "Name, phone, email and the request captured",
+      "Your qualifying questions, in your order",
+      "Spam and sales calls filtered out"
+     ]
+    },
+    {
+     "tag": "Wired to the rest",
+     "h3": "Straight into follow-up",
+     "say": "A call becomes a quote, a booking or an invoice without you retyping anything.",
+     "bullets": [
+      "Instant text or email alert to you",
+      "Automatic follow-up email to the caller",
+      "Feeds quoting and invoicing"
+     ]
+    }
+   ],
+   "faq": [
+    {
+     "q": "Will callers know it's an AI?",
+     "a": "It doesn't pretend to be a person. It sounds natural, answers in your business's name, and gets the caller what they need. Most callers care that someone picked up."
+    },
+    {
+     "q": "Do I have to change my phone number?",
+     "a": "No. It works with the number you already have, so nothing changes on your cards, your truck or your Google listing."
+    },
+    {
+     "q": "What happens when a caller wants to talk to me?",
+     "a": "You get an alert right away with the caller's name, number and what they want, so you can call back with the details already in hand."
+    },
+    {
+     "q": "Is this the same system you use?",
+     "a": "Yes. An assistant like this answers the phones for my own company every day. I don't sell anything I don't run myself."
+    }
+   ],
+   "cta_h2": "How many calls did you miss last week?",
+   "cta_p": "Tell me how your phone works today and I'll show you what an assistant would handle for you."
+  },
+  {
+   "slug": "services/marketing",
+   "service_type": "Small business marketing: organic content, paid ads and email marketing",
+   "kicker": "Marketing, Organic & Paid",
+   "title_tag": "Small Business Marketing: Organic, Paid Ads & Email | ART3RY",
+   "meta_description": "Organic content, paid ads on Google and Facebook, and email marketing, run as one plan by one person, tracked back to real customers. Start with a free diagnostic.",
+   "h1": "Marketing that ends<br>in a customer, not a like.",
+   "hero_sub": "Most small businesses either post and hope, or pay for ads that send people to a page that doesn't convert. I run the whole thing as one plan: organic content that builds your name for free, paid ads only where the math works, and email that brings back the people who almost bought. Every dollar gets traced to a real customer.",
+   "what_h2": "How I run it",
+   "what_lead": "The order matters. Ads poured onto a weak setup just make the leak bigger.",
+   "steps": [
+    {
+     "n": "01",
+     "h3": "Fix the landing spot first",
+     "p": "Your website, your Google profile and your follow-up have to catch the traffic before anyone pays to send it. That gets built first."
+    },
+    {
+     "n": "02",
+     "h3": "Organic before paid",
+     "p": "Posts, short video, Google updates and content on a real schedule. It costs nothing per click and it compounds. Paid ads come in once we know which message works."
+    },
+    {
+     "n": "03",
+     "h3": "Pay only for what converts",
+     "p": "Google Ads, Local Services Ads, Facebook and Instagram ads, set up with tracking from the first dollar, so you see cost per customer, not cost per click."
+    }
+   ],
+   "inc_h2": "What's included",
+   "scenarios": [
+    {
+     "tag": "Organic",
+     "h3": "Content and social, on a schedule",
+     "say": "Show up every week where your customers already scroll, without paying for reach.",
+     "bullets": [
+      "A content calendar built from your market research",
+      "Facebook, Instagram and Google Business posts",
+      "Group and community posting that sounds like you"
+     ]
+    },
+    {
+     "tag": "Paid",
+     "h3": "Ads that pay for themselves",
+     "say": "Google, Facebook and Instagram ads set up, watched and cut when they stop working.",
+     "bullets": [
+      "Google Ads and Local Services Ads",
+      "Facebook and Instagram campaigns",
+      "Conversion tracking from day one"
+     ]
+    },
+    {
+     "tag": "Email",
+     "h3": "Email that brings people back",
+     "say": "Your past customers and old quotes are the cheapest sales you'll ever make.",
+     "bullets": [
+      "Professional email on your own domain",
+      "Follow-up and win-back sequences",
+      "Review requests after every finished job"
+     ]
+    }
+   ],
+   "faq": [
+    {
+     "q": "Should I run paid ads or organic marketing?",
+     "a": "Both, in that order: organic first, paid second. Organic builds the name and tells us which message lands. Paid ads multiply what's already working. Starting with ads on an unproven setup is the most common way small businesses burn money."
+    },
+    {
+     "q": "Do you manage the ad spend?",
+     "a": "Yes. I set up the campaigns, watch them, and cut what doesn't produce customers. The ad budget is paid by you directly to Google or Meta, so you always see exactly where it goes."
+    },
+    {
+     "q": "Can you teach me how to run it myself?",
+     "a": "Yes. If you want to own it, I'll set it up and walk you through how it runs: what to post, how to read the numbers, and when to change an ad."
+    },
+    {
+     "q": "How do I know it's working?",
+     "a": "Every channel is tracked back to calls, forms and paid invoices, and you get a plain-language report each month that says what worked, what didn't and what changes next."
+    }
+   ],
+   "cta_h2": "Spending on marketing and not sure what it's doing?",
+   "cta_p": "Tell me what you're running now. I'll show you what's working, what's wasted, and what I'd do instead."
+  },
+  {
+   "slug": "services/ai-search",
+   "service_type": "AI search optimization: visibility in ChatGPT, Claude, Perplexity and Google AI Overviews",
+   "kicker": "AI Search Visibility",
+   "title_tag": "Show Up in ChatGPT, Claude & AI Search for Your City | ART3RY",
+   "meta_description": "When someone asks ChatGPT, Claude or Google AI who's the best in your city, your business should be the answer. AI search optimization, done for you.",
+   "h1": "When someone asks AI<br>who's best in your city.",
+   "hero_sub": "People don't just Google anymore. They ask ChatGPT, Claude, Perplexity and Google's AI: who's the best barber in town, which contractor should I call, who does this near me. Those answers come from what the web says about you. I make sure your business is what they find, and that what they find is right.",
+   "what_h2": "How it works",
+   "what_lead": "AI tools recommend businesses they can find, read and trust. Each of those can be built.",
+   "steps": [
+    {
+     "n": "01",
+     "h3": "Make you findable",
+     "p": "Your site gets opened to the AI crawlers, with structured data and a plain-language summary they can read, so the answer engines know exactly who you are, what you do and where."
+    },
+    {
+     "n": "02",
+     "h3": "Make you the clear answer",
+     "p": "Pages that answer the real questions people ask, written so an AI can quote them directly: what you do, who you serve, what it costs to start, why you."
+    },
+    {
+     "n": "03",
+     "h3": "Make you trusted",
+     "p": "Your name, phone and details matching everywhere: Google, Bing, Apple Maps, Yelp, directories and reviews. Consistency is what AI tools use to decide who to recommend."
+    }
+   ],
+   "inc_h2": "What's included",
+   "scenarios": [
+    {
+     "tag": "Answer engines",
+     "h3": "ChatGPT, Claude and Perplexity",
+     "say": "Be the business named when someone asks for a recommendation.",
+     "bullets": [
+      "AI crawler access and an llms.txt summary",
+      "Answer-first pages for the questions you get",
+      "Checked by asking the AI tools directly"
+     ]
+    },
+    {
+     "tag": "Google AI",
+     "h3": "AI Overviews and the map pack",
+     "say": "Google's AI answers pull from your profile, your site and your reviews.",
+     "bullets": [
+      "Google Business Profile built out completely",
+      "Structured data on every page",
+      "A review system that keeps them coming"
+     ]
+    },
+    {
+     "tag": "Everywhere else",
+     "h3": "Listings that agree",
+     "say": "Every place that lists your business says the same thing.",
+     "bullets": [
+      "Bing Places and Apple Business Connect",
+      "Directory and citation cleanup",
+      "Social profiles pointed back at you"
+     ]
+    }
+   ],
+   "faq": [
+    {
+     "q": "How does ChatGPT decide which business to recommend?",
+     "a": "It answers from what it can read: your website, your Google and Bing listings, reviews, directories and articles that mention you. Businesses that are easy to read, consistent everywhere and well reviewed get named. Businesses with a thin site and mismatched listings get skipped."
+    },
+    {
+     "q": "Is AI search different from SEO?",
+     "a": "It's built on the same foundation, a fast site with real answers and a strong Google profile, plus a few things SEO alone doesn't cover: crawler access for AI tools, structured data, a plain-language summary file, and listings that agree with each other."
+    },
+    {
+     "q": "Can you guarantee my business shows up in ChatGPT?",
+     "a": "No one can promise what an AI says, and anyone who does is selling you something. What I can do is build everything those tools look at, then check by asking them directly, in your city, the way your customers would."
+    },
+    {
+     "q": "Does this work for any kind of business?",
+     "a": "Yes. Barbers, contractors, salons, law offices, restaurants, shops. If people ask who's the best at what you do in your city, this is how you become the answer."
+    }
+   ],
+   "cta_h2": "Ask ChatGPT who's best at what you do in your city.",
+   "cta_p": "If it didn't name you, tell me about your business and I'll show you why, and what it takes to change."
+  }
+ ]
+}
