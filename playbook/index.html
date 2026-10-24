@@ -69,6 +69,49 @@ footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;justify
   .wordmark{font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;letter-spacing:-.045em;color:#fff;line-height:1}
   .wordmark em{font-style:normal;color:#FF5A67}
   footer .wordmark{font-size:16px}
+
+/* ---------- Call Ada: the public AI phone demo line, (559) 847-9824 ----------
+   Every page carries it in the nav; the homepage, /services/ai-phone-assistant/ and
+   /get-started/ also carry the .call-ada card. Colours are literal so the same block
+   works in pages.css, site.css and the hand-built inline-style pages. */
+nav .nav-links{margin-left:auto}
+.nav-call{display:inline-flex;align-items:center;gap:8px;margin-left:auto;margin-right:10px;
+  padding:8px 12px;border:1px solid rgba(255,255,255,.18);border-radius:6px;
+  font-family:var(--mono);font-size:13px;font-weight:600;color:#fff;white-space:nowrap;
+  transition:border-color .16s,background .16s}
+.nav-call:hover{border-color:rgba(18,196,139,.65);background:rgba(18,196,139,.08)}
+.nav-call-lbl{font-weight:500;color:#93A2C4}
+.nav-call-dot,.call-ada-dot{flex:none;width:7px;height:7px;border-radius:50%;background:#12C48B;
+  animation:callAdaPulse 2.4s ease-out infinite}
+@keyframes callAdaPulse{0%{box-shadow:0 0 0 0 rgba(18,196,139,.55)}70%{box-shadow:0 0 0 7px rgba(18,196,139,0)}100%{box-shadow:0 0 0 0 rgba(18,196,139,0)}}
+.call-ada{display:inline-flex;align-items:center;gap:14px;max-width:100%;margin-top:22px;
+  padding:12px 12px 12px 16px;border:1px solid rgba(18,196,139,.38);border-radius:10px;
+  background:rgba(18,196,139,.07);color:#F2F5FC;text-align:left;
+  transition:border-color .16s,background .16s}
+.call-ada:hover{border-color:rgba(18,196,139,.75);background:rgba(18,196,139,.12)}
+.call-ada .call-ada-dot{width:10px;height:10px}
+.call-ada-txt{display:flex;flex-direction:column;gap:2px;line-height:1.4}
+.call-ada-txt strong{font-size:15px;font-weight:700;color:#fff}
+.call-ada-txt span{font-size:13px;color:#93A2C4}
+.call-ada-num{flex:none;font-family:var(--mono);font-size:15px;font-weight:600;color:#fff;
+  background:#E63946;padding:10px 14px;border-radius:7px;white-space:nowrap}
+.call-ada:hover .call-ada-num{background:#FF5A67}
+.call-ada-stack{flex-direction:column;align-items:flex-start;gap:12px;margin-top:0;padding:24px}
+.call-ada-stack .call-ada-num{width:100%;text-align:center}
+.call-ada-kick{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+  color:#12C48B;display:flex;align-items:center;gap:8px}
+@media(max-width:1060px){.nav-call-lbl{display:none}}
+@media(max-width:768px){
+  nav{flex-wrap:wrap}
+  .nav-call{order:-1;width:100%;justify-content:center;margin:0 0 10px;padding:9px 12px}
+  .nav-call-lbl{display:inline}
+}
+@media(max-width:560px){
+  .call-ada{flex-wrap:wrap}
+  .call-ada-txt{flex:1 1 0;min-width:0}
+  .call-ada-num{width:100%;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.nav-call-dot,.call-ada-dot{animation:none}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -77,6 +120,7 @@ footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;justify
 <nav>
   <a href="/" class="logo" aria-label="ART3RY home"><svg class="logo-mark" viewBox="0 0 26 26" aria-hidden="true"><defs><linearGradient id="lm" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#E63946"/><stop offset="100%" stop-color="#5B9BFF"/></linearGradient></defs><path d="M1 15 H6 L9 7 L13 21 L16 13 H21" fill="none" stroke="url(#lm)" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.2" cy="13" r="2.1" fill="#E63946"/></svg><span class="wordmark">ART<em>3</em>RY</span></a>
   <div class="nav-links"><a href="/services/">The Growth Build</a><a href="/about/">About</a><a href="/blog/">Blog</a></div>
+  <a href="tel:+15598479824" class="nav-call" aria-label="Call Ada, the Art3ry AI phone assistant, live at (559) 847-9824"><span class="nav-call-dot" aria-hidden="true"></span><span class="nav-call-lbl">Call Ada</span>(559) 847-9824</a>
   <a href="/get-started/" class="nav-cta">Work with me →</a>
 </nav>
 

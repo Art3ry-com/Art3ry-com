@@ -2,6 +2,7 @@
  "service": [
   {
    "slug": "services/ai-phone-assistant",
+   "call_demo": true,
    "service_type": "AI phone assistant and AI receptionist for small business",
    "kicker": "AI Phone Assistant",
    "title_tag": "AI Phone Assistant for Small Business: Every Call Answered | ART3RY",

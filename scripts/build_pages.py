@@ -41,7 +41,7 @@ _ANALYTICS = ("""<!-- Cloudflare Web Analytics -->"""
               """data-cf-beacon='{"token": "11bbd30f1f234e4a85f719e0e1c87be3"}'></script>"""
               """<!-- End Cloudflare Web Analytics -->""")
 
-CSS_V = "20260831c"
+CSS_V = "20261024a"
 _CSS_LINK = f'<link rel="stylesheet" href="/assets/pages.css?v={CSS_V}">'
 
 
@@ -58,8 +58,13 @@ _NAV = """<nav>
     <span class="wordmark">ART<em>3</em>RY</span>
   </a>
   <div class="nav-links"><a href="/services/">The Growth Build</a><a href="/about/">About</a><a href="/blog/">Blog</a></div>
+  <a href="tel:+15598479824" class="nav-call" aria-label="Call Ada, the Art3ry AI phone assistant, live at (559) 847-9824"><span class="nav-call-dot" aria-hidden="true"></span><span class="nav-call-lbl">Call Ada</span>(559) 847-9824</a>
   <a href="/get-started/" class="nav-cta">Work with me &rarr;</a>
 </nav>"""
+
+# Ada, the public AI phone demo line. Rendered in the hero of any service spec with
+# "call_demo": true (today: services/ai-phone-assistant). Styles: .call-ada in pages.css.
+_CALL_ADA = ('<a href="tel:+15598479824" class="call-ada" aria-label="Call Ada, the Art3ry AI phone assistant, live at (559) 847-9824"><span class="call-ada-dot" aria-hidden="true"></span><span class="call-ada-txt"><strong>Call Ada now, hear it answer live.</strong><span>Ada is the AI phone assistant I build, answering a real line day or night.</span></span><span class="call-ada-num">(559) 847-9824</span></a>')
 
 _FOOTER = """<footer>
   <div style="display:flex;flex-direction:column;gap:6px">
@@ -336,11 +341,12 @@ def render_service(spec: dict) -> tuple[str, str]:
         + "".join(f"<li>{_esc(b)}</li>" for b in c["bullets"]) + "</ul></div>"
         for c in spec["scenarios"])
     faq = "".join(f'<div class="q">{_esc(f["q"])}</div><div class="a">{_esc(f["a"])}</div>' for f in spec["faq"])
+    call = ("\n" + _CALL_ADA) if spec.get("call_demo") else ""
     body = f"""{_head(spec['title_tag'], spec['meta_description'], canon, jsonld)}
 <header class="hero"><div class="wrap"><div class="kicker">{_esc(spec['kicker'])}</div>
 <h1>{_h1(spec['h1'])}</h1><p class="sub">{_esc(spec['hero_sub'])}</p>
 <div class="btns"><a href="/get-started/" class="btn-primary">Start with a free diagnostic &rarr;</a>
-<a href="https://jessemoraga.com" target="_blank" rel="noopener" class="btn-secondary">See it running a real business</a></div></div></header>
+<a href="https://jessemoraga.com" target="_blank" rel="noopener" class="btn-secondary">See it running a real business</a></div>{call}</div></header>
 <section class="section"><h2>{_esc(spec['what_h2'])}</h2><p class="lead">{_esc(spec['what_lead'])}</p><div class="steps wrap">{steps}</div></section>
 <section class="section"><h2>{_esc(spec['inc_h2'])}</h2><div class="cards wrap">{cards}</div></section>
 <section class="section"><p class="proof">Not a pitch deck. Every Art3ry service already runs <a href="https://jessemoraga.com" target="_blank" rel="noopener">a real California field-services company</a>, a real one-person company.</p></section>
