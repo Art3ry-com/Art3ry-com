@@ -149,3 +149,8 @@ Already configured and working. Do not change these unless something is broken.
   `/blog/automate-invoicing/` and the six `/blog/growth-for-*/` posts. They predate
   the factory, so nothing will add schema to them on a rebuild. Structured data is
   the cheapest remaining on-page win on this site.
+
+## Internal links (2026-10-24)
+`scripts/seo_links.py` adds the seven service links to every footer and a "Related service" line to each
+blog post (topic words in slug/title). `build_pages.py` runs it after every build; it is idempotent, so
+run it by hand after any hand edit to a page too.

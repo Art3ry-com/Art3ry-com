@@ -515,6 +515,9 @@ def main(argv=None) -> int:
         blog_cards.append((spec["title"], f"/blog/{slug}/", spec["meta_description"]))
 
     write_sitemap(sitemap_urls)
+    # Footer service links + each post's "Related service" line (2026-10-24 SEO audit); idempotent.
+    import seo_links
+    seo_links.main()
     print(f"build_pages: wrote {len(written)} pages")
     for w in written:
         print("  ", w)
