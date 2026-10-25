@@ -42,14 +42,44 @@ def pick(slug: str, title: str) -> list[str]:
     return list(dict.fromkeys(out))[:2] or ["/services/websites/", "/services/lead-follow-up/"]
 
 
-def service_line(svcs: list[str]) -> str:
+def service_line(svcs: list[str], nxt: tuple[str, str] | None = None) -> str:
     links = " and ".join(f'<a href="{s}" style="color:var(--blue);text-decoration:none">{NAMES[s]}</a>' for s in svcs)
+    more = (f'<br>Keep reading: <a href="/blog/{nxt[0]}/" style="color:var(--blue);text-decoration:none">'
+            f'{nxt[1]}</a>' if nxt else "")
     return (f'{MARK}<section class="section"><p style="text-align:center;color:var(--ink-2);font-size:14px">'
             f'Related service: {links} &middot; <a href="/services/" style="color:var(--blue);'
-            f'text-decoration:none">see the full Growth Build &rarr;</a></p></section>\n')
+            f'text-decoration:none">see the full Growth Build &rarr;</a>{more}</p></section>\n')
 
 
-def process(path: Path) -> list[str]:
+def _title(html: str) -> str:
+    m = re.search(r"<title>(.*?)</title>", html, re.S)
+    return re.sub(r"\s*\|\s*ART3RY\s*$", "", m.group(1).strip()) if m else ""
+
+
+def reading_ring() -> dict[str, tuple[str, str]]:
+    """Each post -> the next post sharing its primary service (sorted, wrapping), so every post
+    is linked from a sibling on the same topic, not just the blog index."""
+    posts = {}
+    for p in sorted((ROOT / "blog").glob("*/index.html")):
+        slug, title = p.parent.name, _title(p.read_text(encoding="utf-8"))
+        posts[slug] = (pick(slug, title), title)
+    counts = {}
+    for picks, _ in posts.values():
+        counts[picks[0]] = counts.get(picks[0], 0) + 1
+    # A topic with one post joins its second topic's ring (or Websites) so it still gets a sibling link.
+    posts = {s: ((v[0][0] if counts[v[0][0]] > 1 else (v[0][1] if len(v[0]) > 1 else "/services/websites/")), v[1])
+             for s, v in posts.items()}
+    ring = {}
+    for svc in {v[0] for v in posts.values()}:
+        group = [s for s in posts if posts[s][0] == svc]
+        for i, slug in enumerate(group):
+            if len(group) > 1:
+                nxt = group[(i + 1) % len(group)]
+                ring[slug] = (nxt, posts[nxt][1])
+    return ring
+
+
+def process(path: Path, ring: dict | None = None) -> list[str]:
     html = path.read_text(encoding="utf-8")
     before, changes = html, []
     if FOOTER_ANCHOR in html and FOOTER_SERVICES.strip() not in html:
@@ -58,8 +88,7 @@ def process(path: Path) -> list[str]:
     rel = path.relative_to(ROOT).as_posix()
     if rel.startswith("blog/") and rel != "blog/index.html":
         slug = rel.split("/")[1]
-        title = re.search(r"<title>(.*?)</title>", html, re.S)
-        line = service_line(pick(slug, title.group(1) if title else ""))
+        line = service_line(pick(slug, _title(html)), (ring or {}).get(slug))
         html = re.sub(re.escape(MARK) + r".*?</section>\n", "", html, flags=re.S)
         cta = html.find('<section class="section"><div class="cta-strip')
         if cta != -1:
@@ -71,11 +100,11 @@ def process(path: Path) -> list[str]:
 
 
 def main() -> int:
-    n = 0
+    n, ring = 0, reading_ring()
     for p in sorted(ROOT.rglob("index.html")):
         if ".git" in p.parts or "scripts" in p.parts:
             continue
-        ch = process(p)
+        ch = process(p, ring)
         if ch:
             n += 1
             print(f"{p.relative_to(ROOT)}: {', '.join(ch)}")
