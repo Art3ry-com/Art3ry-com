@@ -121,7 +121,7 @@ def _head(title, desc, canon, jsonld) -> str:
     return f"""<!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{t}</title><meta name="description" content="{d}">
-<link rel="icon" type="image/png" href="/assets/art3ry-logo.png">
+<link rel="icon" type="image/png" href="/assets/favicon-64.png">
 <link rel="canonical" href="{canon}">
 <meta property="og:type" content="website"><meta property="og:url" content="{canon}">
 <meta property="og:title" content="{t}"><meta property="og:description" content="{d}">
