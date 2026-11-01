@@ -1,0 +1,160 @@
+{
+  "blog": [
+    {
+      "slug": "seo-for-law-firms",
+      "title": "SEO for Law Firms: How to Get Found Without Breaking the Rules",
+      "title_tag": "SEO for Law Firms: How to Rank and Stay Compliant | ART3RY",
+      "meta_description": "SEO for law firms in plain terms: the practice-area pages, reviews and intake speed that actually rank, done without running afoul of bar advertising rules.",
+      "dek": "Clients search for a lawyer the moment something goes wrong, then call one of the first names they see. This is how a law firm wins those searches the honest way, and why the rules you have to follow are not a handicap.",
+      "sections": [
+        {
+          "h2": "Where a law firm's next client actually comes from",
+          "paragraphs": [
+            "Someone gets a notice, has an accident, is arrested, or finally decides it is time for an estate plan. They search a short phrase, often from a phone, and call one of the first few results. That call is worth hundreds or thousands of dollars to whichever firm answers it.",
+            "That is why SEO for law firms is really two problems at once: be visible when the search happens, and be ready when the call comes in. Rank without intake and you lose the lead you worked to get. This guide covers both."
+          ]
+        },
+        {
+          "h2": "Start with the rules, because they change the playbook",
+          "paragraphs": [
+            "A law firm cannot market the way a plumber can. Bar rules on advertising restrict guarantees, superlatives, client endorsements and anything that could mislead. In California those are the State Bar's advertising and solicitation rules. I am not your attorney and this is not legal advice, but the practical version is: keep every claim factual, drop the word 'guarantee', and have the attorney sign off on anything that touches the law.",
+            "That is not a handicap in search. It means your pages win on substance, real practice areas, real answers and a real local presence, instead of puffery Google would not rank anyway."
+          ]
+        },
+        {
+          "h2": "Step one: one page per practice area",
+          "paragraphs": [
+            "A single practice areas page cannot rank for personal injury, family law, criminal defense and estate planning at once. Search engines match a page to a search, so give each area the firm actually practices its own page, written with the attorney who handles it. A page that tries to cover everything serves none of them well.",
+            "Each page should answer what the searcher is actually asking: what this area covers, how it works in California, what the timeline looks like and how to get a consultation. That is content that ranks and gets read, not the generic firm boilerplate everyone copies."
+          ]
+        },
+        {
+          "h2": "Step two: the Google Business Profile is your front door",
+          "paragraphs": [
+            "For local searches the map results sit above the website results. Claim the profile, pick the primary category that matches your biggest practice area, fill every field and keep the name exactly what is on the door. If the profile is missing or stuck, work through [why a business is not showing up on Google](/blog/why-is-my-business-not-showing-up-on-google/) first.",
+            "Add real photos, your actual hours and the cities you serve. A complete, accurate profile is the fastest local win available and it costs nothing but time."
+          ]
+        },
+        {
+          "h2": "Step three: reviews, handled within your rules",
+          "paragraphs": [
+            "Reviews drive both the map ranking and whether a stranger picks you. The compliant version is to ask a satisfied client for an honest review at the right moment, then reply to every one without discussing specifics or confirming representation. Anything about a client's matter stays private.",
+            "The mechanics are the same as any business; the guardrails are yours. There is a full walkthrough in [how to get more Google reviews](/blog/how-to-get-more-google-reviews/), and the substance of every public statement stays with your counsel."
+          ]
+        },
+        {
+          "h2": "Step four: the call is where the ranking pays off",
+          "paragraphs": [
+            "Winning the search and missing the call is the most expensive failure in legal marketing. A person in crisis calls the first few names; if they reach voicemail they call the next. Intake has to answer, take the details and flag the urgent ones immediately.",
+            "I cover the intake side in [answering service for law firms](/blog/answering-service-for-law-firms/) and the follow-up side in [lead follow-up](/services/lead-follow-up/)."
+          ]
+        },
+        {
+          "h2": "How Art3ry fits in",
+          "paragraphs": [
+            "I build and run the whole system for a handful of California law firms: the practice-area pages, the tuned Google profile and the intake that answers the phone. I do the work; the attorney reviews the substance. To see where your firm stands before deciding anything, start with the [free diagnostic](/diagnostic/) or the [California law firm marketing](/california/law-firms/) page."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "How long does SEO take for a law firm?",
+          "a": "Long-tail practice-area terms can move in weeks; competitive head terms take months. I start with the fastest wins so you see movement early, and report honestly on what moved."
+        },
+        {
+          "q": "Can you guarantee rankings or clients?",
+          "a": "No, and you should be wary of anyone who does. I promise the work and honest reporting."
+        },
+        {
+          "q": "Do you write the legal content?",
+          "a": "I draft the marketing pages. Anything that touches the law is drafted with and approved by the attorney."
+        },
+        {
+          "q": "Do I need a website before we start?",
+          "a": "No. If you have one I improve it; if not I build one wired to the same intake and follow-up system."
+        },
+        {
+          "q": "Is this compliant with bar advertising rules?",
+          "a": "I keep claims factual and avoid the patterns the rules restrict, and the attorney reviews every page. Specific ethics questions go to your own counsel."
+        }
+      ]
+    },
+    {
+      "slug": "answering-service-for-law-firms",
+      "title": "Answering Service for Law Firms: When a Missed Call Is a Missed Case",
+      "title_tag": "Answering Service for Law Firms: Don't Lose the Call | ART3RY",
+      "meta_description": "Answering service for law firms: how intake should handle confidentiality, after-hours and urgent calls, and what to check before you sign.",
+      "dek": "A prospective client in trouble does not leave a voicemail and wait. They call the next firm on the list. This is what legal intake needs to do differently, and how to evaluate the services that promise to handle it.",
+      "sections": [
+        {
+          "h2": "Why the missed call costs more in law",
+          "paragraphs": [
+            "Most callers to a law firm are having a bad day: an accident, an arrest, a notice, a deadline. They are not calmly comparing options. They call the first few names and hire whoever answers. If your phone goes to voicemail after hours, that person calls the next firm and is gone.",
+            "A plumber misses a call and loses a job. A law firm misses a call and loses a case that could be worth far more. That is why intake is not an afterthought in legal marketing; it is the part that turns a ranking into revenue."
+          ]
+        },
+        {
+          "h2": "What legal intake needs that a generic service gets wrong",
+          "paragraphs": [
+            "A generic answering service takes a name and a number. Legal intake needs more: enough detail to know the practice area, the urgency and the basics of the matter, captured without the caller feeling interrogated. A family-law call and a criminal-defense call go to different attorneys, and the script has to route them correctly.",
+            "It also has to respect confidentiality. The caller is sharing something sensitive, so the intake should ask only what it needs, collect what matters and pass it to the right person. Ask any service how it handles confidential information before you trust it with clients."
+          ]
+        },
+        {
+          "h2": "After hours is when the best cases arrive",
+          "paragraphs": [
+            "Arrests, accidents and urgent questions do not keep business hours. A firm that only answers nine to five hands the evening and weekend calls to competitors. An answering service for law firms exists so someone answers at 11 PM, the urgent ones reach you and the routine ones wait for the morning.",
+            "The alternative is voicemail, and voicemail in a moment of crisis reads as 'this firm is not available'. Callers rarely leave a message. They move on."
+          ]
+        },
+        {
+          "h2": "What to ask before you sign",
+          "paragraphs": [
+            "Three questions separate a useful service from an expensive mailbox. First, does the caller's information reach you as a job-ready message with the name, number, matter type and urgency, not a garbled voicemail? Second, what happens if you do not respond: does it try a second number or tell the caller when to expect a call back? Third, what is the real monthly cost at your volume, per-minute, per-call, after-hours fees and minimums included?",
+            "The pricing detail is in [answering service pricing](/blog/answering-service-pricing/), and the human-versus-AI-versus-hybrid decision is in [virtual receptionist companies compared](/blog/virtual-receptionist-companies-compared/)."
+          ]
+        },
+        {
+          "h2": "Human, AI or hybrid",
+          "paragraphs": [
+            "Human services answer in a person's voice and charge per minute or per call. AI services answer instantly at any hour and cost less, but have to be configured to ask your practice area's questions and flag urgency. Hybrids route between the two. Each has a place; the right choice depends on your call volume and how much you want a human on the line for every caller."
+          ]
+        },
+        {
+          "h2": "How intake connects to the rest of the system",
+          "paragraphs": [
+            "Intake is only the first step. The caller also needs follow-up: the consultation scheduled, the paperwork sent and the reminder the day before. If intake captures the lead but nothing chases it, the system is half built. I wire that together in [lead follow-up](/services/lead-follow-up/)."
+          ]
+        },
+        {
+          "h2": "How Art3ry fits in",
+          "paragraphs": [
+            "I build and run an AI phone assistant for law firms that answers every call, asks the right questions and texts the attorney the details, with confidentiality treated as a first-class requirement. The attorney stays in control of what is said. For the full picture for a California firm, start with the [California law firm marketing](/california/law-firms/) page or test it on your own line with the [free diagnostic](/diagnostic/)."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do law firms really need an answering service?",
+          "a": "If the firm misses calls after hours or while in court or consults, yes. A caller with an urgent legal problem calls the next firm when they reach voicemail."
+        },
+        {
+          "q": "What should legal intake ask the caller?",
+          "a": "Name, confirmed phone number, the general type of matter, how urgent it is and the best time to reach them, captured without pressing for details the caller should not volunteer to a machine."
+        },
+        {
+          "q": "Is an AI answering service appropriate for a law firm?",
+          "a": "For intake and routing, yes when it is set up for the firm's practice areas and confidentiality is handled properly. Anything substantive still goes to the attorney."
+        },
+        {
+          "q": "What does a legal answering service cost?",
+          "a": "It varies by billing method and call volume. Ask for a sample bill at your volume and check for minimums and after-hours fees before you sign."
+        },
+        {
+          "q": "Does using an answering service break confidentiality?",
+          "a": "Not if it is set up correctly, but it is a real consideration. Ask how the service handles confidential information and limit what the caller is asked to share."
+        }
+      ]
+    }
+  ]
+}
