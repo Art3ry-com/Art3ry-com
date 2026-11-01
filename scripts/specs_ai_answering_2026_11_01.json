@@ -1,0 +1,76 @@
+{
+  "blog": [
+    {
+      "slug": "ai-answering-service",
+      "title": "AI Answering Service: What It Is, and When to Use One",
+      "title_tag": "AI Answering Service for Small Business | ART3RY",
+      "meta_description": "AI answering service explained: how AI phone answering works, how it compares to a live operator answering service, and how to pick the best for a small business.",
+      "dek": "An AI answering service picks up every call and handles it like a trained receptionist, for a fraction of the cost. Here is what it actually sounds like, where it beats a human, and where it does not.",
+      "sections": [
+        {
+          "h2": "What an AI answering service actually is",
+          "paragraphs": [
+            "An AI answering service is software that answers your business phone line, talks to the caller in a natural voice, asks the right questions, and hands you a clean lead with the name, number and reason they called. It is not a recorded menu and not a voicemail box. It is the call being handled.",
+            "For most small businesses the alternative is the phone ringing out. That is why the fastest way to describe it is a live operator answering service, without the per-minute meter running."
+          ]
+        },
+        {
+          "h2": "AI phone answering versus a live operator",
+          "paragraphs": [
+            "A live operator answering service is a person reading a script and typing your messages. It works, and it charges by the minute. An AI answering service does the same job instantly, at any hour, for a flat cost. The tradeoff is the human touch on the rare, messy call.",
+            "Most calls are not messy. They are 'how much do you charge' and 'can you come tomorrow'. AI handles those and only escalates the ones that need you. The full comparison is in [virtual receptionist companies compared](/blog/virtual-receptionist-companies-compared/)."
+          ]
+        },
+        {
+          "h2": "What it sounds like on a real call",
+          "paragraphs": [
+            "The caller hears a clear, friendly voice that answers on the first ring, says your business name, and asks what they need help with. It confirms the phone number back, asks the follow-up questions your trade needs, and texts you the details the moment the call ends.",
+            "If the AI is not sure, or the caller asks for a person, it transfers. The point of AI phone answering is not to pretend there is no human. It is to make sure the human only spends time on calls that actually need one."
+          ]
+        },
+        {
+          "h2": "How to pick the best phone answering service for a small business",
+          "paragraphs": [
+            "Start with what happens to the lead after the call. Does it reach you as a text with the name, number and need, or as a voicemail you have to listen to? Does it flag emergencies? Does it work after hours and on weekends?",
+            "Then check the pricing honestly. Per-minute billing on a human service adds up fast; a flat AI plan usually costs less than one missed job. The detail is in [answering service pricing](/blog/answering-service-pricing/)."
+          ]
+        },
+        {
+          "h2": "When AI is the right call, and when it is not",
+          "paragraphs": [
+            "AI answering is right for a small business that misses calls because the owner is on a job, in a consult, or asleep. It is right for trades, clinics, law firms and any business where a missed call is a missed job.",
+            "It is less right for a business where every caller needs a long, sensitive conversation with a person from the first word. Even then, AI can answer and route, and hand the human the warm ones."
+          ]
+        },
+        {
+          "h2": "How Art3ry fits",
+          "paragraphs": [
+            "I build and run an AI answering service for small businesses as part of the whole system, so the answer, the booking and the follow-up all happen without you. To see what it would catch on your own line, start with the [free diagnostic](/diagnostic/)."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is an AI answering service good enough for a real business?",
+          "a": "For answering, qualifying and booking, yes. It handles the routine calls instantly and escalates the ones that need you, which is most of what a receptionist does all day."
+        },
+        {
+          "q": "How is it different from voicemail?",
+          "a": "Voicemail makes the caller wait and usually makes them hang up. An AI answering service answers on the first ring and captures the lead while the caller is still on the line."
+        },
+        {
+          "q": "What does it cost compared to a live operator?",
+          "a": "Live operators charge by the minute and add up fast. AI answering is usually a flat monthly cost that is less than one missed job a month."
+        },
+        {
+          "q": "Will callers know it is not a person?",
+          "a": "Some will, some will not. The voice is natural and the call is handled properly, which is what callers actually care about."
+        },
+        {
+          "q": "Can it transfer to me if the caller needs a human?",
+          "a": "Yes. If the caller asks for a person or the AI is unsure, it transfers to you or takes a message you can act on."
+        }
+      ]
+    }
+  ]
+}
