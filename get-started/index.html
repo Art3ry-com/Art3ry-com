@@ -322,7 +322,9 @@ nav .nav-links{margin-left:auto}
       if(res && res.success){
         f.querySelectorAll('input,textarea,button').forEach(function(el){ el.disabled = true; });
         status.style.color = 'var(--green)';
-        status.textContent = "Got it. You'll hear from Jesse within one business day.";
+        status.style.fontWeight = '700';
+        status.style.fontSize = '15px';
+        status.textContent = "✓ Message sent successfully — Jesse will reply within one business day.";
         return;
       }
       // Server rejected it. Never dead-end the visitor — hand them the mail path.
