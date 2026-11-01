@@ -5,9 +5,9 @@
       "service_type": "AI receptionist",
       "kicker": "AI Receptionist",
       "title_tag": "AI Receptionist: Answers Every Call 24/7, Done for You | ART3RY",
-      "meta_description": "Art3ry's AI receptionist answers every call, books the job and texts you the lead. Flat monthly, scoped to your calls. Hear it on your own line, free.",
+      "meta_description": "Art3ry's AI receptionist answers every call, books the job and texts you the lead. $149/month, 300 minutes included, then $0.15/minute. Hear it on your line, free.",
       "h1": "An AI receptionist that answers every call,<br>books the job, and texts you the lead.",
-      "hero_sub": "Art3ry is an AI receptionist for small business. It answers 24/7, asks the right questions, books appointments, and sends you a clean lead with the name, number and reason they called. Flat monthly, scoped to your call volume — no per-minute meter, no surprise fees.",
+      "hero_sub": "Art3ry is an AI receptionist for small business. It answers 24/7, books appointments, and sends you a clean lead with the name, number and reason they called. $149/month, 300 minutes included, then $0.15/minute. No setup fee, no contract.",
       "what_h2": "What it does",
       "what_lead": "You stop living by the phone. The receptionist does.",
       "steps": [
@@ -22,7 +22,7 @@
         {"tag": "Texts you the lead", "h3": "Job-ready, in your pocket", "say": "The details reach you the second the call ends.", "bullets": ["Name, number, need, by text", "Missed-call text back", "Follow-up that chases until it closes"]}
       ],
       "faq": [
-        {"q": "What does it cost?", "a": "Flat monthly, scoped to your call volume. You get your exact number in a free 15-minute diagnostic — no per-minute meter, no surprise fees."},
+        {"q": "What does it cost?", "a": "$149/month, with 300 minutes included and $0.15/minute after that. Want it built and wired in for you? White-glove setup is a one-time $750. There is also a $349/month plan that adds booking and follow-up, and a full business-on-autopilot plan with a $1,500 to $3,000 build."},
         {"q": "Is it a real AI or a person?", "a": "An AI that sounds like a person. It handles the routine calls and transfers to you the moment a caller needs a human."},
         {"q": "What if a caller needs me?", "a": "It transfers, or takes a message you can act on. You set the rules."},
         {"q": "Can I try it first?", "a": "Yes. The free diagnostic shows what it would catch on your own line before you pay anything."}
